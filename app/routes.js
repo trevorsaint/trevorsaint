@@ -37,6 +37,10 @@ router.get('/contact', function(req, res) {
   res.render('contact');
 });
 
+router.get('/contact/thanks', function(req, res) {
+  res.render('thanks');
+});
+
 router.get('/cookies', function(req, res) {
   res.render('cookies');
 });
@@ -44,5 +48,12 @@ router.get('/cookies', function(req, res) {
 router.get('/privacy-policy', function(req, res) {
   res.render('privacy-policy');
 });
+
+
+// Page not found 404
+router.get('*', function(req, res){
+  res.render('404');
+});
+
 
 module.exports = router;
