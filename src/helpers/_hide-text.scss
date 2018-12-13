@@ -1,0 +1,9 @@
+/*
+Hide the text that sits inside an element, but have the area remain avaialble
+*/
+
+@mixin hide-text {
+  text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}

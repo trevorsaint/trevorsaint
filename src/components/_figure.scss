@@ -1,0 +1,16 @@
+.figure {
+  margin: 0; 
+  padding: 0;
+}
+
+
+.figure + .figure {
+  padding-top: spacing(8);
+}
+
+
+.figure__caption {
+  @include typography(14);
+  color: colour("grey-2");
+  margin-top: spacing(3);
+}

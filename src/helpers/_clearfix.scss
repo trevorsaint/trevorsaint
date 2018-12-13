@@ -1,0 +1,13 @@
+/*
+Clearfix
+
+Clear floated content within a container using a pseudo element
+*/
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}

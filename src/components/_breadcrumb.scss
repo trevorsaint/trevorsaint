@@ -1,0 +1,65 @@
+
+.breadcrumb {
+  padding-top: spacing(6);
+  padding-bottom: spacing(6);
+}
+
+
+.breadcrumb__list {
+  font-size: 0; // Remove white space when using inline-block
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+.breadcrumb__item {
+  @include typography(19);
+  display: inline-block;
+  font-family: font-family(gilroy);
+
+  &:first-child {
+
+    &:before {
+      background-image: image-url("icon/backlink-arrow.svg");
+      display: inline-block;
+      content: "";
+      height: 10px;
+      margin-right: spacing(2);
+      width: 6px;
+    }
+
+  }  
+
+  &:not(:last-child) {
+
+    &:after {
+      content: "";
+      background-color: colour("grey-4");
+      display: inline-block;
+      height: 20px;
+      margin-left: spacing(3);
+      margin-right: spacing(3);
+      transform: rotate(20deg);
+      vertical-align: middle;
+      width: 1px;
+    }
+
+  }
+
+}
+
+
+.breadcrumb__link {
+
+  &[aria-current=page] {
+    @include font-weight(bold);
+    text-decoration: none;
+
+    &:after {
+      content: none;
+    }
+
+  }
+
+}

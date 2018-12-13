@@ -1,0 +1,47 @@
+/*
+Hide an element visually, but have it available for screen readers
+*/
+
+@mixin visually-hidden($important: true) {
+  border: 0 iff($important, !important);
+  clip: rect(0 0 0 0) iff($important, !important);
+  clip-path: inset(50%) iff($important, !important);
+  height: 1px iff($important, !important);
+  margin: -1px iff($important, !important);
+  padding: 0 iff($important, !important);
+  overflow: hidden iff($important, !important);
+  position: absolute iff($important, !important);
+  white-space: nowrap iff($important, !important);
+  width: 1px iff($important, !important);
+}
+
+
+/*
+Hide an element visually, but have it available for screen readers whilst
+allowing the element to be focussed when navigated to via the keyboard
+(for example, the skip link).
+*/
+
+@mixin visually-hidden-focusable($important: true) {
+  clip: rect(0 0 0 0) iff($important, !important);
+  clip-path: inset(50%) iff($important, !important);
+  height: 1px iff($important, !important);
+  margin: -1px iff($important, !important);
+  overflow: hidden iff($important, !important);
+  position: absolute iff($important, !important);
+  white-space: nowrap iff($important, !important);
+  width: 1px iff($important, !important);
+
+  &:active,
+  &:focus {
+    clip: auto iff($important, !important);
+    clip-path: none iff($important, !important);
+    height: auto iff($important, !important);
+    margin: inherit iff($important, !important);
+    overflow: visible iff($important, !important);
+    position: static iff($important, !important);
+    white-space: inherit iff($important, !important);
+    width: auto iff($important, !important);
+  }
+
+}

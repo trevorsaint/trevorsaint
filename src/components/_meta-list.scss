@@ -1,0 +1,21 @@
+.meta-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+
+  @include mq($from: tablet) {
+    margin-bottom: 0;
+  }
+
+}
+
+
+.meta-list__item {
+  @include typography(14);
+
+  &:not(:last-child) { // IE 9+ (prevents the need for a reset)
+    margin-right: spacing(2);
+  }
+
+}

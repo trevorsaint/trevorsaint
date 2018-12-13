@@ -1,0 +1,66 @@
+.footer {
+  background-color: colour("black");
+  color: colour("white");
+}
+
+
+.footer__container {
+  @include container;
+  padding-bottom: spacing(8);
+  padding-top: spacing(8);
+
+  @include mq($from: desktop) {
+    padding-bottom: spacing(8) * 2;
+    padding-top: spacing(8) * 2;
+  }
+
+  @include mq($from: 500px) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+}
+
+
+// Copyright
+.copyright {
+  @include typography(14);
+  margin-right: spacing(4);
+}
+
+
+.footer__support {
+  @include typography(14);
+  display: flex;
+}
+
+
+
+.footer__meta {
+
+  @include mq($from: 600px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: right;
+  }
+
+}
+
+
+
+.footer__contact {
+
+  @include mq($from: 500px) {
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+}
+
+
+
+.contents {
+  max-width: 700px;
+}

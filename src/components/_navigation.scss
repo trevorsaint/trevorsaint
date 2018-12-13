@@ -1,0 +1,105 @@
+.navigation {
+
+  @include mq($until: tablet) {
+    border-bottom: spacing(1) solid colour("blue");
+    left: 0;
+    position: absolute;
+    top: 55px;
+    width: 100%;
+    z-index: 1;
+  }
+
+}
+
+
+.navigation__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @include mq(tablet) {
+    display: flex;
+  }
+
+}
+
+
+.navigation__link {
+  @include typography(19);
+  box-sizing: border-box;
+  display: block;
+  font-family: font-family(gilroy);
+  outline: 0;
+  text-decoration: none;
+
+  &:link,
+  &:visited {
+    color: colour("white");
+  }
+
+  @include mq($until: tablet) {
+    background-color: colour("black");
+
+    &[aria-current] {
+      @include font-weight(bold);
+      background-color: colour("black");
+      border-right: spacing(1) solid colour("blue");
+      color: colour("blue");
+
+      &:focus {
+        color: colour("blue");
+      }
+
+    }
+
+    &:hover,
+    &:focus {
+      background-color: colour("white");
+      color: colour("black");
+    }
+
+  }
+
+  @include mq(tablet) {
+    padding-bottom: spacing(2);
+  }
+
+
+  &:focus {
+
+    span {
+
+      @include mq(tablet) {
+        outline: 3px solid colour("light-blue");
+      }
+
+    }
+
+  }
+
+
+  span {
+    display: block;
+    padding: spacing(3);
+
+    @include mq(tablet) {
+      padding: 9px 15px 6px 15px;
+    }
+
+  }
+
+
+  @include mq(tablet) {    
+    &[aria-current=page] {
+      @include font-weight(bold);
+      border-bottom: spacing(1) solid colour("white");
+      padding-bottom: spacing(1); // Compensate for border
+    }    
+  }
+
+}
+
+
+.js-enabled .hidden {
+  display: none;
+}

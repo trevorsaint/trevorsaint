@@ -1,0 +1,42 @@
+.clients-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: - $gutter;
+  margin-right: - ($gutter-half);
+  margin-left: - ($gutter-half);
+}
+
+
+.clients-grid__item {
+  box-sizing: border-box;
+  margin-bottom: $gutter;
+  padding: 0 $gutter-half;
+  width: 100%;
+
+  @include mq($from: 500px) {
+    width: grid-width(one-half);
+  }
+
+  @include mq(tablet) {
+    width: grid-width(one-third);
+  }
+
+  @include mq(desktop) {
+    width: grid-width(one-quarter);
+  }
+
+}
+
+
+.client {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  height: 155px;
+  justify-content: center;
+
+  img {
+    flex-shrink: 0;
+  }
+
+}

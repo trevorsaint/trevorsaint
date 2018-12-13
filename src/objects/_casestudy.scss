@@ -1,0 +1,41 @@
+.casestudy__header {
+
+  @include mq(desktop) {
+    padding-top: 30px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+
+}
+
+
+.casestudy__header-title {
+  max-width: 790px;
+}
+
+
+.casestudy__header-logo {
+  flex-shrink: 0;
+
+  @include mq($until: desktop) {
+    display: none;
+  }
+
+  @include mq(desktop) {
+    padding-left: spacing(9);
+    padding-top: spacing(2);
+  }
+  
+}
+
+
+.casestudy__content {
+  padding-bottom: spacing(8);
+
+  @include mq($from: desktop) {
+    padding-bottom: spacing(8) * 2;
+  }
+
+}

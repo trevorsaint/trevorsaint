@@ -1,0 +1,6 @@
+.hint {
+  @include typography(19);
+  color: colour("grey-1");
+  display: block;
+  margin-bottom: spacing(2);
+}

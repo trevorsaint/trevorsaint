@@ -1,0 +1,64 @@
+.heading-xxl {
+  @include typography(80);
+  @include font-weight("extra-bold");
+  font-family: font-family(gilroy);
+  margin-bottom: spacing(7);
+  margin-top: 0;
+}
+
+
+.heading-xl {
+  @include typography(48);
+  font-family: font-family(gilroy);
+  margin-bottom: spacing(4);
+  margin-top: 0;
+}
+
+
+.heading-l {
+  @include typography(36);
+  font-family: font-family(gilroy);
+  margin-bottom: spacing(4);
+  margin-top: 0;
+}
+
+
+.heading-m {
+  @include typography(24);
+  font-family: font-family(gilroy);
+  margin-bottom: spacing(4);
+  margin-top: 0;
+}
+
+
+.heading-s {
+  @include typography(19);
+  font-family: font-family(gilroy);
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+
+.body-l {
+  @include typography(24);
+}
+
+
+.body {
+  @include typography(19);
+}
+
+
+.body-s {
+  @include typography(16);
+}
+
+
+.body-xs {
+  @include typography(14);
+}
+
+
+.text {
+  max-width: px-to-rem(790);
+}

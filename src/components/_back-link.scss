@@ -1,0 +1,20 @@
+.back-link {
+  @include focusable-fill;
+  @include typography(19);
+  font-family: font-family(gilroy);
+  display: inline-block;
+  margin-bottom: spacing(3);
+  margin-top: spacing(3);
+  position: relative;
+
+  &:before {
+    background-image: image-url("icon/backlink-arrow.svg");
+    display: inline-block;
+    content: "";
+    height: 10px;
+    margin-bottom: 1px; // Alignment tweak
+    margin-right: spacing(2);
+    width: 6px;
+  }
+
+}

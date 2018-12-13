@@ -1,0 +1,29 @@
+.testimonial {
+
+  @include mq(tablet) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+}
+
+
+.testimonial__logo {
+  flex-shrink: 0;
+  min-width: 174px;
+
+  @include mq($until: tablet) {
+    margin-bottom: spacing(7);
+  }
+
+}
+
+
+.testimonial__quote {
+  max-width: 585px; // Ideal content width
+
+  @include mq(tablet) {
+    padding-left: spacing(9);
+  }
+
+}

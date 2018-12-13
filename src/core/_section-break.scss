@@ -1,0 +1,34 @@
+.section-break {
+  border: 0;
+  height: 1px; // This is required due to margins collapsing
+  margin: 0;
+}
+
+
+.section-break--xl {
+  @include responsive-margin(9, "top");
+  @include responsive-margin(9, "bottom");
+}
+
+
+.section-break--l {
+  @include responsive-margin(8, "top");
+  @include responsive-margin(8, "bottom");
+}
+
+
+.section-break--m {
+  @include responsive-margin(6, "top");
+  @include responsive-margin(6, "bottom");
+}
+
+
+.section-break--s {
+  @include responsive-margin(4, "top");
+  @include responsive-margin(4, "bottom");
+}
+
+
+.section-break--visible {
+  background-color: colour("grey-5");
+}

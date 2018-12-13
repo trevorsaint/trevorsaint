@@ -1,0 +1,51 @@
+.project {
+
+  @include mq(tablet) {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+}
+
+
+.project__content {
+  max-width: 483px; // Ideal content width
+
+  @include mq(tablet) {
+    width: 50%;
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+  }
+
+}
+
+
+.project__image {
+  max-width: 585px; // Ideal content width
+  width: 100%;
+
+  @include mq(tablet) {
+    padding-left: spacing(9);
+    width: 50%;
+  }
+
+}
+
+
+.project--reverse {
+
+  @include mq(tablet) {
+    flex-direction: row-reverse;
+
+    .project__image {
+      padding-right: spacing(9);
+      padding-left: 0;
+    }
+
+  }
+
+}

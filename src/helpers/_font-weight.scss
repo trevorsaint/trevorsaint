@@ -1,0 +1,19 @@
+/*
+Font weight
+
+Returns weight corresponding to the font-weight requested.
+
+Example: scss
+.text {
+  @include font-weight(light);
+}
+*/
+
+@function font-weight($weight) {
+  @return map-get($weights, $weight);
+}
+
+
+@mixin font-weight($weight) {
+  font-weight: font-weight($weight);
+}

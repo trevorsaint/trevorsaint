@@ -1,0 +1,7 @@
+@include grid-row;
+@include grid-column(one-quarter);
+@include grid-column(one-third);
+@include grid-column(one-half);
+@include grid-column(two-thirds);
+@include grid-column(three-quarters);
+@include grid-column(full);

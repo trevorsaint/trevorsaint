@@ -1,0 +1,42 @@
+// =========================================================
+// Page layout
+// =========================================================
+
+// Width of main container
+$page-width: 1200px !default;
+
+
+// Width of gutter between grid columns
+$gutter: 30px !default;
+
+
+// Width of half the gutter between grid columns
+$gutter-half: $gutter / 2;
+
+
+// =========================================================
+// Borders
+// =========================================================
+
+// Standard border width
+$border-width: 5px !default;
+
+
+// Wide border width
+$border-width-wide: 10px !default;
+
+
+// Form control border width
+$border-width-form-element: 3px !default;
+
+
+// Form control border width when in error state
+$border-width-form-element-error: 5px !default;
+
+
+// Form group border width when in error state
+$border-width-form-group-error: 5px !default;
+
+
+// Border width of focus outline
+$focus-width: 3px !default;

@@ -1,0 +1,41 @@
+.about {
+
+  @include mq(tablet) {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+
+}
+
+
+.about__body {
+  max-width: 585px; // Ideal content width
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+}
+
+
+.about__image {
+  max-width: 380px;
+  max-height: 505px;
+  min-width: 290px;
+  overflow: hidden;
+  width: 100%;
+
+  @include mq($until: tablet) {
+    margin-top: spacing(7);
+  }
+
+  @include mq(tablet) {
+    padding-left: spacing(9);
+
+    // Enhancement if supported
+    position: sticky; 
+    top: 30px;
+  }
+
+}

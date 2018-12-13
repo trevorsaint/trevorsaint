@@ -1,0 +1,10 @@
+/*
+Convert pixels to rem
+*/
+
+@function px-to-rem($value) {
+  @if (unitless($value)) {
+    $value: $value * 1px;
+  }
+  @return $value / $root-font-size * 1rem;
+}

@@ -1,0 +1,4 @@
+https://moz.com/learn/seo/robotstxt
+
+User-agent: *
+Disallow: /example-subfolder/

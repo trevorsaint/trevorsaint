@@ -1,0 +1,46 @@
+.textblock {
+  padding-bottom: spacing(8);
+  padding-top: spacing(8);
+  max-width: 996px;
+  margin: auto;
+
+  @include mq($from: desktop) {
+    padding-bottom: spacing(8) * 2;
+    padding-top: spacing(8) * 2;
+  }
+
+}
+
+
+.textblock__content {
+
+  @include mq(tablet) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+}
+
+
+.textblock__main {
+  max-width: 586px; // Ideal content width
+
+  @include mq(tablet) {
+    width: grid-width(two-thirds);
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+  }
+
+}
+
+
+.textblock__supporting {
+
+  @include mq(tablet) {
+    padding-left: spacing(9);
+  }
+
+}

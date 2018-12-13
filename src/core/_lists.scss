@@ -1,0 +1,30 @@
+.list {
+  @include responsive-margin(4, "bottom");
+  @include typography(19);
+  list-style-type: none;
+  margin-top: 0;
+  padding-left: 0;
+
+  // Add top margin to nested lists
+  .list {
+    margin-top: govuk-spacing(2);
+  }
+
+}
+
+
+.list > li {
+  margin-bottom: spacing(1);
+}
+
+
+.list--bullet {
+  list-style-type: disc;
+  padding-left: spacing(4);
+}
+
+
+.list--number {
+  list-style-type: decimal;
+  padding-left: spacing(4);
+}

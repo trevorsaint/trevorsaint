@@ -1,0 +1,58 @@
+.toggle {
+  @include typography(19);
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  box-sizing: border-box;
+  color: colour("white");
+  cursor: pointer;
+  display: inline-block;
+  line-height: 25px; // Override to match title height
+  margin: 0;
+  margin-right: - spacing(1); // Alignment tweak
+  padding: spacing(1);
+  text-decoration: none;
+  text-transform: capitalize;
+  vertical-align: top;
+  -webkit-appearance: none;
+
+
+  // Fix unwanted button padding in Firefox
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+
+
+  &:after {
+    content: "";
+    background-image: image-url("icon/toggle-arrow-down.svg");
+    margin-left: spacing(1);
+    display: inline-block;
+    height: 6px;
+    vertical-align: middle;
+    width: 10px;
+  }
+
+
+  &[aria-expanded=true] {
+
+    &:after {
+      content: "";
+      background-image: image-url("icon/toggle-arrow-up.svg");
+    }
+    
+  }
+
+
+  &:focus {
+    @include focusable;
+  }
+
+
+  @include mq(tablet) {
+    display: none;
+  }
+
+
+}

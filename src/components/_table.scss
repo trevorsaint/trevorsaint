@@ -1,0 +1,51 @@
+.table {
+  @include typography(19);
+  border-spacing: 0;
+  margin-bottom: spacing(4);
+  width: 100%;
+}
+
+
+.table__header {
+  @include font-weight(bold);
+  white-space: nowrap;
+}
+
+
+.table__header,
+.table__cell {
+  border-bottom: 1px solid colour("grey-5");
+  padding-top: spacing(2);
+  padding-right: spacing(4);
+  padding-bottom: spacing(2)-1px;
+  text-align: left;
+  vertical-align: top;
+
+  @include mq($from: tablet) {
+    padding-bottom: spacing(3);
+    padding-top: spacing(3)-1px; // Compensate for border bottom 1px
+  }
+
+}
+
+
+.table__header {
+  border-color: colour("black");
+}
+
+
+.table__header:last-child,
+.table__cell:last-child {
+  padding-right: 0;
+}
+
+
+.table__header--numeric,
+.table__cell--numeric {
+  text-align: right;
+}
+
+
+.table__cell--nowrap {
+  white-space: nowrap;
+}

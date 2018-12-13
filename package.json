@@ -1,0 +1,47 @@
+{
+  "name": "trevor-saint",
+  "description": "Trevor Saint website",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": "11.2.0",
+    "npm": "6.4.1"
+  },
+  "scripts": {
+    "start": "gulp develop",
+    "heroku-postbuild": "gulp build"
+  },
+  "author": {
+    "name": "Trevor Saint",
+    "email": "hello@trevorsaint.uk"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/trevorsaint/trevorsaint.git"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "browser-sync": "^2.26.3",
+    "del": "^3.0.0",
+    "express": "^4.16.4",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-cache": "^1.0.1",
+    "gulp-changed": "^3.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-data": "^1.2.1",
+    "gulp-eslint": "^5.0.0",
+    "gulp-htmlhint": "^0.3.1",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-nodemon": "^2.4.1",
+    "gulp-nunjucks-render": "^2.2.2",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.1",
+    "gulp-util": "^3.0.8",
+    "require-dir": "^1.1.0",
+    "run-sequence": "^2.2.1",
+    "sass-mq": "^5.0.0"
+  }
+}

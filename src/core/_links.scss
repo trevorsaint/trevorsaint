@@ -1,0 +1,34 @@
+.link {
+  @include focusable-fill;
+  @include font-weight("semi-bold");
+
+  &:link,
+  &:visited,
+  &:hover,
+  &:active,
+  &:focus {
+    color: colour("black");
+  }
+
+  &[aria-current=page] {
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+}
+
+
+.link--ondark {
+
+  &:link,
+  &:visited,
+  &:hover,
+  &:active {
+    color: colour("white");
+  }
+
+  &:focus {
+    color: colour("black");
+  }
+
+}

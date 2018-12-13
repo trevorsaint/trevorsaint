@@ -1,0 +1,14 @@
+.quote {
+  margin: 0;
+}
+
+
+.quote__cite {
+  @include typography(16);
+}
+
+
+.quote__cite-name {
+  @include font-weight(bold);
+  display: block;
+}

@@ -1,0 +1,80 @@
+@import "../helpers/colours";
+
+// =========================================================
+// Generic
+// =========================================================
+
+// Brand colour
+$brand-colour: colour("red") !default;
+
+
+// Text colour
+$text-colour: colour("black") !default;
+
+
+// Secondary text colour
+$secondary-text-colour: colour("grey-1") !default;
+
+
+// Focus colour
+$focus-colour: colour("light-blue") !default;
+
+
+// Focused text colour
+$focus-text-colour: colour("black") !default;
+
+
+// Error colour
+$focus-error-colour: colour("red") !default;
+
+
+// Border colour
+$focus-border-colour: colour("grey-2") !default;
+
+
+// Input border colour
+$focus-input-border-colour: colour("black") !default;
+
+
+// Canvas background colour
+$canvas-background-colour: colour("black") !default;
+
+
+// Body background colour
+$body-background-colour: colour("white") !default;
+
+
+// =========================================================
+// Links
+// =========================================================
+
+// Link colour
+$link-colour: colour("black") !default;
+
+
+// Visited link colour
+$link-visited-colour: colour("black") !default;
+
+
+// Hover link colour
+$link-hover-colour: colour("black") !default;
+
+
+// Active link colour
+$link-active-colour: colour("black") !default;
+
+
+// link inverted colour
+$link-inverted-colour: colour("white") !default;
+
+
+// Visited inverted link colour
+$link-inverted-visited-colour: colour("white") !default;
+
+
+// Hover inverted link colour
+$link-inverted-hover-colour: colour("white") !default;
+
+
+// Active inverted link colour
+$link-inverted-active-colour: colour("white") !default;

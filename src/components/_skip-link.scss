@@ -1,0 +1,8 @@
+.skip-link {
+  @include focusable-fill;
+  @include visually-hidden-focusable;
+  @include typography(16);
+  display: block;
+  padding: spacing(2) spacing(3);
+  text-align: center;
+}

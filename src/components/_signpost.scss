@@ -1,0 +1,101 @@
+.signpost {
+
+  @include mq($from: tablet) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+}
+
+
+.signpost__item {
+
+  @include mq($until: tablet) {
+    margin-bottom: spacing(5);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+  }
+
+}
+
+
+.signpost__link {
+  @include typography(19);
+  @include focusable;
+  display: inline-block;
+  text-decoration: none;
+}
+
+
+.signpost__link--next {
+
+  @include mq($from: tablet) {
+    text-align: right;
+  }
+
+}
+
+
+.signpost__link-label {
+  @include typography(24);
+  @include font-weight(bold);
+  display: block;
+  font-family: font-family(gilroy);
+
+  &:before,
+  &:after {
+    background-image: image-url("icon/signpost.svg"); // This is a sprite (contains left / right arrow)
+    display: inline-block;
+    height: 16px;
+    vertical-align: top;
+    width: 16px;
+
+    @include mq($from: tablet) {
+      position: relative;
+      top: 6px;
+    }
+
+  }
+
+  &:before {
+    background-position: 0 0;
+    content: "";
+    margin-right: spacing(2);
+  }
+
+}
+
+
+.signpost__link-context {
+  display: block;
+  margin-left: spacing(2)+16px;  // Size of the arrow
+  text-decoration: underline;
+}
+
+
+.signpost__link--next .signpost__link-label:before {
+  background-position: 16px 16px;
+}
+
+
+@include mq($from: tablet) {
+
+  .signpost__link--next .signpost__link-label:before {
+    content: none;
+  }
+
+  .signpost__link--next .signpost__link-label:after {
+    background-position: 16px 16px;
+    content: "";
+    margin-left: spacing(2);
+  }
+
+  .signpost__link--next .signpost__link-context {
+    margin-left: 0; // Reset
+    margin-right: spacing(2)+16px; // Size of the arrow
+  }
+
+}

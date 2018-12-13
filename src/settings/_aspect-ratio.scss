@@ -1,0 +1,20 @@
+/*
+Aspect ratio
+
+Maintain aspect ratio using psuedo elements to maintain an elements
+aspect ratio, even if it scales.
+
+Example: scss
+.element {
+  @include aspect-ratio(16,9);
+}
+*/
+
+@mixin aspect-ratio($ratio-or-width, $height: null) {
+  $padding: if($height,
+    percentage($height/$ratio-or-width),
+    percentage(1/$ratio-or-width)
+  );
+  &:before { content:''; float: left; padding-bottom: $padding;  }
+  &:after  { content:''; display: table; clear: both;  }
+}

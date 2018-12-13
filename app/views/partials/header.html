@@ -1,0 +1,27 @@
+
+  <header class="header">
+
+    <div class="header__container">
+
+      <div class="header__logo">
+        <a class="header__logo-link" href="/">Trevor Saint</a>
+      </div>
+
+      <div class="header__navigation">
+
+        <nav class="navigation" id="nav">
+          <ul class="navigation__list">
+            <li class="navigation__item"><a class="navigation__link" href="/"{% if pageId == 'home' %} aria-current="page"{% endif %}><span>Home</span></a></li>
+            <li class="navigation__item"><a class="navigation__link" href="/about"{% if pageId == 'about' %} aria-current="page"{% endif %}><span>About</span></a></li>
+            <li class="navigation__item"><a class="navigation__link" href="/feedback"{% if pageId == 'feedback' %} aria-current="page"{% endif %}><span>Feedback</span></a></li>
+            <li class="navigation__item"><a class="navigation__link" href="/projects"{% if pageId == 'projects' %} aria-current="page"{% endif %}><span>Projects</span></a></li>
+            <li class="navigation__item"><a class="navigation__link" href="/contact"{% if pageId == 'contact' %} aria-current="page"{% endif %}><span>Contact</span></a></li>
+          </ul>
+        </nav>
+
+      </div>
+
+    </div>
+
+  </header>
+  

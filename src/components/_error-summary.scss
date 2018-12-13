@@ -1,0 +1,56 @@
+.error-summary {
+  @include responsive-padding(4); // 15px then 20px
+  @include responsive-margin(8, "bottom"); // 30px then 50px
+  @include focusable;
+  border: 5px solid colour("red");
+}
+
+
+.error-summary__title {
+  @include typography(24);
+  font-family: font-family(gilroy);
+  margin-bottom: spacing(2);
+  margin-top: 0;
+}
+
+
+.error-summary__body {
+  @include typography(19);
+
+  p {
+    margin-bottom: spacing(4);
+    margin-top: 0;
+  }
+
+}
+
+
+.error-summary__list {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+
+.error-summary__list-item:last-child {
+  margin-bottom: 0;
+}
+
+
+.error-summary__link {
+  @include focusable-fill;
+  @include font-weight(bold);
+
+  // Override default link styling to use error colour
+  &:link,
+  &:visited,
+  &:hover,
+  &:active {
+    color: colour("red");
+  }
+
+  // When focussed, the text colour needs to be darker to ensure that colour contrast is still acceptable
+  &:focus {
+    color: $focus-text-colour;
+  }
+
+}
