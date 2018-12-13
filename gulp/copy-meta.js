@@ -6,8 +6,7 @@ gulp.task('copy-meta', function() {
   return gulp.src([
     'humans.txt',
     'robots.txt',
-    'manifest.json',
-    'sw.js' 
+    'manifest.json'
   ])
   .pipe(gulp.dest('public/'));
 
