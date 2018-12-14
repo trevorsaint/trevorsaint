@@ -1,5 +1,3 @@
-https://moz.com/learn/seo/robotstxt
-
 User-agent: *
 Disallow: /contact/thanks/
 Disallow: /support/cookies/
