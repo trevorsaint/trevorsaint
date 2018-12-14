@@ -1,4 +1,6 @@
 https://moz.com/learn/seo/robotstxt
 
 User-agent: *
-Disallow: /example-subfolder/
+Disallow: /contact/thanks/
+Disallow: /support/cookies/
+Disallow: /support/privacy-policy/
