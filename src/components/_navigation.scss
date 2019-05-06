@@ -1,12 +1,22 @@
 .navigation {
 
   @include mq($until: tablet) {
-    border-bottom: spacing(1) solid colour("blue");
+    background-color: colour("black");
     left: 0;
     position: absolute;
     top: 55px;
     width: 100%;
-    z-index: 1;
+
+    &::after {
+      background-color: rgba(colour("black"), .5);
+      content: "";
+      height: 100%;
+      position: fixed;
+      top: 55px;
+      width: 100%;
+      z-index: -1;
+    }
+
   }
 
 }
@@ -43,8 +53,7 @@
     &[aria-current] {
       @include font-weight(bold);
       background-color: colour("black");
-      border-right: spacing(1) solid colour("blue");
-      color: colour("blue");
+      border-right: spacing(1) solid colour("white");
 
       &:focus {
         color: colour("blue");
@@ -89,12 +98,12 @@
   }
 
 
-  @include mq(tablet) {    
+  @include mq(tablet) {
     &[aria-current=page] {
       @include font-weight(bold);
       border-bottom: spacing(1) solid colour("white");
       padding-bottom: spacing(1); // Compensate for border
-    }    
+    }
   }
 
 }
