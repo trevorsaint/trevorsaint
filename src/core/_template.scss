@@ -7,6 +7,10 @@ body {
   background-color: colour("blue");
   font-family: font-family(adelle-sans);
   margin: 0;
+
+  // Font rendering fixes
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 
