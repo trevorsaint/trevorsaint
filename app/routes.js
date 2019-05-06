@@ -29,6 +29,10 @@ router.get('/projects', function(req, res) {
     res.render('projects/paramount-packaging');
   });
 
+  router.get('/projects/rural-payments', function(req, res) {
+    res.render('projects/rural-payments');
+  });
+
 router.get('/feedback', function(req, res) {
   res.render('feedback');
 });
