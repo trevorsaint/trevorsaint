@@ -25,6 +25,7 @@
 // Copyright
 .copyright {
   @include typography(14);
+  color: colour("grey-3");
   margin-right: spacing(4);
 }
 

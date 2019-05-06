@@ -14,8 +14,28 @@
 .meta-list__item {
   @include typography(14);
 
-  &:not(:last-child) { // IE 9+ (prevents the need for a reset)
+  &:not(:last-child) {
+
+    // IE 9+ (prevents the need for a reset)
     margin-right: spacing(2);
+  }
+
+}
+
+
+.meta-list__link {
+  @include focusable-fill;
+  @include font-weight("semi-bold");
+
+  &:link,
+  &:visited,
+  &:hover,
+  &:active {
+    color: colour("grey-3");
+  }
+
+  &:focus {
+    color: colour("black");
   }
 
 }
