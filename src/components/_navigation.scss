@@ -1,5 +1,6 @@
 .navigation {
 
+  // Mobile
   @include mq($until: tablet) {
     background-color: colour("black");
     left: 0;
@@ -29,6 +30,7 @@
 
   @include mq(tablet) {
     display: flex;
+    margin-right: - spacing(3); // Alignment tweak
   }
 
 }
