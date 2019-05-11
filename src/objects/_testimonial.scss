@@ -1,8 +1,22 @@
 .testimonial {
+  position: relative;
 
-  @include mq(tablet) {
+  @include mq($from: tablet) {
+    align-items: flex-start;
     display: flex;
     justify-content: space-between;
+  }
+
+  @include responsive-padding(9, "bottom");
+
+  &:not(:first-child) {
+    @include responsive-padding(9, "top");
+    border-top: 1px solid colour("grey-5");
+    margin-top: -1px; // Restore vertical rhythm
+  }
+
+  &:last-child {
+    padding-bottom: 0;
   }
 
 }
@@ -19,11 +33,15 @@
 }
 
 
-.testimonial__quote {
-  max-width: 585px; // Ideal content width
+.testimonial__content {
+  max-width: 688px; // Ideal content width
 
-  @include mq(tablet) {
+  @include mq($from: tablet) {
     padding-left: spacing(9);
   }
+}
 
+
+.testimonial__quote:not(:last-child) {
+  margin-bottom: spacing(9);
 }
