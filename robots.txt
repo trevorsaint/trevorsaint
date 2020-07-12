@@ -1,4 +1,2 @@
 User-agent: *
-Disallow: /contact/thanks/
-Disallow: /support/cookies/
-Disallow: /support/privacy-policy/
+Disallow: /contact/thanks

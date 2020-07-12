@@ -1,59 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{{pageTitle}}</title>
-    <meta name="author" content="Trevor Saint">
-    <meta name="theme-color" content="#0b0c0c">
-    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Manifest -->
-    <link href="{{assetPath}}manifest.json" rel="manifest">
+    <title>{{ pageTitle }}</title>
+
+    <!-- Stylesheet -->
+    <link href="{{assetPath}}stylesheets/main.css" rel="stylesheet">
 
     <!-- Add home screen for Safari on iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="Trevor Saint">
 
-    <link href="{{assetPath}}images/icon/512x512.png" rel="shortcut icon" type="image/png">
-    <link href="{{assetPath}}images/icon/favicon.png" rel="icon" type="image/png" sizes="32x32">
-    <link href="{{assetPath}}images/icon/152x152.png" rel="apple-touch-icon" sizes="152x152">
+    <!-- Apple icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="{{ assetPath }}images/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{ assetPath }}images/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ assetPath }}images/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ assetPath }}images/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ assetPath }}images/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ assetPath }}images/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ assetPath }}images/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ assetPath }}images/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ assetPath }}images/apple-icon-180x180.png">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="{{assetPath}}stylesheets/main.css" rel="stylesheet">
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="96x96" href="{{ assetPath }}images/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ assetPath }}images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ assetPath }}images/favicon-16x16.png">
 
-    <!-- Standard SEO -->
-    <meta name="referrer" content="no-referrer-when-downgrade">
-    <meta name="description" content="{{pageDescription}}">
-    <link href="http://localhost:3000" rel="canonical">
-    <link href="http://localhost:3000" rel="alternate" hreflang="x-default">
+    <!-- Search Engine -->
+    <meta name="description" content="{{ pageDescription }}">
 
-    <!-- Facebook open graph -->
+    <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:locale" content="en_gb">
-    <meta property="og:url" content="http://localhost:3000">
-    <meta property="og:title" content="{{pageTitle}}">
-    <meta property="og:description" content="{{pageDescription}}">
-    <meta property="og:image" content="{{assetPath}}images/icon/opengraph.png">
+    <meta property="og:url" content="{{ assetPath }}">
+    <meta property="og:title" content="{{ pageTitle }}">
+    <meta property="og:image" content="{{ assetPath }}images/opengraph.png">
+    <meta property="og:description" content="{{ pageDescription }}">
+    <meta property="og:site_name" content="Trevor Saint">
+    <meta property="og:locale" content="en_GB">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:site_name" content="Trevor Saint">
-    <meta property="og:see_also" content="https://pinterest.co.uk/trevorsaint">
-    <meta property="og:see_also" content="https://linkedin.com/in/trevorsaint">
-    <meta property="og:see_also" content="https://twitter.com/trevorsaint">
-    <meta property="og:see_also" content="https://instagram.com/trevorsaint">
-    <meta property="og:see_also" content="https://github.com/trevorsaint">
 
-    <!-- Twitter Card -->
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="{{pageTitle}}">
-    <meta name="twitter:description" content="{{pageDescription}}">
-    <meta name="twitter:image" content="{{assetPath}}images/icon/512x512.png">
+    <meta name="twitter:site" content="@trevorsaint">
+    <meta name="twitter:creator" content="trevorsaint">
+    <meta name="twitter:url" content="{{ assetPath }}">
+    <meta name="twitter:title" content="{{ pageTitle }}">
+    <meta name="twitter:description" content="{{ pageDescription }}">
+    <meta name="twitter:image" content="{{ assetPath }}images/twitter.png">
 
-    <!-- Humans.txt authorship http://humanstxt.org -->
-    <link href="{{assetPath}}humans.txt" type="text/plain" rel="author">
+
+    <!-- Manifest -->
+    <link href="{{ assetPath }}manifest.json" rel="manifest">
+    <meta name="theme-color" content="#0b0c0c">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <!--script async src="https://www.googletagmanager.com/gtag/js?id=UA-2273524-1"></script>

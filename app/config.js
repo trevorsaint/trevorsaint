@@ -5,7 +5,7 @@ module.exports = {
   serviceName: 'Trevor Saint',
 
   // Asset path
-  assetPath: '/public/',
+  assetPath: '/',
 
   // Default port that prototype runs on
   port: '3000'

@@ -4,9 +4,9 @@ const gulp = require('gulp');
 gulp.task('copy-meta', function() {
 
   return gulp.src([
-    'humans.txt',
     'robots.txt',
-    'manifest.json'
+    'manifest.json',
+    'sw.js'
   ])
   .pipe(gulp.dest('public/'));
 
