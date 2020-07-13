@@ -41,14 +41,6 @@ router.get('/feedback', function(req, res) {
   res.render('feedback/index');
 });
 
-router.get('/contact', function(req, res) {
-  res.render('contact/index');
-});
-
-router.get('/contact/thanks', function(req, res) {
-  res.render('contact/thanks/index');
-});
-
 router.get('/cookies', function(req, res) {
   res.render('cookies/index');
 });
