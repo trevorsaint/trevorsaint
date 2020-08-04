@@ -1,25 +1,33 @@
+<a class="skip-link" href="#content">Skip to main content</a>
 
-  <header class="header">
+<header class="header js-header">
 
-    <div class="header__container">
+  <div class="header__container container">
 
-      <div class="header__logo">
-        <a class="header__logo-link" href="/">Trevor Saint</a>
-      </div>
-
-      <div class="header__navigation">
-
-        <nav class="navigation" id="nav">
-          <ul class="navigation__list">
-            <li class="navigation__item"><a class="navigation__link" href="/"{% if pageId == 'home' %} aria-current="page"{% endif %}><span>Home</span></a></li>
-            <li class="navigation__item"><a class="navigation__link" href="/about"{% if pageId == 'about' %} aria-current="page"{% endif %}><span>About</span></a></li>
-            <li class="navigation__item"><a class="navigation__link" href="/feedback"{% if pageId == 'feedback' %} aria-current="page"{% endif %}><span>Feedback</span></a></li>
-            <li class="navigation__item"><a class="navigation__link" href="/projects"{% if pageId == 'projects' %} aria-current="page"{% endif %}><span>Projects</span></a></li>
-          </ul>
-        </nav>
-
-      </div>
-
+    <div class="header__logo">
+      <a class="header__logo-link" href="/">
+        Trevor Saint
+      </a>
     </div>
 
-  </header>
+    <button class="header__trigger js-header__trigger button button--small button--icon-trailing" aria-label="Toggle menu" aria-expanded="false" aria-controls="header-nav">
+      Menu
+      <svg class="icon icon--sm" viewBox="0 0 24 24" role="img" focusable="false" aria-hidden="true">
+        <use xlink:href="{{ assetPath }}images/sprite.svg#expand-more"/>
+      </svg>
+    </button>
+
+    <nav class="header__nav js-header__nav" id="header-nav" aria-label="Main navigation">
+      <div class="header__nav-inner">
+        <ul class="header__list">
+          <li class="header__item"><a class="header__link" href="/"{% if pageId == "Home" %} aria-current="true"{% endif %}><span>Home</span></a></li>
+          <li class="header__item"><a class="header__link" href="/about"{% if pageId == "About" %} aria-current="true"{% endif %}><span>About</span></a></li>
+          <li class="header__item"><a class="header__link" href="/feedback"{% if pageId == "Feedback" %} aria-current="true"{% endif %}><span>Feedback</span></a></li>
+          <li class="header__item"><a class="header__link" href="/projects"{% if pageId == "Projects" %} aria-current="true"{% endif %}><span>Projects</span></a></li>
+        </ul>
+      </div>
+    </nav>
+
+  </div>
+
+</header>

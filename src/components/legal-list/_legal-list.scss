@@ -1,0 +1,15 @@
+/* --------------------------------
+Legal list
+-------------------------------- */
+
+
+.legal-list {
+  display: flex;
+}
+
+
+.legal-list__item {
+  @include typography(16);
+  display: flex;
+  margin-right: var(--space-xxs);
+}

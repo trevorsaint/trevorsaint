@@ -1,5 +1,5 @@
 // Core dependencies
-const path       = require('path');
+const path = require('path');
 
 
 // NPM dependencies
@@ -38,6 +38,7 @@ const nunjucksEnvironment = nunjucks.configure(appViews, {
   noCache: true,
   watch: true
 });
+
 
 // Set view engine
 app.set('view engine', 'html');

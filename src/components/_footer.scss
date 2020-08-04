@@ -1,37 +1,37 @@
 .footer {
-  background-color: colour("black");
-  color: colour("white");
+  background-color: var(--color-black);
+  color: var(--color-white);
 }
 
 
 .footer__container {
-  @include container;
-  padding-bottom: spacing(8);
-  padding-top: spacing(8);
+  //@include container;
+  padding-bottom: var(--space-lg);
+  padding-top: var(--space-lg);
 
-  @include mq($from: desktop) {
-    padding-bottom: spacing(8) * 2;
-    padding-top: spacing(8) * 2;
-  }
+  //@include mq($from: desktop) {
+    padding-bottom: var(--space-xxxxl);
+    padding-top: var(--space-xxxxl);
+  //}
 
-  @include mq($from: 500px) {
+  //@include mq($from: 500px) {
     display: flex;
     justify-content: space-between;
-  }
+  //}
 
 }
 
 
 // Copyright
 .copyright {
-  @include typography(14);
-  color: colour("grey-3");
-  margin-right: spacing(4);
+  //@include typography(14);
+  color: var(--color-contrast-medium);
+  margin-right: var(--space-xs);
 }
 
 
 .footer__support {
-  @include typography(14);
+  //@include typography(14);
   display: flex;
 }
 
@@ -39,12 +39,12 @@
 
 .footer__meta {
 
-  @include mq($from: 600px) {
+  //@include mq($from: 600px) {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     text-align: right;
-  }
+  //}
 
 }
 
@@ -52,11 +52,11 @@
 
 .footer__contact {
 
-  @include mq($from: 500px) {
+  //@include mq($from: 500px) {
     p:last-child {
       margin-bottom: 0;
     }
-  }
+  //}
 
 }
 

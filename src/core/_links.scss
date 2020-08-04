@@ -1,34 +1,22 @@
+/* --------------------------------
+Link
+-------------------------------- */
+
 .link {
-  @include focusable-fill;
-  @include font-weight("semi-bold");
+  @include link-common;
+  @include link-style-default;
+  font-weight: var(--font-semibold);
 
-  &:link,
-  &:visited,
-  &:hover,
-  &:active,
-  &:focus {
-    color: colour("black");
-  }
-
-  &[aria-current=page] {
-    font-weight: bold;
+  &[aria-current="true"] {
+    color: var(--color-black);
+    font-weight: var(--font-normal);
+    pointer-events: none; // Disable mouse pointer events
     text-decoration: none;
   }
 
 }
 
-
 .link--ondark {
-
-  &:link,
-  &:visited,
-  &:hover,
-  &:active {
-    color: colour("white");
-  }
-
-  &:focus {
-    color: colour("black");
-  }
-
+  @include link-style-ondark;
 }
+

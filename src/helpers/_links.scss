@@ -1,0 +1,67 @@
+// --------------------------------
+// Link
+// --------------------------------
+
+@mixin link-common {
+  font-weight: var(--font-semibold);
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:focus {
+    @include focused-text;
+  }
+
+}
+
+// Default link style mixin
+
+// Provides the default unvisited, visited, hover and active states for links.
+// If you use this mixin in a component you must also include the link-common
+// mixin in order to get the focus state.
+
+@mixin link-style-default {
+
+  &:link,
+  &:visited {
+    color: var(--color-black);
+  }
+
+  &:hover {
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+
+  &:focus,
+  &:active {
+    color: var(--color-white);
+  }
+
+}
+
+// On dark style link mixin
+
+// Used for links that sit on a dark background.
+// If you use this mixin in a component you must also include the
+// link-common mixin in order to get the focus state.
+
+@mixin link-style-ondark {
+
+  &:link,
+  &:visited,
+  &:hover {
+    color: var(--color-white);
+  }
+
+  &:hover {
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+
+  &:focus,
+  &:active {
+    color: var(--color-white);
+  }
+
+}

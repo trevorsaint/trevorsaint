@@ -1,0 +1,74 @@
+// --------------------------------
+// Colors
+// --------------------------------
+
+// Define HSL color variable
+@mixin defineColorHSL($color, $hue, $saturation, $lightness){
+  #{$color}: unquote("hsl(#{$hue}, #{$saturation}, #{$lightness})");#{$color}-h: #{$hue};#{$color}-s: #{$saturation};#{$color}-l: #{$lightness};
+}
+
+// Return color with different opacity value
+@function alpha($color, $opacity){
+  $color: str-replace($color, "var(");
+  $color: str-replace($color, ")");
+  $color-h: var(#{$color+"-h"});
+  $color-s: var(#{$color+"-s"});
+  $color-l: var(#{$color+"-l"});
+  @return hsla($color-h, $color-s, $color-l, $opacity);
+}
+
+// Return color with different lightness value
+@function lightness($color, $lightnessMultiplier){
+  $color: str-replace($color, "var(");
+  $color: str-replace($color, ")");
+  $color-h: var(#{$color+"-h"});
+  $color-s: var(#{$color+"-s"});
+  $color-l: var(#{$color+"-l"});
+  @return hsl($color-h, $color-s, calc(#{$color-l} * #{$lightnessMultiplier}));
+}
+
+// Replace substring with another string
+@function str-replace($string, $search, $replace: "") {
+  $index: str-index($string, $search);
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+  @return $string;
+}
+
+
+:root, [data-theme="default"] {
+
+  // Main colours
+  @include defineColorHSL(--color-primary-darker, 218, 100%, 30%);
+  @include defineColorHSL(--color-primary-dark, 218, 100%, 40%);
+  @include defineColorHSL(--color-primary, 218, 100%, 50%);
+  @include defineColorHSL(--color-primary-light, 218, 100%, 60%);
+  @include defineColorHSL(--color-primary-lighter, 218, 100%, 70%);
+
+  // Black + white
+  @include defineColorHSL(--color-black, 0, 0%, 0%);
+  @include defineColorHSL(--color-white, 0, 0%, 100%);
+
+  // Rating
+  @include defineColorHSL(--color-rating, 46, 100%, 61%);
+
+  // Error
+  @include defineColorHSL(--color-error-darker, 348, 100%, 35%);
+  @include defineColorHSL(--color-error-dark, 348, 100%, 45%);
+  @include defineColorHSL(--color-error, 348, 100%, 55%);
+  @include defineColorHSL(--color-error-light, 348, 100%, 65%);
+  @include defineColorHSL(--color-error-lighter, 348, 100%, 75%);
+
+  // Focus
+  @include defineColorHSL(--color-focus, 231, 52%, 88%);
+
+  // Color contrasts
+  @include defineColorHSL(--color-bg, 0, 0%, 100%);
+  @include defineColorHSL(--color-contrast-lower, 0, 0%, 95%);
+  @include defineColorHSL(--color-contrast-low, 240, 1%, 83%);
+  @include defineColorHSL(--color-contrast-medium, 240, 1%, 35%);
+  @include defineColorHSL(--color-contrast-high, 240, 4%, 20%);
+  @include defineColorHSL(--color-contrast-higher, 240, 8%, 12%);
+
+}

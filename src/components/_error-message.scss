@@ -1,7 +1,0 @@
-.error-message {
-  @include typography(19);
-  @include font-weight(bold);
-  color: colour("red");
-  display: block;
-  margin-bottom: spacing(2);
-}

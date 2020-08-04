@@ -1,231 +1,53 @@
+{% set pageTitle       = "A design system to solve problems and avoid repetition - Trevor Saint" %}
+{% set pageDescription = "Trevor Saint designed and developed a design system for HM Courts and Tribunals Service" %}
+{% set pageId          = "casestudy" %}
+
 {% extends "layout.html" %}
 
-{% set pageId = "casestudy" %}
-{% set pageTitle = "A design system to solve problems and avoid repetition - Trevor Saint" %}
-{% set pageDescription = "Trevor Saint designed and developed a design system for HM Courts and Tribunals Service" %}
-
 {% block content %}
-    <div class="container">
 
-      <nav class="breadcrumb" aria-label="Breadcrumb">
-        <ol class="breadcrumb__list">
-          <li class="breadcrumb__item"><a class="breadcrumb__link" href="/projects">Projects</a></li>
-          <li class="breadcrumb__item"><a class="breadcrumb__link" href="/projects/judicial-case-manager" aria-current="page">HMCTS Design System</a></li>
-        </ol>
-      </nav>
-
-      <div class="casestudy__header">
-
-        <div class="casestudy__header-logo">
-          <img src="{{assetPath}}images/logo/hmcts.svg" alt="HM Courts &amp; Tribunals Service">
-        </div>
-
-        <div class="casestudy__header-title">
-          <h1 class="heading-xxl">A design system to solve problems and avoid repetition</h1>
-        </div>
-
-      </div>
-
-      <div class="casestudy__content">
+<section>
 
 
-        <figure class="figure">
-          <div class="image  image--16:9">
-            <img src="{{assetPath}}images/projects/project/hmcts-design-system/hmcts-design-system-featured.png" srcset="{{assetPath}}images/projects/project/hmcts-design-system/hmcts-design-system-featured.png 1x, {{assetPath}}images/projects/project/hmcts-design-system/hmcts-design-system-featured@2x.png 2x" alt="HMCTS Design System visual inside Samsung tablet device">
-          </div>
-        </figure>
+  <div class="container">
 
 
-        <div class="textblock">
+    <a class="back-link margin-y-md" href="/projects"><svg class="icon icon--sm" viewBox="0 0 24 24" role="img" focusable="false" aria-hidden="true"><use xlink:href="{{assetPath}}images/sprite.svg#chevron-left"/></svg>Back</a>
 
-          <h2 class="heading-l">Overview</h2>
 
-          <div class="textblock__content">
+    <h1 class="heading-xxl">A design system to solve problems and avoid repetition</h1>
 
-            <div class="textblock__main">
-              <p>At <abbr class="abbr" title="HM Courts and Tribunals Service">HMCTS</abbr> the design practice consisted of 18 teams made up of 62 people. This included 26 researchers, 14 interaction designers, 3 service designers and 15 content designers.</p>
+
+    <figure class="margin-top-xs">
+      <div class="bg-contrast-lower media-wrapper media-wrapper--3:2"></div>
+    </figure>
+
+
+    <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
+
+      <div class="container max-width-xl">
+
+        <h2 class="heading-xl margin-bottom-sm">Overview</h2>
+
+        <div class="grid gap-sm justify-between">
+
+          <div class="col-7@sm">
+            <div class="text-component">
+              <p>At HMCTS the design practice consisted of 18 teams made up of 62 people. This included 26 researchers, 14 interaction designers, 3 service designers and 15 content designers.</p>
               <p>Given this, we wanted to reduce the effort it took to share good styles, components and patterns for reuse across the teams.</p>
-              <p>Creating the <abbr class="abbr" title="HM Courts and Tribunals Service">HMCTS</abbr> Design System solved all of these problems.</p>
-            </div>
-
-            <div class="textblock__supporting">
-              <dl class="metadata">
-                <dt class="metadata__heading">Client</dt>
-                <dd class="metadata__description">HM Courts &amp; Tribunals Service</dd>
-                <dt class="metadata__heading">Industry</dt>
-                <dd class="metadata__description">Government</dd>
-                <dt class="metadata__heading">Year</dt>
-                <dd class="metadata__description">2018</dd>
-              </dl>
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <figure class="figure">
-          <div class="image image--16:10">
-            <img src="{{assetPath}}images/projects/project/hmcts-design-system/hmcts-design-system-home-page.png" srcset="{{assetPath}}images/projects/project/hmcts-design-system/hmcts-design-system-home-page.png 1x, {{assetPath}}images/projects/project/hmcts-design-system/hmcts-design-system-home-page@2x.png 2x" alt="HMCTS Design System home page example showing desktop, tablet and mobile version of the design">
-          </div>
-          <figcaption class="figure__caption">Home page visual design for the <abbr class="abbr" title="HM Courts and Tribunals Service">HMCTS</abbr> Design System</figcaption>
-        </figure>
-
-
-        <div class="textblock">
-
-          <h2 class="heading-l">Our approach</h2>
-
-          <div class="textblock__content">
-            <div class="textblock__main">
-              <p>After consulting Government Digital Service (<abbr>GDS</abbr>), we created an alpha version of <abbr class="abbr" title="HM Courts and Tribunals Service">HMCTS</abbr> Design System that closely matched the approach of the GOV.UK Design System.</p>
-              <p>This meant using the same words to describe things and the same format and layout for delivering the design system. It also meant creating an <abbr class="abbr" title="HM Courts and Tribunals Service">HMCTS</abbr> Frontend project where the styles and component code would live just like GOV.UK Frontend.</p>
+              <p>Creating the HMCTS Design System solved all of these problems.</p>
             </div>
           </div>
 
-        </div>
-
-
-        <figure class="figure">
-          <div class="image image--16:10">
-            <img src="{{assetPath}}images/projects/project/hmcts-design-system/hmcts-design-system-progress-bar.png" srcset="{{assetPath}}images/projects/project/hmcts-design-system/hmcts-design-system-progress-bar.png 1x, {{assetPath}}images/projects/project/hmcts-design-system/hmcts-design-system-progress-bar@2x.png 2x" alt="HMCTS Design System progress bar component example">
-          </div>
-          <figcaption class="figure__caption">Progress bar component in the <abbr class="abbr" title="HM Courts and Tribunals Service">HMCTS</abbr> Design System</figcaption>
-        </figure>
-
-        <figure class="figure">
-          <div class="image image--16:10">
-            <img src="{{assetPath}}images/projects/project/hmcts-design-system/hmcts-design-system-pagination.png" srcset="{{assetPath}}images/projects/project/hmcts-design-system/hmcts-design-system-pagination.png 1x, {{assetPath}}images/projects/project/hmcts-design-system/hmcts-design-system-pagination@2x.png 2x" alt="HMCTS Design System pagination component example">
-          </div>
-          <figcaption class="figure__caption">Pagination component in the <abbr class="abbr" title="HM Courts and Tribunals Service">HMCTS</abbr> Design System</figcaption>
-        </figure>
-
-
-        <div class="textblock">
-
-          <h2 class="heading-l">Quality assurance</h2>
-
-          <div class="textblock__content">
-            <div class="textblock__main">
-              <p>We made sure that the <abbr class="abbr" title="HM Courts and Tribunals Service">HMCTS</abbr> Design System was easy to use in projects and easy to contribute to as a designer by making releases possible.</p>
-              <p>We also ensured a good level of quality control, by making sure contributors couldn't push without two people’s review.</p>
-            </div>
-          </div>
-
-        </div>
-
-
-        <figure class="figure">
-          <div class="image image--16:10">
-            <img src="{{assetPath}}images/projects/project/hmcts-design-system/hmcts-design-system-quality-assurance.png" srcset="{{assetPath}}images/projects/project/hmcts-design-system/hmcts-design-system-quality-assurance.png 1x, {{assetPath}}images/projects/project/hmcts-design-system/hmcts-design-system-quality-assurance@2x.png 2x" alt="HMCTS Design System timeline component being used in a service for Judicial case manager">
-          </div>
-          <figcaption class="figure__caption">Manage case decisions using components from the <abbr class="abbr" title="HM Courts and Tribunals Service">HMCTS</abbr> Design System</figcaption>
-        </figure>
-
-
-        <div class="textblock">
-
-          <h2 class="heading-l">Collaborative effort</h2>
-
-          <div class="textblock__content">
-            <div class="textblock__main">
-              <p>Various patterns that were either designed or required were discussed in weekly design crits. If good enough, they would be added into the backlog ready for development, and added to <abbr class="abbr" title="HM Courts and Tribunals Service">HMCTS</abbr> Frontend, and documented in the <abbr class="abbr" title="HM Courts and Tribunals Service">HMCTS</abbr> Design System.</p>
-            </div>
-          </div>
-
-        </div>
-
-
-        <figure class="figure">
-          <div class="image image--16:10">
-            <img src="{{assetPath}}images/projects/project/hmcts-design-system/hmcts-design-system-contributors.png" srcset="{{assetPath}}images/projects/project/hmcts-design-system/hmcts-design-system-contributors.png 1x, {{assetPath}}images/projects/project/hmcts-design-system/hmcts-design-system-contributors@2x.png 2x" alt="HMCTS Design System progress bar component example">
-          </div>
-          <figcaption class="figure__caption">Contributors for the <abbr class="abbr" title="HM Courts and Tribunals Service">HMCTS</abbr> Design System and <abbr class="abbr" title="HM Courts and Tribunals Service">HMCTS</abbr> Frontend on GitHub repositories</figcaption>
-        </figure>
-
-
-        <div class="textblock">
-
-          <h2 class="heading-l">Our process</h2>
-
-          <div class="textblock__content">
-            <div class="textblock__main">
-              <p>When we designed and developed the <a class="link" href="/projects/judicial-case-manager">Judicial case manager</a>, a lot of the elements were useful for other service lines, which is why a lot of these were added into the <abbr class="abbr" title="HM Courts and Tribunals Service">HMCTS</abbr> Design System as a foundation to build upon.</p>
-              <p>Each component needed to be made flexible and reusable, so time was spent making these into components which were customisable for each use case. We would ensure that each component was semantic, accessible and responsive.</p>
-              <p>We would also perform other checks such as various browser types and operating systems to ensure each component was good enough for reuse.</p>
-            </div>
-          </div>
-
-        </div>
-
-
-        <figure class="figure">
-          <div class="image image--16:10">
-            <img src="{{assetPath}}images/projects/project/hmcts-design-system/hmcts-design-system-process.png" srcset="{{assetPath}}images/projects/project/hmcts-design-system/hmcts-design-system-process.png 1x, {{assetPath}}images/projects/project/hmcts-design-system/hmcts-design-system-process@2x.png 2x" alt="HMCTS Design System collaboration on GitHub about the progress bar used in the GOV.UK divorce service">
-          </div>
-          <figcaption class="figure__caption">Collaboration on GitHub about the <abbr class="abbr" title="HM Courts and Tribunals Service">HMCTS</abbr> Frontend and <abbr class="abbr" title="HM Courts and Tribunals Service">HMCTS</abbr> Design System progress bar being used on GOV.UK divorce</figcaption>
-        </figure>
-
-
-        <div class="textblock">
-
-          <h2 class="heading-l">The benefits</h2>
-
-          <div class="textblock__content">
-            <div class="textblock__main">
-              <p>The benefits of a Design System is that if a service is using a component, any changes or improvements we make to the design system are immediately reflected in the services using the component. We would perform these updates in ‘package releases’.</p>
-            </div>
-          </div>
-
-        </div>
-
-
-        <figure class="figure">
-          <div class="image image--16:10">
-            <img src="{{assetPath}}images/projects/project/hmcts-design-system/hmcts-design-system-benefits.png" srcset="{{assetPath}}images/projects/project/hmcts-design-system/hmcts-design-system-benefits.png 1x, {{assetPath}}images/projects/project/hmcts-design-system/hmcts-design-system-benefits@2x.png 2x" alt="HMCTS Frontend releases on GitHub">
-          </div>
-          <figcaption class="figure__caption"><abbr class="abbr" title="HM Courts and Tribunals Service">HMCTS</abbr> Frontend package release v0.0.21-alpha on GitHub</figcaption>
-        </figure>
-
-
-        <div class="textblock">
-
-          <h2 class="heading-l">The results</h2>
-
-          <div class="textblock__content">
-            <div class="textblock__main">
-              <p>A number of separate services teams are now using the design system and saving a lot of time because of that.</p>
-              <p>This ensured consistency throughout all service lines, with a significant reduction in time and effort spent in research, design, development and accessibility testing.</p>
-            </div>
-          </div>
-
-        </div>
-
-        <figure class="figure">
-          <div class="image image--16:10">
-            <img src="{{assetPath}}images/projects/project/hmcts-design-system/hmcts-design-system-results.png" srcset="{{assetPath}}images/projects/project/hmcts-design-system/hmcts-design-system-results.png 1x, {{assetPath}}images/projects/project/hmcts-design-system/hmcts-design-system-results@2x.png 2x" alt="Manage case decisions using components from the HMCTS Design System">
-          </div>
-          <figcaption class="figure__caption">Manage case decisions using components from the <abbr class="abbr" title="HM Courts and Tribunals Service">HMCTS</abbr> Design System</figcaption>
-        </figure>
-
-
-        <hr class="section-break  section-break--xl  section-break--visible">
-
-
-        <div class="signpost">
-
-          <div class="signpost__item">
-            <a class="signpost__link signpost__link--previous" href="/projects/judicial-case-manger">
-              <span class="signpost__link-label">Previous</span>
-              <span class="signpost__link-context">Judicial case manager</span>
-            </a>
-          </div>
-
-          <div class="signpost__item">
-            <a class="signpost__link signpost__link--next" href="/projects/paramount-packaging">
-              <span class="signpost__link-label">Next</span>
-              <span class="signpost__link-context">Paramount Packaging</span>
-            </a>
+          <div class="col-3@sm">
+            <dl>
+              <dt class="font-bold">Client</dt>
+              <dd class="margin-bottom-xs">HM Courts &amp; Tribunals Service</dd>
+              <dt class="font-bold">Industry</dt>
+              <dd class="margin-bottom-xs">Government</dd>
+              <dt class="font-bold">Year</dt>
+              <dd>2018</dd>
+            </dl>
           </div>
 
         </div>
@@ -233,4 +55,215 @@
       </div>
 
     </div>
+
+
+    <figure>
+      <div class="bg-contrast-lower media-wrapper media-wrapper--3:2"></div>
+      <figcaption class="color-contrast-medium body-sm margin-top-xxs">Home page visual design for the HMCTS Design System</figcaption>
+    </figure>
+
+
+    <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
+
+      <div class="container max-width-xl">
+
+        <div class="grid gap-sm justify-between">
+
+          <div class="col-7@sm">
+            <div class="text-component">
+              <h2>Our approach</h2>
+              <p>After consulting Government Digital Service (GDS), we created an alpha version of HMCTS Design System that closely matched the approach of the GOV.UK Design System.</p>
+              <p>This meant using the same words to describe things and the same format and layout for delivering the design system. It also meant creating an HMCTS Frontend project where the styles and component code would live just like GOV.UK Frontend.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <figure>
+      <div class="bg-contrast-lower media-wrapper media-wrapper--3:2"></div>
+      <figcaption class="color-contrast-medium body-sm margin-top-xxs">Progress bar component in the HMCTS Design System</figcaption>
+    </figure>
+
+
+    <figure class="margin-top-xs">
+      <div class="bg-contrast-lower media-wrapper media-wrapper--3:2"></div>
+      <figcaption class="color-contrast-medium body-sm margin-top-xxs">Pagination component in the HMCTS Design System</figcaption>
+    </figure>
+
+
+    <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
+
+      <div class="container max-width-xl">
+
+        <div class="grid gap-sm justify-between">
+
+          <div class="col-7@sm">
+            <div class="text-component">
+              <h2>Quality assurance</h2>
+              <p>We made sure that the HMCTS Design System was easy to use in projects and easy to contribute to as a designer by making releases possible.</p>
+              <p>We also ensured a good level of quality control, by making sure contributors couldn't push without two people’s review.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <figure>
+      <div class="bg-contrast-lower media-wrapper media-wrapper--3:2"></div>
+      <figcaption class="color-contrast-medium body-sm margin-top-xxs">Manage case decisions using components from the HMCTS Design System</figcaption>
+    </figure>
+
+
+    <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
+
+      <div class="container max-width-xl">
+
+        <div class="grid gap-sm justify-between">
+
+          <div class="col-7@sm">
+            <div class="text-component">
+              <h2>Collaborative effort</h2>
+              <p>Various patterns that were either designed or required were discussed in weekly design crits. If good enough, they would be added into the backlog ready for development, and added to HMCTS Frontend, and documented in the HMCTS Design System.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <figure>
+      <div class="bg-contrast-lower media-wrapper media-wrapper--3:2"></div>
+      <figcaption class="color-contrast-medium body-sm margin-top-xxs">Contributors for the HMCTS Design System and HMCTS Frontend on GitHub repositories</figcaption>
+    </figure>
+
+
+    <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
+
+      <div class="container max-width-xl">
+
+        <div class="grid gap-sm justify-between">
+
+          <div class="col-7@sm">
+            <div class="text-component">
+              <h2>Our process</h2>
+              <p>When we designed and developed the Judicial case manager, a lot of the elements were useful for other service lines, which is why a lot of these were added into the HMCTS Design System as a foundation to build upon.</p>
+              <p>Each component needed to be made flexible and reusable, so time was spent making these into components which were customisable for each use case. We would ensure that each component was semantic, accessible and responsive.</p>
+              <p>We would also perform other checks such as various browser types and operating systems to ensure each component was good enough for reuse.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <figure>
+      <div class="bg-contrast-lower media-wrapper media-wrapper--3:2"></div>
+      <figcaption class="color-contrast-medium body-sm margin-top-xxs">Collaboration on GitHub about the HMCTS Frontend and HMCTS Design System progress bar being used on GOV.UK divorce</figcaption>
+    </figure>
+
+
+    <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
+
+      <div class="container max-width-xl">
+
+        <div class="grid gap-sm justify-between">
+
+          <div class="col-7@sm">
+            <div class="text-component">
+              <h2>The benefits</h2>
+              <p>The benefits of a Design System is that if a service is using a component, any changes or improvements we make to the design system are immediately reflected in the services using the component. We would perform these updates in ‘package releases’.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <figure>
+      <div class="bg-contrast-lower media-wrapper media-wrapper--3:2"></div>
+      <figcaption class="color-contrast-medium body-sm margin-top-xxs">HMCTS Frontend package release v0.0.21-alpha on GitHub</figcaption>
+    </figure>
+
+
+    <figure class="margin-top-xs">
+      <div class="bg-contrast-lower media-wrapper media-wrapper--3:2"></div>
+      <figcaption class="color-contrast-medium body-sm margin-top-xxs">Manage case decisions using components from the HMCTS Design System</figcaption>
+    </figure>
+
+
+    <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
+
+      <div class="container max-width-xl">
+
+        <div class="grid gap-sm justify-between">
+
+          <div class="col-7@sm">
+            <div class="text-component">
+              <h2>The results</h2>
+              <p>A number of separate services teams are now using the design system and saving a lot of time because of that.</p>
+              <p>This ensured consistency throughout all service lines, with a significant reduction in time and effort spent in research, design, development and accessibility testing.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="container padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg border-top">
+
+      <nav class="pagination" aria-label="Pagination Navigation">
+
+        <a class="pagination__link" href="/projects/judicial-case-manager" rel="prev">
+
+          <span class="pagination__direction">
+            <svg class="icon icon--sm margin-right-xxxs" viewBox="0 0 24 24" role="img" focusable="false" aria-hidden="true"><use xlink:href="/images/sprite.svg#arrow-back"/></svg>
+            Previous
+          </span>
+
+          <span class="pagination__subtext display@sm">Judicial Case Manager</span>
+
+        </a>
+
+        <a class="pagination__link pagination__link--next" href="/projects/paramount-packaging" rel="next">
+
+          <span class="pagination__direction">
+            Next
+            <svg class="icon icon--sm margin-left-xxxs" viewBox="0 0 24 24" role="img" focusable="false" aria-hidden="true"><use xlink:href="/images/sprite.svg#arrow-forward"/></svg>
+          </span>
+
+          <span class="pagination__subtext display@sm">Paramount Packaging</span>
+
+        </a>
+
+      </nav>
+
+    </div>
+
+
+  </div>
+
+
+</section>
+
 {% endblock %}

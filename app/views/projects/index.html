@@ -1,137 +1,125 @@
-{% extends "layout.html" %}
-
-{% set pageId = "projects" %}
-{% set pageTitle = "Pleasure in the job puts perfection in the work - Trevor Saint" %}
+{% set pageTitle       = "Pleasure in the job puts perfection in the work" %}
 {% set pageDescription = "Trevor Saint showing his most recent work for government departments and other industries." %}
+{% set pageId          = "projects" %}
+
+{% extends "layout.html" %}
 
 {% block content %}
 
-  <div class="section section--masthead">
+  <!-- Masthead -->
+  <section class="bg-primary padding-y-md padding-y-lg@sm">
     <div class="container">
-      <div class="contents">
-        <h1 class="heading-xxl override-!-margin-bottom-0">Pleasure in the job puts perfection in the work</h1>
+      <div class="text-component color-white max-width-md">
+        <h1>Projects</h1>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="section">
+  <!-- Projects -->
+  <section class="container padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
 
-    <div class="container">
+    <div class="grid gap-sm items-center justify-between padding-bottom-xl">
 
-      <div class="project">
-
-        <div class="project__content">
-          <h2 class="heading-l"><a class="link" href="/projects/servelec">Servelec</a></h2>
+      <div class="col-5@sm">
+        <div class="text-component">
+          <h2><a href="/projects/servelec">Servelec</a></h2>
           <p>Servelec is a health informatics company and supplies software to the healthcare, social care and education sectors.</p>
         </div>
-
-        <div class="project__image">
-          <div class="image image--3:2">
-            <a class="link" href="/projects/servelec" tabindex="-1" aria-hidden="true">
-              <img src="{{assetPath}}images/projects/project/servelec/servelec-teaser.jpg" srcset="{{assetPath}}images/projects/project/servelec/servelec-teaser.jpg 1x, {{assetPath}}images/projects/project/servelec/servelec-teaser@2x.jpg 2x" alt="Servelec branded photo effect">
-            </a>
-          </div>
-        </div>
-
       </div>
 
-      <hr class="section-break section-break--m">
-
-      <div class="project project--reverse">
-
-        <div class="project__content">
-          <h2 class="heading-l"><a class="link" href="/projects/max-powder">Max Powder</a></h2>
-          <p>Max Powder is an alloy wheel refurbishment company in Hemel Hempstead. They are a small friendly team who have a passion for quality and attention to detail.</p>
+      <div class="col-6@sm">
+        <div class="bg-contrast-lower media-wrapper media-wrapper--3:2">
+          <a class="link" href="/projects/servelec" tabindex="-1" aria-hidden="true"></a>
         </div>
-
-        <div class="project__image">
-          <div class="image image--3:2">
-            <a class="link" href="/projects/max-powder" tabindex="-1" aria-hidden="true">
-              <img src="{{assetPath}}images/projects/project/max-powder/max-powder-teaser.jpg" srcset="{{assetPath}}images/projects/project/max-powder/max-powder-teaser.jpg 1x, {{assetPath}}images/projects/project/max-powder/max-powder-teaser@2x.jpg 2x" alt="Max Powder website on a Google Pixel mobile device">
-            </a>
-          </div>
-        </div>
-
-      </div>
-
-      <hr class="section-break section-break--m">
-
-      <div class="project">
-
-        <div class="project__content">
-          <h2 class="heading-l"><a class="link" href="/projects/judicial-case-manager">Judicial case manager</a></h2>
-          <p>The Judicial case manager is part of a &pound;1 billion programme involving over 50 projects to change and improve the Courts and Tribunals Service, to bring new technology and modern ways of working.</p>
-        </div>
-
-        <div class="project__image">
-          <div class="image image--3:2">
-            <a class="link" href="/projects/judicial-case-manager" tabindex="-1" aria-hidden="true">
-              <img src="{{assetPath}}images/projects/project/judicial-case-manager/judicial-case-manager-teaser.jpg" srcset="{{assetPath}}images/projects/project/judicial-case-manager/judicial-case-manager-teaser.jpg 1x, {{assetPath}}images/projects/project/judicial-case-manager/judicial-case-manager-teaser@2x.jpg 2x" alt="Central Criminal Court in London">
-            </a>
-          </div>
-        </div>
-
-      </div>
-
-      <hr class="section-break section-break--m">
-
-      <div class="project project--reverse">
-
-        <div class="project__content">
-          <h2 class="heading-l"><a class="link" href="/projects/hmcts-design-system">HMCTS Design System</a></h2>
-          <p>The <abbr class="abbr" title="HM Courts and Tribunals Service">HMCTS</abbr> Design System is a collection of reusable components and design patterns for use across all the service lines and the reform programme.</p>
-        </div>
-
-        <div class="project__image">
-          <div class="image image--3:2">
-            <a class="link" href="/projects/hmcts-design-system" tabindex="-1" aria-hidden="true">
-              <img src="{{assetPath}}images/projects/project/hmcts-design-system/hmcts-design-system-teaser.png" srcset="{{assetPath}}images/projects/project/hmcts-design-system/hmcts-design-system-teaser.png 1x, {{assetPath}}images/projects/project/hmcts-design-system/hmcts-design-system-teaser@2x.png 2x" alt="HMCTS Design System service on mobile and tablet devices">
-            </a>
-          </div>
-        </div>
-
-      </div>
-
-      <hr class="section-break section-break--m">
-
-      <div class="project">
-
-        <div class="project__content">
-          <h2 class="heading-l"><a class="link" href="/projects/paramount-packaging">Paramount Packaging</a></h2>
-          <p>Paramount Packaging are the leading supplier of horizontal and vertical Fuji packaging solutions for the food, non-food, pharmaceutical and medical device industries.</p>
-        </div>
-
-        <div class="project__image">
-          <div class="image image--3:2">
-            <a class="link" href="/projects/paramount-packaging" tabindex="-1" aria-hidden="true">
-              <img src="{{assetPath}}images/projects/project/paramount-packaging/paramount-packaging-teaser.jpg" srcset="{{assetPath}}images/projects/project/paramount-packaging/paramount-packaging-teaser.jpg 1x, {{assetPath}}images/projects/project/paramount-packaging/paramount-packaging-teaser@2x.jpg 2x" alt="Paramount Packaging website on a Google Pixel mobile device">
-            </a>
-          </div>
-        </div>
-
-      </div>
-
-      <hr class="section-break section-break--m">
-
-      <div class="project project--reverse">
-
-        <div class="project__content">
-          <h2 class="heading-l"><a class="link" href="/projects/rural-payments">Rural Payments (GOV.UK)</a></h2>
-          <p>The Rural Payments is an online registration system for farmers, animal keepers, rural traders and businesses. They use this service to make online applications for rural grants and payments.</p>
-        </div>
-
-        <div class="project__image">
-          <div class="image image--3:2">
-            <a class="link" href="/projects/rural-payments" tabindex="-1" aria-hidden="true">
-              <img src="{{assetPath}}images/projects/project/rural-payments/rural-payments-teaser.jpg" srcset="{{assetPath}}images/projects/project/rural-payments/rural-payments-teaser.jpg 1x, {{assetPath}}images/projects/project/rural-payments/rural-payments-teaser@2x.jpg 2x" alt="">
-            </a>
-          </div>
-        </div>
-
       </div>
 
     </div>
 
-  </div>
+    <div class="grid gap-sm items-center justify-between padding-bottom-xl">
+
+      <div class="col-5@sm">
+        <div class="text-component">
+          <h2><a href="/projects/max-powder">Max Powder</a></h2>
+          <p>Max Powder is an alloy wheel refurbishment company in Hemel Hempstead. They are a small friendly team who have a passion for quality and attention to detail.</p>
+        </div>
+      </div>
+
+      <div class="col-6@sm">
+        <div class="bg-contrast-lower media-wrapper media-wrapper--3:2">
+          <a class="link" href="/projects/max-powder" tabindex="-1" aria-hidden="true"></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="grid gap-sm items-center justify-between padding-bottom-xl">
+
+      <div class="col-5@sm">
+        <div class="text-component">
+          <h2><a href="/projects/judicial-case-manager">Judicial case manager</a></h2>
+          <p>The Judicial case manager is part of a &pound;1 billion programme involving over 50 projects to change and improve the Courts and Tribunals Service, to bring new technology and modern ways of working.</p>
+        </div>
+      </div>
+
+      <div class="col-6@sm">
+        <div class="bg-contrast-lower media-wrapper media-wrapper--3:2">
+          <a class="link" href="/projects/judicial-case-manager" tabindex="-1" aria-hidden="true"></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="grid gap-sm items-center justify-between padding-bottom-xl">
+
+      <div class="col-5@sm">
+        <div class="text-component">
+          <h2><a href="/projects/hmcts-design-system">HMCTS Design System</a></h2>
+          <p>The HMCTS Design System is a collection of reusable components and design patterns for use across all the service lines and the reform programme.</p>
+        </div>
+      </div>
+
+      <div class="col-6@sm">
+        <div class="bg-contrast-lower media-wrapper media-wrapper--3:2">
+          <a class="link" href="/projects/hmcts-design-system" tabindex="-1" aria-hidden="true"></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="grid gap-sm items-center justify-between padding-bottom-xl">
+
+      <div class="col-5@sm">
+        <div class="text-component">
+          <h2><a href="/projects/paramount-packaging">Paramount Packaging</a></h2>
+          <p>Paramount Packaging are the leading supplier of horizontal and vertical Fuji packaging solutions for the food, non-food, pharmaceutical and medical device industries.</p>
+        </div>
+      </div>
+
+      <div class="col-6@sm">
+        <div class="bg-contrast-lower media-wrapper media-wrapper--3:2">
+          <a class="link" href="/projects/paramount-packaging" tabindex="-1" aria-hidden="true"></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="grid gap-sm items-center justify-between">
+
+      <div class="col-5@sm">
+        <div class="text-component">
+          <h2><a href="/projects/rural-payments">Rural Payments (GOV.UK)</a></h2>
+          <p>The Rural Payments is an online registration system for farmers, animal keepers, rural traders and businesses. They use this service to make online applications for rural grants and payments.</p>
+        </div>
+      </div>
+
+      <div class="col-6@sm">
+        <div class="bg-contrast-lower media-wrapper media-wrapper--3:2">
+          <a class="link" href="/projects/rural-payments" tabindex="-1" aria-hidden="true"></a>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
 
 {% endblock %}

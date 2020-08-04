@@ -1,150 +1,60 @@
+{% set pageTitle       = "Get to know me a little better" %}
+{% set pageDescription = "Trevor Saint has been in the creative industry for 17 years and has experience designing and developing impressive web services for government departments and digital agencies." %}
+{% set pageId          = "about" %}
+
 {% extends "layout.html" %}
 
-{% set pageId = "about" %}
-{% set pageTitle = "Get to know me a little better - Trevor Saint" %}
-{% set pageDescription = "Trevor Saint has been in the creative industry for 17 years and has experience designing and developing impressive web services for government departments and digital agencies." %}
-
 {% block content %}
-    <div class="section section--masthead">
-      <div class="container">
-        <div class="contents">
-          <h1 class="heading-xxl override-!-margin-bottom-0">Get to know me a little better</h1>
-        </div>
-      </div>
+
+<!-- Masthead -->
+<section class="bg-primary padding-y-md padding-y-lg@sm">
+  <div class="container">
+    <div class="text-component color-white max-width-md">
+      <h1>About</h1>
     </div>
+  </div>
+</section>
 
-    <div class="section">
+<!-- About -->
+<section class="container padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
 
-      <div class="container">
+  <div class="grid gap-sm justify-between">
 
-        <div class="about">
+    <div class="col-6@sm">
 
-          <div class="about__body">
+      <div class="text-component">
 
-            <h2 class="heading-xl">Hello, I’m Trevor</h2>
+        <h2>Hello, I’m Trevor</h2>
 
-            <p>I’ve been in the creative industry 17 years, graduating in 2002, with a BSc (Hons) Multimedia Computing degree. It’s a great industry to be involved in, and I consider myself incredibly fortunate.</p>
+        <p>I’ve been in the creative industry 17 years, graduating in 2002, with a BSc (Hons) Multimedia Computing degree. It’s a great industry to be involved in, and I consider myself incredibly fortunate.</p>
 
-            <p>After years of experience working with different companies, I’ve obtained hands-on-skills in design, front-end and back-end development.</p>
+        <p>After years of experience working with different companies, I’ve obtained hands-on-skills in design, front-end and back-end development.</p>
 
-            <h3 class="heading-m">What I’m comfortable with</h3>
+        <h3>What I’m comfortable with</h3>
 
-            <p>There are a lot of software products and technologies I’m comfortable with and use daily. Some of these include:</p>
+        <p>There are a lot of software products and technologies I’m comfortable with and use daily. Some of these include:</p>
 
-            <ul class="list list--bullet">
-              <li>Balsamiq, Sketch and Adobe Suite</li>
-              <li>Visual Studio Code, Terminal, Github</li>
-              <li>HTML, CSS, SASS, ARIA</li>
-              <li>Node, Express, Nunjucks and Gulp</li>
-            </ul>
+        <ul>
+          <li>Balsamiq, Sketch and Adobe Suite</li>
+          <li>Visual Studio Code, Terminal, Github</li>
+          <li>HTML, CSS, SASS, ARIA</li>
+          <li>Node, Express, Nunjucks and Gulp</li>
+        </ul>
 
-            <h3 class="heading-m">What I’m working on at the moment</h3>
+        <h3>What I’m working on at the moment</h3>
 
-            <p>I’m working with Office for National Statistics on Census 2021.</p>
-
-          </div>
-
-          <div class="about__image">
-            <div class="image image--3:4">
-              <img src="{{assetPath}}images/profile/profile-photo.jpg" srcset="{{assetPath}}images/profile/profile-photo.jpg 1x, {{assetPath}}images/profile/profile-photo@2x.jpg 2x" alt="Profile photo of Trevor Saint">
-            </div>
-          </div>
-
-        </div>
-
-        <hr class="section-break section-break--xl section-break--visible">
-
-        <h1 class="heading-xl">I’ve worked for</h1>
-
-        <div class="clients-grid">
-
-          <div class="clients-grid__item">
-            <div class="client">
-              <img src="{{assetPath}}images/logo/servelec.svg" alt="Servelec - Together for Digital Care">
-            </div>
-          </div>
-
-          <div class="clients-grid__item">
-            <div class="client">
-              <img src="{{assetPath}}images/logo/elsevier.svg" alt="Elsevier">
-            </div>
-          </div>
-
-          <div class="clients-grid__item">
-            <div class="client">
-              <img src="{{assetPath}}images/logo/premier-league.svg" alt="Premier League">
-            </div>
-          </div>
-
-          <div class="clients-grid__item">
-            <div class="client">
-              <img src="{{assetPath}}images/logo/ministry-of-justice.svg" alt="Ministry of Justice">
-            </div>
-          </div>
-
-          <div class="clients-grid__item">
-            <div class="client">
-              <img src="{{assetPath}}images/logo/defra.svg" alt="Department for Environment Food &amp; Rural Affairs">
-            </div>
-          </div>
-
-          <div class="clients-grid__item">
-            <div class="client">
-              <img src="{{assetPath}}images/logo/nike.svg" alt="Nike">
-            </div>
-          </div>
-
-          <div class="clients-grid__item">
-            <div class="client">
-              <img src="{{assetPath}}images/logo/hmcts.svg" alt="HM Courts &amp; Tribunals Service">
-            </div>
-          </div>
-
-          <div class="clients-grid__item">
-            <div class="client">
-              <img src="{{assetPath}}images/logo/the-football-association.svg" alt="The Football Association">
-            </div>
-          </div>
-
-          <div class="clients-grid__item">
-            <div class="client">
-              <img src="{{assetPath}}images/logo/kainos.svg" alt="Kainos">
-            </div>
-          </div>
-
-          <div class="clients-grid__item">
-            <div class="client">
-              <img src="{{assetPath}}images/logo/gov.svg" alt="GOV.UK">
-            </div>
-          </div>
-
-          <div class="clients-grid__item">
-            <div class="client">
-              <img src="{{assetPath}}images/logo/akqa.svg" alt="AKQA">
-            </div>
-          </div>
-
-          <div class="clients-grid__item">
-            <div class="client">
-              <img src="{{assetPath}}images/logo/rural-payments-agency.svg" alt="Rural Payments Agency">
-            </div>
-          </div>
-
-          <div class="clients-grid__item">
-            <div class="client">
-              <img src="{{assetPath}}images/logo/capita.svg" alt="Capita">
-            </div>
-          </div>
-
-          <div class="clients-grid__item">
-            <div class="client">
-              <img src="{{assetPath}}images/logo/conchango.svg" alt="Conchango">
-            </div>
-          </div>
-
-        </div>
+        <p>I’m working with Office for National Statistics on Census 2021.</p>
 
       </div>
 
     </div>
+
+    <div class="col-4@sm">
+      <div class="bg-contrast-lower media-wrapper media-wrapper--3:4"></div>
+    </div>
+
+  </div>
+
+</section>
+
 {% endblock %}

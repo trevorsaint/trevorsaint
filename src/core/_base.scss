@@ -1,0 +1,87 @@
+// --------------------------------
+// Base
+// --------------------------------
+
+html {
+  @include typography(16);
+  background-color: var(--color-black);
+  font-size: 100%;
+  font-weight: var(--font-normal);
+  min-height: 100%; // Ensure page fills entire viewport
+  overflow-x: hidden;
+  // Fix fonts that render as bold in Firefox - https://www.lockedownseo.com/firefox-font-weight-too-bold
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+// Optional - enable smooth scrolling
+@media screen and (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  @include typography(20);
+  background-color: var(--color-white);
+  color: var(--color-black);
+  font-family: var(--font-secondary);
+  font-weight: var(--font-regular);
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  background-color: transparent;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-primary);
+  font-weight: var(--font-bold);
+}
+
+b,
+strong {
+  font-weight: var(--font-bold);
+}
+
+img,
+svg,
+video {
+  display: block;
+  user-select: none;
+}
+
+abbr[title] {
+  border-bottom: 0;
+  cursor: help;
+  text-decoration: none;
+}
+
+:focus {
+  outline: 0;
+}
+
+::-moz-focus-inner {
+  border: 0;
+}
+
+::selection {
+  background-color: alpha(var(--color-primary), 0.99);
+  color: var(--color-white);
+}
+
+// Internet Explorer 10-11
+:-ms-input-placeholder {
+  color: var(--color-contrast-low);
+}
+
+// Microsoft Edge
+::-ms-input-placeholder {
+  color: var(--color-contrast-low);
+}

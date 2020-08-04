@@ -1,0 +1,15 @@
+/* --------------------------------
+Back link
+-------------------------------- */
+
+
+.back-link {
+  @include link-common;
+  @include link-style-default;
+  align-items: center;
+  display: inline-flex;
+  font-weight: var(--font-bold);
+  left: calc(var(--space-xxxs) * -1);
+  position: relative;
+  vertical-align: top;
+}

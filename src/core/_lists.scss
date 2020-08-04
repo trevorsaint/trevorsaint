@@ -1,30 +1,118 @@
+/* --------------------------------
+List
+Custom list component
+-------------------------------- */
+
 .list {
-  @include responsive-margin(4, "bottom");
-  @include typography(19);
-  list-style-type: none;
-  margin-top: 0;
   padding-left: 0;
 
-  // Add top margin to nested lists
-  .list {
-    margin-top: govuk-spacing(2);
+  ul,
+  ol {
+    margin: 0; // Reset
+    padding-left: var(--space-xs);
+    padding-top: var(--space-xxxs);
+  }
+
+  li {
+    display: block;
+    margin-bottom: var(--space-xxxs);
+  }
+
+  > li:last-child, ul > li:last-child, ol > li:last-child {
+    margin-bottom: 0;
+  }
+
+  ul > li:last-child, ol > li:last-child {
+    padding-bottom: 0;
   }
 
 }
 
+.list--ul,
+.list--ol {
 
-.list > li {
-  margin-bottom: spacing(1);
+  li {
+    padding-left: calc(var(--bullet-size) + var(--bullet-margin-right));
+  }
+
+  li::before {
+    display: inline-flex;
+    height: var(--bullet-size);
+    left: calc(var(--bullet-margin-right) * -1);
+    margin-left: calc(var(--bullet-size) * -1);
+    position: relative;
+    vertical-align: middle;
+    width: var(--bullet-size);
+  }
+
 }
 
+// Unordered list
+.list--ul {
 
-.list--bullet {
-  list-style-type: disc;
-  padding-left: spacing(4);
+  --bullet-size: 8px; // Dot width and height
+  --bullet-margin-right: var(--space-xxs); // Gap between bullet and content
+
+  // Bullet
+  li::before {
+    background-color: currentColor;
+    border: 2px solid currentColor;
+    border-radius: 50%;
+    color: var(--color-black); // Bullet color
+    content: "";
+  }
+
+  ul li::before {
+    background-color: transparent;
+  }
+
 }
 
+// Ordered list
+.list--ol {
 
-.list--number {
-  list-style-type: decimal;
-  padding-left: spacing(4);
+  --bullet-size: 24px; // Circle width and height
+  --bullet-margin-right: var(--space-xxxs); // Ggap between circle and content
+
+  counter-reset: list-items;
+
+  li {
+    counter-increment: list-items;
+  }
+
+  ol {
+    counter-reset: list-items;
+  }
+
+  li::before {
+    @include typography(16);
+    align-items: center;
+    background-color: var(--color-contrast-lower);
+    border: 2px solid var(--color-contrast-lower);
+    border-radius: 50%;
+    color: var(--color-contrast-high);
+    content: counter(list-items);
+    top: -1px;
+    padding-top: 3px;
+    justify-content: center;
+  }
+
+  ol li::before {
+    background-color: transparent;
+  }
+
+}
+
+// Tick list
+.list--tick {
+
+  li {
+    display: flex;
+    margin-bottom: var(--space-xxs); // Double up the gap between items
+  }
+
+  svg {
+    color: var(--color-primary);
+  }
+
 }

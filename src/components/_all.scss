@@ -1,22 +1,16 @@
-@import "header";
-@import "navigation";
 @import "footer";
-@import "button";
-@import "label";
-@import "hint";
-@import "input";
-@import "textarea";
-@import "error-message";
-@import "error-summary";
-@import "table";
-@import "signpost";
+@import "pagination";
 @import "breadcrumb";
-@import "skip-link";
-// @import "back-link";
-@import "social-list";
 @import "meta-list";
-@import "inset-text";
-@import "toggle";
 @import "quote";
 @import "figure";
 @import "metadata";
+
+
+
+@import "legal-list/legal-list";
+@import "social-list/social-list";
+@import "header/header";
+@import "button/button";
+@import "skip-link/skip-link";
+@import "back-link/back-link";

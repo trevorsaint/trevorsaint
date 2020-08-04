@@ -1,0 +1,312 @@
+/* --------------------------------
+Main Header
+Accessible website navigation
+-------------------------------- */
+
+:root {
+  --logo-max-color: var(--color-primary);
+  --logo-power-color: var(--color-white);
+}
+
+
+.header {
+  background-color: var(--color-black);
+  height: 80px;
+  position: relative;
+  width: 100%;
+  z-index: var(--zindex-header);
+}
+
+
+.header__container {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+}
+
+
+// Logo
+.header__logo {
+  display: block;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+
+  a, svg, img {
+    display: block;
+  }
+
+}
+
+
+.header__logo-link {
+  color: var(--color-white);
+  text-decoration: none;
+
+  &:focus {
+    @include focused-text;
+  }
+
+}
+
+
+// Navigation
+.header__nav {
+  background-color: var(--color-black);
+  box-shadow: var(--shadow-lg);
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-height: 100vh;
+  overflow: auto;
+  width: 100%;
+  z-index: 1;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+
+  // Top header bg + border
+  &::before {
+    background: inherit;
+    border-bottom: 1px solid var(--color-contrast-high);
+    content: "";
+    display: block;
+    position: sticky;
+    height: 80px; // Same as height of header
+    top: 0;
+  }
+
+}
+
+
+.header__nav--is-visible {
+  display: block;
+}
+
+
+.header__nav-inner {
+  padding: var(--space-sm) 0;
+}
+
+
+// Nav list item
+.header__item {
+  display: block;
+  margin-bottom: var(--space-xxxs);
+  padding: calc(var(--space-xxs) - var(--space-xxxxs)) var(--space-xs);
+  position: relative;
+}
+
+
+// Link within list item
+.header__link {
+  font-family: var(--font-primary);
+  color: var(--color-white);
+  display: block;
+  display: inline-block;
+  outline-color: var(--color-primary);
+  text-decoration: none;
+
+
+  &:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+  }
+
+
+  &[aria-current] {
+    color: var(--color-primary);
+    font-weight: var(--font-bold);
+
+    &:before {
+      background-color: var(--color-primary);
+      content: "";
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 4px;
+    }
+
+  }
+
+
+  &:focus {
+    @include focused-text;
+  }
+
+
+  // Fine adjustments
+  span {
+    display: block;
+    position: relative;
+    top: 1px;
+  }
+
+  // Trick for making the whole element clickable
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+  }
+
+}
+
+
+// Menu trigger
+.header__trigger {
+  position: relative;
+  z-index: 2;
+}
+
+
+// Active
+.header__trigger[aria-expanded="true"] {
+
+  .icon {
+    transform: rotate(180deg);
+  }
+
+}
+
+
+
+@include breakpoint(sm) {
+
+
+  // Sticky header on large screens
+  .header {
+    position: sticky;
+    top: 0;
+  }
+
+
+  .header__nav {
+
+    // Reset
+    background-color: transparent;
+    box-shadow: none;
+    display: block;
+    max-height: none;
+    overflow: visible;
+    overscroll-behavior: auto;
+    position: static;
+    width: auto;
+
+    &::before {
+      display: none;
+    }
+
+  }
+
+
+  .header__nav-inner {
+    padding: 0; // Reset
+  }
+
+
+  .header__list {
+    align-items: center;
+    display: flex;
+  }
+
+
+  .header__item {
+    display: inline-block; // Flex fallback
+    margin-bottom: 0;
+    margin-left: var(--space-sm);
+    padding: 0; // Reset
+  }
+
+
+  .header__link {
+    padding: 0;
+
+    &:after {
+      content: none; // Reset
+    }
+
+    &[aria-current] {
+
+      &:before {
+        height: 4px;
+        top: auto;
+        bottom: -31px;
+        width: 100%;
+      }
+
+    }
+
+
+  }
+
+
+  .header__trigger {
+    display: none !important;
+  }
+
+
+}
+
+
+
+// No JS fallback
+html:not(.js) {
+
+  .header {
+    height: auto;
+    padding-top: var(--space-xs);
+  }
+
+  .header__trigger {
+    display: none;
+  }
+
+  .header__container {
+    display: block;
+  }
+
+  .header__nav {
+    box-shadow: none;
+    display: block;
+    height: auto;
+    overflow: visible;
+    padding: 0;
+    position: static;
+
+    &::before {
+      display: none;
+    }
+
+  }
+
+  .header__nav-inner {
+    height: auto;
+    margin-left: calc(-1 * var(--space-xs));
+    margin-right: calc(-1 * var(--space-xs));
+    overflow: visible;
+    padding: var(--space-xs) 0;
+    position: static;
+  }
+
+
+  @include breakpoint(md) {
+
+    .header {
+      padding: 0;
+    }
+
+    .header__container {
+      display: flex;
+      padding: var(--space-xs) 0;
+    }
+
+    .header__nav-inner {
+      margin: 0; // Reset
+      padding: 0; // Reset
+    }
+
+  }
+
+}
