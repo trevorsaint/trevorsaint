@@ -36,16 +36,28 @@ routes.get('/projects', function(req, res) {
     res.render('projects/servelec/index');
   });
 
-routes.get('/feedback', function(req, res) {
-  res.render('feedback/index');
+routes.get('/testimonials', function(req, res) {
+  res.render('testimonials/index');
+});
+
+routes.get('/contact', function(req, res) {
+  res.render('contact/index');
+});
+
+routes.post('/contact/thank-you', function(req, res) {
+  res.render('contact/thank-you');
 });
 
 routes.get('/support/cookies', function(req, res) {
   res.render('support/cookies/index');
 });
 
-routes.get('/support/privacy-notice', function(req, res) {
-  res.render('support/privacy-notice/index');
+routes.get('/support/privacy', function(req, res) {
+  res.render('support/privacy/index');
+});
+
+routes.get('/support/accessibility', function(req, res) {
+  res.render('support/accessibility/index');
 });
 
 

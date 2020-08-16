@@ -1,72 +1,35 @@
-/*
-Font family
+// --------------------------------
+// Font faces
+// --------------------------------
 
-How to use:
-font-family: font-family(gilroy);
-font-family: font-family(adelle-sans);
-
-Reference: https://css-tricks.com/snippets/css/using-font-face
-
-font-display: swap; - https://developers.google.com/web/updates/2016/02/font-display
-*/
 
 @font-face {
-  font-family: "Gilroy";
-  font-display: swap;
-  src: font-url("Gilroy-Medium.woff2") format("woff2"),
-       font-url("Gilroy-Medium.woff") format("woff");
-  font-weight: 500; // Medium
+  font-family: "Baskerville";
+  src: font-url("Baskerville.woff2") format("woff2"), font-url("Baskerville.woff") format("woff");
+  font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: "Gilroy";
-  font-display: swap;
-  src: font-url("Gilroy-Bold.woff2") format("woff2"),
-       font-url("Gilroy-Bold.woff") format("woff");
-  font-weight: 700; // Bold
+  font-family: "Moderat";
+  src: font-url("Moderat-Bold.woff2") format("woff2"), font-url("Moderat-Bold.woff") format("woff");
+  font-weight: bold;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: "Gilroy";
-  font-display: swap;
-  src: font-url("Gilroy-ExtraBold.woff2") format("woff2"),
-       font-url("Gilroy-ExtraBold.woff") format("woff");
-  font-weight: 800; // Extra bold
+  font-family: "Moderat";
+  src: font-url("Moderat-Regular.woff2") format("woff2"), font-url("Moderat-Regular.woff") format("woff");
+  font-weight: normal;
   font-style: normal;
-}
-
-@font-face {
-  font-family: "Adelle Sans";
   font-display: swap;
-  src: font-url("AdelleSans.woff2") format("woff2"),
-       font-url("AdelleSans.woff") format("woff");
-  font-weight: 400; // Regular
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Adelle Sans";
-  font-display: swap;
-  src: font-url("AdelleSans-SemiBold.woff2") format("woff2"),
-       font-url("AdelleSans-SemiBold.woff") format("woff");
-  font-weight: 600; // Semi bold
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Adelle Sans";
-  font-display: swap;
-  src: font-url("AdelleSans-Bold.woff2") format("woff2"),
-       font-url("AdelleSans-Bold.woff") format("woff");
-  font-weight: 700; // Bold
-  font-style: normal;
 }
 
 
 // Font family
 :root {
-  --font-primary:   "Gilroy", "Avenir", "Century Gothic", -apple-system, "Helvetica Neue", "Segoe UI", "Roboto", sans-serif;
-  --font-secondary: "Adelle Sans", "Droid Sans", -apple-system, "Helvetica Neue", "Segoe UI", "Arial", sans-serif;
+  --font-primary:   "Baskerville", "Baskerville Old Face", "Hoefler Text", "Garamond", "Times New Roman", serif;
+  --font-secondary: "Moderat", "Arial", sans-serif
 }

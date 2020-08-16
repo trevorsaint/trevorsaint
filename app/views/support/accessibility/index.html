@@ -1,0 +1,77 @@
+{% set pageTitle       = "Accessibility" %}
+{% set pageDescription = "" %}
+{% set pageId          = "accessibility" %}
+
+{% extends "layout.html" %}
+
+{% block content %}
+
+<section class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
+
+  <div class="container">
+
+    <div class="grid gap-xs justify-between">
+
+      <div class="col-8@sm">
+
+        <div class="text-component">
+
+          <h1>Accessibility</h1>
+
+          <p>This website is run by Trevor Saint. I want as many people as possible to be able to use this website. For example, that means you should be able to:</p>
+
+          <ul>
+            <li>change colours, contrast levels and fonts</li>
+            <li>zoom in up to 300% without the text spilling off the screen</li>
+            <li>navigate most of the website using just a keyboard</li>
+            <li>navigate most of the website using speech recognition software</li>
+            <li>listen to most of the website using a screen reader (including the most recent versions of JAWS, NVDA and VoiceOver)</li>
+          </ul>
+
+          <p><a href="https://mcmw.abilitynet.org.uk" rel="external">AbilityNet</a> has advice on making your device easier to use if you have a disability.</p>
+
+          <h2>Reporting accessibility problems</h2>
+
+          <p>If you find any problems that are not listed on this page or you think I’m not meeting the accessibility requirements, <a href="/contact">contact me</a></p>
+
+          <h2>Enforcement procedure</h2>
+
+          <p>If you contact me with a complaint and you’re not happy with my response <a href="https://www.equalityadvisoryservice.com" rel="external">contact the Equality Advisory and Support Service (EASS)</a></p>
+
+          <p>The Equality and Human Rights Commission (EHRC) is responsible for enforcing the Public Sector Bodies (Websites and Mobile Applications) (No. 2) Accessibility Regulations 2018 (the ‘accessibility regulations’).</p>
+
+          <h2>Technical information</h2>
+
+          <p>Trevor Saint is committed to making its website accessible, in accordance with the Public Sector Bodies (Websites and Mobile Applications) (No. 2) Accessibility Regulations 2018.</p>
+
+          <h3>Compliance status</h3>
+
+          <p>This website is fully compliant with the <a href="https://www.w3.org/TR/WCAG21" rel="external">Web Content Accessibility Guidelines version 2.1</a> AA standard.</p>
+
+        </div>
+
+      </div>
+
+      <div class="col-3@sm">
+
+        <aside class="border-top border-primary border-4">
+
+          <h3 class="heading-md margin-top-xs margin-bottom-xxs">Support</h3>
+
+          <ul class="list">
+            <li class="list__item"><a class="link" href="/support/accessibility"{% if pageId == "accessibility" %} aria-current="true" tabindex="-1"{% endif %}>Accessibility</a></li>
+            <li class="list__item"><a class="link" href="/support/privacy"{% if pageId == "privacy" %} aria-current="true" tabindex="-1"{% endif %}>Privacy</a></li>
+            <li class="list__item"><a class="link" href="/support/cookies"{% if pageId == "cookies" %} aria-current="true" tabindex="-1"{% endif %}>Cookies</a></li>
+          </ul>
+
+        </aside>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+{% endblock %}

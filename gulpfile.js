@@ -54,10 +54,14 @@ function scripts() {
     .src([
       'src/assets/javascripts/util.js',
       'src/components/header/header.js',
-      'src/components/skip-link/skip-link.js'
+      'src/components/skip-link/skip-link.js',
+      'src/components/read-more/read-more.js',
+      'src/components/swipe-content/swipe-content.js',
+      'src/components/carousel/carousel.js',
+      'src/components/accordion/accordion.js'
     ])
     .pipe(uglify())
-    .pipe(concat('app.js'))
+    .pipe(concat('scripts.js'))
     .pipe(gulp.dest(configPaths.public + 'javascripts'))
 }
 

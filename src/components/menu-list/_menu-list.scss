@@ -1,0 +1,19 @@
+/* --------------------------------
+ Menu list
+-------------------------------- */
+
+
+.menu-list {
+  display: flex;
+}
+
+
+.menu-list__item {
+  @include typography(18);
+  display: flex;
+
+  &:not(:last-child) {
+    margin-right: var(--space-sm);
+  }
+
+}

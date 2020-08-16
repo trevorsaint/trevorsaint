@@ -1,7 +1,7 @@
 /* --------------------------------
-Main Header
-Accessible website navigation
+Header
 -------------------------------- */
+
 
 :root {
   --logo-max-color: var(--color-primary);
@@ -10,8 +10,7 @@ Accessible website navigation
 
 
 .header {
-  background-color: var(--color-black);
-  height: 80px;
+  height: 120px;
   position: relative;
   width: 100%;
   z-index: var(--zindex-header);
@@ -40,8 +39,15 @@ Accessible website navigation
 }
 
 
+.header__logo-svg {
+  display: block;
+  height: 80px;
+  width: 85px;
+}
+
+
 .header__logo-link {
-  color: var(--color-white);
+  color: var(--color-black);
   text-decoration: none;
 
   &:focus {
@@ -53,7 +59,6 @@ Accessible website navigation
 
 // Navigation
 .header__nav {
-  background-color: var(--color-black);
   box-shadow: var(--shadow-lg);
   display: none;
   position: absolute;
@@ -101,22 +106,15 @@ Accessible website navigation
 
 // Link within list item
 .header__link {
-  font-family: var(--font-primary);
-  color: var(--color-white);
+  @include link-common;
+  @include link-style-muted;
   display: block;
   display: inline-block;
   outline-color: var(--color-primary);
   text-decoration: none;
 
-
-  &:hover {
-    color: var(--color-primary);
-    text-decoration: underline;
-  }
-
-
   &[aria-current] {
-    color: var(--color-primary);
+    color: var(--color-black);
     font-weight: var(--font-bold);
 
     &:before {
@@ -144,12 +142,14 @@ Accessible website navigation
     top: 1px;
   }
 
+
   // Trick for making the whole element clickable
   &:after {
     content: "";
     position: absolute;
     top: 0; right: 0; bottom: 0; left: 0;
   }
+
 
 }
 
@@ -174,16 +174,7 @@ Accessible website navigation
 
 @include breakpoint(sm) {
 
-
-  // Sticky header on large screens
-  .header {
-    position: sticky;
-    top: 0;
-  }
-
-
   .header__nav {
-
     // Reset
     background-color: transparent;
     box-shadow: none;
@@ -191,15 +182,26 @@ Accessible website navigation
     max-height: none;
     overflow: visible;
     overscroll-behavior: auto;
-    position: static;
+    position: relative;
     width: auto;
 
-    &::before {
+    &:after {
+      background-color: var(--color-contrast-low);
+      content: "";
+      display: block;
+      height: 1px;
+      left: 0;
+      mix-blend-mode: multiply;
+      position: absolute;
+      bottom: 0;
+      width: 300%;
+    }
+
+    &:before {
       display: none;
     }
 
   }
-
 
   .header__nav-inner {
     padding: 0; // Reset
@@ -213,10 +215,15 @@ Accessible website navigation
 
 
   .header__item {
-    display: inline-block; // Flex fallback
+    display: flex;
     margin-bottom: 0;
-    margin-left: var(--space-sm);
     padding: 0; // Reset
+    padding-bottom: 24px;
+
+    &:not(:first-child) {
+      margin-left: var(--space-md);
+    }
+
   }
 
 
@@ -232,8 +239,9 @@ Accessible website navigation
       &:before {
         height: 4px;
         top: auto;
-        bottom: -31px;
+        bottom: 0;
         width: 100%;
+        z-index: 1;
       }
 
     }
@@ -307,6 +315,15 @@ html:not(.js) {
       padding: 0; // Reset
     }
 
+  }
+
+}
+
+
+@include breakpoint(xl) {
+
+  .header__logo {
+    transform: translateX(-100%); // Full width of logo
   }
 
 }

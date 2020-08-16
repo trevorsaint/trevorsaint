@@ -5,11 +5,53 @@ Back link
 
 .back-link {
   @include link-common;
-  @include link-style-default;
+  @include link-style-text;
   align-items: center;
   display: inline-flex;
-  font-weight: var(--font-bold);
   left: calc(var(--space-xxxs) * -1);
+  line-height: (24/18); // Line height override
   position: relative;
   vertical-align: top;
+
+  &:hover {
+
+    .back-link__label {
+
+      &:after {
+        background-color: var(--color-black);
+      }
+
+    }
+
+  }
+
+  &:focus {
+
+    .back-link__label {
+
+      &:after {
+        content: none;
+      }
+
+    }
+
+  }
+
+}
+
+
+.back-link__label {
+  display: block;
+  position: relative;
+
+  &:after {
+    background-color: alpha(var(--color-black), .2);
+    bottom: -1px;
+    content: "";
+    height: 1px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+  }
+
 }

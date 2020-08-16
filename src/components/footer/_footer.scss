@@ -1,0 +1,27 @@
+// --------------------------------
+// Footer
+// --------------------------------
+
+
+.footer__container {
+  position: relative;
+
+  &:after {
+    background-color: var(--color-contrast-low);
+    content: "";
+    display: block;
+    height: 1px;
+    left: 0;
+    mix-blend-mode: multiply;
+    position: absolute;
+    top: 0;
+    width: 200%;
+  }
+
+}
+
+
+.footer__content {
+  position: relative;
+  z-index: 1;
+}

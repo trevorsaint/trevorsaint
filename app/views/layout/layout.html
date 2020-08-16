@@ -1,3 +1,4 @@
+{% from "components/back-link/_macro.njk" import backLink %}
 <!DOCTYPE html>
 <html lang="en-GB">
   <head>
@@ -16,30 +17,28 @@
     <meta name="apple-mobile-web-app-title" content="Trevor Saint">
 
     <!-- Apple icons -->
-    <link rel="apple-touch-icon" sizes="57x57" href="{{ assetPath }}images/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="{{ assetPath }}images/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="{{ assetPath }}images/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="{{ assetPath }}images/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="{{ assetPath }}images/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="{{ assetPath }}images/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="{{ assetPath }}images/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="{{ assetPath }}images/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ assetPath }}images/apple-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="{{assetPath}}images/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{assetPath}}images/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{assetPath}}images/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{assetPath}}images/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{assetPath}}images/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{assetPath}}images/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{assetPath}}images/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{assetPath}}images/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{assetPath}}images/apple-icon-180x180.png">
 
-    <!-- Favicons -->
-    <link rel="icon" type="image/png" sizes="96x96" href="{{ assetPath }}images/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ assetPath }}images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ assetPath }}images/favicon-16x16.png">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="{{assetPath}}images/favicon.svg">
 
     <!-- Search Engine -->
-    <meta name="description" content="{{ pageDescription }}">
+    <meta name="description" content="{{pageDescription}}">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="{{ assetPath }}">
-    <meta property="og:title" content="{{ pageTitle }}">
-    <meta property="og:image" content="{{ assetPath }}images/opengraph.png">
-    <meta property="og:description" content="{{ pageDescription }}">
+    <meta property="og:url" content="{{assetPath}}">
+    <meta property="og:title" content="{{pageTitle}}">
+    <meta property="og:image" content="{{assetPath}}images/opengraph.png">
+    <meta property="og:description" content="{{pageDescription}}">
     <meta property="og:site_name" content="Trevor Saint">
     <meta property="og:locale" content="en_GB">
     <meta property="og:image:type" content="image/png">
@@ -50,14 +49,14 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@trevorsaint">
     <meta name="twitter:creator" content="trevorsaint">
-    <meta name="twitter:url" content="{{ assetPath }}">
-    <meta name="twitter:title" content="{{ pageTitle }}">
-    <meta name="twitter:description" content="{{ pageDescription }}">
-    <meta name="twitter:image" content="{{ assetPath }}images/twitter.png">
+    <meta name="twitter:url" content="{{assetPath}}">
+    <meta name="twitter:title" content="{{pageTitle}}">
+    <meta name="twitter:description" content="{{pageDescription}}">
+    <meta name="twitter:image" content="{{assetPath}}images/twitter.png">
 
     <!-- Manifest -->
-    <link href="{{ assetPath }}manifest.json" rel="manifest">
-    <meta name="theme-color" content="#005cff">
+    <link href="{{assetPath}}manifest.json" rel="manifest">
+    <meta name="theme-color" content="#F24B88">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <!--script async src="https://www.googletagmanager.com/gtag/js?id=UA-2273524-1"></script>
@@ -76,8 +75,22 @@
   {% include "header.html" %}
 
   <main class="content" id="content">
-    {% block content %}{% endblock %}
+
+    <div class="content__main">
+      {% block content %}{% endblock %}
+    </div>
+
+    {# <svg class="blob blob--one" width="428" height="472" viewBox="0 0 428 472" role="img" focusable="false" aria-hidden="true"><use xlink:href="/images/sprite.svg#blob-1"/></svg>
+    <svg class="blob blob--two" width="261" height="288" viewBox="0 0 261 288" role="img" focusable="false" aria-hidden="true"><use xlink:href="/images/sprite.svg#blob-2"/></svg>
+    <svg class="blob blob--three" width="527" height="475" viewBox="0 0 527 475" role="img" focusable="false" aria-hidden="true"><use xlink:href="/images/sprite.svg#blob-3"/></svg>
+    <svg class="blob blob--four" width="598" height="543" viewBox="0 0 598 543" role="img" focusable="false" aria-hidden="true"><use xlink:href="/images/sprite.svg#blob-4"/></svg>
+    <svg class="blob blob--five" width="282" height="256" viewBox="0 0 282 256" role="img" focusable="false" aria-hidden="true"><use xlink:href="/images/sprite.svg#blob-5"/></svg> #}
+
   </main>
+
+  <svg class="blob blob--four" width="598" height="543" viewBox="0 0 598 543" role="img" focusable="false" aria-hidden="true"><use xlink:href="/images/sprite.svg#blob-4"/></svg>
+  <svg class="blob blob--one" width="428" height="472" viewBox="0 0 428 472" role="img" focusable="false" aria-hidden="true"><use xlink:href="/images/sprite.svg#blob-1"/></svg>
+
 
   {% include "footer.html" %}
 

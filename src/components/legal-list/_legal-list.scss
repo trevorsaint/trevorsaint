@@ -1,5 +1,5 @@
 /* --------------------------------
-Legal list
+ Legal list
 -------------------------------- */
 
 
@@ -9,7 +9,11 @@ Legal list
 
 
 .legal-list__item {
-  @include typography(16);
+  @include typography(14);
   display: flex;
-  margin-right: var(--space-xxs);
+
+  &:not(:last-child) {
+    margin-right: var(--space-xs);
+  }
+
 }

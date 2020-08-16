@@ -1,0 +1,32 @@
+// --------------------------------
+// Forms
+// --------------------------------
+
+
+.form-control {
+  background-color: var(--color-contrast-lower);
+  border: 2px solid transparent;
+  border-radius: var(--radius-sm);
+  padding: calc(var(--space-xxxs) - 2px); // Minus border width
+  resize: none;
+  width: 100%;
+
+  &::placeholder {
+    color: var(--color-contrast-medium);
+    opacity: 1; // Firefox
+  }
+
+  &:focus {
+    background-color: var(--color-white);
+    border-color: var(--color-black);
+    box-shadow: 0 0 0 var(--space-xxxxs) var(--color-tertiary);
+    outline: none;
+  }
+
+}
+
+
+.form-label {
+  display: block;
+  margin-bottom: var(--space-xxxs);
+}

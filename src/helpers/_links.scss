@@ -3,17 +3,20 @@
 // --------------------------------
 
 @mixin link-common {
-  font-weight: var(--font-semibold);
-
-  &:hover {
-    text-decoration: none;
-  }
+  text-decoration: none;
 
   &:focus {
     @include focused-text;
   }
 
+  &[aria-current] {
+    color: var(--color-black) !important;
+    font-weight: var(--font-bold);
+    pointer-events: none;
+  }
+
 }
+
 
 // Default link style mixin
 
@@ -25,43 +28,68 @@
 
   &:link,
   &:visited {
-    color: var(--color-black);
+    color: var(--color-primary);
   }
 
   &:hover {
-    color: var(--color-primary);
-    text-decoration: none;
+    color: var(--color-black);
   }
 
   &:focus,
   &:active {
-    color: var(--color-white);
+    color: var(--color-black);
   }
 
 }
 
-// On dark style link mixin
 
-// Used for links that sit on a dark background.
+// Muted style link mixin
+
+/// Used for secondary links on a page - the link will appear in muted colours
+/// regardless of visited state.
+
 // If you use this mixin in a component you must also include the
 // link-common mixin in order to get the focus state.
 
-@mixin link-style-ondark {
+@mixin link-style-muted {
 
+  // Override link colour to use text colour
   &:link,
   &:visited,
-  &:hover {
-    color: var(--color-white);
-  }
-
-  &:hover {
-    color: var(--color-primary);
-    text-decoration: none;
-  }
-
-  &:focus,
   &:active {
-    color: var(--color-white);
+    color: var(--color-contrast-medium);
+  }
+
+  &:hover {
+    color: var(--color-black);
+  }
+
+  // When focussed, the text colour needs to be darker to ensure that colour
+  // contrast is still acceptable
+  &:focus {
+    color: var(--color-black);
+  }
+
+}
+
+
+// Text style link mixin
+
+// Overrides the colour of links to match the text colour. Generally used by
+// navigation components, such as breadcrumbs or the back link.
+
+// If you use this mixin in a component you must also include the
+// link-common mixin in order to get the focus state.
+
+@mixin link-style-text {
+
+  // Override link colour to use text colour
+  &:link,
+  &:visited,
+  &:active,
+  &:hover,
+  &:focus {
+    color: var(--color-black);
   }
 
 }

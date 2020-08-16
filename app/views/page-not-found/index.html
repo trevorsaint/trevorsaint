@@ -5,14 +5,30 @@
 
 {% block content %}
 
-<div class="section">
+
+<!-- Masthead -->
+<section class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
+
   <div class="container">
-    <div class="contents">
-      <h1 class="heading-xxl">Page not found</h1>
-      <p>It looks like you found a page you shouldn’t have.</p>
-      <p class="override-!-margin-bottom-0">Go to the <a href="/">home page</a></p>
-    </div>
+
+      <h1 class="heading-xxl margin-bottom-lg">Page not found</h1>
+
+      <div class="grid gap-sm">
+
+        <div class="col-8@sm offset-1@sm">
+
+          <div class="text-component color-contrast-medium body-lg">
+            <p>It looks like you found a page you shouldn’t have.</p>
+            <p>Go to the <a href="/">home page</a></p>
+          </div>
+
+        </div>
+
+      </div>
+
   </div>
+
 </div>
+
 
 {% endblock %}

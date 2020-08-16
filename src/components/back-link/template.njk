@@ -1,6 +1,6 @@
-<a class="back-link" href="{{ params.url }}">
+<a class="back-link{% if params.classes is defined %} {{ params.classes }}{% endif %}" href="{{ params.url }}">
   <svg class="icon icon--sm" viewBox="0 0 24 24" role="img" focusable="false" aria-hidden="true">
     <use xlink:href="/images/sprite.svg#chevron-left"/>
   </svg>
-  {{ params.text }}
+  <span class="back-link__label">{{ params.text }}</span>
 </a>

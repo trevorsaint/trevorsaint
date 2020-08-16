@@ -1,70 +1,29 @@
-<footer class="bg-black color-white padding-y-md padding-y-xxxxl@md">
+<footer class="footer">
 
-  <div class="container padding-bottom-sm padding-bottom-xl@md">
+  <div class="footer__container container padding-y-xxxxl">
 
-    <div class="flex@sm items-center justify-between">
+    <div class="footer__content">
 
-      <div class="flex@sm">
+      <h2 class="heading-xl padding-bottom-xxxxl">Do you have a project in mind? <br> <a class="link" href="#0">Get in touch</a></h2>
 
-        <small class="copyright">&copy;Trevor Saint 2020</small>
+      <div class="flex@sm items-center justify-between">
 
-        <ul class="legal-list margin-bottom-xxs margin-y-0@sm">
-          <li class="legal-list__item"><a class="link link--ondark" href="/support/privacy-notice"{% if sectionId == "Privacy notice" %} aria-current="true" tabindex="-1"{% endif %}>Privacy</a></li>
-          <li class="legal-list__item"><a class="link link--ondark" href="/support/cookies"{% if sectionId == "Cookies" %} aria-current="true" tabindex="-1"{% endif %}>Cookies</a></li>
-          <li class="legal-list__item"><a class="link link--ondark" href="/support/accessibility"{% if sectionId == "Accessibility" %} aria-current="true" tabindex="-1"{% endif %}>Accessibility</a></li>
+        <ul class="menu-list margin-bottom-xxs margin-y-0">
+          <li class="menu-list__item"><a class="link-muted" href="/"{% if pageId == 'home' %} aria-current="true" tabindex="-1"{% endif %}>Home</a></li>
+          <li class="menu-list__item"><a class="link-muted" href="/about"{% if pageId == 'about' %} aria-current="true" tabindex="-1"{% endif %}>About</a></li>
+          <li class="menu-list__item"><a class="link-muted" href="/projects"{% if pageId == 'projects' %} aria-current="true" tabindex="-1"{% endif %}>Projects</a></li>
+          <li class="menu-list__item"><a class="link-muted" href="/testimonials"{% if pageId == 'testimonials' %} aria-current="true" tabindex="-1"{% endif %}>Testimonials</a></li>
+          <li class="menu-list__item"><a class="link-muted" href="/contact"{% if pageId == 'contact' %} aria-current="true" tabindex="-1"{% endif %}>Contact</a></li>
+        </ul>
+
+        <ul class="legal-list">
+          <li class="legal-list__item"><a class="link-muted" href="/support/accessibility"{% if pageId == 'accessibility' %} aria-current="true" tabindex="-1"{% endif %}>Accessibility</a></li>
+          <li class="legal-list__item"><a class="link-muted" href="/support/privacy"{% if pageId == 'privacy' %} aria-current="true" tabindex="-1"{% endif %}>Privacy</a></li>
+          <li class="legal-list__item"><a class="link-muted" href="/support/cookies"{% if pageId == 'cookies' %} aria-current="true" tabindex="-1"{% endif %}>Cookies</a></li>
+          <li class="legal-list__item">&copy;2020</li>
         </ul>
 
       </div>
-
-      <ul class="social-list">
-
-        <li class="social-list__item">
-
-          <a class="social-list__link link link--ondark" href="https://pinterest.co.uk/trevorsaint" rel="noreferrer external" aria-label="Follow on Pinterest">
-            <span class="social-list__icon">
-              <svg class="icon icon--sm" viewBox="0 0 24 24" role="img" focusable="false" aria-hidden="true">
-                <use xlink:href="{{assetPath}}images/sprite.svg#pinterest"/>
-              </svg>
-            </span>
-          </a>
-
-        </li>
-
-        <li class="social-list__item">
-
-          <a class="social-list__link link link--ondark" href="https://twitter.com/trevorsaint" rel="noreferrer external" aria-label="Follow on Twitter">
-            <span class="social-list__icon">
-              <svg class="icon icon--sm" viewBox="0 0 24 24" role="img" focusable="false" aria-hidden="true">
-                <use xlink:href="{{assetPath}}images/sprite.svg#twitter"/>
-              </svg>
-            </span>
-          </a>
-
-        </li>
-
-        <li class="social-list__item">
-
-          <a class="social-list__link link link--ondark" href="https://linkedin.com/in/trevorsaint" rel="noreferrer external" aria-label="Follow on LinkedIn">
-            <span class="social-list__icon">
-              <svg class="icon icon--sm" viewBox="0 0 24 24" role="img" focusable="false" aria-hidden="true">
-                <use xlink:href="{{assetPath}}images/sprite.svg#linkedin"/>
-              </svg>
-            </span>
-          </a>
-
-        </li>
-
-        <li class="social-list__item">
-          <a class="social-list__link link link--ondark" href="https://instagram.com/trevorsaint" rel="noreferrer external" aria-label="Follow on Instagram">
-            <span class="social-list__icon">
-              <svg class="icon icon--sm" viewBox="0 0 24 24" role="img" focusable="false" aria-hidden="true">
-                <use xlink:href="{{assetPath}}images/sprite.svg#instagram"/>
-              </svg>
-            </span>
-          </a>
-        </li>
-
-      </ul>
 
     </div>
 

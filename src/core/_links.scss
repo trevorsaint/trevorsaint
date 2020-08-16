@@ -5,18 +5,18 @@ Link
 .link {
   @include link-common;
   @include link-style-default;
-  font-weight: var(--font-semibold);
-
-  &[aria-current="true"] {
-    color: var(--color-black);
-    font-weight: var(--font-normal);
-    pointer-events: none; // Disable mouse pointer events
-    text-decoration: none;
-  }
-
+  position: relative;
 }
 
-.link--ondark {
-  @include link-style-ondark;
+
+.link-text {
+  @include link-common;
+  @include link-style-text;
+}
+
+
+.link-muted {
+  @include link-common;
+  @include link-style-muted;
 }
 

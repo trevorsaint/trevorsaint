@@ -3,18 +3,17 @@ Buttons
 -------------------------------- */
 
 
-// Primary button
 .button {
   @include fontSmooth;
   @include typography(16);
   align-items: center;
-  background-color: var(--color-black);
+  background-color: var(--color-primary);
+  border-radius: var(--radius-sm);
   border: none;
   color: var(--color-white);
   cursor: pointer;
   display: inline-flex;
   font-weight: var(--font-semibold);
-  letter-spacing: 1px;
   padding-bottom: calc(var(--space-xxxs) + var(--space-xxxxs));
   padding-left: var(--space-xxs);
   padding-right: var(--space-xxs);
@@ -23,26 +22,34 @@ Buttons
   text-decoration: none;
   vertical-align: middle;
 
-
   &:link,
   &:visited {
     color: var(--color-white);
   }
 
-
   &:hover {
     background-color: var(--color-black);
   }
 
-
   &:focus {
-    background-color: var(--color-white);
-    outline: 3px solid var(--color-primary-dark);
-    box-shadow: var(--shadow-lg);
+    background-color: var(--color-tertiary);
+    box-shadow: 0 0 0 var(--space-xxxxs) var(--color-tertiary);
     color: var(--color-black);
   }
 
+}
 
+
+.button--full-width {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+
+.button__label {
+  position: relative;
+  top: -2px;
 }
 
 

@@ -26,7 +26,8 @@ Skip Link
   clip: rect(1px, 1px, 1px, 1px);
   clip-path: inset(50%);
 
-  &:focus, &.skip-link--focus {
+  &:focus,
+  &.skip-link--focus {
 
     // Show
     box-shadow: 0 0 0 var(--space-xxxxs) var(--color-focus);

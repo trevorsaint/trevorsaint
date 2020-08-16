@@ -99,9 +99,11 @@ hr {
   padding: 0;
 }
 
+
 html {
   box-sizing: border-box;
 }
+
 
 article,
 aside,
@@ -120,10 +122,12 @@ legend {
   display: block;
 }
 
+
 blockquote,
 q {
   quotes: none;
 }
+
 
 button,
 input,
@@ -132,11 +136,13 @@ select {
   margin: 0;
 }
 
+
 // Fix unwanted button padding in Firefox
 button::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
+
 
 // Reset style of buttons + form controls
 button,
@@ -152,10 +158,12 @@ textarea {
   padding: 0;
 }
 
+
 // Hide Select default icon on IE
 select::-ms-expand {
   display: none;
 }
+
 
 textarea {
   overflow: auto;
@@ -163,15 +171,18 @@ textarea {
   vertical-align: top;
 }
 
+
 // Hide X icon in IE and Edge
 input::-ms-clear {
   display: none;
 }
 
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
 
 img,
 video,

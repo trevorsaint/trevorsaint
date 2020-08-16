@@ -482,16 +482,18 @@ $media-wrapper-aspect-ratios: (
 .bg-transparent { background-color: transparent; }
 .bg-inherit { background-color: inherit; }
 .bg { background-color: alpha(var(--color-bg), var(--bg-o)); }
+
 .bg-contrast-lower { background-color: alpha(var(--color-contrast-lower), var(--bg-o, 1)); }
 .bg-contrast-low { background-color: alpha(var(--color-contrast-low), var(--bg-o, 1)); }
 .bg-contrast-medium { background-color: alpha(var(--color-contrast-medium), var(--bg-o, 1)); }
 .bg-contrast-high { background-color: alpha(var(--color-contrast-high), var(--bg-o, 1)); }
 .bg-contrast-higher { background-color: alpha(var(--color-contrast-higher), var(--bg-o, 1)); }
-.bg-primary-darker { background-color: alpha(var(--color-primary-darker), var(--bg-o, 1)); }
-.bg-primary-dark { background-color: alpha(var(--color-primary-dark), var(--bg-o, 1)); }
+
 .bg-primary { background-color: alpha(var(--color-primary), var(--bg-o, 1)); }
-.bg-primary-light { background-color: alpha(var(--color-primary-light), var(--bg-o, 1)); }
-.bg-primary-lighter { background-color: alpha(var(--color-primary-lighter), var(--bg-o, 1)); }
+.bg-secondary { background-color: alpha(var(--color-secondary), var(--bg-o, 1)); }
+.bg-tertiary { background-color: alpha(var(--color-tertiary), var(--bg-o, 1)); }
+.bg-quaternary { background-color: alpha(var(--color-quaternary), var(--bg-o, 1)); }
+
 .bg-white { background-color: alpha(var(--color-white), var(--bg-o, 1)); }
 .bg-black { background-color: alpha(var(--color-black), var(--bg-o, 1)); }
 

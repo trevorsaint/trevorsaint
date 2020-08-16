@@ -1,0 +1,64 @@
+/* --------------------------------
+Card
+-------------------------------- */
+
+
+.card {
+  background-color: var(--color-bg);
+  overflow: hidden;
+}
+
+
+.card__image {
+
+  img {
+    display: block;
+    width: 100%;
+  }
+
+}
+
+
+.card__content {
+  padding: var(--space-xs);
+}
+
+
+
+.card__link {
+  align-items: center;
+  display: inline-flex;
+  font-weight: var(--font-bold);
+
+  &:hover,
+  &:focus {
+
+    .card__link-label {
+
+      &::after {
+        content: none;
+      }
+
+    }
+
+  }
+
+}
+
+
+.card__link-label {
+  margin-right: var(--space-xxxxs);
+  position: relative;
+  top: -1px;
+
+  &::after {
+    background-color: alpha(var(--color-primary), .2);
+    bottom: -1px;
+    content: "";
+    height: 1px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+  }
+
+}

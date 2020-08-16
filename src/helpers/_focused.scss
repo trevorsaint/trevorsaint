@@ -8,9 +8,8 @@
   // backgrounds and box-shadows disappear, so we need to ensure there's a
   // transparent outline which will be set to a visible colour.
 
-  background-color: var(--color-primary);
-  box-shadow: 0 0 0 var(--space-xxxxs) var(--color-primary);
-  color: var(--color-white);
+  background-color: var(--color-tertiary);
+  box-shadow: 0 0 0 var(--space-xxxxs) var(--color-tertiary);
+  color: var(--color-black);
   text-decoration: none;
-
 }

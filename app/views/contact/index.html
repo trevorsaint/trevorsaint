@@ -1,0 +1,83 @@
+{% set pageTitle       = "Contact" %}
+{% set pageDescription = "Do you have a project in mind? Call Trevor Saint on 07783 809 087." %}
+{% set pageId          = "contact" %}
+
+{% extends "layout.html" %}
+
+{% block content %}
+
+
+<!-- Masthead -->
+<section class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
+
+  <div class="container">
+
+    <h1 class="heading-xxl margin-bottom-lg">Contact</h1>
+
+    <div class="grid gap-sm">
+
+      <div class="col-8@sm offset-1@sm">
+
+        <div class="text-component color-contrast-medium body-lg">
+          <p>Do you have a project in mind? Call me on <b>07783 809 087</b>.</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- Send a message -->
+<section class="padding-bottom-md padding-bottom-lg@sm padding-bottom-xxl@md padding-bottom-xxxxl@lg">
+
+  <div class="container">
+
+    <div class="grid gap-sm">
+
+      <div class="col-11@sm offset-1@sm">
+        <h2 class="heading-xl padding-bottom-xxs margin-bottom-xs margin-bottom-lg@sm border-offscreen">Send message</h2>
+      </div>
+
+    </div>
+
+    <div class="grid gap-sm">
+
+      <div class="col-7@sm offset-1@sm">
+
+        <form method="POST" action="/contact/thank-you">
+
+            <div class="margin-bottom-sm">
+                <label class="form-label" for="name">Name</label>
+                <input class="form-control" id="name" name="name">
+            </div>
+
+            <div class="margin-bottom-sm">
+                <label class="form-label" for="email">Email</label>
+                <input class="form-control" id="email" name="email">
+            </div>
+
+            <div class="margin-bottom-sm">
+                <label class="form-label" for="message">Message</label>
+                <textarea class="form-control" id="message" name="message" rows="8"></textarea>
+            </div>
+
+            <button class="button button--full-width" type="submit">
+                <span class="button__label">Send your message</span>
+            </button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+{% endblock %}

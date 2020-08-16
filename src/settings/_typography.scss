@@ -36,18 +36,35 @@ $root-font-size: 16px !default;
 
 $typography-scale: (
 
-  84: (
+  144: (
 
     base: (
       font-size: 48px,
-      line-height: (56/48),
-      letter-spacing: -1.5px
+      line-height: (56/48)
     ),
 
     md: (
       font-size: 84px,
-      line-height: (84/84),
-      letter-spacing: -2px
+      line-height: (84/84)
+    ),
+
+    lg: (
+      font-size: 144px,
+      line-height: (144/144)
+    )
+
+  ),
+
+  84: (
+
+    base: (
+      font-size: 48px,
+      line-height: (56/48)
+    ),
+
+    md: (
+      font-size: 84px,
+      line-height: (84/84)
     )
 
   ),
@@ -56,14 +73,12 @@ $typography-scale: (
 
     base: (
       font-size: 36px,
-      line-height: (40/36),
-      letter-spacing: -1px
+      line-height: (40/36)
     ),
 
     md: (
       font-size: 48px,
-      line-height: (56/48),
-      letter-spacing: -1.5px
+      line-height: (56/48)
     )
 
   ),
@@ -72,14 +87,12 @@ $typography-scale: (
 
     base: (
       font-size: 24px,
-      line-height: (32/24),
-      letter-spacing: -0.5px
+      line-height: (32/24)
     ),
 
     md: (
       font-size: 36px,
-      line-height: (40/36),
-      letter-spacing: -1px
+      line-height: (40/36)
     )
 
   ),
@@ -87,18 +100,27 @@ $typography-scale: (
   24: (
 
     base: (
+      font-size: 18px,
+      line-height: (24/18)
+    ),
+
+    md: (
       font-size: 24px,
-      line-height: (32/24),
-      letter-spacing: -0.5px
+      line-height: (32/24)
     )
 
   ),
 
-  20: (
+  18: (
 
     base: (
-      font-size: 20px,
-      line-height: (24/20)
+      font-size: 18px,
+      line-height: (24/18)
+    ),
+
+    md: (
+      font-size: 18px,
+      line-height: (32/18)
     )
 
   ),
@@ -108,6 +130,15 @@ $typography-scale: (
     base: (
       font-size: 16px,
       line-height: (24/16)
+    )
+
+  ),
+
+  14: (
+
+    base: (
+      font-size: 14px,
+      line-height: (24/14)
     )
 
   )

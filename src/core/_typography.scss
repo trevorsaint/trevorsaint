@@ -2,33 +2,46 @@
 // Typography
 // --------------------------------
 
+
+%heading-xxxl {
+  @include typography(144);
+}
+
+
 %heading-xxl {
   @include typography(84);
 }
+
 
 %heading-xl {
   @include typography(48);
 }
 
+
 %heading-lg {
   @include typography(36);
 }
+
 
 %heading-md {
   @include typography(24);
 }
 
+
 %heading-sm {
-  @include typography(20);
+  @include typography(18);
 }
+
 
 %body-lg {
   @include typography(24);
 }
 
+
 %body {
-  @include typography(20);
+  @include typography(18);
 }
+
 
 %body-sm {
   @include typography(16);
@@ -36,21 +49,30 @@
 
 
 // Headings
+.heading-xxxl {
+  @extend %heading-xxxl;
+}
+
+
 .heading-xxl {
   @extend %heading-xxl;
 }
+
 
 .heading-xl {
   @extend %heading-xl;
 }
 
+
 .heading-lg {
   @extend %heading-lg;
 }
 
+
 .heading-md {
   @extend %heading-md;
 }
+
 
 .heading-sm {
   @extend %heading-sm;
@@ -62,9 +84,11 @@
   @extend %body-lg;
 }
 
+
 .body {
   @extend %body;
 }
+
 
 .body-sm {
   @extend %body-sm;
@@ -132,12 +156,4 @@
     margin-bottom: 0;
   }
 
-}
-
-
-// Copyright
-.copyright {
-  @include typography(16);
-  display: block;
-  margin-right: var(--space-xxs);
 }

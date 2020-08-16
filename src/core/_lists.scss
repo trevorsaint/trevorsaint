@@ -102,17 +102,3 @@ Custom list component
   }
 
 }
-
-// Tick list
-.list--tick {
-
-  li {
-    display: flex;
-    margin-bottom: var(--space-xxs); // Double up the gap between items
-  }
-
-  svg {
-    color: var(--color-primary);
-  }
-
-}
