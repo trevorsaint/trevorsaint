@@ -48,6 +48,11 @@
 }
 
 
+%body-xs {
+  @include typography(14);
+}
+
+
 // Headings
 .heading-xxxl {
   @extend %heading-xxxl;
@@ -95,6 +100,11 @@
 }
 
 
+.body-xs {
+  @extend %body-xs;
+}
+
+
 // --------------------------------
 // Text Component
 // --------------------------------
@@ -119,6 +129,12 @@
     margin-top: var(--space-md);
   }
 
+  h4 {
+    @extend %heading-md;
+    margin-bottom: var(--space-xxs);
+    margin-top: var(--space-md);
+  }
+
   ul,
   ol,
   p {
@@ -127,6 +143,10 @@
 
   ul {
     @extend .list--ul;
+  }
+
+  ol {
+    @extend .list--ol;
   }
 
   li {

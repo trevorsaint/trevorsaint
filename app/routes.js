@@ -60,6 +60,10 @@ routes.get('/support/accessibility', function(req, res) {
   res.render('support/accessibility/index');
 });
 
+routes.get('/style-guide', function(req, res) {
+  res.render('style-guide/index');
+});
+
 
 // Page not found
 routes.get('*', function(req, res){

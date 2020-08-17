@@ -4,13 +4,18 @@ Header
 
 
 :root {
-  --logo-max-color: var(--color-primary);
-  --logo-power-color: var(--color-white);
+  --header-height: 72px;
+
+  @include breakpoint(md) {
+    --header-height: 120px;
+  }
+
 }
 
 
 .header {
-  height: 120px;
+  background-color: var(--color-bg);
+  height: var(--header-height);
   position: relative;
   width: 100%;
   z-index: var(--zindex-header);
@@ -29,7 +34,8 @@ Header
 .header__logo {
   display: block;
   flex-shrink: 0;
-  position: relative;
+  position: absolute;
+  left: 24px;
   z-index: 2;
 
   a, svg, img {
@@ -41,8 +47,8 @@ Header
 
 .header__logo-svg {
   display: block;
-  height: 80px;
-  width: 85px;
+  height: 48px;
+  width: 51px;
 }
 
 
@@ -59,6 +65,7 @@ Header
 
 // Navigation
 .header__nav {
+  background-color: var(--color-bg);
   box-shadow: var(--shadow-lg);
   display: none;
   position: absolute;
@@ -74,11 +81,11 @@ Header
   // Top header bg + border
   &::before {
     background: inherit;
-    border-bottom: 1px solid var(--color-contrast-high);
+    border-bottom: 1px solid var(--color-contrast-low);
     content: "";
     display: block;
     position: sticky;
-    height: 80px; // Same as height of header
+    height: var(--header-height); // Same as height of header
     top: 0;
   }
 
@@ -91,7 +98,8 @@ Header
 
 
 .header__nav-inner {
-  padding: var(--space-sm) 0;
+  padding-top: var(--component-padding);
+  padding-bottom: var(--component-padding);
 }
 
 
@@ -108,7 +116,6 @@ Header
 .header__link {
   @include link-common;
   @include link-style-muted;
-  display: block;
   display: inline-block;
   outline-color: var(--color-primary);
   text-decoration: none;
@@ -129,35 +136,16 @@ Header
 
   }
 
-
-  &:focus {
-    @include focused-text;
-  }
-
-
-  // Fine adjustments
-  span {
-    display: block;
-    position: relative;
-    top: 1px;
-  }
-
-
-  // Trick for making the whole element clickable
-  &:after {
+  // Trick to make full area clickable
+  &::after {
+    bottom: 0;
     content: "";
+    left: 0;
     position: absolute;
-    top: 0; right: 0; bottom: 0; left: 0;
+    right: 0;
+    top: 0;
   }
 
-
-}
-
-
-// Menu trigger
-.header__trigger {
-  position: relative;
-  z-index: 2;
 }
 
 
@@ -171,10 +159,22 @@ Header
 }
 
 
+// Menu trigger
+.header__trigger {
+  margin-left: auto;
+  position: relative;
+  z-index: 2;
+}
 
-@include breakpoint(sm) {
+
+
+
+@include breakpoint(md) {
+
 
   .header__nav {
+    margin-left: auto;
+
     // Reset
     background-color: transparent;
     box-shadow: none;
@@ -184,6 +184,10 @@ Header
     overscroll-behavior: auto;
     position: relative;
     width: auto;
+
+    &::before {
+      display: none;
+    }
 
     &:after {
       background-color: var(--color-contrast-low);
@@ -197,11 +201,8 @@ Header
       width: 300%;
     }
 
-    &:before {
-      display: none;
-    }
-
   }
+
 
   .header__nav-inner {
     padding: 0; // Reset
@@ -218,34 +219,11 @@ Header
     display: flex;
     margin-bottom: 0;
     padding: 0; // Reset
-    padding-bottom: 24px;
+    padding-bottom: var(--space-xs);
 
     &:not(:first-child) {
       margin-left: var(--space-md);
     }
-
-  }
-
-
-  .header__link {
-    padding: 0;
-
-    &:after {
-      content: none; // Reset
-    }
-
-    &[aria-current] {
-
-      &:before {
-        height: 4px;
-        top: auto;
-        bottom: 0;
-        width: 100%;
-        z-index: 1;
-      }
-
-    }
-
 
   }
 
@@ -255,75 +233,117 @@ Header
   }
 
 
-}
-
-
-
-// No JS fallback
-html:not(.js) {
-
-  .header {
-    height: auto;
-    padding-top: var(--space-xs);
-  }
-
-  .header__trigger {
-    display: none;
-  }
-
-  .header__container {
-    display: block;
-  }
-
-  .header__nav {
-    box-shadow: none;
-    display: block;
-    height: auto;
-    overflow: visible;
+  .header__link {
     padding: 0;
-    position: static;
 
-    &::before {
-      display: none;
+    &::after {
+      content: none; // Reset
     }
+
+    &[aria-current] {
+
+        &:before {
+          height: 4px;
+          top: auto;
+          bottom: 0;
+          width: 100%;
+          z-index: 1;
+        }
+
+      }
 
   }
 
-  .header__nav-inner {
-    height: auto;
-    margin-left: calc(-1 * var(--space-xs));
-    margin-right: calc(-1 * var(--space-xs));
-    overflow: visible;
-    padding: var(--space-xs) 0;
-    position: static;
-  }
-
-
-  @include breakpoint(md) {
-
-    .header {
-      padding: 0;
-    }
-
-    .header__container {
-      display: flex;
-      padding: var(--space-xs) 0;
-    }
-
-    .header__nav-inner {
-      margin: 0; // Reset
-      padding: 0; // Reset
-    }
-
-  }
 
 }
 
 
-@include breakpoint(xl) {
 
-  .header__logo {
-    transform: translateX(-100%); // Full width of logo
+
+
+
+
+
+
+
+// // No JS fallback
+// html:not(.js) {
+
+//   .header {
+//     height: auto;
+//     padding-top: var(--space-xs);
+//   }
+
+//   .header__trigger {
+//     display: none;
+//   }
+
+//   .header__container {
+//     display: block;
+//   }
+
+//   .header__nav {
+//     box-shadow: none;
+//     display: block;
+//     height: auto;
+//     overflow: visible;
+//     padding: 0;
+//     position: static;
+
+//     &::before {
+//       display: none;
+//     }
+
+//   }
+
+//   .header__nav-inner {
+//     height: auto;
+//     margin-left: calc(-1 * var(--space-xs));
+//     margin-right: calc(-1 * var(--space-xs));
+//     overflow: visible;
+//     padding: var(--space-xs) 0;
+//     position: static;
+//   }
+
+
+//   @include breakpoint(md) {
+
+//     .header {
+//       padding: 0;
+//     }
+
+//     .header__container {
+//       display: flex;
+//       padding: var(--space-xs) 0;
+//     }
+
+//     .header__nav-inner {
+//       margin: 0; // Reset
+//       padding: 0; // Reset
+//     }
+
+//   }
+
+// }
+
+
+// @include breakpoint(xl) {
+
+//   .header__logo {
+//     transform: translateX(-100%); // Full width of logo
+//   }
+
+// }
+
+
+
+
+
+@include breakpoint(md) {
+
+  .header__logo-svg {
+    height: 80px;
+    width: 85px;
   }
 
 }

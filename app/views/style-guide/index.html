@@ -1,0 +1,168 @@
+{% set pageTitle       = "Style guide - Trevor Saint" %}
+{% set pageDescription = "Trevor Saint is a digital perfectionist with 17 years of experience designing and developing impressive services for Government departments and digital agencies." %}
+{% set pageId          = "style-guide" %}
+
+{% extends "layout.html" %}
+
+{% block content %}
+
+<!-- Masthead -->
+<section class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
+
+  <div class="container">
+    <h1 class="heading-xxxl margin-top-sm margin-bottom-lg max-width-lg">Style guide</h1>
+  </div>
+
+</section>
+
+
+<!-- Buttons -->
+<section class="padding-bottom-md padding-bottom-lg@sm padding-bottom-xxl@md padding-bottom-xxxxl@lg">
+
+  <div class="container">
+
+    <div class="grid gap-sm">
+
+      <div class="col-11@sm offset-1@sm">
+        <h2 class="heading-xl padding-bottom-xxs margin-bottom-xs margin-bottom-lg@sm border-offscreen">Buttons</h2>
+      </div>
+
+    </div>
+
+    <div class="flex flex-gap-sm">
+
+      <div class="offset-1@sm">
+        <button class="button">
+          <span class="button__label">Standard button</span>
+        </button>
+      </div>
+
+      <div>
+        <button class="button">
+          <span class="button__label margin-right-xxxxs">Trailing icon button</span>
+          <svg class="icon icon--sm" width="24" height="24" viewBox="0 0 24 24" role="img" focusable="false" aria-hidden="true"><use xlink:href="/images/sprite.svg#arrow-forward"/></svg>
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- Headings -->
+<section class="padding-bottom-md padding-bottom-lg@sm padding-bottom-xxl@md padding-bottom-xxxxl@lg">
+
+  <div class="container">
+
+    <div class="grid gap-sm">
+
+      <div class="col-11@sm offset-1@sm">
+        <h2 class="heading-xl padding-bottom-xxs margin-bottom-xs margin-bottom-lg@sm border-offscreen">Headings</h2>
+      </div>
+
+    </div>
+
+    <div class="flex flex-gap-sm">
+
+      <div class="offset-1@sm">
+
+        <div class="text-component">
+          <h1>Heading-xl</h1>
+          <h2>Heading-lg</h2>
+          <h3>Heading-md</h3>
+          <h4>Heading-sm</h4>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- Body -->
+<section class="padding-bottom-md padding-bottom-lg@sm padding-bottom-xxl@md padding-bottom-xxxxl@lg">
+
+  <div class="container">
+
+    <div class="grid gap-sm">
+
+      <div class="col-11@sm offset-1@sm">
+        <h2 class="heading-xl padding-bottom-xxs margin-bottom-xs margin-bottom-lg@sm border-offscreen">Body</h2>
+      </div>
+
+    </div>
+
+    <div class="flex flex-gap-sm">
+
+      <div class="offset-1@sm">
+
+        <div class="text-component max-width-sm">
+          <p class="body-lg">Maecenas ut magna mauris. Aliquam sed lorem quam. Suspendisse consectetur enim arcu, ac finibus tortor.</p>
+          <p>Maecenas ut magna mauris. Aliquam sed lorem quam. Suspendisse consectetur enim arcu, ac finibus tortor.</p>
+          <p class="body-sm">Maecenas ut magna mauris. Aliquam sed lorem quam. Suspendisse consectetur enim arcu, ac finibus tortor.</p>
+          <p class="body-xs">Maecenas ut magna mauris. Aliquam sed lorem quam. Suspendisse consectetur enim arcu, ac finibus tortor.</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- Lists -->
+<section class="padding-bottom-md padding-bottom-lg@sm padding-bottom-xxl@md padding-bottom-xxxxl@lg">
+
+  <div class="container">
+
+    <div class="grid gap-sm">
+
+      <div class="col-11@sm offset-1@sm">
+        <h2 class="heading-xl padding-bottom-xxs margin-bottom-xs margin-bottom-lg@sm border-offscreen">Lists</h2>
+      </div>
+
+    </div>
+
+    <div class="flex flex-gap-sm">
+
+      <div class="offset-1@sm">
+
+        <div class="text-component">
+
+          <h3>Unordered list</h3>
+
+          <ul>
+            <li>UX/UI Design and Art Direction</li>
+            <li>Research and Analysis (end-users)</li>
+            <li>Design System and Style Guide</li>
+            <li>Accessible Design</li>
+          </ul>
+
+          <h3>Ordered list</h3>
+
+          <ol>
+            <li>UX/UI Design and Art Direction</li>
+            <li>Research and Analysis (end-users)</li>
+            <li>Design System and Style Guide</li>
+            <li>Accessible Design</li>
+          </ol>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+{% endblock %}

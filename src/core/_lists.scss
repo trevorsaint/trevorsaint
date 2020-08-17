@@ -50,7 +50,7 @@ Custom list component
 // Unordered list
 .list--ul {
 
-  --bullet-size: 8px; // Dot width and height
+  --bullet-size: 6px; // Dot width and height
   --bullet-margin-right: var(--space-xxs); // Gap between bullet and content
 
   // Bullet
@@ -60,6 +60,7 @@ Custom list component
     border-radius: 50%;
     color: var(--color-black); // Bullet color
     content: "";
+    margin-top: calc(-1 * var(--bullet-size) / 2); // Half bullet size
   }
 
   ul li::before {
@@ -92,8 +93,6 @@ Custom list component
     border-radius: 50%;
     color: var(--color-contrast-high);
     content: counter(list-items);
-    top: -1px;
-    padding-top: 3px;
     justify-content: center;
   }
 
