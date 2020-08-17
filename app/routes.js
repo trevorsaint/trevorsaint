@@ -64,11 +64,9 @@ routes.get('/style-guide', function(req, res) {
   res.render('style-guide/index');
 });
 
-
 // Page not found
 routes.get('*', function(req, res){
   res.render('page-not-found/index');
 });
-
 
 module.exports = routes;
