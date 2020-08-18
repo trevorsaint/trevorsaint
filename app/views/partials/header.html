@@ -1,4 +1,6 @@
-<a class="skip-link" href="#content">Skip to main content</a>
+<a class="skip-link" href="#content">
+  <span class="skip-link__label">Skip to main content</span>
+</a>
 
 <header class="header js-header">
 
@@ -6,7 +8,7 @@
 
     <div class="header__logo">
       <a class="header__logo-link" href="/">
-        <svg class="header__logo-svg" viewBox="0 0 85 80" role="img" focusable="false">
+        <svg class="header__logo-svg" viewBox="0 0 85 80" focusable="false">
           <title>Trevor Saint</title>
           <use xlink:href="{{ assetPath }}images/sprite.svg#trevor-saint"/>
         </svg>
@@ -15,7 +17,7 @@
 
     <button class="header__trigger js-header__trigger button button--small button--icon-trailing" aria-label="Toggle menu" aria-expanded="false" aria-controls="header-nav">
       <span class="button__label">Menu</span>
-      <svg class="icon icon--sm" viewBox="0 0 24 24" role="img" focusable="false" aria-hidden="true">
+      <svg class="icon icon--sm" viewBox="0 0 24 24" focusable="false" aria-hidden="true">
         <use xlink:href="{{ assetPath }}images/sprite.svg#expand-more"/>
       </svg>
     </button>
@@ -23,11 +25,11 @@
     <nav class="header__nav js-header__nav" id="header-nav" aria-label="Main navigation">
       <div class="header__nav-inner">
         <ul class="header__list">
-          <li class="header__item"><a class="header__link" href="/"{% if pageId == 'home' %} aria-current="true" tabindex="-1"{% endif %}>Home</a></li>
-          <li class="header__item"><a class="header__link" href="/about"{% if pageId == 'about' %} aria-current="true" tabindex="-1"{% endif %}>About</a></li>
-          <li class="header__item"><a class="header__link" href="/projects"{% if pageId == 'projects' %} aria-current="true" tabindex="-1"{% endif %}>Projects</a></li>
-          <li class="header__item"><a class="header__link" href="/testimonials"{% if pageId == 'testimonials' %} aria-current="true" tabindex="-1"{% endif %}>Testimonials</a></li>
-          <li class="header__item"><a class="header__link" href="/contact"{% if pageId == 'contact' %} aria-current="true" tabindex="-1"{% endif %}>Contact</a></li>
+          <li class="header__item"><a class="header__link" href="/"{% if pageId == 'home' %} aria-current="true"{% endif %}>Home</a></li>
+          <li class="header__item"><a class="header__link" href="/about"{% if pageId == 'about' %} aria-current="true"{% endif %}>About</a></li>
+          <li class="header__item"><a class="header__link" href="/projects"{% if pageId == 'projects' %} aria-current="true"{% endif %}>Projects</a></li>
+          <li class="header__item"><a class="header__link" href="/testimonials"{% if pageId == 'testimonials' %} aria-current="true"{% endif %}>Testimonials</a></li>
+          <li class="header__item"><a class="header__link" href="/contact"{% if pageId == 'contact' %} aria-current="true"{% endif %}>Contact</a></li>
         </ul>
       </div>
     </nav>

@@ -6,14 +6,11 @@ Skip Link
 .skip-link {
   @include fontSmooth;
   background-color: var(--color-white);
-  color: var(--color-black);
+  color: var(--color-contrast-high);
   display: inline-block;
   font-weight: var(--font-semibold);
   left: var(--space-xxs);
-  padding-left: var(--space-xxs);
-  padding-right: var(--space-xxs);
-  padding-bottom: calc(var(--space-xxs) - var(--space-xxxxs));
-  padding-top: calc(var(--space-xxs) - var(--space-xxxxs));
+  padding: var(--space-xxxs) var(--space-xxs);
   position: absolute;
   top: var(--space-xxs);
   z-index: var(--zindex-fixed-element);
@@ -36,4 +33,11 @@ Skip Link
     outline: var(--space-xxxxs) solid var(--color-primary);
   }
 
+}
+
+
+.skip-link__label {
+  display: block;
+  position: relative;
+  top: -1px;
 }

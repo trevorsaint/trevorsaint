@@ -28,7 +28,7 @@ html {
 body {
   @include typography(18);
   background-color: var(--color-white);
-  color: var(--color-black);
+  color: var(--color-contrast-high);
   font-family: var(--font-secondary);
   font-weight: var(--font-regular);
 }

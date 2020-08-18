@@ -10,7 +10,7 @@
   }
 
   &[aria-current] {
-    color: var(--color-black) !important;
+    color: var(--color-contrast-high) !important;
     font-weight: var(--font-bold);
     pointer-events: none;
   }
@@ -32,12 +32,12 @@
   }
 
   &:hover {
-    color: var(--color-black);
+    color: var(--color-contrast-high);
   }
 
   &:focus,
   &:active {
-    color: var(--color-black);
+    color: var(--color-contrast-high);
   }
 
 }
@@ -61,13 +61,13 @@
   }
 
   &:hover {
-    color: var(--color-black);
+    color: var(--color-contrast-high);
   }
 
   // When focussed, the text colour needs to be darker to ensure that colour
   // contrast is still acceptable
   &:focus {
-    color: var(--color-black);
+    color: var(--color-contrast-high);
   }
 
 }
@@ -89,7 +89,7 @@
   &:active,
   &:hover,
   &:focus {
-    color: var(--color-black);
+    color: var(--color-contrast-high);
   }
 
 }

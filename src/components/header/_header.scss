@@ -6,7 +6,7 @@ Header
 :root {
   --header-height: 72px;
 
-  @include breakpoint(md) {
+  @include breakpoint(sm) {
     --header-height: 120px;
   }
 
@@ -53,7 +53,7 @@ Header
 
 
 .header__logo-link {
-  color: var(--color-black);
+  color: var(--color-contrast-high);
   text-decoration: none;
 
   &:focus {
@@ -121,7 +121,7 @@ Header
   text-decoration: none;
 
   &[aria-current] {
-    color: var(--color-black);
+    color: var(--color-contrast-high);
     font-weight: var(--font-bold);
 
     &:before {
@@ -169,7 +169,7 @@ Header
 
 
 
-@include breakpoint(md) {
+@include breakpoint(sm) {
 
 
   .header__nav {
@@ -339,7 +339,7 @@ Header
 
 
 
-@include breakpoint(md) {
+@include breakpoint(sm) {
 
   .header__logo-svg {
     height: 80px;

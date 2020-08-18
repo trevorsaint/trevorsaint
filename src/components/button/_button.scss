@@ -28,13 +28,13 @@ Buttons
   }
 
   &:hover {
-    background-color: var(--color-black);
+    background-color: var(--color-contrast-high);
   }
 
   &:focus {
     background-color: var(--color-tertiary);
     box-shadow: 0 0 0 var(--space-xxxxs) var(--color-tertiary);
-    color: var(--color-black);
+    color: var(--color-contrast-high);
   }
 
 }

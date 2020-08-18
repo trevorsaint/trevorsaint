@@ -1,10 +1,12 @@
 var cacheName = 'trevorsaint';
 
+
 var filesToCache = [
   '/',
   '/stylesheets/main.css',
   '/javascripts/scripts.js'
 ];
+
 
 // Start the service worker and cache all of the app’s content
 self.addEventListener('install', function(e) {
@@ -14,6 +16,7 @@ self.addEventListener('install', function(e) {
     })
   );
 });
+
 
 // Serve cached content when offline
 self.addEventListener('fetch', function(e) {

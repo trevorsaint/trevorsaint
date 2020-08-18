@@ -58,7 +58,7 @@ Custom list component
     background-color: currentColor;
     border: 2px solid currentColor;
     border-radius: 50%;
-    color: var(--color-black); // Bullet color
+    color: var(--color-contrast-high); // Bullet color
     content: "";
     margin-top: calc(-1 * var(--bullet-size) / 2); // Half bullet size
   }
