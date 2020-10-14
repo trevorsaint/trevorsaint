@@ -36,6 +36,10 @@ routes.get('/projects', function(req, res) {
     res.render('projects/servelec/index');
   });
 
+  routes.get('/projects/census-2021', function(req, res) {
+    res.render('projects/census-2021/index');
+  });
+
 routes.get('/testimonials', function(req, res) {
   res.render('testimonials/index');
 });

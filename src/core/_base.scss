@@ -27,7 +27,7 @@ html {
 
 
 body {
-  @include typography(18);
+  @include typography(20);
   color: var(--color-contrast-high);
   font-family: var(--font-secondary);
   font-weight: var(--font-regular);

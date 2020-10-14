@@ -49,7 +49,6 @@ Custom list component
 
 // Unordered list
 .list--ul {
-
   --bullet-size: 6px; // Dot width and height
   --bullet-margin-right: var(--space-xxs); // Gap between bullet and content
 
@@ -71,7 +70,6 @@ Custom list component
 
 // Ordered list
 .list--ol {
-
   --bullet-size: 24px; // Circle width and height
   --bullet-margin-right: var(--space-xxxs); // Ggap between circle and content
 
