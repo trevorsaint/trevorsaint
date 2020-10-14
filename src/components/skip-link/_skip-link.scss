@@ -2,7 +2,6 @@
 Skip Link
 -------------------------------- */
 
-
 .skip-link {
   @include fontSmooth;
   background-color: var(--color-white);
@@ -31,6 +30,7 @@ Skip Link
     clip: auto;
     clip-path: none;
     outline: var(--space-xxxxs) solid var(--color-primary);
+    outline-offset: 0;
   }
 
 }

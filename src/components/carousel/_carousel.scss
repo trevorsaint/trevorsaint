@@ -8,15 +8,18 @@ Carousel
   --carousel-transition-duration: 0.5s;
 }
 
+
 .carousel {
   position: relative;
 }
+
 
 .carousel__list {
   display: flex;
   flex-wrap: nowrap;
   will-change: transform;
 }
+
 
 .carousel__item {
   display: block;
@@ -25,6 +28,7 @@ Carousel
   margin-right: var(--carousel-grid-gap);
   margin-bottom: var(--carousel-grid-gap);
 }
+
 
 .js {
 
@@ -60,6 +64,7 @@ Carousel
 
 }
 
+
 .carousel__control {
   display: flex;
   justify-content: center;
@@ -92,6 +97,7 @@ Carousel
     font-size: 20px; // Icon size
   }
 }
+
 
 // Carousel dots navigation
 .carousel__navigation { // Created in JS
@@ -151,9 +157,11 @@ Carousel
   }
 }
 
+
 .carousel__nav-item--selected button {
   opacity: 1;
 }
+
 
 // Pagination
 .carousel__navigation--pagination {
@@ -175,12 +183,10 @@ Carousel
   }
 }
 
+
 html:not(.js) .carousel__list {
   overflow: auto;
 }
-
-
-
 
 
 /* --------------------------------

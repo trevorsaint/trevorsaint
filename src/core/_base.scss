@@ -10,6 +10,7 @@ html {
   font-weight: var(--font-normal);
   min-height: 100%; // Ensure page fills entire viewport
   overflow-x: hidden;
+  position: relative; // For background svg positioning
 
   // Fix fonts that render as bold in Firefox - https://www.lockedownseo.com/firefox-font-weight-too-bold
   -moz-osx-font-smoothing: grayscale;
@@ -27,7 +28,6 @@ html {
 
 body {
   @include typography(18);
-  background-color: var(--color-white);
   color: var(--color-contrast-high);
   font-family: var(--font-secondary);
   font-weight: var(--font-regular);

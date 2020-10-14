@@ -2,7 +2,6 @@
 Header
 -------------------------------- */
 
-
 :root {
   --header-height: 72px;
 
@@ -14,7 +13,6 @@ Header
 
 
 .header {
-  background-color: var(--color-bg);
   height: var(--header-height);
   position: relative;
   width: 100%;
@@ -38,7 +36,9 @@ Header
   left: 24px;
   z-index: 2;
 
-  a, svg, img {
+  a,
+  svg,
+  img {
     display: block;
   }
 
@@ -167,8 +167,6 @@ Header
 }
 
 
-
-
 @include breakpoint(sm) {
 
 
@@ -190,7 +188,7 @@ Header
     }
 
     &:after {
-      background-color: var(--color-contrast-low);
+      background-color: alpha(var(--color-black), 0.2);
       content: "";
       display: block;
       height: 1px;
@@ -235,6 +233,10 @@ Header
 
   .header__link {
     padding: 0;
+
+    &:hover {
+      text-decoration: underline;
+    }
 
     &::after {
       content: none; // Reset

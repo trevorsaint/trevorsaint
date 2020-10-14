@@ -5,6 +5,10 @@
 @mixin link-common {
   text-decoration: none;
 
+  // &:hover {
+  //   text-decoration: underline;
+  // }
+
   &:focus {
     @include focused-text;
   }
@@ -62,6 +66,7 @@
 
   &:hover {
     color: var(--color-contrast-high);
+    text-decoration: underline;
   }
 
   // When focussed, the text colour needs to be darker to ensure that colour

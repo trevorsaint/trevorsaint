@@ -2,12 +2,11 @@
 // Footer
 // --------------------------------
 
-
 .footer__container {
   position: relative;
 
   &:after {
-    background-color: var(--color-contrast-low);
+    background-color: alpha(var(--color-black), 0.2);
     content: "";
     display: block;
     height: 1px;
