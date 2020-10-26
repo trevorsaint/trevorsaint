@@ -1,0 +1,111 @@
+/* --------------------------------
+
+Table of Contents
+A navigation with a list of links to the main sections of the page
+
+-------------------------------- */
+
+
+:root {
+  --toc-border-width: 1px;
+}
+
+
+.toc {
+  box-shadow: inset var(--toc-border-width) 0 0 var(--color-contrast-low);
+}
+
+
+.toc__list {
+  position: relative;
+
+  .toc__list .toc__link {
+    padding-left: var(--space-sm); // Offset sub navigation
+  }
+
+}
+
+
+.toc__item {
+  display: block;
+}
+
+
+.toc__link,
+.toc__label {
+  padding: var(--space-xxxs) var(--space-xs);
+}
+
+
+.toc__link {
+  color: var(--color-contrast-medium);
+  display: inline-flex;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  // Left mark
+  &::before {
+    content: "";
+    width: var(--toc-border-width);
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  &:hover {
+    color: var(--color-contrast-high);
+    text-decoration: underline;
+
+    &::before {
+      background-color: var(--color-contrast-high);
+    }
+
+  }
+
+}
+
+
+.toc__link--selected {
+  color: var(--color-primary);
+
+  &::before {
+    background-color: var(--color-primary);
+  }
+
+  &:hover {
+    color: var(--color-primary);
+  }
+
+}
+
+
+// Label style
+.toc__label {
+  font-weight: var(--font-bold);
+}
+
+
+.toc-content {
+
+  *:target {
+    animation: toc-target 2s; // Highlight section on target
+  }
+
+}
+
+
+@keyframes toc-target {
+
+  0%, 50% {
+    outline: 2px solid alpha(var(--color-primary), 0.5);
+  }
+
+  100% {
+    outline: 2px solid alpha(var(--color-primary), 0);
+  }
+
+}

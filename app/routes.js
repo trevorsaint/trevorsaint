@@ -32,12 +32,20 @@ routes.get('/projects', function(req, res) {
     res.render('projects/rural-payments/index');
   });
 
-  routes.get('/projects/servelec', function(req, res) {
-    res.render('projects/servelec/index');
+  routes.get('/projects/servelec-social-care', function(req, res) {
+    res.render('projects/servelec-social-care/index');
+  });
+
+  routes.get('/projects/government-digital-service', function(req, res) {
+    res.render('projects/government-digital-service/index');
   });
 
   routes.get('/projects/census-2021', function(req, res) {
     res.render('projects/census-2021/index');
+  });
+
+  routes.get('/projects/travalion', function(req, res) {
+    res.render('projects/travalion/index');
   });
 
 routes.get('/testimonials', function(req, res) {
