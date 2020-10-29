@@ -235,37 +235,22 @@
 
     <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
 
-      <ul class="pn-links grid">
-
-        <li class="pn-links__item col-6@md">
-
-          <a class="pn-links__link justify-center justify-between@md" href="/projects/rural-payments" rel="prev">
-
-            <svg class="pn-links__icon icon icon--md" viewBox="0 0 24 24" role="img" focusable="false" aria-hidden="true"><use xlink:href="/images/sprite.svg#arrow-back"/></svg>
-
-            <span class="margin-left-sm">
-              <i class="sr-only">Previous project: </i>A complete rebrand and design for Max Powder
-            </span>
-
-          </a>
-
-        </li>
-
-        <li class="pn-links__item col-6@md">
-
-          <a class="pn-links__link justify-center justify-between@md" href="/projects/max-powder" rel="next">
-
-            <span class="margin-right-sm">
-              <i class="sr-only">Next project: </i>A complete rebrand and design for Max Powder
-            </span>
-
-            <svg class="pn-links__icon icon icon--md" viewBox="0 0 24 24" role="img" focusable="false" aria-hidden="true"><use xlink:href="/images/sprite.svg#arrow-forward"/></svg>
-
-          </a>
-
-        </li>
-
-      </ul>
+      {{ previousNextLinks({
+        "previousNextLinksItems": [
+          {
+            "rel": 'prev',
+            "text": 'Previous project',
+            "url": '#0',
+            "label": 'A complete rebrand and design for Max Powder'
+          },
+          {
+            "rel": 'next',
+            "text": 'Next project',
+            "url": '#0',
+            "label": 'A complete rebrand and design for Max Powder'
+          }
+        ]
+      }) }}
 
     </div>
 
