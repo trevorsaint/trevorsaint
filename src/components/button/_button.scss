@@ -7,7 +7,6 @@ Buttons
 
 .button {
   @include fontSmooth;
-  @include typography(16);
   align-items: center;
   background-color: var(--color-primary);
   border-radius: var(--radius-sm);
@@ -56,6 +55,7 @@ Buttons
 
 
 .button--small {
+  @include typography(16);
   padding: var(--space-xxxs) var(--space-xxs);
 }
 

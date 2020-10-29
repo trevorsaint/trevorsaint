@@ -1,4 +1,4 @@
-{% set pageTitle       = "" %}
+{% set pageTitle       = "A once in a decade survey that gives us a better future" %}
 {% set pageDescription = "" %}
 {% set pageId          = "projects" %}
 
@@ -7,214 +7,81 @@
 {% block content %}
 
 
-<section class="padding-top-xs padding-bottom-md padding-bottom-lg@sm padding-bottom-xxl@md padding-bottom-xxxxl@lg">
-
-
   <div class="container">
 
 
-    {{
-      backLink({
-        "url": '/projects',
-        "text": 'Back'
-      })
-    }}
+    {{ backLink({
+      "url": '/projects',
+      "text": 'Back'
+    }) }}
 
 
-    <h1 class="heading-xxl margin-y-sm margin-y-lg@sm">An improved User Experience in Mosaic for Servelec’s Social Care</h1>
+    <h1 class="heading-xxl margin-y-sm margin-y-lg@sm">A once in a decade survey that gives us a better future</h1>
 
 
-    <figure>
+    <figure class="figure">
       <div class="bg-contrast-lower media-wrapper media-wrapper--3:2"></div>
     </figure>
 
 
-    <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
+    <div class="flex justify-between items-start margin-top-md">
 
-      <div class="grid gap-xs justify-between">
+      {{ entryDetails({
+        "rows": [
+          {
+            "key": {
+              "text": 'Client'
+            },
+            "value": {
+              "text": 'Office for National Statistics'
+            }
+          },
+          {
+            "key": {
+              "text": 'Industry'
+            },
+            "value": {
+              "text": 'Statistics'
+            }
+          },
+          {
+            "key": {
+              "text": 'Year'
+            },
+            "value": {
+              "text": '2020'
+            }
+          }
+        ]
+      }) }}
 
-        <div class="col-11@sm offset-1@sm">
-          <h2 class="heading-xl">Overview</h2>
-        </div>
-
-        <div class="col-7@sm offset-1@sm">
-          <div class="color-contrast-medium text-component">
-            <p>Servelec asked me for some UX Consultancy for a new Mosaic release. Mosaic is a Digital Case Management System for Social Care and allows the management of adult’s, children and finance cases all on one platform.</p>
-            <p>When starting on the project, I found existing user research material that had been prepared by a UX Consultancy. The research was useful and insightful and gave me a good steer towards improving the service. However, it did not include visual design, so it was my role to design a new look and feel.</p>
-          </div>
-        </div>
-
-        <div class="col-3@sm">
-          <dl>
-            <dt class="font-bold">Client</dt>
-            <dd class="color-contrast-medium margin-bottom-xxs">Office for National Statistics</dd>
-            <dt class="font-bold">Industry</dt>
-            <dd class="color-contrast-medium margin-bottom-xxs">Statistics</dd>
-            <dt class="font-bold">Year</dt>
-            <dd class="color-contrast-medium">2020</dd>
-          </dl>
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <figure>
-      <div class="bg-contrast-lower media-wrapper media-wrapper--3:2"></div>
-      <figcaption class="color-contrast-medium body-xs margin-top-xxxs text-center">Mosaic Design System building blocks created in Sketch</figcaption>
-    </figure>
-
-
-    <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
-
-      <div class="grid gap-xs">
-
-        <div class="col-7@sm offset-1@sm">
-          <div class="text-component">
-            <h2>A design system built from scratch</h2>
-            <div class="color-contrast-medium">
-              <p>After research and investigation of the existing system were complete, I was then able to focus my attention on the visual look and feel for the entire system.</p>
-              <p>I built a design system that contained a collection of reusable elements. They consisted of colour palettes, iconography, badges, accordions, buttons, counters, form elements and more.</p>
-              <p>Each element was carefully designed to ensure accessibility and standards were baked in from the start. These elements were the building blocks for page design, ready to be handed over for development.</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <figure>
-      <div class="bg-contrast-lower media-wrapper media-wrapper--3:2"></div>
-      <figcaption class="color-contrast-medium body-xs margin-top-xxxs text-center">Mosaic panel components created in Sketch</figcaption>
-    </figure>
-
-
-    <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
-
-      <div class="grid gap-xs">
-
-        <div class="col-7@sm offset-1@sm">
-          <div class="text-component">
-            <h2>Information for end-users</h2>
-            <div class="color-contrast-medium">
-              <p>A big part of the system was to present information using panels. These panels would include valuable information about a person or persons and other information relating to a case. There could be few or many depending on the scale of the case.</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <figure>
-      <div class="bg-contrast-lower media-wrapper media-wrapper--3:2"></div>
-      <figcaption class="color-contrast-medium body-xs margin-top-xxxs text-center">Demographic Information panel in Mosaic. Interactive states designed in Sketch for Developers to build</figcaption>
-    </figure>
-
-
-    <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
-
-      <div class="grid gap-xs">
-
-        <div class="col-7@sm offset-1@sm">
-          <div class="text-component">
-            <h2>Defining the overall look and feel</h2>
-            <div class="color-contrast-medium">
-              <p>When the panel design work was complete, I started design work on the overall interface appearance for Mosaic. I made some reference to the design work Servelec had done with its online branding. It was important to maintain brand awareness and ensure some of the Servelec identity was part of the design for Mosaic.</p>
-              <p>This design work included elements like header, navigation, footer and other page contents. The result was a clean, minimalistic interface feel with a Servelec touch.</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <figure>
-      <div class="bg-contrast-lower media-wrapper media-wrapper--3:2"></div>
-      <figcaption class="color-contrast-medium body-xs margin-top-xxxs text-center">Personal summary page design in Sketch</figcaption>
-    </figure>
-
-
-    <figure class="margin-top-md">
-      <div class="bg-contrast-lower media-wrapper media-wrapper--3:2"></div>
-      <figcaption class="color-contrast-medium body-xs margin-top-xxxs text-center">Team work view page design in Sketch</figcaption>
-    </figure>
-
-
-    <figure class="margin-top-md">
-      <div class="bg-contrast-lower media-wrapper media-wrapper--3:2"></div>
-      <figcaption class="color-contrast-medium body-xs margin-top-xxxs text-center">Person summary with sub navigation menu design in Sketch</figcaption>
-    </figure>
-
-
-    <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
-
-      <div class="grid gap-xs">
-
-        <div class="col-7@sm offset-1@sm">
-          <div class="text-component">
-            <h2>The results</h2>
-            <div class="color-contrast-medium">
-              <p>I delivered an attractive new interface with an Improved User Experience where possible, within the time-frame. This work met the needs of the client and their end-users. My involvement included:</p>
-              <ul>
-                <li>UX/UI Design and Art Direction</li>
-                <li>Research and Analysis (end-users)</li>
-                <li>Design System and Style Guide</li>
-                <li>Accessible Design</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <!-- Previous / Next Links -->
-    <ul class="pn-links grid">
-
-      <li class="pn-links__item col-6@md">
-
-        <a class="pn-links__link justify-center justify-between@md" href="/projects/rural-payments" rel="prev">
-
-          <svg class="pn-links__icon icon icon--md" viewBox="0 0 24 24" role="img" focusable="false" aria-hidden="true"><use xlink:href="/images/sprite.svg#arrow-back"/></svg>
-
-          <span class="margin-left-sm">
-            <i class="sr-only">Previous project: </i>Rural grants and payments to help the farming industry
-          </span>
-
+      <p>
+        <a class="link-icon" href="#0" rel="external">
+          <span class="link-icon__label">Visit website</span>
+          <svg class="icon icon--sm" width="24" height="24" viewBox="0 0 24 24" role="img" focusable="false" aria-hidden="true"><use xlink:href="/images/sprite.svg#launch"/></svg>
         </a>
+      </p>
 
-      </li>
+    </div>
 
-      <li class="pn-links__item col-6@md">
 
-        <a class="pn-links__link justify-center justify-between@md" href="/projects/max-powder" rel="next">
+    <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
 
-          <span class="margin-right-sm">
-            <i class="sr-only">Next project: </i>A complete rebrand and design for Max Powder
-          </span>
+      <div class="container text-component max-width-sm">
 
-          <svg class="pn-links__icon icon icon--md" viewBox="0 0 24 24" role="img" focusable="false" aria-hidden="true"><use xlink:href="/images/sprite.svg#arrow-forward"/></svg>
+        <h2>Overview</h2>
 
-        </a>
+        <div class="color-contrast-medium">
+          <p>Fusce eu dui et mauris viverra commodo sed ut ante. Fusce sed ligula quis nunc varius mollis. Fusce lacinia felis diam, at imperdiet nulla venenatis id. Morbi sed purus eget risus rhoncus sodales. Maecenas molestie ligula nisl. Nam at consequat mi.</p>
+          <p>Vivamus faucibus, purus at luctus tristique, elit nulla pulvinar velit, sed fermentum est lacus imperdiet neque.</p>
+        </div>
 
-      </li>
+      </div>
 
-    </ul>
+    </div>
 
 
   </div>
-
-
-</section>
 
 
 {% endblock %}

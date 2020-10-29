@@ -1,4 +1,4 @@
-{% set pageTitle       = "Manage cases in a simple, accessible and efficient way - Trevor Saint" %}
+{% set pageTitle       = "Manage cases in a simple, accessible and efficient way" %}
 {% set pageDescription = "Trevor Saint as part of a large team designed and developed a system for HM Courts and Tribunals Service to allow members of the judiciary to manage and progress cases." %}
 {% set pageId          = "projects" %}
 
@@ -7,53 +7,74 @@
 {% block content %}
 
 
-<section class="padding-top-xs padding-bottom-md padding-bottom-lg@sm padding-bottom-xxl@md padding-bottom-xxxxl@lg">
-
-
   <div class="container">
 
 
-    {{
-      backLink({
-        "url": '/projects',
-        "text": 'Back'
-      })
-    }}
+    {{ backLink({
+      "url": '/projects',
+      "text": 'Back'
+    }) }}
 
 
     <h1 class="heading-xxl margin-y-sm margin-y-lg@sm">Manage cases in a simple, accessible and efficient way</h1>
 
 
-    <figure>
-      <div class="bg-contrast-lower media-wrapper media-wrapper--3:2"></div>
-      <figcaption class="color-contrast-medium body-xs margin-top-xxxs text-center">The Central Criminal Court of England and Wales at The Old Bailey. Photo by Trevor Saint</figcaption>
+    <figure class="figure">
+      <div class="bg-contrast-lower media-wrapper media-wrapper--3:2">
+      </div>
     </figure>
+
+
+    <div class="flex justify-between items-start margin-top-md">
+
+      {{ entryDetails({
+        "rows": [
+          {
+            "key": {
+              "text": 'Client'
+            },
+            "value": {
+              "text": 'HM Courts & Tribunals Service'
+            }
+          },
+          {
+            "key": {
+              "text": 'Industry'
+            },
+            "value": {
+              "text": 'Government'
+            }
+          },
+          {
+            "key": {
+              "text": 'Year'
+            },
+            "value": {
+              "text": '2018'
+            }
+          }
+        ]
+      }) }}
+
+      <p>
+        <a class="link-icon" href="#0" rel="external">
+          <span class="link-icon__label">Visit website</span>
+          <svg class="icon icon--sm" width="24" height="24" viewBox="0 0 24 24" role="img" focusable="false" aria-hidden="true"><use xlink:href="/images/sprite.svg#launch"/></svg>
+        </a>
+      </p>
+
+    </div>
 
 
     <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
 
-      <div class="grid gap-sm justify-between">
+      <div class="container text-component max-width-sm">
 
-        <div class="col-11@sm offset-1@sm">
-          <h2 class="heading-xl">Overview</h2>
-        </div>
+        <h2>Overview</h2>
 
-        <div class="col-7@sm offset-1@sm">
-          <div class="color-contrast-medium text-component">
-            <p>The Judicial case manager is part of a &pound;1 billion programme involving over 50 projects to change and improve the Courts and Tribunals Service to bring new technology and modern ways of working.</p>
-            <p>Our role was to create a user interface that would enable and support Judges and other members of the judiciary, working within the reformed services to manage their cases in a more efficient way.</p>
-          </div>
-        </div>
-
-        <div class="col-3@sm">
-          <dl>
-            <dt class="font-bold">Client</dt>
-            <dd class="color-contrast-medium margin-bottom-xxs">HM Courts &amp; Tribunals Service</dd>
-            <dt class="font-bold">Industry</dt>
-            <dd class="color-contrast-medium margin-bottom-xxs">Government</dd>
-            <dt class="font-bold">Year</dt>
-            <dd class="color-contrast-medium">2018</dd>
-          </dl>
+        <div class="color-contrast-medium">
+          <p>The Judicial case manager is part of a &pound;1 billion programme involving over 50 projects to change and improve the Courts and Tribunals Service to bring new technology and modern ways of working.</p>
+          <p>Our role was to create a user interface that would enable and support Judges and other members of the judiciary, working within the reformed services to manage their cases in a more efficient way.</p>
         </div>
 
       </div>
@@ -61,25 +82,22 @@
     </div>
 
 
-    <figure>
+    <figure class="figure">
       <div class="bg-contrast-lower media-wrapper media-wrapper--3:2"></div>
-      <figcaption class="color-contrast-medium body-xs margin-top-xxxs text-center">Mockups in Balsamiq, to tease out user requirements for research and user testing with Judges</figcaption>
+      <figcaption class="figure__caption margin-top-xxs">Mockups in Balsamiq, to tease out user requirements for research and user testing with Judges</figcaption>
     </figure>
 
 
     <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
 
-      <div class="grid gap-xs">
+      <div class="container text-component max-width-sm">
 
-        <div class="col-7@sm offset-1@sm">
-          <div class="text-component">
-            <h2>My process</h2>
-            <div class="color-contrast-medium">
-              <p>I started designing with low-fidelity prototypes which consisted of sticky notes and hand-drawn sketches which helped brainstorm.</p>
-              <p>Balsamiq helped me quickly create rough concepts to test scenarios with judges.</p>
-              <p>Later, I created hi-fidelity mockups using Sketch to get an overall look and feel for the interface and to design a collection of reusable components for the service.</p>
-            </div>
-          </div>
+        <h2>My process</h2>
+
+        <div class="color-contrast-medium">
+          <p>I started designing with low-fidelity prototypes which consisted of sticky notes and hand-drawn sketches which helped brainstorm.</p>
+          <p>Balsamiq helped me quickly create rough concepts to test scenarios with judges.</p>
+          <p>Later, I created hi-fidelity mockups using Sketch to get an overall look and feel for the interface and to design a collection of reusable components for the service.</p>
         </div>
 
       </div>
@@ -87,12 +105,12 @@
     </div>
 
 
-    <figure>
+    <figure class="figure">
 
       <div class="grid gap-xs">
 
         <div class="col-6@sm">
-            <div class="bg-contrast-lower media-wrapper media-wrapper--3:2"></div>
+          <div class="bg-contrast-lower media-wrapper media-wrapper--3:2"></div>
         </div>
 
         <div class="col-6@sm">
@@ -100,7 +118,7 @@
         </div>
 
         <div class="col-6@sm">
-            <div class="bg-contrast-lower media-wrapper media-wrapper--3:2"></div>
+          <div class="bg-contrast-lower media-wrapper media-wrapper--3:2"></div>
         </div>
 
         <div class="col-6@sm">
@@ -109,35 +127,32 @@
 
       </div>
 
-      <figcaption class="color-contrast-medium body-xs margin-top-xxxs text-center">Hand-drawn sketches, sticky notes, planning, and research</figcaption>
+      <figcaption class="figure__caption margin-top-xxs">Hand-drawn sketches, sticky notes, planning, and research</figcaption>
 
     </figure>
 
 
-    <figure class="margin-top-md">
+    <figure class="figure margin-top-md">
       <div class="bg-contrast-lower media-wrapper media-wrapper--3:2"></div>
-      <figcaption class="color-contrast-medium body-xs margin-top-xxxs text-center">Digital case file high fidelity visual design for the Judicial case manager service</figcaption>
+      <figcaption class="figure__caption margin-top-xxs">Digital case file high fidelity visual design for the Judicial case manager service</figcaption>
     </figure>
 
 
-    <figure class="margin-top-md">
+    <figure class="figure margin-top-md">
       <div class="bg-contrast-lower media-wrapper media-wrapper--3:2"></div>
-      <figcaption class="color-contrast-medium body-xs margin-top-xxxs text-center">Questions high fidelity visual design for the Judicial case manager</figcaption>
+      <figcaption class="figure__caption margin-top-xxs">Questions high fidelity visual design for the Judicial case manager</figcaption>
     </figure>
 
 
     <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
 
-      <div class="grid gap-sm">
+      <div class="container text-component max-width-sm">
 
-        <div class="col-7@sm offset-1@sm">
-          <div class="text-component">
-            <h2>Prototyping in code</h2>
-            <div class="color-contrast-medium">
-              <p>Later, I moved Sketch designs into prototype code. This took time to ramp up but once I did, it was very fast to prototype new features.</p>
-              <p>Presenting an interactive, realistic user experience helped to spot usability failures within the service and ensured user needs were at the center of every design decision.</p>
-            </div>
-          </div>
+        <h2>Prototyping in code</h2>
+
+        <div class="color-contrast-medium">
+          <p>Later, I moved Sketch designs into prototype code. This took time to ramp up but once I did, it was very fast to prototype new features.</p>
+          <p>Presenting an interactive, realistic user experience helped to spot usability failures within the service and ensured user needs were at the center of every design decision.</p>
         </div>
 
       </div>
@@ -145,31 +160,28 @@
     </div>
 
 
-    <figure>
+    <figure class="figure">
       <div class="bg-contrast-lower media-wrapper media-wrapper--3:2"></div>
-      <figcaption class="color-contrast-medium body-xs margin-top-xxxs text-center">Prototyping Judicial case manager service in code, ready for user testing, and developers to integrate</figcaption>
+      <figcaption class="figure__caption margin-top-xxs">Prototyping Judicial case manager service in code, ready for user testing, and developers to integrate</figcaption>
     </figure>
 
 
     <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
 
-      <div class="grid gap-sm">
+      <div class="container text-component max-width-sm">
 
-        <div class="col-7@sm offset-1@sm">
-          <div class="text-component">
-            <h2>Research and analysis</h2>
-            <div class="color-contrast-medium">
-              <p>Research visits around England included 12 locations, 25 participants and over 104 hours of research. We also worked with individual service lines to use their research saving us a lot of time and duplication of effort.</p>
-              <p>From our research we defined:</p>
-              <ul>
-                <li>a set of user needs for each service line</li>
-                <li>a core set of user needs for the Judicial case manager</li>
-                <li>ExpressionEngine integration</li>
-                <li>a set of personas describing our main user types</li>
-                <li>understanding of the current user journeys for each service line</li>
-              </ul>
-            </div>
-          </div>
+        <h2>Research and analysis</h2>
+
+        <div class="color-contrast-medium">
+          <p>Research visits around England included 12 locations, 25 participants and over 104 hours of research. We also worked with individual service lines to use their research saving us a lot of time and duplication of effort.</p>
+          <p>From our research we defined:</p>
+          <ul>
+            <li>a set of user needs for each service line</li>
+            <li>a core set of user needs for the Judicial case manager</li>
+            <li>ExpressionEngine integration</li>
+            <li>a set of personas describing our main user types</li>
+            <li>understanding of the current user journeys for each service line</li>
+          </ul>
         </div>
 
       </div>
@@ -180,16 +192,16 @@
     <div class="grid gap-xs">
 
       <div class="col-6@sm">
-        <figure>
+        <figure class="figure">
           <div class="bg-contrast-lower media-wrapper media-wrapper--1:1"></div>
-          <figcaption class="color-contrast-medium body-xs margin-top-xxxs text-center">User testing with a Judge in Guildford Magistrates’ Court and Family Court</figcaption>
+          <figcaption class="figure__caption margin-top-xxs">User testing with a Judge in Guildford Magistrates’ Court and Family Court</figcaption>
         </figure>
       </div>
 
       <div class="col-6@sm">
-        <figure>
+        <figure class="figure">
           <div class="bg-contrast-lower media-wrapper media-wrapper--1:1"></div>
-          <figcaption class="color-contrast-medium body-xs margin-top-xxxs text-center">Sticky notes and hand-drawn sketches for Continuous Online Resolution (SSCS)</figcaption>
+          <figcaption class="figure__caption margin-top-xxs">Sticky notes and hand-drawn sketches for Continuous Online Resolution (SSCS)</figcaption>
         </figure>
       </div>
 
@@ -198,16 +210,13 @@
 
     <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
 
-      <div class="grid gap-sm">
+      <div class="container text-component max-width-sm">
 
-        <div class="col-7@sm offset-1@sm">
-          <div class="text-component">
-            <h2>Collaborative delivery</h2>
-            <div class="color-contrast-medium">
-              <p>I worked with product owners, business analysts, user researchers, content designers, developers and delivery managers adopting Agile principles.</p>
-              <p>Every individual brought their own set of skills and expertise, to transform the Courts and Tribunals system.</p>
-            </div>
-          </div>
+        <h2>Collaborative delivery</h2>
+
+        <div class="color-contrast-medium">
+          <p>I worked with product owners, business analysts, user researchers, content designers, developers and delivery managers adopting Agile principles.</p>
+          <p>Every individual brought their own set of skills and expertise, to transform the Courts and Tribunals system.</p>
         </div>
 
       </div>
@@ -215,37 +224,34 @@
     </div>
 
 
-    <figure>
+    <figure class="figure">
       <div class="bg-contrast-lower media-wrapper media-wrapper--3:2"></div>
-      <figcaption class="color-contrast-medium body-xs margin-top-xxxs text-center">Filtering your cases visual design for Judicial case manager</figcaption>
+      <figcaption class="figure__caption margin-top-xxs">Filtering your cases visual design for Judicial case manager</figcaption>
     </figure>
 
 
-    <figure class="margin-top-md">
+    <figure class="figure margin-top-md">
       <div class="bg-contrast-lower media-wrapper media-wrapper--3:2"></div>
-      <figcaption class="color-contrast-medium body-xs margin-top-xxxs text-center">Filtering your cases visual design for Judicial case manager</figcaption>
+      <figcaption class="figure__caption margin-top-xxs">Filtering your cases visual design for Judicial case manager</figcaption>
     </figure>
 
 
     <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
 
-      <div class="grid gap-sm">
+      <div class="container text-component max-width-sm">
 
-        <div class="col-7@sm offset-1@sm">
-          <div class="text-component">
-            <h2>The results</h2>
-            <div class="color-contrast-medium">
-              <p>We delivered a highly complex end-to-end digital service for judges to manage their cases. This incorporated and met the needs of the following service lines:</p>
-              <ul>
-                <li>Divorce</li>
-                <li>Financial remedy</li>
-                <li>Social Security and Child Support (SSCS)</li>
-                <li>Civil Money Claims (CMC)</li>
-                <li>Probate</li>
-                <li>Public Law</li>
-              </ul>
-            </div>
-          </div>
+        <h2>The results</h2>
+
+        <div class="color-contrast-medium">
+          <p>We delivered a highly complex end-to-end digital service for judges to manage their cases. This incorporated and met the needs of the following service lines:</p>
+          <ul>
+            <li>Divorce</li>
+            <li>Financial remedy</li>
+            <li>Social Security and Child Support (SSCS)</li>
+            <li>Civil Money Claims (CMC)</li>
+            <li>Probate</li>
+            <li>Public Law</li>
+          </ul>
         </div>
 
       </div>
@@ -253,44 +259,87 @@
     </div>
 
 
-    <!-- Previous / Next Links -->
-    <ul class="pn-links grid">
+    <div class="container max-width-sm">
 
-      <li class="pn-links__item col-6@md">
+      <div class="margin-bottom-sm">
+        <p class="font-bold text-sm text-center">Share this project</p>
+      </div>
 
-        <a class="pn-links__link justify-center justify-between@md" href="/projects/max-powder" rel="prev">
+      <ul class="sharebar flex flex-wrap gap-xs justify-center">
 
-          <svg class="pn-links__icon icon icon--md" viewBox="0 0 24 24" role="img" focusable="false" aria-hidden="true"><use xlink:href="/images/sprite.svg#arrow-back"/></svg>
+        <li class="sharebar__item">
+          <a class="sharebar__link js-social-share" data-social="twitter" data-text="Hi there! https://trevorsaint.uk via @trevorsaint" data-hashtags="#govuk, #design, #government, #dev, #ux, #interaction-design, #brexit, #eu-funding, #double-opt-in" href="https://twitter.com/intent/tweet">
+            <svg class="icon icon--sm" viewBox="0 0 32 32"><title>Share on Twitter</title><path d="M32,6.1c-1.2,0.5-2.4,0.9-3.8,1c1.4-0.8,2.4-2.1,2.9-3.6c-1.3,0.8-2.7,1.3-4.2,1.6C25.7,3.8,24,3,22.2,3 c-3.6,0-6.6,2.9-6.6,6.6c0,0.5,0.1,1,0.2,1.5C10.3,10.8,5.5,8.2,2.2,4.2c-0.6,1-0.9,2.1-0.9,3.3c0,2.3,1.2,4.3,2.9,5.5 c-1.1,0-2.1-0.3-3-0.8c0,0,0,0.1,0,0.1c0,3.2,2.3,5.8,5.3,6.4c-0.6,0.1-1.1,0.2-1.7,0.2c-0.4,0-0.8,0-1.2-0.1 c0.8,2.6,3.3,4.5,6.1,4.6c-2.2,1.8-5.1,2.8-8.2,2.8c-0.5,0-1.1,0-1.6-0.1C2.9,27.9,6.4,29,10.1,29c12.1,0,18.7-10,18.7-18.7 c0-0.3,0-0.6,0-0.8C30,8.5,31.1,7.4,32,6.1z"></path></svg>
+          </a>
+        </li>
 
-          <span class="margin-left-sm">
-            <i class="sr-only">Previous project: </i>A complete rebrand and design for Max Powder
-          </span>
+        <li class="sharebar__item">
+          <a class="sharebar__link js-social-share" data-social="facebook" data-url="https://trevorsaint.uk" href="http://www.facebook.com/sharer.php">
+            <svg class="icon icon--sm" viewBox="0 0 32 32"><title>Share on Facebook</title><path d="M32,16A16,16,0,1,0,13.5,31.806V20.625H9.438V16H13.5V12.475c0-4.01,2.389-6.225,6.043-6.225a24.644,24.644,0,0,1,3.582.312V10.5H21.107A2.312,2.312,0,0,0,18.5,13v3h4.438l-.71,4.625H18.5V31.806A16,16,0,0,0,32,16Z"></path></svg>
+          </a>
+        </li>
 
-        </a>
+        <li class="sharebar__item">
+          <a class="sharebar__link js-social-share" data-social="pinterest" data-description="Description for my Pinterest share" data-media="https://trevorsaint.uk/app/assets/img/social-sharing-img-1.jpg" data-url="https://trevorsaint.uk" href="http://pinterest.com/pin/create/button">
+            <svg class="icon icon--sm" viewBox="0 0 32 32"><title>Share on Pinterest</title><path d="M16,0C7.2,0,0,7.2,0,16c0,6.8,4.2,12.6,10.2,14.9c-0.1-1.3-0.3-3.2,0.1-4.6c0.3-1.2,1.9-8,1.9-8 s-0.5-1-0.5-2.4c0-2.2,1.3-3.9,2.9-3.9c1.4,0,2,1,2,2.3c0,1.4-0.9,3.4-1.3,5.3c-0.4,1.6,0.8,2.9,2.4,2.9c2.8,0,5-3,5-7.3 c0-3.8-2.8-6.5-6.7-6.5c-4.6,0-7.2,3.4-7.2,6.9c0,1.4,0.5,2.8,1.2,3.7c0.1,0.2,0.1,0.3,0.1,0.5c-0.1,0.5-0.4,1.6-0.4,1.8 C9.5,21.9,9.3,22,9,21.8c-2-0.9-3.2-3.9-3.2-6.2c0-5,3.7-9.7,10.6-9.7c5.6,0,9.9,4,9.9,9.2c0,5.5-3.5,10-8.3,10 c-1.6,0-3.1-0.8-3.7-1.8c0,0-0.8,3.1-1,3.8c-0.4,1.4-1.3,3.1-2,4.2c1.5,0.5,3.1,0.7,4.7,0.7c8.8,0,16-7.2,16-16C32,7.2,24.8,0,16,0z "></path></svg>
+          </a>
+        </li>
 
-      </li>
+        <li class="sharebar__item">
+          <a class="sharebar__link js-social-share" data-social="linkedin" data-url="https://trevorsaint.uk" href="https://www.linkedin.com/shareArticle">
+            <svg class="icon icon--sm" viewBox="0 0 32 32"><title>Share on Linkedin</title><path d="M29,1H3A2,2,0,0,0,1,3V29a2,2,0,0,0,2,2H29a2,2,0,0,0,2-2V3A2,2,0,0,0,29,1ZM9.887,26.594H5.374V12.25H9.887ZM7.63,10.281a2.625,2.625,0,1,1,2.633-2.625A2.624,2.624,0,0,1,7.63,10.281ZM26.621,26.594H22.2V19.656c0-1.687,0-3.75-2.35-3.75s-2.633,1.782-2.633,3.656v7.126H12.8V12.25h4.136v1.969h.094a4.7,4.7,0,0,1,4.231-2.344c4.513,0,5.359,3,5.359,6.844Z"></path></svg>
+          </a>
+        </li>
 
-      <li class="pn-links__item col-6@md">
+        <li class="sharebar__item">
+          <a class="sharebar__link js-social-share" data-social="mail" data-subject="Email Subject" data-body="Content of my email." href="mailto:">
+            <svg class="icon icon--sm" viewBox="0 0 32 32"><title>Share by Email</title><path d="M28,3H4A3.957,3.957,0,0,0,0,7V25a3.957,3.957,0,0,0,4,4H28a3.957,3.957,0,0,0,4-4V7A3.957,3.957,0,0,0,28,3Zm.6,6.8-12,9a1,1,0,0,1-1.2,0l-12-9A1,1,0,0,1,4.6,8.2L16,16.75,27.4,8.2a1,1,0,1,1,1.2,1.6Z"></path></svg>
+          </a>
+        </li>
 
-        <a class="pn-links__link justify-center justify-between@md" href="/projects/hmcts-design-system" rel="next">
+      </ul>
 
-          <span class="margin-right-sm">
-            <i class="sr-only">Next project: </i>A design system to solve problems and avoid repition
-          </span>
+    </div>
 
-          <svg class="pn-links__icon icon icon--md" viewBox="0 0 24 24" role="img" focusable="false" aria-hidden="true"><use xlink:href="/images/sprite.svg#arrow-forward"/></svg>
 
-        </a>
+    <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
 
-      </li>
+      <ul class="pn-links grid">
 
-    </ul>
+        <li class="pn-links__item col-6@md">
+
+          <a class="pn-links__link justify-center justify-between@md" href="/projects/rural-payments" rel="prev">
+
+            <svg class="pn-links__icon icon icon--md" viewBox="0 0 24 24" role="img" focusable="false" aria-hidden="true"><use xlink:href="/images/sprite.svg#arrow-back"/></svg>
+
+            <span class="margin-left-sm">
+              <i class="sr-only">Previous project: </i>A complete rebrand and design for Max Powder
+            </span>
+
+          </a>
+
+        </li>
+
+        <li class="pn-links__item col-6@md">
+
+          <a class="pn-links__link justify-center justify-between@md" href="/projects/max-powder" rel="next">
+
+            <span class="margin-right-sm">
+              <i class="sr-only">Next project: </i>A complete rebrand and design for Max Powder
+            </span>
+
+            <svg class="pn-links__icon icon icon--md" viewBox="0 0 24 24" role="img" focusable="false" aria-hidden="true"><use xlink:href="/images/sprite.svg#arrow-forward"/></svg>
+
+          </a>
+
+        </li>
+
+      </ul>
+
+    </div>
 
 
   </div>
-
-
-</section>
 
 
 {% endblock %}

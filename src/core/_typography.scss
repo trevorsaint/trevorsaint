@@ -114,6 +114,21 @@
 }
 
 
+.text-lg {
+  @include typography(36);
+}
+
+
+.text-md {
+  @include typography(24);
+}
+
+
+.text-sm {
+  @include typography(20);
+}
+
+
 
 // --------------------------------
 // Text Component
@@ -185,5 +200,6 @@
   > *:last-child {
     margin-bottom: 0;
   }
+
 
 }

@@ -6,8 +6,8 @@ Previous / Next Links
 
 
 .pn-links {
-  border-bottom: 1px solid var(--color-contrast-low);
-  border-top: 1px solid var(--color-contrast-low);
+  border-bottom: 1px solid alpha(var(--color-black), .2);
+  border-top: 1px solid alpha(var(--color-black), .2);
 }
 
 
@@ -19,7 +19,7 @@ Previous / Next Links
 .pn-links__item:first-child {
 
   .pn-links__link {
-    border-bottom: 1px solid var(--color-contrast-low);
+    border-bottom: 1px solid alpha(var(--color-black), .2);
   }
 
 }
@@ -50,7 +50,7 @@ Previous / Next Links
 
   .pn-links__item:first-child .pn-links__link {
     border-bottom: none;
-    border-right: 1px solid var(--color-contrast-low);
+    border-right: 1px solid alpha(var(--color-black), .2);
   }
 
 }

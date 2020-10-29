@@ -9,12 +9,11 @@ Footer
   position: relative;
 
   &:after {
-    background-color: alpha(var(--color-black), 0.2);
+    background-color: alpha(var(--color-black), .2);
     content: "";
     display: block;
     height: 1px;
     left: 0;
-    mix-blend-mode: multiply;
     position: absolute;
     top: 0;
     width: 200%;

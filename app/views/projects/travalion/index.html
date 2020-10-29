@@ -7,52 +7,73 @@
 {% block content %}
 
 
-<section class="padding-top-xs padding-bottom-md padding-bottom-lg@sm padding-bottom-xxl@md padding-bottom-xxxxl@lg">
-
-
   <div class="container">
 
 
-    {{
-      backLink({
-        "url": '/projects',
-        "text": 'Back'
-      })
-    }}
+    {{ backLink({
+      "url": '/projects',
+      "text": 'Back'
+    }) }}
 
 
     <h1 class="heading-xxl margin-y-sm margin-y-lg@sm">Designing for the happy travel campany ‘Travalion’</h1>
 
 
-    <figure>
+    <figure class="figure">
       <div class="bg-contrast-lower media-wrapper media-wrapper--3:2"></div>
     </figure>
 
 
+    <div class="flex justify-between items-start margin-top-md">
+
+      {{ entryDetails({
+        "rows": [
+          {
+            "key": {
+              "text": 'Client'
+            },
+            "value": {
+              "text": 'Travalion'
+            }
+          },
+          {
+            "key": {
+              "text": 'Industry'
+            },
+            "value": {
+              "text": 'Travel'
+            }
+          },
+          {
+            "key": {
+              "text": 'Year'
+            },
+            "value": {
+              "text": '2020'
+            }
+          }
+        ]
+      }) }}
+
+      <p>
+        <a class="link-icon" href="#0" rel="external">
+          <span class="link-icon__label">Visit website</span>
+          <svg class="icon icon--sm" width="24" height="24" viewBox="0 0 24 24" role="img" focusable="false" aria-hidden="true"><use xlink:href="/images/sprite.svg#launch"/></svg>
+        </a>
+      </p>
+
+    </div>
+
+
     <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
 
-      <div class="grid gap-xs justify-between">
+      <div class="container text-component max-width-sm">
 
-        <div class="col-11@sm offset-1@sm">
-          <h2 class="heading-xl">Overview</h2>
-        </div>
+        <h2>Overview</h2>
 
-        <div class="col-7@sm offset-1@sm">
-          <div class="color-contrast-medium text-component">
-            <p>I was approached by a German startup company to design a complete brand identity package, as well as develop the entire front-end architecture for the service. </p>
-            <p>This included logo design, typography, colour palette, and a full set of reusable design components used to piece together the foundations for the website design and build. </p>
-          </div>
-        </div>
-
-        <div class="col-3@sm">
-          <dl>
-            <dt class="font-bold">Client</dt>
-            <dd class="color-contrast-medium margin-bottom-xxs">Travalion</dd>
-            <dt class="font-bold">Industry</dt>
-            <dd class="color-contrast-medium margin-bottom-xxs">Travel</dd>
-            <dt class="font-bold">Year</dt>
-            <dd class="color-contrast-medium">2020</dd>
-          </dl>
+        <div class="color-contrast-medium">
+          <p>I was approached by a German startup company to design a complete brand identity package, as well as develop the entire front-end architecture for the service. </p>
+          <p>This included logo design, typography, colour palette, and a full set of reusable design components used to piece together the foundations for the website design and build. </p>
         </div>
 
       </div>
@@ -60,24 +81,21 @@
     </div>
 
 
-    <figure>
+    <figure class="figure">
       <div class="bg-contrast-lower media-wrapper media-wrapper--3:2"></div>
-      <figcaption class="color-contrast-medium body-xs margin-top-xxs text-center">Fig caption</figcaption>
+      <figcaption class="figure__caption margin-top-xxs">Fig caption</figcaption>
     </figure>
 
 
     <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
 
-      <div class="grid gap-xs">
+      <div class="container text-component max-width-sm">
 
-        <div class="col-7@sm offset-1@sm">
-          <div class="text-component">
-            <h2>Forming the brand identity</h2>
-            <div class="color-contrast-medium">
-              <p>It was my sole responsibility to design a ‘happy’ brand, something encompassing an energetic, friendly and professional look and feel. In my opinion, a good starting point is with type. A great typeface evokes a level of emotion and in most cases is used to form a logo.</p>
-              <p>I searched for a German typeface, something perfectly fitting for a German startup. I was lucky enough to find NB Akademie, a beautiful looking typeface designed by German designer Stefan Gandl. I fell in love with this typeface instantly, as it adopts a style I tend to use in other projects.</p>
-            </div>
-          </div>
+        <h2>Forming the brand identity</h2>
+
+        <div class="color-contrast-medium">
+          <p>It was my sole responsibility to design a ‘happy’ brand, something encompassing an energetic, friendly and professional look and feel. In my opinion, a good starting point is with type. A great typeface evokes a level of emotion and in most cases is used to form a logo.</p>
+          <p>I searched for a German typeface, something perfectly fitting for a German startup. I was lucky enough to find NB Akademie, a beautiful looking typeface designed by German designer Stefan Gandl. I fell in love with this typeface instantly, as it adopts a style I tend to use in other projects.</p>
         </div>
 
       </div>
@@ -85,29 +103,26 @@
     </div>
 
 
-    <figure>
+    <figure class="figure">
       <div class="bg-contrast-lower media-wrapper media-wrapper--3:2"></div>
-      <figcaption class="color-contrast-medium body-xs margin-top-xxs text-center">Fig caption</figcaption>
+      <figcaption class="figure__caption margin-top-xxs">Fig caption</figcaption>
     </figure>
 
 
-    <figure class="margin-top-lg">
+    <figure class="figure margin-top-lg">
       <div class="bg-contrast-lower media-wrapper media-wrapper--3:2"></div>
-      <figcaption class="color-contrast-medium body-xs margin-top-xxs text-center">Fig caption</figcaption>
+      <figcaption class="figure__caption margin-top-xxs">Fig caption</figcaption>
     </figure>
 
 
     <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
 
-      <div class="grid gap-xs">
+      <div class="container text-component max-width-sm">
 
-        <div class="col-7@sm offset-1@sm">
-          <div class="text-component">
-            <h2>Designing the logo</h2>
-            <div class="color-contrast-medium">
-              <p>The logo uses the chosen typeface, with a complimentary happy smiley face mark that works well with their strap-line, ‘The Happy Travel Company’. Creating the distinct icon I felt would work well with other branding material, as with social shortcut icons and other social media application.</p>
-            </div>
-          </div>
+        <h2>Designing the logo</h2>
+
+        <div class="color-contrast-medium">
+          <p>The logo uses the chosen typeface, with a complimentary happy smiley face mark that works well with their strap-line, ‘The Happy Travel Company’. Creating the distinct icon I felt would work well with other branding material, as with social shortcut icons and other social media application.</p>
         </div>
 
       </div>
@@ -118,16 +133,16 @@
     <div class="grid gap-xs">
 
       <div class="col-6@sm">
-        <figure>
+        <figure class="figure">
           <div class="bg-contrast-lower media-wrapper media-wrapper--3:2"></div>
-          <figcaption class="color-contrast-medium body-xs margin-top-xxs text-center">Travalion logo on a dark background</figcaption>
+          <figcaption class="figure__caption margin-top-xxs">Travalion logo on a dark background</figcaption>
         </figure>
       </div>
 
       <div class="col-6@sm">
-        <figure>
+        <figure class="figure">
           <div class="bg-contrast-lower media-wrapper media-wrapper--3:2"></div>
-          <figcaption class="color-contrast-medium body-xs margin-top-xxs text-center">Travalion logo on light background</figcaption>
+          <figcaption class="figure__caption margin-top-xxs">Travalion logo on light background</figcaption>
         </figure>
       </div>
 
@@ -136,15 +151,12 @@
 
     <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
 
-      <div class="grid gap-xs">
+      <div class="container text-component max-width-sm">
 
-        <div class="col-7@sm offset-1@sm">
-          <div class="text-component">
-            <h2>Researching their competitors</h2>
-            <div class="color-contrast-medium">
-              <p>It’s a good move generally, to research competitive websites to see what they are offering and how well they are doing this from both a visual and functional perspective, to ensure we have a competitive edge when designing and developing something better.</p>
-            </div>
-          </div>
+        <h2>Researching their competitors</h2>
+
+        <div class="color-contrast-medium">
+          <p>It’s a good move generally, to research competitive websites to see what they are offering and how well they are doing this from both a visual and functional perspective, to ensure we have a competitive edge when designing and developing something better.</p>
         </div>
 
       </div>
@@ -152,23 +164,20 @@
     </div>
 
 
-    <figure>
+    <figure class="figure">
       <div class="bg-contrast-lower media-wrapper media-wrapper--3:2"></div>
-      <figcaption class="color-contrast-medium body-xs margin-top-xxs text-center">Fig caption</figcaption>
+      <figcaption class="figure__caption margin-top-xxs">Fig caption</figcaption>
     </figure>
 
 
     <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
 
-      <div class="grid gap-xs">
+      <div class="container text-component max-width-sm">
 
-        <div class="col-7@sm offset-1@sm">
-          <div class="text-component">
-            <h2>Creating a design system</h2>
-            <div class="color-contrast-medium">
-              <p>Building a design system for Travalion go hand in hand with the need for scale, efficiency and consistency in design. The design system acted as a single source of truth for both design and code. It would ensure that new design patterns and code were more structured and guided to avoid chaos with other people working with it.</p>
-            </div>
-          </div>
+        <h2>Creating a design system</h2>
+
+        <div class="color-contrast-medium">
+          <p>Building a design system for Travalion go hand in hand with the need for scale, efficiency and consistency in design. The design system acted as a single source of truth for both design and code. It would ensure that new design patterns and code were more structured and guided to avoid chaos with other people working with it.</p>
         </div>
 
       </div>
@@ -177,25 +186,21 @@
 
 
     <blockquote class="position-relative z-index-1 text-center">
-        <div class="text-component">
-          <p class="text-xl font-medium">“A design system is a collection of reusable components, guided by clear standards, that can be assembled to build any number of applications.”</p>
-        </div>
-        <footer class="margin-top-lg">&mdash; InVision</footer>
+      <div class="text-component">
+        <p class="text-xl font-medium">“A design system is a collection of reusable components, guided by clear standards, that can be assembled to build any number of applications.”</p>
+      </div>
+      <footer class="margin-top-lg">&mdash; InVision</footer>
     </blockquote>
 
 
     <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
 
-      <div class="grid gap-xs">
+      <div class="container text-component max-width-sm">
 
-        <div class="col-7@sm offset-1@sm">
-          <div class="text-component">
-            <div class="color-contrast-medium">
-              <p>This design system consisted of everything from typography, colour palette, spacing scale, components, patterns and documentation on how to use them in the service. I created the design system in two formats, one as an asset library, prepared in Sketch. The other as an interactive coded resource.</p>
-              <p>The asset library was essential in the design of new pages. Any updates to the library would immediately be reflected in any design files referencing it. The coded resource included code snippets, previews and documentation on how to use the components.</p>
-              <p>With both of these assets in place, it made designing and developing pages a quick process, which reduced inconsistencies in both design and development. I was able to quickly design and develop pages after all of the hard work had been done in preparing all the required assets.</p>
-            </div>
-          </div>
+        <div class="color-contrast-medium">
+          <p>This design system consisted of everything from typography, colour palette, spacing scale, components, patterns and documentation on how to use them in the service. I created the design system in two formats, one as an asset library, prepared in Sketch. The other as an interactive coded resource.</p>
+          <p>The asset library was essential in the design of new pages. Any updates to the library would immediately be reflected in any design files referencing it. The coded resource included code snippets, previews and documentation on how to use the components.</p>
+          <p>With both of these assets in place, it made designing and developing pages a quick process, which reduced inconsistencies in both design and development. I was able to quickly design and develop pages after all of the hard work had been done in preparing all the required assets.</p>
         </div>
 
       </div>
@@ -203,23 +208,20 @@
     </div>
 
 
-    <figure>
+    <figure class="figure">
       <div class="bg-contrast-lower media-wrapper media-wrapper--3:2"></div>
-      <figcaption class="color-contrast-medium body-xs margin-top-xxs text-center">Fig caption</figcaption>
+      <figcaption class="figure__caption margin-top-xxs">Fig caption</figcaption>
     </figure>
 
 
     <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
 
-      <div class="grid gap-xs">
+      <div class="container text-component max-width-sm">
 
-        <div class="col-7@sm offset-1@sm">
-          <div class="text-component">
-            <h2>Scaleable blocks of reusable code</h2>
-            <div class="color-contrast-medium">
-              <p>Every component carefully built to be responsive, accessible, flexible and production-ready. Typical components included date pickers, accordions, menus, paginations, tabs, filters and many more.</p>
-            </div>
-          </div>
+        <h2>Scaleable blocks of reusable code</h2>
+
+        <div class="color-contrast-medium">
+          <p>Every component carefully built to be responsive, accessible, flexible and production-ready. Typical components included date pickers, accordions, menus, paginations, tabs, filters and many more.</p>
         </div>
 
       </div>
@@ -227,23 +229,20 @@
     </div>
 
 
-    <figure>
+    <figure class="figure">
       <div class="bg-contrast-lower media-wrapper media-wrapper--3:2"></div>
-      <figcaption class="color-contrast-medium body-xs margin-top-xxs text-center">Fig caption</figcaption>
+      <figcaption class="figure__caption margin-top-xxs">Fig caption</figcaption>
     </figure>
 
 
     <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
 
-      <div class="grid gap-xs">
+      <div class="container text-component max-width-sm">
 
-        <div class="col-7@sm offset-1@sm">
-          <div class="text-component">
-            <h2>The results</h2>
-            <div class="color-contrast-medium">
-              <p>I delivered a clean, attractive and scalable solution that works and looks great on all devices. The flexibility to build new pages has been made possible with clear documentation for future growth.</p>
-            </div>
-          </div>
+        <h2>The results</h2>
+
+        <div class="color-contrast-medium">
+          <p>I delivered a clean, attractive and scalable solution that works and looks great on all devices. The flexibility to build new pages has been made possible with clear documentation for future growth.</p>
         </div>
 
       </div>
@@ -251,45 +250,44 @@
     </div>
 
 
+    <div class="padding-bottom-md padding-bottom-lg@sm padding-bottom-xxl@md padding-bottom-xxxxl@lg">
 
-    <!-- Previous / Next Links -->
-    <ul class="pn-links grid">
+      <ul class="pn-links grid">
 
-      <li class="pn-links__item col-6@md">
+        <li class="pn-links__item col-6@md">
 
-        <a class="pn-links__link justify-center justify-between@md" href="/projects/rural-payments" rel="prev">
+          <a class="pn-links__link justify-center justify-between@md" href="/projects/rural-payments" rel="prev">
 
-          <svg class="pn-links__icon icon icon--md" viewBox="0 0 24 24" role="img" focusable="false" aria-hidden="true"><use xlink:href="/images/sprite.svg#arrow-back"/></svg>
+            <svg class="pn-links__icon icon icon--md" viewBox="0 0 24 24" role="img" focusable="false" aria-hidden="true"><use xlink:href="/images/sprite.svg#arrow-back"/></svg>
 
-          <span class="margin-left-sm">
-            <i class="sr-only">Previous project: </i>Rural grants and payments to help the farming industry
-          </span>
+            <span class="margin-left-sm">
+              <i class="sr-only">Previous project: </i>Rural grants and payments to help the farming industry
+            </span>
 
-        </a>
+          </a>
 
-      </li>
+        </li>
 
-      <li class="pn-links__item col-6@md">
+        <li class="pn-links__item col-6@md">
 
-        <a class="pn-links__link justify-center justify-between@md" href="/projects/max-powder" rel="next">
+          <a class="pn-links__link justify-center justify-between@md" href="/projects/max-powder" rel="next">
 
-          <span class="margin-right-sm">
-            <i class="sr-only">Next project: </i>A complete rebrand and design for Max Powder
-          </span>
+            <span class="margin-right-sm">
+              <i class="sr-only">Next project: </i>A complete rebrand and design for Max Powder
+            </span>
 
-          <svg class="pn-links__icon icon icon--md" viewBox="0 0 24 24" role="img" focusable="false" aria-hidden="true"><use xlink:href="/images/sprite.svg#arrow-forward"/></svg>
+            <svg class="pn-links__icon icon icon--md" viewBox="0 0 24 24" role="img" focusable="false" aria-hidden="true"><use xlink:href="/images/sprite.svg#arrow-forward"/></svg>
 
-        </a>
+          </a>
 
-      </li>
+        </li>
 
-    </ul>
+      </ul>
+
+    </div>
 
 
   </div>
-
-
-</section>
 
 
 {% endblock %}
