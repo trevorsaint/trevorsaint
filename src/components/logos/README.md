@@ -1,1 +1,1 @@
-# Customer logos
+# Logos

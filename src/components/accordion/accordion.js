@@ -1,5 +1,3 @@
-// File#: _1_accordion
-// Usage: codyhouse.co/license
 (function() {
   var Accordion = function(element) {
     this.element = element;
@@ -12,7 +10,7 @@
   };
 
   Accordion.prototype.initAccordion = function() {
-    //set initial aria attributes
+    // Set initial aria attributes
     for( var i = 0; i < this.items.length; i++) {
       var button = this.items[i].getElementsByTagName('button')[0],
         content = this.items[i].getElementsByClassName('js-accordion__panel')[0],
@@ -22,7 +20,7 @@
       Util.setAttributes(content, {'aria-labelledby': 'accordion-header-'+i, 'id': 'accordion-content-'+i});
     }
 
-    //listen for Accordion events
+    // Listen for Accordion events
     this.initAccordionEvents();
   };
 
@@ -31,7 +29,7 @@
 
     this.element.addEventListener('click', function(event) {
       var trigger = event.target.closest('.js-accordion__trigger');
-      //check index to make sure the click didn't happen inside a children accordion
+      // Check index to make sure the click didn't happen inside a children accordion
       if( trigger && Util.getIndexInArray(self.items, trigger.parentElement) >= 0) self.triggerAccordion(trigger);
     });
   };
@@ -58,14 +56,14 @@
 
   Accordion.prototype.resetContentVisibility = function(item, content, bool) {
     Util.toggleClass(item, this.showClass, !bool);
-    content.removeAttribute("style");
-    if(bool && !this.multiItems) { // accordion item has been closed -> check if there's one open to move inside viewport
+    content.removeAttribute('style');
+    if(bool && !this.multiItems) { // Accordion item has been closed -> check if there’s one open to move inside viewport
       this.moveContent();
     }
   };
 
   Accordion.prototype.closeSiblings = function(item) {
-    //if only one accordion can be open -> search if there's another one open
+    // If only one accordion can be open -> search if there’s another one open
     var index = Util.getIndexInArray(this.items, item);
     for( var i = 0; i < this.items.length; i++) {
       if(Util.hasClass(this.items[i], this.showClass) && i != index) {
@@ -75,7 +73,7 @@
     }
   };
 
-  Accordion.prototype.moveContent = function() { // make sure title of the accordion just opened is inside the viewport
+  Accordion.prototype.moveContent = function() { // Make sure title of the accordion just opened is inside the viewport
     var openAccordion = this.element.getElementsByClassName(this.showClass);
     if(openAccordion.length == 0) return;
     var boundingRect = openAccordion[0].getBoundingClientRect();
@@ -87,7 +85,7 @@
 
   window.Accordion = Accordion;
 
-  //initialize the Accordion objects
+  // Initialize the Accordion objects
   var accordions = document.getElementsByClassName('js-accordion');
   if( accordions.length > 0 ) {
     for( var i = 0; i < accordions.length; i++) {

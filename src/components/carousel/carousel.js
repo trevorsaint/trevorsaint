@@ -6,43 +6,43 @@
     this.listWrapper = this.element.getElementsByClassName('carousel__wrapper')[0];
     this.list = this.element.getElementsByClassName('carousel__list')[0];
     this.items = this.element.getElementsByClassName('carousel__item');
-    this.initItems = []; // store only the original elements - will need this for cloning
-    this.itemsNb = this.items.length; //original number of items
-    this.visibItemsNb = 1; // tot number of visible items
-    this.itemsWidth = 1; // this will be updated with the right width of items
-    this.itemOriginalWidth = false; // store the initial width to use it on resize
-    this.selectedItem = 0; // index of first visible item
-    this.translateContainer = 0; // this will be the amount the container has to be translated each time a new group has to be shown (negative)
-    this.containerWidth = 0; // this will be used to store the total width of the carousel (including the overflowing part)
+    this.initItems = []; // Store only the original elements - will need this for cloning
+    this.itemsNb = this.items.length; // Original number of items
+    this.visibItemsNb = 1; // Total number of visible items
+    this.itemsWidth = 1; // This will be updated with the right width of items
+    this.itemOriginalWidth = false; // Store the initial width to use it on resize
+    this.selectedItem = 0; // Index of first visible item
+    this.translateContainer = 0; // This will be the amount the container has to be translated each time a new group has to be shown (negative)
+    this.containerWidth = 0; // This will be used to store the total width of the carousel (including the overflowing part)
     this.ariaLive = false;
-    // navigation
+    // Navigation
     this.controls = this.element.getElementsByClassName('js-carousel__control');
     this.animating = false;
-    // autoplay
+    // Autoplay
     this.autoplayId = false;
     this.autoplayPaused = false;
-    //drag
+    // Drag
     this.dragStart = false;
-    // resize
+    // Resize
     this.resizeId = false;
-    // used to re-initialize js
+    // Used to re-initialize js
     this.cloneList = [];
-    // store items min-width
+    // Store items min-width
     this.itemAutoSize = false;
-    // store translate value (loop = off)
+    // Store translate value (loop = off)
     this.totTranslate = 0;
-    // modify loop option if navigation is on
+    // Modify loop option if navigation is on
     if(this.options.nav) this.options.loop = false;
-    // store counter elements (if present)
+    // Store counter elements (if present)
     this.counter = this.element.getElementsByClassName('js-carousel__counter');
     this.counterTor = this.element.getElementsByClassName('js-carousel__counter-tot');
-    initCarouselLayout(this); // get number visible items + width items
+    initCarouselLayout(this); // Get number visible items + width items
     setItemsWidth(this, true);
-    insertBefore(this, this.visibItemsNb); // insert clones before visible elements
-    updateCarouselClones(this); // insert clones after visible elements
-    resetItemsTabIndex(this); // make sure not visible items are not focusable
-    initAriaLive(this); // set aria-live region for SR
-    initCarouselEvents(this); // listen to events
+    insertBefore(this, this.visibItemsNb); // Insert clones before visible elements
+    updateCarouselClones(this); // Insert clones after visible elements
+    resetItemsTabIndex(this); // Make sure not visible items are not focusable
+    initAriaLive(this); // Set aria-live region for SR
+    initCarouselEvents(this); // Listen to events
     initCarouselCounter(this);
     Util.addClass(this.element, 'carousel--loaded');
   };
@@ -64,9 +64,9 @@
     pauseAutoplay(this);
   };
 
-  //private carousel functions
+  // Private carousel functions
   function initCarouselLayout(carousel) {
-    // evaluate size of single elements + number of visible elements
+    // Evaluate size of single elements + number of visible elements
     var itemStyle = window.getComputedStyle(carousel.items[0]),
       containerStyle = window.getComputedStyle(carousel.listWrapper),
       itemWidth = parseFloat(itemStyle.getPropertyValue('width')),
@@ -78,10 +78,10 @@
       carousel.itemAutoSize = itemWidth;
     }
 
-    // if carousel.listWrapper is hidden -> make sure to retrieve the proper width
+    // If carousel.listWrapper is hidden -> make sure to retrieve the proper width
     containerWidth = getCarouselWidth(carousel, containerWidth);
 
-    if( !carousel.itemOriginalWidth) { // on resize -> use initial width of items to recalculate
+    if( !carousel.itemOriginalWidth) { // On resize -> use initial width of items to recalculate
       carousel.itemOriginalWidth = itemWidth;
     } else {
       itemWidth = carousel.itemOriginalWidth;
@@ -91,25 +91,25 @@
       carousel.itemOriginalWidth = parseInt(carousel.itemAutoSize);
       itemWidth = carousel.itemOriginalWidth;
     }
-    // make sure itemWidth is smaller than container width
+    // Make sure itemWidth is smaller than container width
     if(containerWidth < itemWidth) {
       carousel.itemOriginalWidth = containerWidth
       itemWidth = carousel.itemOriginalWidth;
     }
-    // get proper width of elements
+    // Get proper width of elements
     carousel.visibItemsNb = parseInt((containerWidth - 2*containerPadding + itemMargin)/(itemWidth+itemMargin));
     carousel.itemsWidth = parseFloat( (((containerWidth - 2*containerPadding + itemMargin)/carousel.visibItemsNb) - itemMargin).toFixed(1));
     carousel.containerWidth = (carousel.itemsWidth+itemMargin)* carousel.items.length;
     carousel.translateContainer = 0 - ((carousel.itemsWidth+itemMargin)* carousel.visibItemsNb);
-    // flexbox fallback
+    // Flexbox fallback
     if(!flexSupported) carousel.list.style.width = (carousel.itemsWidth + itemMargin)*carousel.visibItemsNb*3+'px';
 
-    // this is used when loop == off
+    // This is used when loop == off
     carousel.totTranslate = 0 - carousel.selectedItem*(carousel.itemsWidth+itemMargin);
     if(carousel.items.length <= carousel.visibItemsNb) carousel.totTranslate = 0;
 
-    centerItems(carousel); // center items if carousel.items.length < visibItemsNb
-    alignControls(carousel); // check if controls need to be aligned to a different element
+    centerItems(carousel); // Center items if carousel.items.length < visibItemsNb
+    alignControls(carousel); // Check if controls need to be aligned to a different element
   };
 
   function setItemsWidth(carousel, bool) {
@@ -121,19 +121,18 @@
 
   function updateCarouselClones(carousel) {
     if(!carousel.options.loop) return;
-    // take care of clones after visible items (needs to run after the update of clones before visible items)
+    // Take care of clones after visible items (needs to run after the update of clones before visible items)
     if(carousel.items.length < carousel.visibItemsNb*3) {
       insertAfter(carousel, carousel.visibItemsNb*3 - carousel.items.length, carousel.items.length - carousel.visibItemsNb*2);
     } else if(carousel.items.length > carousel.visibItemsNb*3 ) {
       removeClones(carousel, carousel.visibItemsNb*3, carousel.items.length - carousel.visibItemsNb*3);
     }
-    // set proper translate value for the container
+    // Set proper translate value for the container
     setTranslate(carousel, 'translateX('+carousel.translateContainer+'px)');
   };
 
   function initCarouselEvents(carousel) {
-    // listen for click on previous/next arrow
-    // dots navigation
+    // Listen for click on previous/next arrow dots navigation
     if(carousel.options.nav) {
       carouselCreateNavigation(carousel);
       carouselInitNavigationEvents(carousel);
@@ -151,13 +150,13 @@
         updateAriaLive(carousel);
       });
 
-      // update arrow visility -> loop == off only
+      // Update arrow visility -> loop == off only
       resetCarouselControls(carousel);
     }
-    // autoplay
+    // Autoplay
     if(carousel.options.autoplay) {
       startAutoplay(carousel);
-      // pause autoplay if user is interacting with the carousel
+      // Pause autoplay if user is interacting with the carousel
       carousel.element.addEventListener('mouseenter', function(event){
         pauseAutoplay(carousel);
         carousel.autoplayPaused = true;
@@ -175,9 +174,9 @@
         startAutoplay(carousel);
       });
     }
-    // drag events
+    // Drag events
     if(carousel.options.drag && window.requestAnimationFrame) {
-      //init dragging
+      // Init dragging
       new SwipeContent(carousel.element);
       carousel.element.addEventListener('dragStart', function(event){
         if(event.detail.origin && event.detail.origin.closest('.js-carousel__control')) return;
@@ -198,18 +197,18 @@
         setTranslate(carousel, 'translateX('+translate+'px)');
       });
     }
-    // reset on resize
+    // Reset on resize
     window.addEventListener('resize', function(event){
       pauseAutoplay(carousel);
       clearTimeout(carousel.resizeId);
       carousel.resizeId = setTimeout(function(){
         resetCarouselResize(carousel);
-        // reset dots navigation
+        // Reset dots navigation
         resetDotsNavigation(carousel);
         resetCarouselControls(carousel);
         setCounterItem(carousel);
         startAutoplay(carousel);
-        centerItems(carousel); // center items if carousel.items.length < visibItemsNb
+        centerItems(carousel); // Center items if carousel.items.length < visibItemsNb
         alignControls(carousel);
       }, 250)
     });
@@ -229,7 +228,7 @@
     animateList(carousel, carousel.translateContainer*2+'px', 'next');
   };
 
-  function animateDragEnd(carousel) { // end-of-dragging animation
+  function animateDragEnd(carousel) { // End-of-dragging animation
     carousel.element.addEventListener('dragEnd', function cb(event){
       carousel.element.removeEventListener('dragEnd', cb);
       Util.removeClass(carousel.element, 'carousel--is-dragging');
@@ -239,9 +238,9 @@
       } else if(event.detail.x - carousel.dragStart > 40) {
         carousel.animating = false;
         showPrevItems(carousel);
-      } else if(event.detail.x - carousel.dragStart == 0) { // this is just a click -> no dragging
+      } else if(event.detail.x - carousel.dragStart == 0) { // This is just a click -> no dragging
         return;
-      } else { // not dragged enought -> do not update carousel, just reset
+      } else { // Not dragged enought -> do not update carousel, just reset
         carousel.animating = true;
         animateList(carousel, carousel.translateContainer+'px', false);
       }
@@ -249,7 +248,7 @@
     });
   };
 
-  function animateList(carousel, translate, direction) { // takes care of changing visible items
+  function animateList(carousel, translate, direction) { // Takes care of changing visible items
     pauseAutoplay(carousel);
     Util.addClass(carousel.list, 'carousel__list--animating');
     var initTranslate = carousel.totTranslate;
@@ -268,7 +267,7 @@
       animateListCb(carousel, direction);
     }
     if(!carousel.options.loop && (initTranslate == carousel.totTranslate)) {
-      // translate value was not updated -> trigger transitionend event to restart carousel
+      // Translate value was not updated -> trigger transitionend event to restart carousel
       carousel.list.dispatchEvent(new CustomEvent('transitionend'));
     }
     resetCarouselControls(carousel);
@@ -297,24 +296,24 @@
     return translate + 'px';
   };
 
-  function animateListCb(carousel, direction) { // reset actions after carousel has been updated
+  function animateListCb(carousel, direction) { // Reset actions after carousel has been updated
     if(direction) updateClones(carousel, direction);
     carousel.animating = false;
-    // reset autoplay
+    // Reset autoplay
     startAutoplay(carousel);
-    // reset tab index
+    // Reset tab index
     resetItemsTabIndex(carousel);
   };
 
   function updateClones(carousel, direction) {
     if(!carousel.options.loop) return;
-    // at the end of each animation, we need to update the clones before and after the visible items
+    // At the end of each animation, we need to update the clones before and after the visible items
     var index = (direction == 'next') ? 0 : carousel.items.length - carousel.visibItemsNb;
-    // remove clones you do not need anymore
+    // Remove clones you do not need anymore
     removeClones(carousel, index, false);
-    // add new clones
+    // Add new clones
     (direction == 'next') ? insertAfter(carousel, carousel.visibItemsNb, 0) : insertBefore(carousel, carousel.visibItemsNb);
-    //reset transform
+    // Reset transform
     setTranslate(carousel, 'translateX('+carousel.translateContainer+'px)');
   };
 
@@ -356,33 +355,33 @@
     }
   };
 
-  function resetCarouselResize(carousel) { // reset carousel on resize
+  function resetCarouselResize(carousel) { // Reset carousel on resize
     var visibleItems = carousel.visibItemsNb;
-    // get new items min-width value
+    // Get new items min-width value
     resetItemAutoSize(carousel);
     initCarouselLayout(carousel);
     setItemsWidth(carousel, false);
-    resetItemsWidth(carousel); // update the array of original items -> array used to create clones
+    resetItemsWidth(carousel); // Update the array of original items -> array used to create clones
     if(carousel.options.loop) {
       if(visibleItems > carousel.visibItemsNb) {
         removeClones(carousel, 0, visibleItems - carousel.visibItemsNb);
       } else if(visibleItems < carousel.visibItemsNb) {
         insertBefore(carousel, carousel.visibItemsNb, visibleItems);
       }
-      updateCarouselClones(carousel); // this will take care of translate + after elements
+      updateCarouselClones(carousel); // This will take care of translate + after elements
     } else {
-      // reset default translate to a multiple value of (itemWidth + margin)
+      // Reset default translate to a multiple value of (itemWidth + margin)
       var translate = noLoopTranslateValue(carousel);
       setTranslate(carousel, 'translateX('+translate+')');
     }
-    resetItemsTabIndex(carousel); // reset focusable elements
+    resetItemsTabIndex(carousel); // Reset focusable elements
   };
 
   function resetItemAutoSize(carousel) {
     if(!cssPropertiesSupported) return;
-    // remove inline style
+    // Remove inline style
     carousel.items[0].removeAttribute('style');
-    // get original item width
+    // Get original item width
     carousel.itemAutoSize = getComputedStyle(carousel.items[0]).getPropertyValue('width');
   };
 
@@ -430,16 +429,16 @@
     }
   };
 
-  function initAriaLive(carousel) { // create an aria-live region for SR
+  function initAriaLive(carousel) { // Create an aria-live region for SR
     if(!carousel.options.ariaLive) return;
-    // create an element that will be used to announce the new visible slide to SR
+    // Create an element that will be used to announce the new visible slide to SR
     var srLiveArea = document.createElement('div');
     Util.setAttributes(srLiveArea, {'class': 'sr-only js-carousel__aria-live', 'aria-live': 'polite', 'aria-atomic': 'true'});
     carousel.element.appendChild(srLiveArea);
     carousel.ariaLive = srLiveArea;
   };
 
-  function updateAriaLive(carousel) { // announce to SR which items are now visible
+  function updateAriaLive(carousel) { // Announce to SR which items are now visible
     if(!carousel.options.ariaLive) return;
     carousel.ariaLive.innerHTML = 'Item '+(carousel.selectedItem + 1)+' selected. '+carousel.visibItemsNb+' items of '+carousel.initItems.length+' visible';
   };
@@ -461,9 +460,9 @@
     carousel.list.style.msTransform = translate;
   };
 
-  function getCarouselWidth(carousel, computedWidth) { // retrieve carousel width if carousel is initially hidden
+  function getCarouselWidth(carousel, computedWidth) { // Retrieve carousel width if carousel is initially hidden
     var closestHidden = carousel.listWrapper.closest('.sr-only');
-    if(closestHidden) { // carousel is inside an .sr-only (visually hidden) element
+    if(closestHidden) { // Carousel is inside an .sr-only (visually hidden) element
       Util.removeClass(closestHidden, 'sr-only');
       computedWidth = carousel.listWrapper.offsetWidth;
       Util.addClass(closestHidden, 'sr-only');
@@ -644,7 +643,7 @@
 
   window.Carousel = Carousel;
 
-  //initialize the Carousel objects
+  // Initialize the Carousel objects
   var carousels = document.getElementsByClassName('js-carousel'),
     flexSupported = Util.cssSupports('align-items', 'stretch'),
     transitionSupported = Util.cssSupports('transition'),
