@@ -11,7 +11,7 @@
     <title>{{pageTitle}}</title>
 
     <!-- Stylesheet -->
-    <link href="{{assetPath}}stylesheets/main.css" rel="stylesheet">
+    <link href="{{rootPath}}stylesheets/main.css" rel="stylesheet">
 
     <!-- Add home screen for Safari on iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -19,27 +19,27 @@
     <meta name="apple-mobile-web-app-title" content="Trevor Saint">
 
     <!-- Apple icons -->
-    <link rel="apple-touch-icon" sizes="57x57" href="{{assetPath}}images/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="{{assetPath}}images/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="{{assetPath}}images/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="{{assetPath}}images/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="{{assetPath}}images/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="{{assetPath}}images/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="{{assetPath}}images/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="{{assetPath}}images/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{assetPath}}images/apple-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="{{rootPath}}images/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{rootPath}}images/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{rootPath}}images/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{rootPath}}images/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{rootPath}}images/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{rootPath}}images/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{rootPath}}images/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{rootPath}}images/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{rootPath}}images/apple-icon-180x180.png">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="{{assetPath}}images/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="{{rootPath}}images/favicon.svg">
 
     <!-- Search Engine -->
     <meta name="description" content="{{pageDescription}}">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="{{assetPath}}">
+    <meta property="og:url" content="{{rootPath}}">
     <meta property="og:title" content="{{pageTitle}}">
-    <meta property="og:image" content="{{assetPath}}images/opengraph.png">
+    <meta property="og:image" content="{{rootPath}}images/opengraph.png">
     <meta property="og:description" content="{{pageDescription}}">
     <meta property="og:site_name" content="Trevor Saint">
     <meta property="og:locale" content="en_GB">
@@ -51,13 +51,13 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@trevorsaint">
     <meta name="twitter:creator" content="trevorsaint">
-    <meta name="twitter:url" content="{{assetPath}}">
+    <meta name="twitter:url" content="{{rootPath}}">
     <meta name="twitter:title" content="{{pageTitle}}">
     <meta name="twitter:description" content="{{pageDescription}}">
-    <meta name="twitter:image" content="{{assetPath}}images/twitter.png">
+    <meta name="twitter:image" content="{{rootPath}}images/twitter.png">
 
     <!-- Manifest -->
-    <link href="{{assetPath}}manifest.json" rel="manifest">
+    <link href="{{rootPath}}manifest.json" rel="manifest">
     <meta name="theme-color" content="#F24B88">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -87,8 +87,8 @@
   {% include "footer.html" %}
 
   <div class="bg-decoration">
-    <img class="bg-decoration__svg-1" src="{{assetPath}}images/bg-1.svg">
-    <img class="bg-decoration__svg-2" src="{{assetPath}}images/bg-2.svg">
+    <img class="bg-decoration__svg-1" src="{{rootPath}}images/bg-1.svg" role="presentation" aria-hidden="true" alt="">
+    <img class="bg-decoration__svg-2" src="{{rootPath}}images/bg-2.svg" role="presentation" aria-hidden="true" alt="">
   </div>
 
   {% include "scripts.html" %}

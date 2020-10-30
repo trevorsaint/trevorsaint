@@ -6,24 +6,18 @@
 
 {% block content %}
 
-
   <div class="container">
 
-
     {{ backLink({
-      "url": assetPath + 'projects',
+      "url": rootPath + 'projects',
       "text": 'Back'
     }) }}
 
-
     <h1 class="heading-xxl margin-y-sm margin-y-lg@sm">Manage cases in a simple, accessible and efficient way</h1>
 
-
-    <figure class="figure">
-      <div class="bg-contrast-lower media-wrapper media-wrapper--3:2">
-      </div>
-    </figure>
-
+    <div class="hero">
+      <img srcset="{{rootPath}}images/projects/project/judicial-case-manager/judicial-case-manager-hero.png 1x, {{rootPath}}images/projects/project/judicial-case-manager/judicial-case-manager-hero@2x.png 2x, {{rootPath}}images/projects/project/judicial-case-manager/judicial-case-manager-hero@3x.png 3x" src="{{rootPath}}images/projects/project/judicial-case-manager/judicial-case-manager-hero.png" alt="">
+    </div>
 
     <div class="flex justify-between items-start margin-top-md">
 
@@ -57,14 +51,15 @@
       }) }}
 
       <p>
-        <a class="link-icon" href="#0" rel="external">
-          <span class="link-icon__label">Visit website</span>
-          <svg class="icon icon--sm" width="24" height="24" viewBox="0 0 24 24" role="presentation" focusable="false" aria-hidden="true"><use xlink:href="{{assetPath}}images/sprite.svg#launch"/></svg>
+        <a class="link link--icon link--underline" href="#0" rel="external">
+          Visit website
+          <svg class="icon icon--sm margin-left-xxxxs" width="24" height="24" viewBox="0 0 24 24" role="presentation" focusable="false" aria-hidden="true">
+            <path d="M14,4c0,0.55,0.45,1,1,1h2.59l-9.13,9.13c-0.39,0.39-0.39,1.02,0,1.41s1.02,0.39,1.41,0L19,6.41V9c0,0.55,0.45,1,1,1s1-0.45,1-1V3h-6C14.45,3,14,3.45,14,4z M18,19H6c-0.55,0-1-0.45-1-1V6c0-0.55,0.45-1,1-1h5c0.55,0,1-0.45,1-1s-0.45-1-1-1H5C3.89,3,3,3.9,3,5v14c0,1.1,0.9,2,2,2h14c1.1,0,2-0.9,2-2v-6c0-0.55-0.45-1-1-1s-1,0.45-1,1v5C19,18.55,18.55,19,18,19z"/>
+          </svg>
         </a>
       </p>
 
     </div>
-
 
     <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
 
@@ -81,12 +76,10 @@
 
     </div>
 
-
     <figure class="figure">
       <div class="bg-contrast-lower media-wrapper media-wrapper--3:2"></div>
       <figcaption class="figure__caption margin-top-xxs">Mockups in Balsamiq, to tease out user requirements for research and user testing with Judges</figcaption>
     </figure>
-
 
     <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
 
@@ -103,7 +96,6 @@
       </div>
 
     </div>
-
 
     <figure class="figure">
 
@@ -131,18 +123,15 @@
 
     </figure>
 
-
     <figure class="figure margin-top-md">
       <div class="bg-contrast-lower media-wrapper media-wrapper--3:2"></div>
       <figcaption class="figure__caption margin-top-xxs">Digital case file high fidelity visual design for the Judicial case manager service</figcaption>
     </figure>
 
-
     <figure class="figure margin-top-md">
       <div class="bg-contrast-lower media-wrapper media-wrapper--3:2"></div>
       <figcaption class="figure__caption margin-top-xxs">Questions high fidelity visual design for the Judicial case manager</figcaption>
     </figure>
-
 
     <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
 
@@ -159,12 +148,10 @@
 
     </div>
 
-
     <figure class="figure">
       <div class="bg-contrast-lower media-wrapper media-wrapper--3:2"></div>
       <figcaption class="figure__caption margin-top-xxs">Prototyping Judicial case manager service in code, ready for user testing, and developers to integrate</figcaption>
     </figure>
-
 
     <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
 
@@ -188,7 +175,6 @@
 
     </div>
 
-
     <div class="grid gap-xs">
 
       <div class="col-6@sm">
@@ -207,7 +193,6 @@
 
     </div>
 
-
     <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
 
       <div class="container text-component max-width-sm">
@@ -223,20 +208,17 @@
 
     </div>
 
-
     <figure class="figure">
       <div class="bg-contrast-lower media-wrapper media-wrapper--3:2"></div>
       <figcaption class="figure__caption margin-top-xxs">Filtering your cases visual design for Judicial case manager</figcaption>
     </figure>
-
 
     <figure class="figure margin-top-md">
       <div class="bg-contrast-lower media-wrapper media-wrapper--3:2"></div>
       <figcaption class="figure__caption margin-top-xxs">Filtering your cases visual design for Judicial case manager</figcaption>
     </figure>
 
-
-    <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
+    <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg border-bottom">
 
       <div class="container text-component max-width-sm">
 
@@ -258,64 +240,66 @@
 
     </div>
 
+    <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
 
-    <div class="container max-width-sm">
+      <div class="container max-width-sm">
 
-      <div class="margin-bottom-sm">
-        <p class="font-bold text-sm text-center">Share this project</p>
+        <div class="margin-bottom-sm">
+          <p class="font-bold text-sm text-center">Share this project</p>
+        </div>
+
+        <ul class="sharebar flex flex-wrap gap-xs justify-center">
+
+          <li class="sharebar__item">
+            <a class="sharebar__link js-social-share" data-social="twitter" data-text="Hi there! https://trevorsaint.uk via @trevorsaint" data-hashtags="#govuk, #design, #government, #dev, #ux, #interaction-design, #brexit, #eu-funding, #double-opt-in" href="https://twitter.com/intent/tweet">
+              <svg class="icon icon--md" viewBox="0 0 32 32"><title>Share on Twitter</title><path d="M26,10.7c0,0.2,0,0.5,0,0.7c0,7-5.2,15.1-14.7,15.1h0h0c-2.9,0-5.7-0.9-7.9-2.4c0.4,0,0.8,0.1,1.2,0.1c2.4,0,4.7-0.8,6.4-2.3c-2.3,0-4.2-1.6-4.8-3.7c0.3,0.1,0.6,0.1,1,0.1c0.5,0,0.9-0.1,1.4-0.2c-2.4-0.5-4.2-2.6-4.2-5.2c0,0,0,0,0-0.1c0.7,0.4,1.5,0.6,2.3,0.7C5.3,12.6,4.4,11,4.4,9.1c0-1,0.3-1.9,0.7-2.7c2.6,3.2,6.4,5.3,10.7,5.5c-0.1-0.4-0.1-0.8-0.1-1.2c0-2.9,2.3-5.3,5.2-5.3c1.5,0,2.8,0.6,3.8,1.7c1.2-0.2,2.3-0.7,3.3-1.3c-0.4,1.2-1.2,2.3-2.3,2.9c1-0.1,2-0.4,3-0.8C27.9,9,27.1,10,26,10.7z"/></svg>
+            </a>
+          </li>
+
+          <li class="sharebar__item">
+            <a class="sharebar__link js-social-share" data-social="facebook" data-url="https://trevorsaint.uk" href="http://www.facebook.com/sharer.php">
+              <svg class="icon icon--md" viewBox="0 0 32 32"><title>Share on Facebook</title><path d="M17.3,29.3V20h4v-4h-4v-2.7c0-0.7,0.6-1.3,1.3-1.3h2.7V8H18c-2.6,0-4.7,2.1-4.7,4.7V16h-2.7v4h2.7v9.1C7.3,27.9,2.7,22.5,2.7,16c0-7.4,6-13.3,13.3-13.3s13.3,6,13.3,13.3C29.3,23,24,28.6,17.3,29.3z"/></svg>
+            </a>
+          </li>
+
+          <li class="sharebar__item">
+            <a class="sharebar__link js-social-share" data-social="pinterest" data-description="Description for my Pinterest share" data-media="https://trevorsaint.uk/app/assets/img/social-sharing-img-1.jpg" data-url="https://trevorsaint.uk" href="http://pinterest.com/pin/create/button">
+              <svg class="icon icon--md" viewBox="0 0 32 32"><title>Share on Pinterest</title><path d="M16,2.7C8.6,2.7,2.7,8.7,2.7,16c0,5.6,3.5,10.4,8.4,12.4c-0.1-1.1-0.2-2.7,0-3.8c0.2-1,1.6-6.6,1.6-6.6s-0.4-0.8-0.4-2c0-1.8,1.1-3.2,2.4-3.2c1.1,0,1.7,0.9,1.7,1.9c0,1.1-0.7,2.8-1.1,4.4c-0.3,1.3,0.7,2.4,2,2.4c2.4,0,4.2-2.5,4.2-6.1c0-3.2-2.3-5.4-5.6-5.4c-3.8,0-6,2.8-6,5.8c0,1.1,0.4,2.4,1,3C11,18.9,11,19,11,19.2c-0.1,0.4-0.3,1.3-0.4,1.5c-0.1,0.2-0.2,0.3-0.4,0.2c-1.6-0.8-2.7-3.2-2.7-5.2c0-4.2,3-8,8.8-8c4.6,0,8.2,3.3,8.2,7.7c0,4.6-2.9,8.3-6.9,8.3c-1.3,0-2.6-0.7-3-1.5c0,0-0.7,2.5-0.8,3.2c-0.3,1.2-1.1,2.6-1.7,3.5c1.2,0.4,2.6,0.6,3.9,0.6c7.3,0,13.3-6,13.3-13.3C29.3,8.7,23.3,2.7,16,2.7z"/></svg>
+            </a>
+          </li>
+
+          <li class="sharebar__item">
+            <a class="sharebar__link js-social-share" data-social="linkedin" data-url="https://trevorsaint.uk" href="https://www.linkedin.com/shareArticle">
+              <svg class="icon icon--md" viewBox="0 0 32 32"><title>Share on Linkedin</title><path d="M9.3,7.7c-1.3,0-2.1,0.8-2.1,2c0,1.1,0.8,2,2.1,2h0c1.3,0,2.1-0.9,2.1-2C11.3,8.5,10.5,7.7,9.3,7.7z M20.3,12.9c-1.9,0-2.8,1-3.3,1.8l0,0.1l0-1.6h-3.8c0,0.3,0,1.3,0,2.7l0,1.4c0,0.1,0,0.2,0,0.3l0,0.6c0,2.7,0,5.7,0,6.2l0,0.1l3.8,0v-6.3c0-0.3,0-0.7,0.1-0.9c0.3-0.7,0.9-1.4,1.9-1.4c1.4,0,1.9,1,1.9,2.6v6h3.8V18C24.6,14.5,22.8,12.9,20.3,12.9z M11.1,13.1H7.4v11.3h3.8V13.1z M26.6,3.5c1,0,1.8,0.8,1.8,1.8v21.4c0,1-0.8,1.8-1.8,1.8H5.4c-1,0-1.8-0.8-1.8-1.8V5.3c0-1,0.8-1.8,1.8-1.8H26.6z"/></svg>
+            </a>
+          </li>
+
+          <li class="sharebar__item">
+            <a class="sharebar__link js-social-share" data-social="mail" data-subject="Email Subject" data-body="Content of my email." href="mailto:">
+              <svg class="icon icon--md" viewBox="0 0 32 32"><title>Share by Email</title><path d="M26.1,11l-9.4,5.9c-0.4,0.3-1,0.3-1.4,0L5.9,11c-0.3-0.2-0.5-0.6-0.5-1c0-0.9,1-1.4,1.7-1l8.9,5.6l8.9-5.6c0.8-0.5,1.7,0.1,1.7,1C26.7,10.4,26.5,10.8,26.1,11z M26.7,5.3H5.3C3.9,5.3,2.7,6.5,2.7,8l0,16c0,1.5,1.2,2.7,2.7,2.7h21.3c1.5,0,2.7-1.2,2.7-2.7V8C29.3,6.5,28.1,5.3,26.7,5.3z"/></svg>
+            </a>
+          </li>
+
+        </ul>
+
       </div>
-
-      <ul class="sharebar flex flex-wrap gap-xs justify-center">
-
-        <li class="sharebar__item">
-          <a class="sharebar__link js-social-share" data-social="twitter" data-text="Hi there! https://trevorsaint.uk via @trevorsaint" data-hashtags="#govuk, #design, #government, #dev, #ux, #interaction-design, #brexit, #eu-funding, #double-opt-in" href="https://twitter.com/intent/tweet">
-            <svg class="icon icon--sm" viewBox="0 0 32 32"><title>Share on Twitter</title><path d="M32,6.1c-1.2,0.5-2.4,0.9-3.8,1c1.4-0.8,2.4-2.1,2.9-3.6c-1.3,0.8-2.7,1.3-4.2,1.6C25.7,3.8,24,3,22.2,3 c-3.6,0-6.6,2.9-6.6,6.6c0,0.5,0.1,1,0.2,1.5C10.3,10.8,5.5,8.2,2.2,4.2c-0.6,1-0.9,2.1-0.9,3.3c0,2.3,1.2,4.3,2.9,5.5 c-1.1,0-2.1-0.3-3-0.8c0,0,0,0.1,0,0.1c0,3.2,2.3,5.8,5.3,6.4c-0.6,0.1-1.1,0.2-1.7,0.2c-0.4,0-0.8,0-1.2-0.1 c0.8,2.6,3.3,4.5,6.1,4.6c-2.2,1.8-5.1,2.8-8.2,2.8c-0.5,0-1.1,0-1.6-0.1C2.9,27.9,6.4,29,10.1,29c12.1,0,18.7-10,18.7-18.7 c0-0.3,0-0.6,0-0.8C30,8.5,31.1,7.4,32,6.1z"></path></svg>
-          </a>
-        </li>
-
-        <li class="sharebar__item">
-          <a class="sharebar__link js-social-share" data-social="facebook" data-url="https://trevorsaint.uk" href="http://www.facebook.com/sharer.php">
-            <svg class="icon icon--sm" viewBox="0 0 32 32"><title>Share on Facebook</title><path d="M32,16A16,16,0,1,0,13.5,31.806V20.625H9.438V16H13.5V12.475c0-4.01,2.389-6.225,6.043-6.225a24.644,24.644,0,0,1,3.582.312V10.5H21.107A2.312,2.312,0,0,0,18.5,13v3h4.438l-.71,4.625H18.5V31.806A16,16,0,0,0,32,16Z"></path></svg>
-          </a>
-        </li>
-
-        <li class="sharebar__item">
-          <a class="sharebar__link js-social-share" data-social="pinterest" data-description="Description for my Pinterest share" data-media="https://trevorsaint.uk/app/assets/img/social-sharing-img-1.jpg" data-url="https://trevorsaint.uk" href="http://pinterest.com/pin/create/button">
-            <svg class="icon icon--sm" viewBox="0 0 32 32"><title>Share on Pinterest</title><path d="M16,0C7.2,0,0,7.2,0,16c0,6.8,4.2,12.6,10.2,14.9c-0.1-1.3-0.3-3.2,0.1-4.6c0.3-1.2,1.9-8,1.9-8 s-0.5-1-0.5-2.4c0-2.2,1.3-3.9,2.9-3.9c1.4,0,2,1,2,2.3c0,1.4-0.9,3.4-1.3,5.3c-0.4,1.6,0.8,2.9,2.4,2.9c2.8,0,5-3,5-7.3 c0-3.8-2.8-6.5-6.7-6.5c-4.6,0-7.2,3.4-7.2,6.9c0,1.4,0.5,2.8,1.2,3.7c0.1,0.2,0.1,0.3,0.1,0.5c-0.1,0.5-0.4,1.6-0.4,1.8 C9.5,21.9,9.3,22,9,21.8c-2-0.9-3.2-3.9-3.2-6.2c0-5,3.7-9.7,10.6-9.7c5.6,0,9.9,4,9.9,9.2c0,5.5-3.5,10-8.3,10 c-1.6,0-3.1-0.8-3.7-1.8c0,0-0.8,3.1-1,3.8c-0.4,1.4-1.3,3.1-2,4.2c1.5,0.5,3.1,0.7,4.7,0.7c8.8,0,16-7.2,16-16C32,7.2,24.8,0,16,0z "></path></svg>
-          </a>
-        </li>
-
-        <li class="sharebar__item">
-          <a class="sharebar__link js-social-share" data-social="linkedin" data-url="https://trevorsaint.uk" href="https://www.linkedin.com/shareArticle">
-            <svg class="icon icon--sm" viewBox="0 0 32 32"><title>Share on Linkedin</title><path d="M29,1H3A2,2,0,0,0,1,3V29a2,2,0,0,0,2,2H29a2,2,0,0,0,2-2V3A2,2,0,0,0,29,1ZM9.887,26.594H5.374V12.25H9.887ZM7.63,10.281a2.625,2.625,0,1,1,2.633-2.625A2.624,2.624,0,0,1,7.63,10.281ZM26.621,26.594H22.2V19.656c0-1.687,0-3.75-2.35-3.75s-2.633,1.782-2.633,3.656v7.126H12.8V12.25h4.136v1.969h.094a4.7,4.7,0,0,1,4.231-2.344c4.513,0,5.359,3,5.359,6.844Z"></path></svg>
-          </a>
-        </li>
-
-        <li class="sharebar__item">
-          <a class="sharebar__link js-social-share" data-social="mail" data-subject="Email Subject" data-body="Content of my email." href="mailto:">
-            <svg class="icon icon--sm" viewBox="0 0 32 32"><title>Share by Email</title><path d="M28,3H4A3.957,3.957,0,0,0,0,7V25a3.957,3.957,0,0,0,4,4H28a3.957,3.957,0,0,0,4-4V7A3.957,3.957,0,0,0,28,3Zm.6,6.8-12,9a1,1,0,0,1-1.2,0l-12-9A1,1,0,0,1,4.6,8.2L16,16.75,27.4,8.2a1,1,0,1,1,1.2,1.6Z"></path></svg>
-          </a>
-        </li>
-
-      </ul>
 
     </div>
 
-
-    <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
+    <div class="padding-bottom-md padding-bottom-lg@sm padding-bottom-xxl@md padding-bottom-xxxxl@lg">
 
       {{ previousNextLinks({
         "previousNextLinksItems": [
           {
             "rel": 'prev',
             "text": 'Previous project',
-            "url": assetPath + 'projects/max-powder',
+            "url": rootPath + 'projects/max-powder',
             "label": 'A complete rebrand and design for Max Powder'
           },
           {
             "rel": 'next',
             "text": 'Next project',
-            "url": assetPath + 'projects/hmcts-design-system',
+            "url": rootPath + 'projects/hmcts-design-system',
             "label": 'A design system to solve problems and avoid repetition'
           }
         ]
@@ -325,6 +309,5 @@
 
 
   </div>
-
 
 {% endblock %}

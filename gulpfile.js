@@ -58,7 +58,8 @@ function scripts() {
       'src/components/read-more/read-more.js',
       'src/components/swipe-content/swipe-content.js',
       'src/components/carousel/carousel.js',
-      'src/components/accordion/accordion.js'
+      'src/components/accordion/accordion.js',
+      'src/components/social-sharing/social-sharing.js'
     ])
     .pipe(uglify())
     .pipe(concat('scripts.js'))

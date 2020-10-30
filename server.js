@@ -61,7 +61,7 @@ app.use(routes);
 
 // Add variables that are available in all views
 app.locals.serviceName = config.serviceName;
-app.locals.assetPath = config.assetPath;
+app.locals.rootPath = config.rootPath;
 
 
 // Start app

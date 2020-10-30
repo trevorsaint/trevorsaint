@@ -32,7 +32,7 @@
 
           <h2>Reporting accessibility problems</h2>
 
-          <p>If you find any problems that are not listed on this page or you think I’m not meeting the accessibility requirements, <a href="{{assetPath}}contact">contact me</a></p>
+          <p>If you find any problems that are not listed on this page or you think I’m not meeting the accessibility requirements, <a href="{{rootPath}}contact">contact me</a></p>
 
           <h2>Enforcement procedure</h2>
 
@@ -57,9 +57,9 @@
         <aside class="border-top border-primary border-4">
 
           <ul class="list margin-top-xs">
-            <li class="list__item"><a class="link" href="{{assetPath}}support/accessibility"{% if pageId == "accessibility" %} aria-current="true" tabindex="-1"{% endif %}>Accessibility</a></li>
-            <li class="list__item"><a class="link" href="{{assetPath}}support/privacy"{% if pageId == "privacy" %} aria-current="true" tabindex="-1"{% endif %}>Privacy</a></li>
-            <li class="list__item"><a class="link" href="{{assetPath}}support/cookies"{% if pageId == "cookies" %} aria-current="true" tabindex="-1"{% endif %}>Cookies</a></li>
+            <li class="list__item"><a class="link" href="{{rootPath}}support/accessibility"{% if pageId == "accessibility" %} aria-current="true"{% endif %}>Accessibility</a></li>
+            <li class="list__item"><a class="link" href="{{rootPath}}support/privacy"{% if pageId == "privacy" %} aria-current="true"{% endif %}>Privacy</a></li>
+            <li class="list__item"><a class="link" href="{{rootPath}}support/cookies"{% if pageId == "cookies" %} aria-current="true"{% endif %}>Cookies</a></li>
           </ul>
 
         </aside>
