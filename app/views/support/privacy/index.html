@@ -6,7 +6,6 @@
 
 {% block content %}
 
-
 <section class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
 
   <div class="container">
@@ -60,9 +59,9 @@
         <aside class="border-top border-primary border-4">
 
           <ul class="list margin-top-xs">
-            <li class="list__item"><a class="link" href="/support/accessibility"{% if pageId == "accessibility" %} aria-current="true" tabindex="-1"{% endif %}>Accessibility</a></li>
-            <li class="list__item"><a class="link" href="/support/privacy"{% if pageId == "privacy" %} aria-current="true" tabindex="-1"{% endif %}>Privacy</a></li>
-            <li class="list__item"><a class="link" href="/support/cookies"{% if pageId == "cookies" %} aria-current="true" tabindex="-1"{% endif %}>Cookies</a></li>
+            <li class="list__item"><a class="link" href="{{assetPath}}support/accessibility"{% if pageId == "accessibility" %} aria-current="true" tabindex="-1"{% endif %}>Accessibility</a></li>
+            <li class="list__item"><a class="link" href="{{assetPath}}support/privacy"{% if pageId == "privacy" %} aria-current="true" tabindex="-1"{% endif %}>Privacy</a></li>
+            <li class="list__item"><a class="link" href="{{assetPath}}support/cookies"{% if pageId == "cookies" %} aria-current="true" tabindex="-1"{% endif %}>Cookies</a></li>
           </ul>
 
         </aside>
@@ -74,6 +73,5 @@
   </div>
 
 </section>
-
 
 {% endblock %}

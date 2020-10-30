@@ -5,23 +5,23 @@
     <div class="footer__content">
 
       <div class="max-width-sm">
-        <h2 class="heading-xl padding-bottom-xxxxl">Do you have a project in mind? <a class="link" href="/contact">Contact me</a></h2>
+        <h2 class="heading-xl padding-bottom-xxxxl">Do you have a project in mind? <a class="link" href="{{assetPath}}contact">Contact me</a></h2>
       </div>
 
-      <div class="flex@sm items-center justify-between">
+      <div class="flex@md items-center justify-between">
 
-        <ul class="menu-list margin-bottom-xxs margin-y-0">
-          <li class="menu-list__item"><a class="link-muted" href="/"{% if pageId == 'home' %} aria-current="true" tabindex="-1"{% endif %}>Home</a></li>
-          <li class="menu-list__item"><a class="link-muted" href="/about"{% if pageId == 'about' %} aria-current="true" tabindex="-1"{% endif %}>About</a></li>
-          <li class="menu-list__item"><a class="link-muted" href="/projects"{% if pageId == 'projects' %} aria-current="true" tabindex="-1"{% endif %}>Projects</a></li>
-          <li class="menu-list__item"><a class="link-muted" href="/testimonials"{% if pageId == 'testimonials' %} aria-current="true" tabindex="-1"{% endif %}>Testimonials</a></li>
-          <li class="menu-list__item"><a class="link-muted" href="/contact"{% if pageId == 'contact' %} aria-current="true" tabindex="-1"{% endif %}>Contact</a></li>
+        <ul class="menu-list margin-bottom-xxs margin-y-0@md">
+          <li class="menu-list__item"><a class="link-muted" href="{{assetPath}}"{% if pageId == 'home' %} aria-current="true" tabindex="-1"{% endif %}>Home</a></li>
+          <li class="menu-list__item"><a class="link-muted" href="{{assetPath}}about"{% if pageId == 'about' %} aria-current="true" tabindex="-1"{% endif %}>About</a></li>
+          <li class="menu-list__item"><a class="link-muted" href="{{assetPath}}projects"{% if pageId == 'projects' %} aria-current="true" tabindex="-1"{% endif %}>Projects</a></li>
+          <li class="menu-list__item"><a class="link-muted" href="{{assetPath}}testimonials"{% if pageId == 'testimonials' %} aria-current="true" tabindex="-1"{% endif %}>Testimonials</a></li>
+          <li class="menu-list__item"><a class="link-muted" href="{{assetPath}}contact"{% if pageId == 'contact' %} aria-current="true" tabindex="-1"{% endif %}>Contact</a></li>
         </ul>
 
         <ul class="legal-list">
-          <li class="legal-list__item"><a class="link-muted" href="/support/accessibility"{% if pageId == 'accessibility' %} aria-current="true" tabindex="-1"{% endif %}>Accessibility</a></li>
-          <li class="legal-list__item"><a class="link-muted" href="/support/privacy"{% if pageId == 'privacy' %} aria-current="true" tabindex="-1"{% endif %}>Privacy</a></li>
-          <li class="legal-list__item"><a class="link-muted" href="/support/cookies"{% if pageId == 'cookies' %} aria-current="true" tabindex="-1"{% endif %}>Cookies</a></li>
+          <li class="legal-list__item"><a class="link-muted" href="{{assetPath}}support/accessibility"{% if pageId == 'accessibility' %} aria-current="true" tabindex="-1"{% endif %}>Accessibility</a></li>
+          <li class="legal-list__item"><a class="link-muted" href="{{assetPath}}support/privacy"{% if pageId == 'privacy' %} aria-current="true" tabindex="-1"{% endif %}>Privacy</a></li>
+          <li class="legal-list__item"><a class="link-muted" href="{{assetPath}}support/cookies"{% if pageId == 'cookies' %} aria-current="true" tabindex="-1"{% endif %}>Cookies</a></li>
           <li class="legal-list__item">&copy;2020</li>
         </ul>
 

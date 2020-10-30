@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>{{ pageTitle }}</title>
+    <title>{{pageTitle}}</title>
 
     <!-- Stylesheet -->
     <link href="{{assetPath}}stylesheets/main.css" rel="stylesheet">
@@ -87,8 +87,8 @@
   {% include "footer.html" %}
 
   <div class="bg-decoration">
-    <img class="bg-decoration__svg-1" src="/images/bg-1.svg">
-    <img class="bg-decoration__svg-2" src="/images/bg-2.svg">
+    <img class="bg-decoration__svg-1" src="{{assetPath}}images/bg-1.svg">
+    <img class="bg-decoration__svg-2" src="{{assetPath}}images/bg-2.svg">
   </div>
 
   {% include "scripts.html" %}

@@ -6,8 +6,6 @@
 
 {% block content %}
 
-
-<!-- Masthead -->
 <section class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
 
   <div class="container">
@@ -30,8 +28,6 @@
 
 </section>
 
-
-<!-- Send a message -->
 <section class="padding-bottom-md padding-bottom-lg@sm padding-bottom-xxl@md padding-bottom-xxxxl@lg">
 
   <div class="container">
@@ -48,25 +44,25 @@
 
       <div class="col-7@sm">
 
-        <form method="POST" action="/contact/thank-you">
+        <form method="POST" action="{{assetPath}}contact/thank-you">
 
             <div class="margin-bottom-sm">
-                <label class="form-label" for="name">Name</label>
-                <input class="form-control" id="name" name="name">
+              <label class="form-label" for="name">Name</label>
+              <input class="form-control" id="name" name="name">
             </div>
 
             <div class="margin-bottom-sm">
-                <label class="form-label" for="email">Email</label>
-                <input class="form-control" id="email" name="email">
+              <label class="form-label" for="email">Email</label>
+              <input class="form-control" id="email" name="email">
             </div>
 
             <div class="margin-bottom-sm">
-                <label class="form-label" for="message">Message</label>
-                <textarea class="form-control" id="message" name="message" rows="8"></textarea>
+              <label class="form-label" for="message">Message</label>
+              <textarea class="form-control" id="message" name="message" rows="8"></textarea>
             </div>
 
             <button class="button button--full-width" type="submit">
-                <span class="button__label">Send your message</span>
+              <span class="button__label">Send your message</span>
             </button>
 
         </form>
@@ -78,6 +74,5 @@
   </div>
 
 </section>
-
 
 {% endblock %}

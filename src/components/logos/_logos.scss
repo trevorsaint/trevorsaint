@@ -1,15 +1,15 @@
 /* --------------------------------
 
-Customer Logos
+Logos
 
 -------------------------------- */
 
 
-.customer-logos {}
+.logos {}
 
 
-.customer-logos__item {
-  background-color: var(--color-contrast-lower);
+.logos__item {
+  background-color: alpha(var(--color-black), 0.03);
   background-blend-mode: multiply;
   border-radius: var(--radius-sm);
   display: flex;
@@ -21,15 +21,18 @@ Customer Logos
 }
 
 
-.customer-logos__logo {
+.logos__img {
   display: block;
   margin: auto;
 }
 
 
 /* --------------------------------
+
 Logo
+
 -------------------------------- */
+
 
 .logo {
   color: var(--color-contrast-high);

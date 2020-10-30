@@ -1,0 +1,22 @@
+/* --------------------------------
+
+Hero
+
+-------------------------------- */
+
+
+.hero {
+  background-color: alpha(var(--color-black), 0.03);
+  position: relative;
+  border-radius: var(--radius-lg)
+}
+
+
+@include breakpoint(lg) {
+
+  .hero img {
+    margin-bottom: -64px;
+    margin-top: -64px;
+  }
+
+}

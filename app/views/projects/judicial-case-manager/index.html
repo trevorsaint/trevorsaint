@@ -11,7 +11,7 @@
 
 
     {{ backLink({
-      "url": '/projects',
+      "url": assetPath + 'projects',
       "text": 'Back'
     }) }}
 
@@ -59,7 +59,7 @@
       <p>
         <a class="link-icon" href="#0" rel="external">
           <span class="link-icon__label">Visit website</span>
-          <svg class="icon icon--sm" width="24" height="24" viewBox="0 0 24 24" role="img" focusable="false" aria-hidden="true"><use xlink:href="/images/sprite.svg#launch"/></svg>
+          <svg class="icon icon--sm" width="24" height="24" viewBox="0 0 24 24" role="presentation" focusable="false" aria-hidden="true"><use xlink:href="{{assetPath}}images/sprite.svg#launch"/></svg>
         </a>
       </p>
 
@@ -309,14 +309,14 @@
           {
             "rel": 'prev',
             "text": 'Previous project',
-            "url": '#0',
+            "url": assetPath + 'projects/max-powder',
             "label": 'A complete rebrand and design for Max Powder'
           },
           {
             "rel": 'next',
             "text": 'Next project',
-            "url": '#0',
-            "label": 'A complete rebrand and design for Max Powder'
+            "url": assetPath + 'projects/hmcts-design-system',
+            "label": 'A design system to solve problems and avoid repetition'
           }
         ]
       }) }}

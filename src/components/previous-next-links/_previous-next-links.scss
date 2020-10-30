@@ -34,8 +34,8 @@ Previous / Next Links
   text-decoration: none;
 
   &:hover {
+    background-color: alpha(var(--color-black), 0.03);
     text-decoration: underline;
-    background-color: var(--color-contrast-lower);
   }
 
 }

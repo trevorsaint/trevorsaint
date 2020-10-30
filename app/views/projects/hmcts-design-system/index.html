@@ -11,7 +11,7 @@
 
 
     {{ backLink({
-      "url": '/projects',
+      "url": assetpath + 'projects',
       "text": 'Back'
     }) }}
 
@@ -19,9 +19,9 @@
     <h1 class="heading-xxl margin-y-sm margin-y-lg@sm">A design system to solve problems and avoid repetition</h1>
 
 
-    <figure class="figure">
-      <div class="bg-contrast-lower media-wrapper media-wrapper--3:2"></div>
-    </figure>
+    <div class="hero">
+      <img srcset="{{assetPath}}images/projects/project/hmcts-design-system/hmcts-design-system-hero.png 1x, {{assetPath}}images/projects/project/hmcts-design-system/hmcts-design-system-hero@2x.png 2x, {{assetPath}}images/projects/project/hmcts-design-system/hmcts-design-system-hero@3x.png 3x" src="{{assetPath}}images/projects/project/hmcts-design-system/hmcts-design-system-hero.png" alt="">
+    </div>
 
 
     <div class="flex justify-between items-start margin-top-md">
@@ -58,7 +58,7 @@
       <p>
         <a class="link-icon" href="#0" rel="external">
           <span class="link-icon__label">Visit website</span>
-          <svg class="icon icon--sm" width="24" height="24" viewBox="0 0 24 24" role="img" focusable="false" aria-hidden="true"><use xlink:href="/images/sprite.svg#launch"/></svg>
+          <svg class="icon icon--sm" width="24" height="24" viewBox="0 0 24 24" role="presetation" focusable="false" aria-hidden="true"><use xlink:href="{{assetPath}}images/sprite.svg#launch"/></svg>
         </a>
       </p>
 
@@ -84,7 +84,7 @@
 
     <figure class="figure">
       <div class="bg-contrast-lower">
-        <img class="block width-100%" srcset="/images/projects/project/hmcts-design-system/hmcts-design-system-home-page.png 1x, /images/projects/project/hmcts-design-system/hmcts-design-system-home-page@2x.png 2x, /images/projects/project/hmcts-design-system/hmcts-design-system-home-page@3x.png 3x" src="/images/projects/project/hmcts-design-system/hmcts-design-system-home-page.png" alt="Home page design for HMCTS design system prepared in Sketch">
+        <img class="block width-100%" srcset="{{assetPath}}images/projects/project/hmcts-design-system/hmcts-design-system-home-page.png 1x, {{assetPath}}images/projects/project/hmcts-design-system/hmcts-design-system-home-page@2x.png 2x, {{assetPath}}images/projects/project/hmcts-design-system/hmcts-design-system-home-page@3x.png 3x" src="{{assetPath}}images/projects/project/hmcts-design-system/hmcts-design-system-home-page.png" alt="Home page design for HMCTS design system prepared in Sketch">
       </div>
       <figcaption class="figure__caption margin-top-xxs">Home page visual design for the HMCTS Design System</figcaption>
     </figure>
@@ -277,14 +277,14 @@
           {
             "rel": 'prev',
             "text": 'Previous project',
-            "url": '#0',
-            "label": 'A complete rebrand and design for Max Powder'
+            "url": assetPath + 'projects/judicial-case-manager',
+            "label": 'Manage cases in a simple, accessible and efficient way'
           },
           {
             "rel": 'next',
             "text": 'Next project',
-            "url": '#0',
-            "label": 'A complete rebrand and design for Max Powder'
+            "url": assetPath + 'projects/rural-payments',
+            "label": 'Rural grants and payments to help the farming industry'
           }
         ]
       }) }}
