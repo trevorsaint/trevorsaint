@@ -12,12 +12,9 @@ Card
 
 
 .card__image {
-
-  img {
-    display: block;
-    width: 100%;
-  }
-
+  background-color: alpha(var(--color-black), 0.03);
+  border-radius: var(--radius-lg);
+  position: relative;
 }
 
 

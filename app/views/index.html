@@ -1,5 +1,5 @@
 {% set pageTitle       = "Interaction Designer and Frontend Developer in Fleet" %}
-{% set pageDescription = "Trevor Saint is a digital perfectionist with 17 years of experience designing and developing impressive services for Government departments and digital agencies." %}
+{% set pageDescription = "Trevor Saint is a digital perfectionist with 17 years of experience designing and developing impressive services for Government departments and digital agencies" %}
 {% set pageId          = "home" %}
 
 {% extends "layout.html" %}
@@ -44,12 +44,14 @@
 
     <div class="feature">
 
-      <div class="feature__grid grid gap-md items-center">
+      <div class="feature__grid grid gap-xs items-center">
 
         <div class="col-8@md">
 
-          <figure class="bg-contrast-lower media-wrapper media-wrapper--3:2 radius-lg">
-            <a href="{{rootPath}}projects/census-2021" tabindex="-1"><!--img class="block width-100%" srcset=" 1x,  2x,  3x" src="" alt="Image description"--></a>
+          <figure class="feature__image">
+            <a href="{{rootPath}}projects/census-2021" tabindex="-1">
+              <img srcset="{{rootPath}}images/projects/project/census-2021/census-2021-feature.png 1x, {{rootPath}}images/projects/project/census-2021/census-2021-feature@2x.png 2x, {{rootPath}}images/projects/project/census-2021/census-2021-feature@3x.png 3x" src="{{rootPath}}images/projects/project/census-2021/census-2021-feature.png" alt="">
+            </a>
           </figure>
 
         </div>
