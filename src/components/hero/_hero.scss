@@ -8,6 +8,8 @@ Hero
 .hero {
   background-color: alpha(var(--color-black), 0.03);
   border-radius: var(--radius-lg);
+  margin-bottom: var(--space-xxl);
+  margin-top: var(--space-xxl);
   position: relative;
 }
 

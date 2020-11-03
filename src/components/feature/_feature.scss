@@ -14,8 +14,10 @@ Content group containing media element + text that outsets its container at a sp
 
 
 .feature__image {
-  background-color: alpha(var(--color-black), 0.03);
+  background-color: alpha(var(--color-black), .03);
   border-radius: var(--radius-lg);
+  margin-bottom: var(--space-lg);
+  margin-top: var(--space-lg);
   position: relative;
 }
 

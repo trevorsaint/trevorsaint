@@ -60,7 +60,7 @@ Custom list component
     background-color: currentColor;
     border: 2px solid currentColor;
     border-radius: 50%;
-    color: var(--color-contrast-high); // Bullet color
+    color: inherit; // Bullet color
     content: "";
     margin-top: calc(-1 * var(--bullet-size) / 2); // Half bullet size
   }
@@ -92,7 +92,7 @@ Custom list component
     background-color: var(--color-contrast-lower);
     border: 2px solid var(--color-contrast-lower);
     border-radius: 50%;
-    color: var(--color-contrast-high);
+    color: inherit;
     content: counter(list-items);
     justify-content: center;
   }

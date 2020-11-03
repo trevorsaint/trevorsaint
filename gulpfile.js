@@ -72,19 +72,21 @@ function images() {
   return gulp
     .src(configPaths.images + '**/*.+(svg|png|jpg|jpeg|gif)')
     .pipe(imagemin([
-      imagemin.mozjpeg({ progressive: true }),
-      imagemin.optipng({ optimizationLevel: 5 }),
-      imagemin.svgo({
-        plugins: [
-          {progessive: true},
-          {interlaced: true},
-          {optimizationLevel: 2},
-          {removeViewBox: false},
-          {cleanupIDs: false}
-        ]
+      imagemin.mozjpeg({
+        quality: 100,
+        progressive: true
       }),
-      imagemin.gifsicle({interlaced: true}),
-      imagemin.optipng({optimizationLevel: 2})
+      imagemin.optipng(),
+      imagemin.svgo()
+      // imagemin.svgo({
+      //   plugins: [
+      //     {progessive: true},
+      //     {interlaced: true},
+      //     {optimizationLevel: 2},
+      //     {removeViewBox: false},
+      //     {cleanupIDs: true}
+      //   ]
+      // })
     ]))
     .pipe(gulp.dest(configPaths.public + 'images'))
 }
