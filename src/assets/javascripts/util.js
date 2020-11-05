@@ -69,6 +69,7 @@ Util.is = function(elem, selector) {
   return false;
 };
 
+
 /*
 	Animate height of an element
 */
@@ -242,6 +243,7 @@ if ( typeof window.CustomEvent !== "function" ) {
 /*
 	Animation curves
 */
+
 Math.easeInOutQuad = function (t, b, c, d) {
 	t /= d/2;
 	if (t < 1) return c/2*t*t + b;
@@ -279,6 +281,7 @@ Math.easeOutElastic = function (t, b, c, d) {
 /*
   JS Utility Classes
 */
+
 (function() {
 
   // Make focus ring visible only for keyboard navigation (i.e., tab key)
