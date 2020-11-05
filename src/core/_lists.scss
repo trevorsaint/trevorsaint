@@ -50,6 +50,7 @@ Custom list component
 
 }
 
+
 // Unordered list
 .list--ul {
   --bullet-size: 6px; // Dot width and height
@@ -70,6 +71,7 @@ Custom list component
   }
 
 }
+
 
 // Ordered list
 .list--ol {
@@ -99,6 +101,18 @@ Custom list component
 
   ol li::before {
     background-color: transparent;
+  }
+
+}
+
+
+// Badges list
+.list--badges {
+  display: flex;
+  flex-wrap: wrap;
+
+  li {
+    display: flex;
   }
 
 }

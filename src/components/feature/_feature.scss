@@ -14,15 +14,18 @@ Content group containing media element + text that outsets its container at a sp
 
 
 .feature__image {
-  background-color: alpha(var(--color-black), .03);
+  background-color: alpha(var(--color-black), 0.05);
   border-radius: var(--radius-lg);
-  margin-bottom: var(--space-lg);
-  margin-top: var(--space-lg);
   position: relative;
 }
 
 
-@include breakpoint(sm) {
+@include breakpoint(md) {
+
+  .feature__image {
+    margin-bottom: var(--space-lg);
+    margin-top: var(--space-lg);
+  }
 
   .feature__image img {
     margin-bottom: calc(var(--space-lg) * -1);

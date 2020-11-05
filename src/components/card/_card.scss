@@ -6,13 +6,12 @@ Card
 
 
 .card {
-  background-color: var(--color-bg);
   overflow: hidden;
 }
 
 
 .card__image {
-  background-color: alpha(var(--color-black), 0.03);
+  background-color: alpha(var(--color-black), 0.05);
   border-radius: var(--radius-lg);
   position: relative;
 }

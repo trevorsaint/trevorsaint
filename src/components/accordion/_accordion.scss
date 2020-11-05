@@ -28,7 +28,7 @@ Accordion
 .accordion__item--is-open > .accordion__header {
 
   .accordion__icon {
-    transform:rotate(-180deg);
+    transform: rotate(-180deg);
   }
 
 }
@@ -39,10 +39,11 @@ Accordion
 
   .accordion__header {
     padding: var(--space-xs);
+    text-decoration: underline;
 
     &:hover {
-      background-color: var(--color-contrast-lower);
-      text-decoration: underline;
+      background-color: alpha(var(--color-black), 0.05);
+      text-decoration: none;
     }
 
     &:focus {

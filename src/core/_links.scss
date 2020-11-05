@@ -13,30 +13,17 @@ Link
 
 .link--underline {
   display: inline-block;
-  position: relative;
+  text-decoration: underline;
 
+  // Fine adjustments for icon
   .icon {
     position: relative;
     top: 1px;
   }
 
-  &::after {
-    background-color: alpha(var(--color-primary), .2);
-    bottom: -1px;
-    content: "";
-    height: 1px;
-    left: 0;
-    position: absolute;
-    width: 100%;
-  }
-
   &:hover,
   &:focus {
-
-    &::after {
-      content: none;
-    }
-
+    text-decoration: none;
   }
 
 }

@@ -28,7 +28,7 @@ Figure
 
 .figure__caption {
   @include typography(14);
-  background-color: var(--color-contrast-lower);
+  background-color: alpha(var(--color-black), 0.05);
   border-radius: var(--radius-sm);
   color: var(--color-contrast-medium);
   display: inline-block;

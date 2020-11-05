@@ -6,7 +6,7 @@ Forms
 
 
 .form-control {
-  background-color: alpha(var(--color-black), 0.03);
+  background-color: alpha(var(--color-black), 0.05);
   border: 2px solid transparent;
   border-radius: var(--radius-sm);
   padding: calc(var(--space-xxxs) - 2px); // Minus border width

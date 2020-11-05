@@ -5,17 +5,38 @@
 -------------------------------- */
 
 
-.menu-list {
-  display: flex;
-}
+.menu-list {}
 
 
 .menu-list__item {
   @include typography(20);
   display: flex;
+}
 
-  &:not(:last-child) {
+
+.menu-list__link {
+  display: block;
+
+  // Bigger hit area for mobile devices
+  padding-top: var(--space-xxxs);
+  padding-bottom: var(--space-xxxs);
+}
+
+
+@include breakpoint(sm) {
+
+  .menu-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .menu-list__item {
     margin-right: var(--space-sm);
+  }
+
+  .menu-list__link {
+    padding-bottom: 0;
+    padding-top: 0;
   }
 
 }

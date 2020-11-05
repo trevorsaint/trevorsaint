@@ -14,46 +14,10 @@ Back link
   line-height: (24/18); // Line height override
   position: relative;
   vertical-align: top;
+  text-decoration: underline;
 
   &:hover {
-
-    .back-link__label {
-
-      &:after {
-        background-color: var(--color-contrast-high);
-      }
-
-    }
-
-  }
-
-  &:focus {
-
-    .back-link__label {
-
-      &:after {
-        content: none;
-      }
-
-    }
-
-  }
-
-}
-
-
-.back-link__label {
-  display: block;
-  position: relative;
-
-  &:after {
-    background-color: alpha(var(--color-black), .2);
-    bottom: -1px;
-    content: "";
-    height: 1px;
-    left: 0;
-    position: absolute;
-    width: 100%;
+    text-decoration: none;
   }
 
 }

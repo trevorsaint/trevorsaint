@@ -14,10 +14,10 @@ Social Sharing
 
 
 .social-share__link {
-  background: var(--color-contrast-lower);
+  background-color: alpha(var(--color-black), 0.05);
   border-radius: 50%;
   display: inline-block;
-  padding: var(--space-xxs);
+  padding: var(--space-xxxs);
 
   .icon {
     color: var(--color-contrast-high);
@@ -25,7 +25,6 @@ Social Sharing
   }
 
   &:hover {
-    background-color: var(--color-bg);
     background-color: var(--color-contrast-high);
 
     .icon {
@@ -44,6 +43,15 @@ Social Sharing
       color: var(--color-contrast-high);
     }
 
+  }
+
+}
+
+
+@include breakpoint(md) {
+
+  .social-share__link {
+    padding: var(--space-xxs);
   }
 
 }

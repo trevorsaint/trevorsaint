@@ -7,7 +7,25 @@ Base
 
 html {
   @include typography(16);
+
   background-color: var(--color-white);
+
+  background-image:
+    url("/images/background-top.svg"),
+    url("/images/background-bottom.svg");
+
+
+  background-position:
+    calc(100% + 208px) -194px,
+    -213px calc(100% + 176px);
+
+  background-size:
+    416px auto,
+    466px auto;
+
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
   font-size: 100%;
   font-weight: var(--font-normal);
   min-height: 100%; // Ensure page fills entire viewport
@@ -17,6 +35,20 @@ html {
   // Fix fonts that render as bold in Firefox - https://www.lockedownseo.com/firefox-font-weight-too-bold
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+
+  // Background adjustment at large breakpoint
+  @include breakpoint(lg) {
+
+    background-position:
+      calc(100% + 150px) -158px,
+      -254px calc(100% + 358px);
+
+    background-size:
+      834px auto,
+      934px auto;
+
+  }
+
 }
 
 
@@ -36,17 +68,21 @@ body {
 }
 
 
-// Styled scrollbars -- https://css-tricks.com/the-current-state-of-styling-scrollbars
-body::-webkit-scrollbar {
-  width: var(--space-xxs);
-}
+@include breakpoint(xl) {
 
-body::-webkit-scrollbar-track {
-  background-color: var(--color-quaternary);
-}
+  // Styled scrollbars -- https://css-tricks.com/the-current-state-of-styling-scrollbars
+  body::-webkit-scrollbar {
+    width: var(--space-xxs);
+  }
 
-body::-webkit-scrollbar-thumb {
-  background-color: var(--color-primary);
+  body::-webkit-scrollbar-track {
+    background-color: var(--color-quaternary);
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: var(--color-primary);
+  }
+
 }
 
 

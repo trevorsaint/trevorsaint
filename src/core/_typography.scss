@@ -166,20 +166,21 @@
     margin-bottom: var(--space-xxs);
   }
 
-  ul {
+  ul:not([class]) {
     @extend .list--ul;
   }
 
-  ol {
+  ol:not([class]) {
     @extend .list--ol;
   }
 
-  li {
+  ul:not([class]) li,
+  ol:not([class]) li {
     display: block;
     margin-bottom: var(--space-xxxs);
   }
 
-  a {
+  a:not([class]) {
     @include link-common;
     @include link-style-default;
   }

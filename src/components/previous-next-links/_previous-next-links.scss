@@ -34,13 +34,12 @@ Previous / Next Links
   text-decoration: none;
 
   &:hover {
-    background-color: alpha(var(--color-black), 0.03);
+    background-color: alpha(var(--color-black), 0.05);
     text-decoration: underline;
   }
 
   &:focus {
     background-color: var(--color-tertiary);
-    // box-shadow: 0 0 0 var(--space-xxxxs) var(--color-tertiary);
     color: var(--color-contrast-high);
   }
 
