@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "start": "gulp develop",
-    "heroku-postbuild": "gulp build"
+    "heroku-postbuild": "gulp build && node server.js"
   },
   "author": {
     "name": "Trevor Saint",

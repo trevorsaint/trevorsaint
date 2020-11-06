@@ -1,7 +1,7 @@
 'use strict';
 
 const gulp = require('gulp');
-const del = require("del");
+const del = require('del');
 const nodemon = require('gulp-nodemon');
 const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
@@ -101,7 +101,7 @@ function nunjucks() {
         path: [
           './src/components',
           './app/views',
-          './app/views/layouts',
+          './app/views/layout',
           './app/views/partials'
         ]
       }))
