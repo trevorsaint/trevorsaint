@@ -1,7 +1,7 @@
-{%- from "components/back-link/_macro.njk" import backLink -%}
-{%- from "components/entry-details/_macro.njk" import entryDetails -%}
-{%- from "components/previous-next-links/_macro.njk" import previousNextLinks -%}
-{%- from "components/social-sharing/_macro.njk" import socialShare -%}
+{%- from "back-link/_macro.njk" import backLink -%}
+{%- from "entry-details/_macro.njk" import entryDetails -%}
+{%- from "previous-next-links/_macro.njk" import previousNextLinks -%}
+{%- from "social-sharing/_macro.njk" import socialShare -%}
 <!DOCTYPE html>
 <html lang="en-GB">
   <head>
@@ -12,7 +12,7 @@
     <title>{{pageTitle}}</title>
 
     <!-- Stylesheet -->
-    <link href="{{rootPath}}stylesheets/main.css" rel="stylesheet">
+    <link href="{{rootPath}}stylesheets/main.min.css" rel="stylesheet">
 
     <!-- Add home screen for Safari on iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -75,14 +75,14 @@
 
   <script>document.getElementsByTagName('html')[0].className += ' js';</script>
 
-  {% include "header.html" %}
+  {% include "header.njk" %}
 
   <main class="content" id="content">
     {%- block content %}{% endblock %}
   </main>
 
-  {% include "footer.html" %}
-  {% include "scripts.html" %}
+  {% include "footer.njk" %}
+  {% include "scripts.njk" %}
 
   </body>
 </html>

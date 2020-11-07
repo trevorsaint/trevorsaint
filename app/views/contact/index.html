@@ -2,7 +2,7 @@
 {% set pageDescription = "You can contact Trevor Saint on 07783 809 087 if you need any design, development, photography or general IT consultancy." %}
 {% set pageId          = "contact" %}
 
-{% extends "layout.html" %}
+{% extends "layout.njk" %}
 
 {% block content %}
 
@@ -34,7 +34,7 @@
 
           <div class="col-7@sm">
 
-            <form method="POST" action="{{rootPath}}contact/thank-you">
+            <form method="POST" action="{{rootPath}}contact/thank-you/">
 
                 <div class="margin-bottom-sm">
                   <label class="form-label" for="name">Name</label>

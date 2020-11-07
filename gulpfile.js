@@ -1,5 +1,6 @@
 'use strict';
 
+
 const gulp = require('gulp');
 const del = require('del');
 const nodemon = require('gulp-nodemon');
@@ -52,7 +53,7 @@ function styles() {
 function scripts() {
   return gulp
     .src([
-      'src/assets/javascripts/util.js',
+      'src/components/util.js',
       'src/components/header/header.js',
       'src/components/skip-link/skip-link.js',
       'src/components/read-more/read-more.js',
@@ -62,8 +63,8 @@ function scripts() {
       'src/components/social-sharing/social-sharing.js'
     ])
     .pipe(uglify())
-    .pipe(concat('scripts.js'))
-    .pipe(gulp.dest(configPaths.public + 'javascripts'))
+    .pipe(concat('scripts.min.js')) // Creates a minified version
+    .pipe(gulp.dest(configPaths.javascripts))
 }
 
 
@@ -96,10 +97,10 @@ function images() {
 function nunjucks() {
   return (
     gulp
-      .src('./app/views/*.html')
+      .src('./app/views/**/*.html')
       .pipe(nunjucksRender({
         data: {
-          imagePath: 'images/'
+          rootPath: '/',
         },
         path: [
           './src/components/',
@@ -154,7 +155,7 @@ function start() {
 
 
 // Define complex tasks
-const build = gulp.series(clean, gulp.parallel(styles, scripts, images, meta, fonts));
+const build = gulp.series(clean, gulp.parallel(styles, scripts, images, meta, fonts, nunjucks));
 const develop = gulp.parallel(watch, start);
 
 

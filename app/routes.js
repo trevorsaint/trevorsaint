@@ -57,7 +57,7 @@ routes.get('/contact', function(req, res) {
 });
 
 routes.post('/contact/thank-you', function(req, res) {
-  res.render('contact/thank-you');
+  res.render('contact/thank-you/index');
 });
 
 routes.get('/support/cookies', function(req, res) {

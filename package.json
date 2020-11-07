@@ -4,7 +4,7 @@
   "version": "2.0.0",
   "private": true,
   "scripts": {
-    "start": "gulp develop",
+    "start": "gulp build && node server.js",
     "heroku-postbuild": "gulp build && node server.js"
   },
   "author": {
