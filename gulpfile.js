@@ -60,7 +60,8 @@ function scripts() {
       'src/components/swipe-content/swipe-content.js',
       'src/components/carousel/carousel.js',
       'src/components/accordion/accordion.js',
-      'src/components/social-sharing/social-sharing.js'
+      'src/components/social-sharing/social-sharing.js',
+      'src/components/forms/forms.js'
     ])
     .pipe(uglify())
     .pipe(concat('scripts.min.js')) // Creates a minified version

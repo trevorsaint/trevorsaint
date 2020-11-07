@@ -34,20 +34,23 @@
 
           <div class="col-7@sm">
 
-            <form name="contact" method="POST" action="/contact/thank-you" netlify-honeypot="bot" data-netlify="true">
+            <form class="js-form" name="contact" method="POST" autocomplete="off" action="/contact/thank-you" netlify-honeypot="bot" data-netlify="true">
 
                 <div class="margin-bottom-sm">
                   <label class="form-label" for="name">Name</label>
+                  <span class="error-message is-hidden" id="name-error">Enter your name</span>
                   <input class="form-control" id="name" name="name">
                 </div>
 
                 <div class="margin-bottom-sm">
                   <label class="form-label" for="email">Email</label>
-                  <input class="form-control" id="email" name="email">
+                  <span class="error-message is-hidden" id="email-error">Enter an email address, like name@example.com</span>
+                  <input class="form-control" id="email" name="email" type="email">
                 </div>
 
                 <div class="margin-bottom-sm">
                   <label class="form-label" for="message">Message</label>
+                  <span class="error-message is-hidden" id="message-error">Enter your message</span>
                   <textarea class="form-control" id="message" name="message" rows="8"></textarea>
                 </div>
 

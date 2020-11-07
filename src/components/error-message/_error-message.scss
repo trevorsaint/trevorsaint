@@ -1,0 +1,13 @@
+/* --------------------------------
+
+Error message
+
+-------------------------------- */
+
+
+.error-message {
+  color: var(--color-error);
+  display: block;
+  font-weight: var(--font-bold);
+  margin-bottom: var(--space-xxxs);
+}

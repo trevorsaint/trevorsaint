@@ -32,3 +32,23 @@ Forms
   display: inline-block;
   margin-bottom: var(--space-xxxs);
 }
+
+
+// Error
+.form-group--error {
+  border-left: var(--space-xxxxs) solid var(--color-error);
+  padding-left: var(--space-xxs);
+}
+
+
+.form-control--error {
+  background-color: var(--color-white);
+  border-color: var(--color-error);
+
+  &:focus {
+    border-color: var(--color-error);
+    box-shadow: 0 0 0 3px alpha(var(--color-error), 0.2);
+    outline: none;
+  }
+
+}

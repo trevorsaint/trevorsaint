@@ -29,7 +29,7 @@ html {
   font-size: 100%;
   font-weight: var(--font-normal);
   min-height: 100%; // Ensure page fills entire viewport
-  overflow-x: hidden;
+  overflow-x: hidden; // Prevent horizontal scrolling
   position: relative; // For background svg positioning
 
   // Fix fonts that render as bold in Firefox - https://www.lockedownseo.com/firefox-font-weight-too-bold
@@ -65,6 +65,7 @@ body {
   color: var(--color-contrast-high);
   font-family: var(--font-secondary);
   font-weight: var(--font-regular);
+  overflow-x: hidden; // Prevent horizontal scrolling
 }
 
 

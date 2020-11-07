@@ -68,4 +68,11 @@ Colours
   @include defineColorHSL(--color-contrast-medium, 257, 3%, 41%);
   @include defineColorHSL(--color-contrast-high, 258, 13%, 15%);
 
+  // Error
+  @include defineColorHSL(--color-error-darker, 348, 100%, 35%);
+  @include defineColorHSL(--color-error-dark, 348, 100%, 45%);
+  @include defineColorHSL(--color-error, 348, 100%, 55%);
+  @include defineColorHSL(--color-error-light, 348, 100%, 65%);
+  @include defineColorHSL(--color-error-lighter, 348, 100%, 75%);
+
 }
