@@ -24,7 +24,7 @@ const port = process.env.PORT || config.port;
 // Setup application
 const appViews = [
 	path.join(__dirname, '/app/views'),
-	path.join(__dirname, '/app/views/layout'),
+	path.join(__dirname, '/app/views/layouts'),
   path.join(__dirname, '/app/views/partials'),
   path.join(__dirname, '/src'),
   path.join(__dirname, '/src/components')

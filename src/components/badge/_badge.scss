@@ -14,3 +14,9 @@ A small label containing a text string
   display: inline-flex;
   padding: var(--space-xxxxs) var(--space-xxs);
 }
+
+
+.badge--contrast-higher {
+  background-color: var(--color-contrast-high);
+  color: var(--color-white);
+}

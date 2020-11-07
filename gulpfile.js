@@ -71,23 +71,23 @@ function scripts() {
 function images() {
   return gulp
     .src(configPaths.images + '**/*.+(svg|png|jpg|jpeg|gif)')
-    .pipe(imagemin([
-      imagemin.mozjpeg({
-        quality: 100,
-        progressive: true
-      }),
-      imagemin.optipng(),
-      imagemin.svgo()
-      // imagemin.svgo({
-      //   plugins: [
-      //     {progessive: true},
-      //     {interlaced: true},
-      //     {optimizationLevel: 2},
-      //     {removeViewBox: false},
-      //     {cleanupIDs: true}
-      //   ]
-      // })
-    ]))
+    // .pipe(imagemin([
+    //   imagemin.mozjpeg({
+    //     quality: 100,
+    //     progressive: true
+    //   }),
+    //   imagemin.optipng(),
+    //   imagemin.svgo()
+    //   imagemin.svgo({
+    //     plugins: [
+    //       {progessive: true},
+    //       {interlaced: true},
+    //       {optimizationLevel: 2},
+    //       {removeViewBox: false},
+    //       {cleanupIDs: true}
+    //     ]
+    //   })
+    // ]))
     .pipe(gulp.dest(configPaths.public + 'images'))
 }
 
@@ -98,11 +98,14 @@ function nunjucks() {
     gulp
       .src('./app/views/*.html')
       .pipe(nunjucksRender({
+        data: {
+          imagePath: 'images/'
+        },
         path: [
-          './src/components',
-          './app/views',
-          './app/views/layout',
-          './app/views/partials'
+          './src/components/',
+          './app/views/',
+          './app/views/layouts/',
+          './app/views/partials/'
         ]
       }))
       .pipe(gulp.dest('./public'))
