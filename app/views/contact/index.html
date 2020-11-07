@@ -34,7 +34,7 @@
 
           <div class="col-7@sm">
 
-            <form name="contact" method="POST" action="/contact/thank-you" data-netlify="true">
+            <form name="contact" method="POST" action="/contact/thank-you" netlify-honeypot="bot" data-netlify="true">
 
                 <div class="margin-bottom-sm">
                   <label class="form-label" for="name">Name</label>
@@ -49,6 +49,11 @@
                 <div class="margin-bottom-sm">
                   <label class="form-label" for="message">Message</label>
                   <textarea class="form-control" id="message" name="message" rows="8"></textarea>
+                </div>
+
+                <div class="is-hidden margin-bottom-sm">
+                  <label class="form-label" for="bot">Don’t fill this out if you’re human</label>
+                  <input class="form-control" id="bot" name="bot">
                 </div>
 
                 <button class="button button--full-width" type="submit">
