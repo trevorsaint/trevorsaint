@@ -7,7 +7,6 @@ Entry details
 
 .entry-details {
   border-left: 1px solid alpha(var(--color-black), .2);
-  margin-right: var(--space-xs);
 }
 
 
@@ -37,7 +36,7 @@ Entry details
 }
 
 
-@include breakpoint(sm) {
+@include breakpoint(md) {
 
   .entry-details {
     border-left: none;
