@@ -1,0 +1,21 @@
+/* --------------------------------
+
+Quote
+
+-------------------------------- */
+
+
+.quote__cite {
+  @include typography(16);
+}
+
+
+.quote__cite-name {
+  display: block;
+  font-weight: var(--font-bold);
+}
+
+
+.quote__cite-role {
+  color: var(--color-contrast-medium);
+}

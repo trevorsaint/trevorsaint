@@ -1,18 +1,27 @@
-{% extends "layout.html" %}
-
-{% set pageTitle = "Page not found - Trevor Saint" %}
+{% set pageTitle       = "Page not found - Trevor Saint" %}
 {% set pageDescription = "It looks like you found a page you shouldn’t have." %}
+
+{% extends "layout.njk" %}
 
 {% block content %}
 
-<div class="section">
-  <div class="container">
-    <div class="contents">
-      <h1 class="heading-xxl">Page not found</h1>
-      <p>It looks like you found a page you shouldn’t have.</p>
-      <p class="override-!-margin-bottom-0">Go to the <a href="/">home page</a></p>
+    <section class="padding-top-xs padding-bottom-md padding-bottom-lg@sm padding-bottom-xxl@md padding-bottom-xxxxl@lg">
+
+      <div class="container">
+
+        <div class="max-width-lg">
+
+          <h1 class="heading-xxxl margin-bottom-xxs margin-bottom-xs@md margin-bottom-lg@lg">Page not found</h1>
+
+          <div class="text-component color-contrast-medium">
+            <p class="body-lg">It looks like you found a page you shouldn’t have.</p>
+            <p>Go to the <a class="link link--underline" href="{{rootPath}}">home page</a></p>
+          </div>
+
+        </div>
+
+      </div>
+
     </div>
-  </div>
-</div>
 
 {% endblock %}

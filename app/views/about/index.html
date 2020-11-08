@@ -1,150 +1,212 @@
-{% extends "layout.html" %}
+{% set pageTitle       = "Get to know me a little better" %}
+{% set pageDescription = "Trevor Saint has been in the creative industry for 18 years and has experience designing and developing impressive web services for government departments and digital agencies." %}
+{% set pageId          = "about" %}
 
-{% set pageId = "about" %}
-{% set pageTitle = "Get to know me a little better - Trevor Saint" %}
-{% set pageDescription = "Trevor Saint has been in the creative industry for 17 years and has experience designing and developing impressive web services for government departments and digital agencies." %}
+{% extends "layout.njk" %}
 
 {% block content %}
-    <div class="section section--masthead">
-      <div class="container">
-        <div class="contents">
-          <h1 class="heading-xxl override-!-margin-bottom-0">Get to know me a little better</h1>
-        </div>
-      </div>
-    </div>
 
-    <div class="section">
+    <section class="padding-top-xs padding-bottom-md padding-bottom-lg@sm padding-bottom-xxl@md padding-bottom-xxxxl@lg">
 
       <div class="container">
 
-        <div class="about">
+        <div class="max-width-md">
 
-          <div class="about__body">
+          <h1 class="heading-xxxl margin-bottom-xxs margin-bottom-xs@md margin-bottom-lg@lg">About</h1>
 
-            <h2 class="heading-xl">Hello, I’m Trevor</h2>
-
-            <p>I’ve been in the creative industry 17 years, graduating in 2002, with a BSc (Hons) Multimedia Computing degree. It’s a great industry to be involved in, and I consider myself incredibly fortunate.</p>
-
+          <div class="text-component color-contrast-medium body-lg">
+            <p>I’ve been in the creative industry 18 years, graduating in 2002, with a BSc (Hons) Multimedia Computing degree. It’s a great industry to be involved in, and I consider myself incredibly fortunate.</p>
             <p>After years of experience working with different companies, I’ve obtained hands-on-skills in design, front-end and back-end development.</p>
-
-            <h3 class="heading-m">What I’m comfortable with</h3>
-
-            <p>There are a lot of software products and technologies I’m comfortable with and use daily. Some of these include:</p>
-
-            <ul class="list list--bullet">
-              <li>Balsamiq, Sketch and Adobe Suite</li>
-              <li>Visual Studio Code, Terminal, Github</li>
-              <li>HTML, CSS, SASS, ARIA</li>
-              <li>Node, Express, Nunjucks and Gulp</li>
-            </ul>
-
-            <h3 class="heading-m">What I’m working on at the moment</h3>
-
-            <p>I’m working with Office for National Statistics on Census 2021.</p>
-
-          </div>
-
-          <div class="about__image">
-            <div class="image image--3:4">
-              <img src="{{assetPath}}images/profile/profile-photo.jpg" srcset="{{assetPath}}images/profile/profile-photo.jpg 1x, {{assetPath}}images/profile/profile-photo@2x.jpg 2x" alt="Profile photo of Trevor Saint">
-            </div>
-          </div>
-
-        </div>
-
-        <hr class="section-break section-break--xl section-break--visible">
-
-        <h1 class="heading-xl">I’ve worked for</h1>
-
-        <div class="clients-grid">
-
-          <div class="clients-grid__item">
-            <div class="client">
-              <img src="{{assetPath}}images/logo/servelec.svg" alt="Servelec - Together for Digital Care">
-            </div>
-          </div>
-
-          <div class="clients-grid__item">
-            <div class="client">
-              <img src="{{assetPath}}images/logo/elsevier.svg" alt="Elsevier">
-            </div>
-          </div>
-
-          <div class="clients-grid__item">
-            <div class="client">
-              <img src="{{assetPath}}images/logo/premier-league.svg" alt="Premier League">
-            </div>
-          </div>
-
-          <div class="clients-grid__item">
-            <div class="client">
-              <img src="{{assetPath}}images/logo/ministry-of-justice.svg" alt="Ministry of Justice">
-            </div>
-          </div>
-
-          <div class="clients-grid__item">
-            <div class="client">
-              <img src="{{assetPath}}images/logo/defra.svg" alt="Department for Environment Food &amp; Rural Affairs">
-            </div>
-          </div>
-
-          <div class="clients-grid__item">
-            <div class="client">
-              <img src="{{assetPath}}images/logo/nike.svg" alt="Nike">
-            </div>
-          </div>
-
-          <div class="clients-grid__item">
-            <div class="client">
-              <img src="{{assetPath}}images/logo/hmcts.svg" alt="HM Courts &amp; Tribunals Service">
-            </div>
-          </div>
-
-          <div class="clients-grid__item">
-            <div class="client">
-              <img src="{{assetPath}}images/logo/the-football-association.svg" alt="The Football Association">
-            </div>
-          </div>
-
-          <div class="clients-grid__item">
-            <div class="client">
-              <img src="{{assetPath}}images/logo/kainos.svg" alt="Kainos">
-            </div>
-          </div>
-
-          <div class="clients-grid__item">
-            <div class="client">
-              <img src="{{assetPath}}images/logo/gov.svg" alt="GOV.UK">
-            </div>
-          </div>
-
-          <div class="clients-grid__item">
-            <div class="client">
-              <img src="{{assetPath}}images/logo/akqa.svg" alt="AKQA">
-            </div>
-          </div>
-
-          <div class="clients-grid__item">
-            <div class="client">
-              <img src="{{assetPath}}images/logo/rural-payments-agency.svg" alt="Rural Payments Agency">
-            </div>
-          </div>
-
-          <div class="clients-grid__item">
-            <div class="client">
-              <img src="{{assetPath}}images/logo/capita.svg" alt="Capita">
-            </div>
-          </div>
-
-          <div class="clients-grid__item">
-            <div class="client">
-              <img src="{{assetPath}}images/logo/conchango.svg" alt="Conchango">
-            </div>
           </div>
 
         </div>
 
       </div>
 
-    </div>
+    </section>
+
+    <section class="padding-bottom-md padding-bottom-lg@sm padding-bottom-xxl@md padding-bottom-xxxxl@lg">
+
+      <div class="container">
+
+        <h2 class="heading-xl padding-bottom-xxs margin-bottom-xs margin-bottom-lg@sm border-offscreen">I can help with</h2>
+
+        <div class="margin-x-auto max-width-lg">
+
+          <ul class="accordion js-accordion" data-animation="off" data-multi-items="on">
+
+            <li class="accordion__item accordion__item--is-open js-accordion__item">
+
+              <button class="reset accordion__header" type="button">
+                <span class="text-md">Design</span>
+                <svg class="icon accordion__icon icon--md no-js:is-hidden" width="24" height="24" viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+                  <path d="M17.29 9c.39.39.39 1.02 0 1.41L12.7 15a.996.996 0 01-1.41 0L6.7 10.41c-.38-.39-.38-1.02 0-1.41s1.02-.39 1.41 0l3.88 3.88L15.88 9c.38-.39 1.02-.38 1.41 0z"/>
+                </svg>
+              </button>
+
+              <div class="accordion__panel js-accordion__panel">
+
+                <div class="text-component">
+
+                  <p>I design websites and online services that engage your audience and builds trust. I bring a wealth of knowledge and experience, along with attention to detail that ensures your product looks and works great.</p>
+
+                  <p class="font-bold">I offer:</p>
+
+                  <ul class="list--badges gap-xxs">
+                    <li><span class="badge">High–end visual design</span></li>
+                    <li><span class="badge">Colours, fonts and graphic elements</span></li>
+                    <li><span class="badge">Selling products online</span></li>
+                    <li><span class="badge">Brochure design</span></li>
+                    <li><span class="badge">Design and style for your business</span></li>
+                    <li><span class="badge">Design for all devices</span></li>
+                    <li><span class="badge">Business cards</span></li>
+                    <li><span class="badge">Logo design</span></li>
+                    <li><span class="badge">Letterheads and stationery</span></li>
+                  </ul>
+
+                </div>
+
+              </div>
+
+            </li>
+
+            <li class="accordion__item  js-accordion__item">
+
+              <button class="reset accordion__header padding-y-sm padding-x-md" type="button">
+                <span class="text-md">Development</span>
+                <svg class="icon accordion__icon icon--md no-js:is-hidden" width="24" height="24" viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+                  <path d="M17.29 9c.39.39.39 1.02 0 1.41L12.7 15a.996.996 0 01-1.41 0L6.7 10.41c-.38-.39-.38-1.02 0-1.41s1.02-.39 1.41 0l3.88 3.88L15.88 9c.38-.39 1.02-.38 1.41 0z"/>
+                </svg>
+              </button>
+
+              <div class="accordion__panel js-accordion__panel">
+
+                <div class="text-component">
+
+                  <p>I develop accessible websites. I can design and build your website from start to finish, but can equally consult on large-scale projects (such as GOV.UK), joining existing teams of developers, designers, testers and web ops.</p>
+
+                  <p class="font-bold">I offer:</p>
+
+                  <ul class="list--badges gap-xxs">
+                    <li><span class="badge">Accessible websites for all users</span></li>
+                    <li><span class="badge">Search-engine friendly code</span></li>
+                    <li><span class="badge">Mobile friendly websites</span></li>
+                    <li><span class="badge">Ability to publish your content</span></li>
+                    <li><span class="badge">Semantic clean code</span></li>
+                    <li><span class="badge">Interactive prototypes</span></li>
+                  </ul>
+
+                </div>
+
+              </div>
+
+            </li>
+
+            <li class="accordion__item  js-accordion__item">
+
+              <button class="reset accordion__header padding-y-sm padding-x-md" type="button">
+                <span class="text-md">Photography</span>
+                <svg class="icon accordion__icon icon--md no-js:is-hidden" width="24" height="24" viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+                  <path d="M17.29 9c.39.39.39 1.02 0 1.41L12.7 15a.996.996 0 01-1.41 0L6.7 10.41c-.38-.39-.38-1.02 0-1.41s1.02-.39 1.41 0l3.88 3.88L15.88 9c.38-.39 1.02-.38 1.41 0z"/>
+                </svg>
+              </button>
+
+              <div class="accordion__panel js-accordion__panel">
+
+                <div class="text-component">
+
+                  <p>I capture photography that complements your brand, ranging from products, property and interior to team profiles and events. I am happy to capture {{rootPath}}images for your website and print designs. I have a studio and photography equipment available.</p>
+
+                  <p class="font-bold">I offer:</p>
+
+                  <ul class="list--badges gap-xxs">
+                    <li><span class="badge">Products</span></li>
+                    <li><span class="badge">Property and interior</span></li>
+                    <li><span class="badge">Exhibitions and events</span></li>
+                    <li><span class="badge">Team profiles</span></li>
+                    <li><span class="badge">Portraits</span></li>
+                  </ul>
+
+                </div>
+
+              </div>
+
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="padding-bottom-md padding-bottom-lg@sm padding-bottom-xxl@md padding-bottom-xxxxl@lg">
+
+      <div class="container">
+        <h2 class="heading-xl padding-bottom-xxs margin-bottom-xs margin-bottom-lg@sm border-offscreen">Technologies used</h2>
+      </div>
+
+      <div class="margin-top-md margin-top-lg@sm padding-x-xs">
+
+        <ul class="logos flex flex-wrap gap-xs flex-center">
+
+          <li class="logos__item">
+            <img class="logos__img" src="{{rootPath}}images/technologies/git.svg" height="40" width="95" alt="Git logo">
+          </li>
+
+          <li class="logos__item">
+            <img class="logos__img" src="{{rootPath}}images/technologies/sass.svg" height="48" width="65" alt="Sass logo">
+          </li>
+
+          <li class="logos__item">
+            <img class="logos__img" src="{{rootPath}}images/technologies/heroku.svg" height="40" width="143" alt="Heroku logo">
+          </li>
+
+          <li class="logos__item">
+            <img class="logos__img" src="{{rootPath}}images/technologies/gulp.svg" height="56" width="26" alt="Gulp logo">
+          </li>
+
+          <li class="logos__item">
+            <img class="logos__img" src="{{rootPath}}images/technologies/npm.svg" height="32" width="82" alt="Npm logo">
+          </li>
+
+          <li class="logos__item">
+            <img class="logos__img" src="{{rootPath}}images/technologies/craft.svg" height="40" width="72" alt="Craft logo">
+          </li>
+
+          <li class="logos__item">
+            <img class="logos__img" src="{{rootPath}}images/technologies/expression-engine.svg" height="40" width="59" alt="ExpressionEngine logo">
+          </li>
+
+          <li class="logos__item">
+            <img class="logos__img" src="{{rootPath}}images/technologies/vscode.svg" height="48" width="48" alt="VS Code logo">
+          </li>
+
+          <li class="logos__item">
+            <img class="logos__img" src="{{rootPath}}images/technologies/sketch.svg" height="32" width="130" alt="Sketch logo">
+          </li>
+
+          <li class="logos__item">
+            <img class="logos__img" src="{{rootPath}}images/technologies/firebase.svg" height="40" width="142" alt="Firebase logo">
+          </li>
+
+          <li class="logos__item">
+            <img class="logos__img" src="{{rootPath}}images/technologies/nodejs.svg" height="56" width="92" alt="NodeJS logo">
+          </li>
+
+          <li class="logos__item">
+            <img class="logos__img" src="{{rootPath}}images/technologies/netlify.svg" height="32" width="121" alt="Netlify logo">
+          </li>
+
+          <li class="logos__item">
+            <img class="logos__img" src="{{rootPath}}images/technologies/gcp.svg" height="48" width="55" alt="Google Cloud Platform logo">
+          </li>
+
+        </ul>
+
+      </div>
+
+    </section>
+
 {% endblock %}

@@ -1,0 +1,25 @@
+/* --------------------------------
+
+Social list
+
+-------------------------------- */
+
+
+.social-list {
+  display: flex;
+}
+
+
+.social-list__item {
+  display: block;
+
+  &:not(:last-child) {
+    margin-right: var(--space-xxs);
+  }
+
+}
+
+
+.social-list__link {
+  display: block;
+}

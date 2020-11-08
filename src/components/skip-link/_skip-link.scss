@@ -1,0 +1,46 @@
+/* --------------------------------
+
+Skip Link
+
+-------------------------------- */
+
+
+.skip-link {
+  @include fontSmooth;
+  background-color: var(--color-white);
+  color: var(--color-contrast-high);
+  display: inline-block;
+  font-weight: var(--font-semibold);
+  left: var(--space-xxs);
+  padding: var(--space-xxxs) var(--space-xxs);
+  position: absolute;
+  top: var(--space-xxs);
+  z-index: var(--zindex-fixed-element);
+
+  &:hover {
+    color: var(--color-primary);
+  }
+
+  // Hide
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+
+  &:focus,
+  &.skip-link--focus {
+
+    // Show
+    box-shadow: 0 0 0 var(--space-xxxxs) var(--color-focus);
+    clip: auto;
+    clip-path: none;
+    outline: var(--space-xxxxs) solid var(--color-primary);
+    outline-offset: 0;
+  }
+
+}
+
+
+.skip-link__label {
+  display: block;
+  position: relative;
+  top: -1px;
+}

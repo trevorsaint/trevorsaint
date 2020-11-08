@@ -1,196 +1,267 @@
-{% extends "layout.html" %}
+{% set pageTitle       = "Rural grants and payments to help the farming industry" %}
+{% set pageDescription = "Trevor Saint was responsible for the design and frontend development of Rural Payments, a service to help the farming industry manage land and businesses." %}
+{% set pageId          = "projects" %}
 
-{% set pageId = "casestudy" %}
-{% set pageTitle = "Rural grants and payments to help the farming industry - Trevor Saint" %}
-{% set pageDescription = "Trevor Saint designed and built a design system to instil design consistency, clean semantic accessible code, guidance for designers and developers, which helped to shape the Rural Payments service for the farming community." %}
+{% extends "layout.njk" %}
 
 {% block content %}
-<div class="container">
 
-  <nav class="breadcrumb" aria-label="Breadcrumb">
-    <ol class="breadcrumb__list">
-      <li class="breadcrumb__item"><a class="breadcrumb__link" href="/projects">Projects</a></li>
-      <li class="breadcrumb__item"><a class="breadcrumb__link" href="/projects/rural-payments" aria-current="page">Rural Payments (GOV.UK)</a></li>
-    </ol>
-  </nav>
+  <section class="padding-top-xs">
 
-  <div class="casestudy__header">
+    <div class="container">
 
-    <div class="casestudy__header-logo">
-      <img src="{{assetPath}}images/logo/rural-payments-agency.svg" alt="Rural Payments Agency">
-    </div>
+      {{ backLink({
+        "url": rootPath + 'projects',
+        "text": 'Back'
+      }) }}
 
-    <div class="casestudy__header-title">
-      <h1 class="heading-xxl">Rural grants and payments to help the farming industry</h1>
-    </div>
+      <h1 class="heading-xxl margin-y-sm margin-y-lg@sm">Rural grants and payments to help the farming industry</h1>
 
-  </div>
-
-  <div class="casestudy__content">
-
-    <figure class="figure">
-      <div class="image  image--16:9">
-        <img src="{{assetPath}}images/projects/project/rural-payments/rural-payments-featured.jpg" srcset="{{assetPath}}images/projects/project/rural-payments/rural-payments-featured.jpg 1x, {{assetPath}}images/projects/project/rural-payments/rural-payments-featured@2x.jpg 2x" alt="Round haybales on a patch of land on a sunny day">
+      <div class="hero">
+        <img srcset="{{rootPath}}images/projects/project/rural-payments/hero.png 1x, {{rootPath}}images/projects/project/rural-payments/hero@2x.png 2x, {{rootPath}}images/projects/project/rural-payments/hero@3x.png 3x" src="{{rootPath}}images/projects/project/rural-payments/hero.png" alt="A preview of Rural Payments on an iMac screen">
       </div>
-      <figcaption class="figure__caption">Round haybales on a patch of land in Hampshire. Photo by Trevor Saint</figcaption>
-    </figure>
 
-    <div class="textblock">
+      <div class="flex@sm justify-between items-start margin-top-md">
 
-      <h2 class="heading-l">Overview</h2>
+        {{ entryDetails({
+          "rows": [
+            {
+              "key": {
+                "text": 'Client'
+              },
+              "value": {
+                "text": 'Rural Payments Agency'
+              }
+            },
+            {
+              "key": {
+                "text": 'Industry'
+              },
+              "value": {
+                "text": 'Government'
+              }
+            },
+            {
+              "key": {
+                "text": 'Year'
+              },
+              "value": {
+                "text": '2016'
+              }
+            }
+          ]
+        }) }}
 
-      <div class="textblock__content">
+        <p class="margin-xs margin-bottom-0 margin-0@sm">
+          <a class="link link--icon link--underline" href="https://gov.uk/claim-rural-payments" rel="external">
+            Visit website
+            <svg class="icon icon--sm margin-left-xxxxs" width="24" height="24" viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+              <path d="M14,4c0,0.55,0.45,1,1,1h2.59l-9.13,9.13c-0.39,0.39-0.39,1.02,0,1.41s1.02,0.39,1.41,0L19,6.41V9c0,0.55,0.45,1,1,1s1-0.45,1-1V3h-6C14.45,3,14,3.45,14,4z M18,19H6c-0.55,0-1-0.45-1-1V6c0-0.55,0.45-1,1-1h5c0.55,0,1-0.45,1-1s-0.45-1-1-1H5C3.89,3,3,3.9,3,5v14c0,1.1,0.9,2,2,2h14c1.1,0,2-0.9,2-2v-6c0-0.55-0.45-1-1-1s-1,0.45-1,1v5C19,18.55,18.55,19,18,19z"/>
+            </svg>
+          </a>
+        </p>
 
-        <div class="textblock__main">
-          <p>The Rural Payments service is an online registration system for farmers, animal keepers, rural traders and businesses.</p>
-          <p>They use this service to register their details, see and update digital maps of their land and make online applications for rural grants and payments.</p>
+      </div>
+
+      <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
+
+        <div class="container text-component max-width-sm">
+
+          <h2>Overview</h2>
+
+          <div class="color-contrast-medium">
+            <p>The Rural Payments service is an online registration system for farmers, animal keepers, rural traders and businesses.</p>
+            <p>They use this service to register their details, see and update digital maps of their land and make online applications for rural grants and payments.</p>
+          </div>
+
         </div>
 
-        <div class="textblock__supporting">
-          <dl class="metadata">
-            <dt class="metadata__heading">Client</dt>
-            <dd class="metadata__description">Rural Payments Agency</dd>
-            <dt class="metadata__heading">Industry</dt>
-            <dd class="metadata__description">Government</dd>
-            <dt class="metadata__heading">Year</dt>
-            <dd class="metadata__description">2016</dd>
-          </dl>
+      </div>
+
+      <figure class="figure">
+        <div class="bg-contrast-lower">
+          <img srcset="{{rootPath}}images/projects/project/rural-payments/sign-in-to-rural-payments.png 1x, {{rootPath}}images/projects/project/rural-payments/sign-in-to-rural-payments@2x.png 2x, {{rootPath}}images/projects/project/rural-payments/sign-in-to-rural-payments@3x.png 3x" src="{{rootPath}}images/projects/project/rural-payments/sign-in-to-rural-payments.png" alt="A preview of signing in to Rural Payments online on both desktop and mobile">
+        </div>
+        <figcaption class="figure__caption margin-top-xxs">Responsive design and development</figcaption>
+      </figure>
+
+      <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
+
+        <div class="container text-component max-width-sm">
+
+          <h2>User research</h2>
+
+          <div class="color-contrast-medium">
+            <p>User research was a big part of the project. We were able to gather valuable insight which improved both design and our approach.</p>
+            <p>We observed farmers in the office and on their farms interacting with prototypes we designed and developed. We were able to watch and learn from them interacting with the service.</p>
+            <p>Researchers helped us learn about our users and helped to make sure our design patterns and page flows worked well for our users. Research conducted also included people with disabilities and non-tech savvy people.</p>
+            <p>It was a valuable insight watching non-tech savvy people interacting with the prototypes as well as how rural locations can have such a damaging effect on internet connections.</p>
+          </div>
+
         </div>
 
       </div>
 
-    </div>
-
-    <figure class="figure">
-      <div class="image image--16:10">
-        <img src="{{assetPath}}images/projects/project/rural-payments/rural-payments-signin.png" srcset="{{assetPath}}images/projects/project/rural-payments/rural-payments-signin.png 1x, {{assetPath}}images/projects/project/rural-payments/rural-payments-signin@2x.png 2x" alt="Rural Payments sign in screen">
-      </div>
-      <figcaption class="figure__caption">Sign in to Rural Payments prototype</figcaption>
-    </figure>
-
-    <div class="textblock">
-
-      <h2 class="heading-l">User research</h2>
-
-      <div class="textblock__content">
-        <div class="textblock__main">
-          <p>User research was a big part of the project. We were able to gather valuable insight which improved both design and our approach.</p>
-          <p>We observed farmers in the office and on their farms interacting with prototypes we designed and developed. We were able to watch and learn from them interacting with the service.</p>
-          <p>Researchers helped us learn about our users and helped to make sure our design patterns, page flows worked well for our users. Research conducted also included people with disabilities and non-tech savvy people.</p>
-          <p>It was a valuable insight watching non-tech savvy people interacting with the prototypes as well as how rural locations can have such a damaging effect on poor internet connections.</p></p>
+      <figure class="figure">
+        <div class="bg-contrast-lower">
+          <img srcset="{{rootPath}}images/projects/project/rural-payments/managing-your-business.png 1x, {{rootPath}}images/projects/project/rural-payments/managing-your-business@2x.png 2x, {{rootPath}}images/projects/project/rural-payments/managing-your-business@3x.png 3x" src="{{rootPath}}images/projects/project/rural-payments/managing-your-business.png" alt="A preview of managing your business in Rural Payments">
         </div>
-      </div>
+        <figcaption class="figure__caption margin-top-xxs">Business status and management of details</figcaption>
+      </figure>
 
-    </div>
+      <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
 
-    <figure class="figure">
-      <div class="image image--16:10">
-        <img src="{{assetPath}}images/projects/project/rural-payments/rural-payments-accountable-people.png" srcset="{{assetPath}}images/projects/project/rural-payments/rural-payments-accountable-people.png 1x, {{assetPath}}images/projects/project/rural-payments/rural-payments-accountable-people@2x.png 2x" alt="People who can help you with Rural Payments screen">
-      </div>
-      <figcaption class="figure__caption">People with access rights who can facilitate with an application on behalf of a farmer (accordion concept design and prototype)</figcaption>
-    </figure>
+        <div class="container text-component max-width-sm">
 
-    <div class="textblock">
+          <h2>A solid foundation</h2>
 
-      <h2 class="heading-l">A solid foundation</h2>
+          <div class="color-contrast-medium">
+            <p>Government Digital Services (GDS) had created a design system to ensure design consistency across all Government services. Their design system was a solid foundation to build upon including patterns like typography, colours, grid and form-based patterns.</p>
+            <p>Unfortunately, their system did not include patterns that were essential for our service and user needs, so I designed and built our own.</p>
+          </div>
 
-      <div class="textblock__content">
-        <div class="textblock__main">
-          <p>Government Digital Services (<abbr>GDS</abbr>) had created a design system to ensure design consistency across all Government services. Their design system was a solid foundation to build upon including patterns like typography, colours, grid and form-based patterns.</p>
-          <p>Unfortunately, their system did not include patterns that were essential for our service and user needs, so I designed and built our own.</p>
         </div>
+
       </div>
 
-    </div>
-
-    <figure class="figure">
-      <div class="image image--16:10">
-        <img src="{{assetPath}}images/projects/project/rural-payments/rural-payments-styleguide.png" srcset="{{assetPath}}images/projects/project/rural-payments/rural-payments-styleguide.png 1x, {{assetPath}}images/projects/project/rural-payments/rural-payments-styleguide@2x.png 2x" alt="Rural Payments Styleguide screen">
-      </div>
-      <figcaption class="figure__caption">A collection of patterns, page examples, concepts and code for designers and developers</figcaption>
-    </figure>
-
-    <div class="textblock">
-
-      <h2 class="heading-l">Our design system</h2>
-
-      <div class="textblock__content">
-        <div class="textblock__main">
-          <p>I designed new components like pagination, tabs, collapsible’s and alerts, placing usability at the forefront of every design decision, as well as making everything fully accessible and compliant.</p>
-          <p>I also spent a considerable amount of time working with <abbr class="abbr" title="Government Digital Services">GDS</abbr> to design and develop new patterns. It was a useful exercise to ensure anything I designed and built was good enough for <abbr class="abbr" title="Government Digital Services">GDS</abbr> service standards.</p>
+      <figure class="figure">
+        <div class="bg-contrast-lower">
+          <img srcset="{{rootPath}}images/projects/project/rural-payments/management-of-accountable-people.png 1x, {{rootPath}}images/projects/project/rural-payments/management-of-accountable-people@2x.png 2x, {{rootPath}}images/projects/project/rural-payments/management-of-accountable-people@3x.png 3x" src="{{rootPath}}images/projects/project/rural-payments/management-of-accountable-people.png" alt="A preview of giving people access rights who can help with an application">
         </div>
-      </div>
+        <figcaption class="figure__caption margin-top-xxs">People with access rights who can facilitate with an application</figcaption>
+      </figure>
 
-    </div>
-
-    <figure class="figure">
-      <div class="image image--16:10">
-        <img src="{{assetPath}}images/projects/project/rural-payments/rural-payments-plotting-land.png" srcset="{{assetPath}}images/projects/project/rural-payments/rural-payments-plotting-land.png 1x, {{assetPath}}images/projects/project/rural-payments/rural-payments-plotting-land@2x.png 2x" alt="Plotting of land and land information screen">
-      </div>
-      <figcaption class="figure__caption">User flow concept for plotting land, built using blocks of reusable code from the Rural Payments design system</figcaption>
-    </figure>
-
-    <div class="textblock">
-
-      <h2 class="heading-l">The results</h2>
-
-      <div class="textblock__content">
-        <div class="textblock__main">
-          <p>We were able to design and prototype pages, user flows quickly and efficiently obtaining feedback promptly. We were able to spot usability problems early, make modifications and send out to test again.</p>
-          <p>Working closely with a content designer and user researcher we were able to update and improve prototypes quickly, test and gather feedback in advance of developers coding functionality required for the actual service.</p>
-          <p>The design system instilled design consistency, clean semantic accessible code, guidance for designers and developers as well as the ability to rapidly prototype users flows.</p>
+      <figure class="figure margin-top-md">
+        <div class="bg-contrast-lower">
+          <img srcset="{{rootPath}}images/projects/project/rural-payments/management-of-land-parcels.png 1x, {{rootPath}}images/projects/project/rural-payments/management-of-land-parcels@2x.png 2x, {{rootPath}}images/projects/project/rural-payments/management-of-land-parcels@3x.png 3x" src="{{rootPath}}images/projects/project/rural-payments/management-of-land-parcels.png" alt="A preview of managing your land parcels">
         </div>
-      </div>
+        <figcaption class="figure__caption margin-top-xxs">Management of land parcels and features</figcaption>
+      </figure>
 
-    </div>
-
-    <figure class="figure">
-      <div class="image image--16:10">
-        <img src="{{assetPath}}images/projects/project/rural-payments/rural-payments-your-account.png" srcset="{{assetPath}}images/projects/project/rural-payments/rural-payments-your-account.png 1x, {{assetPath}}images/projects/project/rural-payments/rural-payments-your-account@2x.png 2x" alt="Your account showing businesses, messages and personal details screen">
-      </div>
-      <figcaption class="figure__caption">My account prototype to allow access to registered businesses, messages and personal details</figcaption>
-    </figure>
-
-    <div class="textblock">
-
-      <h2 class="heading-l">Complimented by others</h2>
-
-      <div class="textblock__content">
-        <div class="textblock__main">
-          <p>Other Government departments were using our design system as a reference point for patterns that had not yet been worked on by <abbr class="abbr" title="Government Digital Services">GDS</abbr>.</p>
+      <figure class="figure margin-top-md">
+        <div class="bg-contrast-lower">
+          <img srcset="{{rootPath}}images/projects/project/rural-payments/management-of-business-details.png 1x, {{rootPath}}images/projects/project/rural-payments/management-of-business-details@2x.png 2x, {{rootPath}}images/projects/project/rural-payments/management-of-business-details@3x.png 3x" src="{{rootPath}}images/projects/project/rural-payments/management-of-business-details.png" alt="A preview of business details">
         </div>
+        <figcaption class="figure__caption margin-top-xxs">Management of business details</figcaption>
+      </figure>
+
+      <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
+
+        <div class="container text-component max-width-sm">
+
+          <h2>Our own design system</h2>
+
+          <div class="color-contrast-medium">
+            <p>I designed new components like pagination, tabs, collapsible’s and alerts, placing usability at the forefront of every design decision, as well as making everything fully accessible and compliant.</p>
+            <p>I also spent a considerable amount of time working with GDS to design and develop new patterns. It was a useful exercise to ensure anything I designed and built was good enough for GDS service standards.</p>
+          </div>
+
+          <h2>Complimented by others</h2>
+
+          <div class="color-contrast-medium">
+            <p>Other Government departments were using our design system as a reference point for patterns that had not yet been worked on by GDS.</p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <figure class="figure">
+        <div class="bg-contrast-lower">
+          <img srcset="{{rootPath}}images/projects/project/rural-payments/management-of-your-account.png 1x, {{rootPath}}images/projects/project/rural-payments/management-of-your-account@2x.png 2x, {{rootPath}}images/projects/project/rural-payments/management-of-your-account@3x.png 3x" src="{{rootPath}}images/projects/project/rural-payments/management-of-your-account.png" alt="A preview of your account page for Rural Payments">
+        </div>
+        <figcaption class="figure__caption margin-top-xxs">Management of your account and business activities</figcaption>
+      </figure>
+
+      <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg border-bottom">
+
+        <div class="container text-component max-width-sm">
+
+          <h2>The results</h2>
+
+          <div class="color-contrast-medium">
+            <p>We were able to design and prototype pages quickly and efficiently, obtaining feedback promptly. We were able to spot usability problems early, make modifications and send out to test again.</p>
+            <p>Working closely with a content designer and user researcher we were able to update and improve prototypes quickly, test and gather feedback in advance of developers coding functionality required for the actual service.</p>
+            <p>The design system instilled design consistency, clean semantic accessible code, guidance for designers and developers as well as the ability to rapidly prototype users flows.</p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
+
+        <div class="container max-width-sm">
+
+          <div class="margin-bottom-sm">
+            <p class="font-bold text-sm text-center">Share this project</p>
+          </div>
+
+          {{ socialShare({
+            "twitter": {
+              "attributes": {
+                "data-social": 'twitter',
+                "data-text": 'Hi there! https://trevorsaint.uk via @trevorsaint',
+                "data-hashtags": '#gov, #government, #designsystem, #rural, #land, #design, #dev, #ux, #interactiondesign'
+              }
+            },
+            "facebook": {
+              "attributes": {
+                "data-social": 'facebook',
+                "data-url": 'https://trevorsaint.uk'
+              }
+            },
+            "pinterest": {
+              "attributes": {
+                "data-social": 'pinterest',
+                "data-url": 'https://trevorsaint.uk',
+                "data-description": 'Rural grants and payments to help the farming industry',
+                "data-media": 'https://trevorsaint.uk/images/projects/project/rural-payments/pinterest.jpg'
+              }
+            },
+            "linkedin": {
+              "attributes": {
+                "data-social": 'linkedin',
+                "data-url": 'https://trevorsaint.uk'
+              }
+            },
+            "email": {
+              "attributes": {
+                "data-social": 'mail',
+                "data-url": 'https://trevorsaint.uk',
+                "data-subject": 'Rural grants and payments to help the farming industry - Trevor Saint',
+                "data-body": 'https://trevorsaint.uk/projects/rural-payments'
+              }
+            }
+          }) }}
+
+        </div>
+
+      </div>
+
+      <div class="padding-bottom-md padding-bottom-lg@sm padding-bottom-xxl@md padding-bottom-xxxxl@lg">
+
+        {{ previousNextLinks({
+          "previousNextLinksItems": [
+            {
+              "rel": 'prev',
+              "text": 'Previous project',
+              "url": rootPath + 'projects/hmcts-design-system',
+              "label": 'A design system to solve problems and avoid repetition'
+            },
+            {
+              "rel": 'next',
+              "text": 'Next project',
+              "url": rootPath + 'projects/census-2021',
+              "label": 'A once in a decade survey that gives us a better future'
+            }
+          ]
+        }) }}
+
       </div>
 
     </div>
 
-    <figure class="figure">
-      <div class="image image--16:10">
-        <img src="{{assetPath}}images/projects/project/rural-payments/rural-payments-business-overview.png" srcset="{{assetPath}}images/projects/project/rural-payments/rural-payments-business-overview.png 1x, {{assetPath}}images/projects/project/rural-payments/rural-payments-business-overview@2x.png 2x" alt="Business overview showing todo tasks screen">
-      </div>
-      <figcaption class="figure__caption">Selected business overview, illustrating business activities and todo tasks</figcaption>
-    </figure>
+  </section>
 
-    <hr class="section-break  section-break--xl  section-break--visible">
-
-    <div class="signpost">
-
-      <div class="signpost__item">
-        <a class="signpost__link signpost__link--previous" href="/projects/paramount-packaging">
-          <span class="signpost__link-label">Previous</span>
-          <span class="signpost__link-context">Servelec</span>
-        </a>
-      </div>
-
-      <div class="signpost__item">
-        <a class="signpost__link signpost__link--next" href="/projects/max-powder">
-          <span class="signpost__link-label">Next</span>
-          <span class="signpost__link-context">Max Powder</span>
-        </a>
-      </div>
-
-    </div>
-
-  </div>
-
-</div>
 {% endblock %}

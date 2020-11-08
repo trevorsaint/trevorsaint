@@ -1,0 +1,11 @@
+{
+  "config": "config/",
+  "source": "src/",
+    "fonts": "src/assets/fonts/",
+    "images": "src/assets/images/",
+  "public": "public/",
+    "stylesheets": "public/stylesheets/",
+    "javascripts": "public/javascripts/",
+  "app": "app/",
+    "sass": "app/sass/"
+}

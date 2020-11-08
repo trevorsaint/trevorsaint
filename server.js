@@ -1,5 +1,5 @@
 // Core dependencies
-const path       = require('path');
+const path = require('path');
 
 
 // NPM dependencies
@@ -24,7 +24,7 @@ const port = process.env.PORT || config.port;
 // Setup application
 const appViews = [
 	path.join(__dirname, '/app/views'),
-	path.join(__dirname, '/app/views/layout'),
+	path.join(__dirname, '/app/views/layouts'),
   path.join(__dirname, '/app/views/partials'),
   path.join(__dirname, '/src'),
   path.join(__dirname, '/src/components')
@@ -38,6 +38,7 @@ const nunjucksEnvironment = nunjucks.configure(appViews, {
   noCache: true,
   watch: true
 });
+
 
 // Set view engine
 app.set('view engine', 'html');
@@ -60,7 +61,7 @@ app.use(routes);
 
 // Add variables that are available in all views
 app.locals.serviceName = config.serviceName;
-app.locals.assetPath = config.assetPath;
+app.locals.rootPath = config.rootPath;
 
 
 // Start app

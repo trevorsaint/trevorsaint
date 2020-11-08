@@ -1,0 +1,40 @@
+/* --------------------------------
+
+Logos
+
+-------------------------------- */
+
+
+.logos {}
+
+
+.logos__item {
+  background-color: alpha(var(--color-black), 0.05);
+  background-blend-mode: multiply;
+  border-radius: var(--radius-sm);
+  display: flex;
+  height: 112px;
+  mix-blend-mode: multiply;
+  min-width: 204px;
+  max-width: 268px;
+  width: 100%;
+}
+
+
+.logos__img {
+  display: block;
+  margin: auto;
+}
+
+
+/* --------------------------------
+
+Logo
+
+-------------------------------- */
+
+
+.logo {
+  color: var(--color-contrast-high);
+  fill: currentColor;
+}

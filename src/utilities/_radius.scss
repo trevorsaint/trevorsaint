@@ -1,0 +1,6 @@
+:root {
+  --radius: 4px;
+  --radius-sm: calc(var(--radius)*2); // 8px
+  --radius-md: calc(var(--radius)*3); // 12px
+  --radius-lg: calc(var(--radius)*4); // 16px
+}

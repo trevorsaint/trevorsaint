@@ -1,27 +1,143 @@
-{% extends "layout.html" %}
+{% set pageTitle       = "Hi, I’m Trevor Saint Interaction Designer" %}
+{% set pageDescription = "Trevor Saint is a digital perfectionist with over 18 years of experience designing and developing impressive services for Government departments and digital agencies." %}
+{% set pageId          = "home" %}
 
-{% set pageId = "home" %}
-{% set pageTitle = "Interaction Designer and Frontend Developer in Fleet - Trevor Saint" %}
-{% set pageDescription = "Trevor Saint is a digital perfectionist with 17 years of experience designing and developing impressive services for Government departments and digital agencies." %}
+{% extends "layout.njk" %}
 
 {% block content %}
-    <div class="section section--masthead">
+
+    <section class="padding-top-xs padding-bottom-md padding-bottom-lg@sm padding-bottom-xxl@md padding-bottom-xxxxl@lg">
 
       <div class="container">
 
-        <div class="contents">
+        <div class="max-width-md">
 
-          <h1 class="heading-xxl">I’m an Interaction Designer living in Fleet</h1>
+          <span class="body-lg block">Hi, I’m Trevor Saint</span>
 
-          <p>I’m a digital perfectionist with 17 years of experience designing and developing impressive services for Government departments and digital agencies.</p>
+          <h1 class="heading-xxxl margin-y-xxs margin-y-xs@md margin-bottom-lg@lg">Interaction Designer</h1>
 
-          <p>I’m currently working with Office for National Statistics on Census 2021.</p>
-
-          <a class="button button--secondary override-!-margin-top-6" href="/about">Find out more<span class="visually-hidden"> about Trevor Saint</span></a>
+          <div class="text-component color-contrast-medium body-lg">
+            <p>I’m a digital perfectionist with over 18 years of experience designing and developing impressive services for Government departments and digital agencies.</p>
+          </div>
 
         </div>
 
       </div>
 
-    </div>
+    </section>
+
+    <section class="padding-bottom-md padding-bottom-lg@sm padding-bottom-xxl@md padding-bottom-xxxxl@lg">
+
+      <div class="container">
+
+        <h2 class="heading-xl padding-bottom-xxs margin-bottom-xs margin-bottom-lg@sm border-offscreen">Featured project</h2>
+
+        <div class="feature">
+
+          <div class="feature__grid grid gap-xs items-center">
+
+            <div class="col-8@md">
+
+              <figure class="feature__image">
+                <a href="{{rootPath}}projects/census-2021" tabindex="-1">
+                  <img srcset="{{rootPath}}images/projects/project/census-2021/feature.png 1x, {{rootPath}}images/projects/project/census-2021/feature@2x.png 2x, {{rootPath}}images/projects/project/census-2021/feature@3x.png 3x" src="{{rootPath}}images/projects/project/census-2021/feature.png" alt="A preview of Census 2021 on an iMac screen">
+                </a>
+              </figure>
+
+            </div>
+
+            <div class="col-4@md position-relative z-index-1">
+
+              <div class="feature__text-offset@md">
+                <span class="badge badge--contrast-higher">In progress</span>
+                <h2 class="heading-xl margin-y-xxs">Census 2021</h2>
+                <p class="body-lg margin-bottom-xxs color-contrast-medium">Designing a once in a century survey for all households in England and Wales.</p>
+                <p>
+                  <a class="link link--icon link--underline" href="{{rootPath}}projects/census-2021" aria-label="View Census 2021 project">
+                    View project
+                    <svg class="icon icon--sm margin-left-xxxxs" width="24" height="24" viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+                      <path d="M3.71 11.02h13.17L14 8.14a.996.996 0 111.41-1.41L20 11.32c.39.39.39 1.02 0 1.41l-4.59 4.59A.996.996 0 1114 15.91l2.88-2.89H3.71c-.55 0-1-.45-1-1s.45-1 1-1z"/>
+                    </svg>
+                  </a>
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="padding-bottom-md padding-bottom-lg@sm padding-bottom-xxl@md padding-bottom-xxxxl@lg">
+
+      <div class="container">
+        <h2 class="heading-xl padding-bottom-xxs margin-bottom-xs margin-bottom-lg@sm border-offscreen">I’ve worked with</h2>
+      </div>
+
+      <div class="padding-x-xs">
+
+        <ul class="logos flex flex-wrap gap-xs flex-center">
+
+          <li class="logos__item">
+            <img class="logos__img" src="{{rootPath}}images/clients/ons.svg" height="32" width="161" alt="Office for National Statistics logo">
+          </li>
+
+          <li class="logos__item">
+            <img class="logos__img" src="{{rootPath}}images/clients/govuk.svg" height="24" width="149" alt="GOV.UK logo">
+          </li>
+
+          <li class="logos__item">
+            <img class="logos__img" src="{{rootPath}}images/clients/servelec.svg" height="48" width="126" alt="Servelec logo">
+          </li>
+
+          <li class="logos__item">
+            <img class="logos__img" src="{{rootPath}}images/clients/elsevier.svg" height="56" width="51" alt="Elsevier logo">
+          </li>
+
+          <li class="logos__item">
+            <img class="logos__img" src="{{rootPath}}images/clients/hmcts.svg" height="56" width="121" alt="HM Courts and Tribunals Service logo">
+          </li>
+
+          <li class="logos__item">
+            <img class="logos__img" src="{{rootPath}}images/clients/moj.svg" height="56" width="72" alt="Ministry of Justice logo">
+          </li>
+
+          <li class="logos__item">
+            <img class="logos__img" src="{{rootPath}}images/clients/premier-league.svg" height="40" width="95" alt="Premier League logo">
+          </li>
+
+          <li class="logos__item">
+            <img class="logos__img" src="{{rootPath}}images/clients/rural-payments-agency.svg" height="56" width="108" alt="Rural Payments Agency logo">
+          </li>
+
+          <li class="logos__item">
+            <img class="logos__img" src="{{rootPath}}images/clients/nike.svg" height="32" width="90" alt="Nike logo">
+          </li>
+
+          <li class="logos__item">
+            <img class="logos__img" src="{{rootPath}}images/clients/akqa.svg" height="32" width="67" alt="AKQA logo">
+          </li>
+
+          <li class="logos__item">
+            <img class="logos__img" src="{{rootPath}}images/clients/thefa.svg" height="56" width="39" alt="The Football Association logo">
+          </li>
+
+          <li class="logos__item">
+            <img class="logos__img" src="{{rootPath}}images/clients/kainos.svg" height="20" width="138" alt="Kainos logo">
+          </li>
+
+          <li class="logos__item">
+            <img class="logos__img" src="{{rootPath}}images/clients/capita.svg" height="20" width="98" alt="Capita logo">
+          </li>
+
+        </ul>
+
+      </div>
+
+    </section>
+
 {% endblock %}

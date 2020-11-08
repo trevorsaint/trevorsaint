@@ -1,0 +1,38 @@
+/* --------------------------------
+
+Figure
+
+-------------------------------- */
+
+
+.figure {
+  text-align: center;
+}
+
+
+@include breakpoint(xl) {
+
+  .figure--full-width {
+    margin-left: calc(50% - 50vw);
+    width: 100vw;
+  }
+
+
+  .figure--outset {
+    margin-left: -240px;
+    width: 1680px;
+  }
+
+}
+
+
+.figure__caption {
+  @include typography(14);
+  background-color: alpha(var(--color-black), 0.05);
+  border-radius: var(--radius-sm);
+  color: var(--color-contrast-medium);
+  display: inline-block;
+  margin: auto;
+  padding: var(--space-xxxxs) var(--space-xxs);
+  text-align: center;
+}

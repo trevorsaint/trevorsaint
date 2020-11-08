@@ -1,0 +1,57 @@
+/* --------------------------------
+
+Social Sharing
+
+-------------------------------- */
+
+
+.social-share {}
+
+
+.social-share__item {
+  display: block;
+}
+
+
+.social-share__link {
+  background-color: alpha(var(--color-black), 0.05);
+  border-radius: 50%;
+  display: inline-block;
+  padding: var(--space-xxxs);
+
+  .icon {
+    color: var(--color-contrast-high);
+    display: block;
+  }
+
+  &:hover {
+    background-color: var(--color-contrast-high);
+
+    .icon {
+      color: var(--color-primary);
+      color: var(--color-white);
+    }
+
+  }
+
+  &:focus {
+    background-color: var(--color-tertiary);
+    box-shadow: 0 0 0 var(--space-xxxxs) var(--color-tertiary);
+    color: var(--color-contrast-high);
+
+    .icon {
+      color: var(--color-contrast-high);
+    }
+
+  }
+
+}
+
+
+@include breakpoint(md) {
+
+  .social-share__link {
+    padding: var(--space-xxs);
+  }
+
+}

@@ -1,0 +1,18 @@
+/* --------------------------------
+
+Read More
+
+-------------------------------- */
+
+
+.js {
+
+  .read-more {
+    opacity: 0; // Hide read-more while it is initialized in JS
+  }
+
+  .read-more--loaded {
+    opacity: 1;
+  }
+
+}

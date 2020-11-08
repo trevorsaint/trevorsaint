@@ -1,0 +1,23 @@
+/* --------------------------------
+
+Back link
+
+-------------------------------- */
+
+
+.back-link {
+  @include link-common;
+  @include link-style-text;
+  align-items: center;
+  display: inline-flex;
+  left: calc(var(--space-xxxs) * -1);
+  line-height: (24/18); // Line height override
+  position: relative;
+  vertical-align: top;
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+}

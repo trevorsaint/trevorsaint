@@ -1,34 +1,49 @@
-.link {
-  @include focusable-fill;
-  @include font-weight("semi-bold");
+/* --------------------------------
 
-  &:link,
-  &:visited,
-  &:hover,
-  &:active,
-  &:focus {
-    color: colour("black");
+Link
+
+-------------------------------- */
+
+
+.link {
+  @include link-common;
+  @include link-style-default;
+}
+
+
+.link--underline {
+  display: inline-block;
+  text-decoration: underline;
+
+  // Fine adjustments for icon
+  .icon {
+    position: relative;
+    top: 1px;
   }
 
-  &[aria-current=page] {
-    font-weight: bold;
+  &:hover,
+  &:focus {
     text-decoration: none;
   }
 
 }
 
 
-.link--ondark {
+.link--icon {
+  align-items: center;
+  display: inline-flex;
+  font-weight: var(--font-bold);
+  white-space: nowrap;
+}
 
-  &:link,
-  &:visited,
-  &:hover,
-  &:active {
-    color: colour("white");
-  }
 
-  &:focus {
-    color: colour("black");
-  }
+.link-text {
+  @include link-common;
+  @include link-style-text;
+}
 
+
+.link-muted {
+  @include link-common;
+  @include link-style-muted;
 }

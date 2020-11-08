@@ -1,0 +1,22 @@
+/* --------------------------------
+
+Badge
+A small label containing a text string
+
+-------------------------------- */
+
+
+.badge {
+  @include typography(16);
+  align-items: center;
+  background-color: alpha(var(--color-black), 0.05);
+  border-radius: var(--radius-lg);
+  display: inline-flex;
+  padding: var(--space-xxxxs) var(--space-xxs);
+}
+
+
+.badge--contrast-higher {
+  background-color: var(--color-contrast-high);
+  color: var(--color-white);
+}

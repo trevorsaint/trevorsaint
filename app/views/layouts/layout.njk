@@ -1,0 +1,88 @@
+{%- from "back-link/_macro.njk" import backLink -%}
+{%- from "entry-details/_macro.njk" import entryDetails -%}
+{%- from "previous-next-links/_macro.njk" import previousNextLinks -%}
+{%- from "social-sharing/_macro.njk" import socialShare -%}
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{{pageTitle}}</title>
+
+    <!-- Stylesheet -->
+    <link href="{{rootPath}}stylesheets/main.min.css" rel="stylesheet">
+
+    <!-- Add home screen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Trevor Saint">
+
+    <!-- Apple icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="{{rootPath}}images/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{rootPath}}images/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{rootPath}}images/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{rootPath}}images/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{rootPath}}images/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{rootPath}}images/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{rootPath}}images/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{rootPath}}images/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{rootPath}}images/apple-icon-180x180.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="{{rootPath}}images/favicon.svg">
+
+    <!-- Search Engine -->
+    <meta name="description" content="{{pageDescription}}">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{rootPath}}">
+    <meta property="og:title" content="{{pageTitle}}">
+    <meta property="og:image" content="{{rootPath}}images/opengraph.png">
+    <meta property="og:description" content="{{pageDescription}}">
+    <meta property="og:site_name" content="Trevor Saint">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@trevorsaint">
+    <meta name="twitter:creator" content="trevorsaint">
+    <meta name="twitter:url" content="{{rootPath}}">
+    <meta name="twitter:title" content="{{pageTitle}}">
+    <meta name="twitter:description" content="{{pageDescription}}">
+    <meta name="twitter:image" content="{{rootPath}}images/twitter.png">
+
+    <!-- Manifest -->
+    <link href="{{rootPath}}manifest.json" rel="manifest">
+    <meta name="theme-color" content="#F24B88">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!--script async src="https://www.googletagmanager.com/gtag/js?id=UA-2273524-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-2273524-1');
+    </script-->
+
+  </head>
+  <body>
+
+  <script>document.getElementsByTagName('html')[0].className += ' js';</script>
+
+  {% include "header.njk" %}
+
+  <main class="content" id="content">
+    {%- block content %}{% endblock %}
+  </main>
+
+  {% include "footer.njk" %}
+  {% include "scripts.njk" %}
+
+  </body>
+</html>

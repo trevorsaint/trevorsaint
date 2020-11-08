@@ -1,0 +1,998 @@
+// --------------------------------
+// Flexbox
+// --------------------------------
+
+.flex { display: flex; }
+.inline-flex { display: inline-flex; }
+.flex-wrap { flex-wrap: wrap; }
+.flex-column { flex-direction: column; }
+.flex-column-reverse { flex-direction: column-reverse; }
+.flex-row { flex-direction: row; }
+.flex-row-reverse { flex-direction: row-reverse; }
+.flex-center { justify-content: center; align-items: center; }
+
+// Flex items
+.flex-grow { flex-grow: 1; }
+.flex-shrink-0 { flex-shrink: 0; }
+.flex-basis-0 { flex-basis: 0; }
+
+
+// --------------------------------
+// Justify Content
+// --------------------------------
+
+.justify-start { justify-content: flex-start; }
+.justify-end { justify-content: flex-end; }
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
+
+
+// --------------------------------
+// Align Items
+// --------------------------------
+
+.items-center { align-items: center; }
+.items-start { align-items: flex-start; }
+.items-end { align-items: flex-end; }
+.items-baseline { align-items: baseline; }
+
+
+// --------------------------------
+// Display
+// --------------------------------
+
+.block { display: block; }
+.inline-block { display: inline-block; }
+.inline { display: inline; }
+
+
+// --------------------------------
+// Media Wrapper - make iframe responsive + prevent img jump when page loads
+// --------------------------------
+
+$media-wrapper-aspect-ratios: (
+  (16 9),
+  (3 2),
+  (3 4),
+  (4 3),
+  (1 1)
+) !default;
+
+.media-wrapper {
+  position: relative;
+  height: 0;
+  padding-bottom: 56.25%; // 16:9 aspect ratio
+
+  > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@each $aspect-ratio in $media-wrapper-aspect-ratios {
+  $aspect-ratio-x: nth($aspect-ratio, 1);
+  $aspect-ratio-y: nth($aspect-ratio, 2);
+
+  .media-wrapper--#{$aspect-ratio-x}\:#{$aspect-ratio-y} {
+    padding-bottom: calc((#{$aspect-ratio-y} / #{$aspect-ratio-x}) * 100%);
+  }
+}
+
+
+// --------------------------------
+// Float
+// --------------------------------
+
+.float-left  { float: left; }
+.float-right { float: right; }
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+// --------------------------------
+// Margin
+// --------------------------------
+
+.margin-xxxxs { margin: var(--space-xxxxs); }
+.margin-xxxs  { margin: var(--space-xxxs); }
+.margin-xxs   { margin: var(--space-xxs); }
+.margin-xs    { margin: var(--space-xs); }
+.margin-sm    { margin: var(--space-sm); }
+.margin-md    { margin: var(--space-md); }
+.margin-lg    { margin: var(--space-lg); }
+.margin-xl    { margin: var(--space-xl); }
+.margin-xxl   { margin: var(--space-xxl); }
+.margin-xxxl  { margin: var(--space-xxxl); }
+.margin-xxxxl { margin: var(--space-xxxxl); }
+.margin-auto  { margin: auto; }
+.margin-0     { margin: 0; }
+
+.margin-top-xxxxs { margin-top: var(--space-xxxxs); }
+.margin-top-xxxs  { margin-top: var(--space-xxxs); }
+.margin-top-xxs   { margin-top: var(--space-xxs); }
+.margin-top-xs    { margin-top: var(--space-xs); }
+.margin-top-sm    { margin-top: var(--space-sm); }
+.margin-top-md    { margin-top: var(--space-md); }
+.margin-top-lg    { margin-top: var(--space-lg); }
+.margin-top-xl    { margin-top: var(--space-xl); }
+.margin-top-xxl   { margin-top: var(--space-xxl); }
+.margin-top-xxxl  { margin-top: var(--space-xxxl); }
+.margin-top-xxxxl { margin-top: var(--space-xxxxl); }
+.margin-top-auto  { margin-top: auto; }
+.margin-top-0     { margin-top: 0; }
+
+.margin-bottom-xxxxs { margin-bottom: var(--space-xxxxs); }
+.margin-bottom-xxxs  { margin-bottom: var(--space-xxxs); }
+.margin-bottom-xxs   { margin-bottom: var(--space-xxs); }
+.margin-bottom-xs    { margin-bottom: var(--space-xs); }
+.margin-bottom-sm    { margin-bottom: var(--space-sm); }
+.margin-bottom-md    { margin-bottom: var(--space-md); }
+.margin-bottom-lg    { margin-bottom: var(--space-lg); }
+.margin-bottom-xl    { margin-bottom: var(--space-xl); }
+.margin-bottom-xxl   { margin-bottom: var(--space-xxl); }
+.margin-bottom-xxxl  { margin-bottom: var(--space-xxxl); }
+.margin-bottom-xxxxl { margin-bottom: var(--space-xxxxl); }
+.margin-bottom-auto  { margin-bottom: auto; }
+.margin-bottom-0     { margin-bottom: 0; }
+
+.margin-right-xxxxs { margin-right: var(--space-xxxxs); }
+.margin-right-xxxs  { margin-right: var(--space-xxxs); }
+.margin-right-xxs   { margin-right: var(--space-xxs); }
+.margin-right-xs    { margin-right: var(--space-xs); }
+.margin-right-sm    { margin-right: var(--space-sm); }
+.margin-right-md    { margin-right: var(--space-md); }
+.margin-right-lg    { margin-right: var(--space-lg); }
+.margin-right-xl    { margin-right: var(--space-xl); }
+.margin-right-xxl   { margin-right: var(--space-xxl); }
+.margin-right-xxxl  { margin-right: var(--space-xxxl); }
+.margin-right-xxxxl { margin-right: var(--space-xxxxl); }
+.margin-right-auto  { margin-right: auto; }
+.margin-right-0     { margin-right: 0; }
+
+.margin-left-xxxxs { margin-left: var(--space-xxxxs); }
+.margin-left-xxxs  { margin-left: var(--space-xxxs); }
+.margin-left-xxs   { margin-left: var(--space-xxs); }
+.margin-left-xs    { margin-left: var(--space-xs); }
+.margin-left-sm    { margin-left: var(--space-sm); }
+.margin-left-md    { margin-left: var(--space-md); }
+.margin-left-lg    { margin-left: var(--space-lg); }
+.margin-left-xl    { margin-left: var(--space-xl); }
+.margin-left-xxl   { margin-left: var(--space-xxl); }
+.margin-left-xxxl  { margin-left: var(--space-xxxl); }
+.margin-left-xxxxl { margin-left: var(--space-xxxxl); }
+.margin-left-auto  { margin-left: auto; }
+.margin-left-0     { margin-left: 0; }
+
+.margin-x-xxxxs { margin-left: var(--space-xxxxs); margin-right: var(--space-xxxxs); }
+.margin-x-xxxs  { margin-left: var(--space-xxxs); margin-right: var(--space-xxxs); }
+.margin-x-xxs   { margin-left: var(--space-xxs); margin-right: var(--space-xxs); }
+.margin-x-xs    { margin-left: var(--space-xs); margin-right: var(--space-xs); }
+.margin-x-sm    { margin-left: var(--space-sm); margin-right: var(--space-sm); }
+.margin-x-md    { margin-left: var(--space-md); margin-right: var(--space-md); }
+.margin-x-lg    { margin-left: var(--space-lg); margin-right: var(--space-lg); }
+.margin-x-xl    { margin-left: var(--space-xl); margin-right: var(--space-xl); }
+.margin-x-xxl   { margin-left: var(--space-xxl); margin-right: var(--space-xxl); }
+.margin-x-xxxl  { margin-left: var(--space-xxxl); margin-right: var(--space-xxxl); }
+.margin-x-xxxxl { margin-left: var(--space-xxxxl); margin-right: var(--space-xxxxl); }
+.margin-x-auto  { margin-left: auto; margin-right: auto; }
+.margin-x-0     { margin-left: 0; margin-right: 0; }
+
+.margin-y-xxxxs { margin-top: var(--space-xxxxs); margin-bottom: var(--space-xxxxs); }
+.margin-y-xxxs  { margin-top: var(--space-xxxs); margin-bottom: var(--space-xxxs); }
+.margin-y-xxs   { margin-top: var(--space-xxs); margin-bottom: var(--space-xxs); }
+.margin-y-xs    { margin-top: var(--space-xs); margin-bottom: var(--space-xs); }
+.margin-y-sm    { margin-top: var(--space-sm); margin-bottom: var(--space-sm); }
+.margin-y-md    { margin-top: var(--space-md); margin-bottom: var(--space-md); }
+.margin-y-lg    { margin-top: var(--space-lg); margin-bottom: var(--space-lg); }
+.margin-y-xl    { margin-top: var(--space-xl); margin-bottom: var(--space-xl); }
+.margin-y-xxl   { margin-top: var(--space-xxl); margin-bottom: var(--space-xxl); }
+.margin-y-xxxl  { margin-top: var(--space-xxxl); margin-bottom: var(--space-xxxl); }
+.margin-y-xxxxl { margin-top: var(--space-xxxxl); margin-bottom: var(--space-xxxxl); }
+.margin-y-auto  { margin-top: auto; margin-bottom: auto; }
+.margin-y-0     { margin-top: 0; margin-bottom: 0; }
+
+
+// --------------------------------
+// Padding
+// --------------------------------
+
+.padding-xxxxs { padding: var(--space-xxxxs); }
+.padding-xxxs  { padding: var(--space-xxxs); }
+.padding-xxs   { padding: var(--space-xxs); }
+.padding-xs    { padding: var(--space-xs); }
+.padding-sm    { padding: var(--space-sm); }
+.padding-md    { padding: var(--space-md); }
+.padding-lg    { padding: var(--space-lg); }
+.padding-xl    { padding: var(--space-xl); }
+.padding-xxl   { padding: var(--space-xxl); }
+.padding-xxxl  { padding: var(--space-xxxl); }
+.padding-xxxxl { padding: var(--space-xxxxl); }
+.padding-0     { padding: 0; }
+
+.padding-top-xxxxs { padding-top: var(--space-xxxxs); }
+.padding-top-xxxs  { padding-top: var(--space-xxxs); }
+.padding-top-xxs   { padding-top: var(--space-xxs); }
+.padding-top-xs    { padding-top: var(--space-xs); }
+.padding-top-sm    { padding-top: var(--space-sm); }
+.padding-top-md    { padding-top: var(--space-md); }
+.padding-top-lg    { padding-top: var(--space-lg); }
+.padding-top-xl    { padding-top: var(--space-xl); }
+.padding-top-xxl   { padding-top: var(--space-xxl); }
+.padding-top-xxxl  { padding-top: var(--space-xxxl); }
+.padding-top-xxxxl { padding-top: var(--space-xxxxl); }
+.padding-top-0     { padding-top: 0; }
+
+.padding-bottom-xxxxs { padding-bottom: var(--space-xxxxs); }
+.padding-bottom-xxxs  { padding-bottom: var(--space-xxxs); }
+.padding-bottom-xxs   { padding-bottom: var(--space-xxs); }
+.padding-bottom-xs    { padding-bottom: var(--space-xs); }
+.padding-bottom-sm    { padding-bottom: var(--space-sm); }
+.padding-bottom-md    { padding-bottom: var(--space-md); }
+.padding-bottom-lg    { padding-bottom: var(--space-lg); }
+.padding-bottom-xl    { padding-bottom: var(--space-xl); }
+.padding-bottom-xxl   { padding-bottom: var(--space-xxl); }
+.padding-bottom-xxxl  { padding-bottom: var(--space-xxxl); }
+.padding-bottom-xxxxl { padding-bottom: var(--space-xxxxl); }
+.padding-bottom-0     { padding-bottom: 0; }
+
+.padding-right-xxxxs { padding-right: var(--space-xxxxs); }
+.padding-right-xxxs  { padding-right: var(--space-xxxs); }
+.padding-right-xxs   { padding-right: var(--space-xxs); }
+.padding-right-xs    { padding-right: var(--space-xs); }
+.padding-right-sm    { padding-right: var(--space-sm); }
+.padding-right-md    { padding-right: var(--space-md); }
+.padding-right-lg    { padding-right: var(--space-lg); }
+.padding-right-xl    { padding-right: var(--space-xl); }
+.padding-right-xxl   { padding-right: var(--space-xxl); }
+.padding-right-xxxl  { padding-right: var(--space-xxxl); }
+.padding-right-xxxxl { padding-right: var(--space-xxxxl); }
+.padding-right-0     { padding-right: 0; }
+
+.padding-left-xxxxs { padding-left: var(--space-xxxxs); }
+.padding-left-xxxs  { padding-left: var(--space-xxxs); }
+.padding-left-xxs   { padding-left: var(--space-xxs); }
+.padding-left-xs    { padding-left: var(--space-xs); }
+.padding-left-sm    { padding-left: var(--space-sm); }
+.padding-left-md    { padding-left: var(--space-md); }
+.padding-left-lg    { padding-left: var(--space-lg); }
+.padding-left-xl    { padding-left: var(--space-xl); }
+.padding-left-xxl   { padding-left: var(--space-xxl); }
+.padding-left-xxxl  { padding-left: var(--space-xxxl); }
+.padding-left-xxxxl { padding-left: var(--space-xxxxl); }
+.padding-left-0     { padding-left: 0; }
+
+.padding-x-xxxxs { padding-left: var(--space-xxxxs); padding-right: var(--space-xxxxs); }
+.padding-x-xxxs  { padding-left: var(--space-xxxs); padding-right: var(--space-xxxs); }
+.padding-x-xxs   { padding-left: var(--space-xxs); padding-right: var(--space-xxs); }
+.padding-x-xs    { padding-left: var(--space-xs); padding-right: var(--space-xs); }
+.padding-x-sm    { padding-left: var(--space-sm); padding-right: var(--space-sm); }
+.padding-x-md    { padding-left: var(--space-md); padding-right: var(--space-md); }
+.padding-x-lg    { padding-left: var(--space-lg); padding-right: var(--space-lg); }
+.padding-x-xl    { padding-left: var(--space-xl); padding-right: var(--space-xl); }
+.padding-x-xxl   { padding-left: var(--space-xxl); padding-right: var(--space-xxl); }
+.padding-x-xxxl  { padding-left: var(--space-xxxl); padding-right: var(--space-xxxl); }
+.padding-x-xxxxl { padding-left: var(--space-xxxxl); padding-right: var(--space-xxxxl); }
+.padding-x-0     { padding-left: 0; padding-right: 0; }
+
+.padding-y-xxxxs { padding-top: var(--space-xxxxs); padding-bottom: var(--space-xxxxs); }
+.padding-y-xxxs  { padding-top: var(--space-xxxs); padding-bottom: var(--space-xxxs); }
+.padding-y-xxs   { padding-top: var(--space-xxs); padding-bottom: var(--space-xxs); }
+.padding-y-xs    { padding-top: var(--space-xs); padding-bottom: var(--space-xs); }
+.padding-y-sm    { padding-top: var(--space-sm); padding-bottom: var(--space-sm); }
+.padding-y-md    { padding-top: var(--space-md); padding-bottom: var(--space-md); }
+.padding-y-lg    { padding-top: var(--space-lg); padding-bottom: var(--space-lg); }
+.padding-y-xl    { padding-top: var(--space-xl); padding-bottom: var(--space-xl); }
+.padding-y-xxl   { padding-top: var(--space-xxl); padding-bottom: var(--space-xxl); }
+.padding-y-xxxl  { padding-top: var(--space-xxxl); padding-bottom: var(--space-xxxl); }
+.padding-y-xxxxl { padding-top: var(--space-xxxxl); padding-bottom: var(--space-xxxxl); }
+.padding-y-0     { padding-top: 0; padding-bottom: 0; }
+
+
+// --------------------------------
+// Vertical Align
+// --------------------------------
+
+.align-baseline { vertical-align: baseline; }
+.align-top { vertical-align: top; }
+.align-middle { vertical-align: middle; }
+.align-bottom { vertical-align: bottom; }
+
+
+// --------------------------------
+// Typography
+// --------------------------------
+
+// Enables font kerning in all browsers - http://blog.typekit.com/2014/02/05/kerning-on-the-web
+.text-kern {
+  font-feature-settings: "kern" 1;
+  font-kerning: normal;
+  text-rendering: optimizeLegibility;
+}
+
+// Truncate text if it exceeds its parent
+.text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+// Replace text with bg image
+.text-replace {
+    overflow: hidden;
+    color: transparent;
+    text-indent: 100%;
+    white-space: nowrap;
+}
+
+
+// --------------------------------
+// Text Transform
+// --------------------------------
+
+.text-uppercase  { text-transform: uppercase; }
+.text-capitalize { text-transform: capitalize; }
+
+
+// --------------------------------
+// Letter Spacing
+// --------------------------------
+
+.letter-spacing-sm { letter-spacing: -0.05em; }
+.letter-spacing-md { letter-spacing: 0.05em; }
+.letter-spacing-lg { letter-spacing: 0.1em; }
+
+
+// --------------------------------
+// Font Weight
+// --------------------------------
+
+.font-thin { font-weight: 100; }
+.font-extralight { font-weight: 200; }
+.font-light { font-weight: 300; }
+.font-normal { font-weight: 400; }
+.font-medium { font-weight: 500; }
+.font-semibold { font-weight: 600; }
+.font-bold { font-weight: 700; }
+.font-extrabold { font-weight: 800; }
+.font-heavy { font-weight: 900; }
+
+
+// --------------------------------
+// Font Style
+// --------------------------------
+
+.font-italic { font-style: italic; }
+
+
+// --------------------------------
+// Font Smooth
+// --------------------------------
+
+.font-smooth {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+// --------------------------------
+// Text Align
+// --------------------------------
+
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.text-justify { text-align: justify; }
+
+
+// --------------------------------
+// Text Decoration
+// --------------------------------
+
+.text-line-through { text-decoration: line-through; }
+.text-underline { text-decoration: underline; }
+.text-decoration-none { text-decoration: none; }
+
+
+// --------------------------------
+// White Space
+// --------------------------------
+
+.text-nowrap { white-space: nowrap; }
+
+
+// --------------------------------
+// Text break
+// --------------------------------
+
+.text-break { word-wrap: break-word; }
+
+
+// --------------------------------
+// Cursor
+// --------------------------------
+
+.cursor-pointer { cursor: pointer; }
+.cursor-default { cursor: default; }
+
+
+// --------------------------------
+// Pointer Events
+// --------------------------------
+
+.pointer-events-auto { pointer-events: auto; }
+.pointer-events-none { pointer-events: none; }
+
+
+// --------------------------------
+// User Select
+// --------------------------------
+
+.user-select-none { user-select: none; }
+.user-select-all  { user-select: all; }
+
+
+
+// --------------------------------
+// Color
+// --------------------------------
+
+[class*="color-"] { --color-o: 1; }
+
+.color-inherit { color: inherit; }
+.color-bg { color: alpha(var(--color-bg), var(--color-o, 1)); }
+.color-contrast-lower { color: alpha(var(--color-contrast-lower), var(--color-o, 1)); }
+.color-contrast-low { color: alpha(var(--color-contrast-low), var(--color-o, 1)); }
+.color-contrast-medium { color: alpha(var(--color-contrast-medium), var(--color-o, 1)); }
+.color-contrast-high { color: alpha(var(--color-contrast-high), var(--color-o, 1)); }
+.color-contrast-higher { color: alpha(var(--color-contrast-higher), var(--color-o, 1)); }
+.color-primary-darker { color: alpha(var(--color-primary-darker), var(--color-o, 1)); }
+.color-primary-dark { color: alpha(var(--color-primary-dark), var(--color-o, 1)); }
+.color-primary { color: alpha(var(--color-primary), var(--color-o, 1)); }
+.color-primary-light { color: alpha(var(--color-primary-light), var(--color-o, 1)); }
+.color-primary-lighter { color: alpha(var(--color-primary-lighter), var(--color-o, 1)); }
+.color-focus { color: alpha(var(--color-focus), var(--color-o, 1)); }
+.color-error { color: alpha(var(--color-error), var(--color-o, 1)); }
+.color-white { color: alpha(var(--color-white), var(--color-o, 1)); }
+.color-black { color: alpha(var(--color-black), var(--color-o, 1)); }
+
+
+
+// --------------------------------
+// Position
+// --------------------------------
+
+.position-relative { position: relative; }
+.position-absolute { position: absolute; }
+.position-fixed { position: fixed; }
+.position-sticky { position: sticky; }
+
+.top-0 { top: 0; }
+.bottom-0 { bottom: 0; }
+.left-0 { left: 0; }
+.right-0 { right: 0; }
+
+
+// --------------------------------
+// Background
+// --------------------------------
+
+.bg, [class*="bg-"] { --bg-o: 1; }
+
+.bg-transparent { background-color: transparent; }
+.bg-inherit { background-color: inherit; }
+.bg { background-color: alpha(var(--color-bg), var(--bg-o)); }
+
+.bg-contrast-lower { background-color: alpha(var(--color-contrast-lower), var(--bg-o, 1)); }
+.bg-contrast-low { background-color: alpha(var(--color-contrast-low), var(--bg-o, 1)); }
+.bg-contrast-medium { background-color: alpha(var(--color-contrast-medium), var(--bg-o, 1)); }
+.bg-contrast-high { background-color: alpha(var(--color-contrast-high), var(--bg-o, 1)); }
+.bg-contrast-higher { background-color: alpha(var(--color-contrast-higher), var(--bg-o, 1)); }
+
+.bg-primary { background-color: alpha(var(--color-primary), var(--bg-o, 1)); }
+.bg-secondary { background-color: alpha(var(--color-secondary), var(--bg-o, 1)); }
+.bg-tertiary { background-color: alpha(var(--color-tertiary), var(--bg-o, 1)); }
+.bg-quaternary { background-color: alpha(var(--color-quaternary), var(--bg-o, 1)); }
+
+.bg-white { background-color: alpha(var(--color-white), var(--bg-o, 1)); }
+.bg-black { background-color: alpha(var(--color-black), var(--bg-o, 1)); }
+
+
+// --------------------------------
+// Max-Height
+// --------------------------------
+
+.max-height-100\% { max-height: 100%; }
+.max-height-100vh { max-height: 100vh; }
+
+
+// --------------------------------
+// Z-Index
+// --------------------------------
+
+.z-index-header { z-index: var(--zindex-header); }
+.z-index-popover { z-index: var(--zindex-popover); }
+.z-index-fixed-element { z-index: var(--zindex-fixed-element); }
+.z-index-overlay { z-index: var(--zindex-overlay); }
+
+.zindex-1, .z-index-1 { z-index: 1; }
+.zindex-2, .z-index-2 { z-index: 2; }
+.zindex-3, .z-index-3 { z-index: 3; }
+
+
+// --------------------------------
+// Overflow
+// --------------------------------
+
+.overflow-hidden { overflow: hidden; }
+.overflow-auto   { overflow: auto; }
+.momentum-scrolling { -webkit-overflow-scrolling: touch; }
+
+// overscroll-behavior
+.overscroll-contain { overscroll-behavior: contain; }
+
+
+// --------------------------------
+// Opacity
+// --------------------------------
+
+.opacity-0    { opacity: 0; }
+.opacity-10\% { opacity: 0.1; }
+.opacity-20\% { opacity: 0.2; }
+.opacity-30\% { opacity: 0.3; }
+.opacity-40\% { opacity: 0.4; }
+.opacity-50\% { opacity: 0.5; }
+.opacity-60\% { opacity: 0.6; }
+.opacity-70\% { opacity: 0.7; }
+.opacity-80\% { opacity: 0.8; }
+.opacity-90\% { opacity: 0.9; }
+
+
+// --------------------------------
+// Width
+// --------------------------------
+
+.width-0     { width: 0; }
+.width-10\%  { width: 10%; }
+.width-20\%  { width: 20%; }
+.width-25\%  { width: 25%; }
+.width-30\%  { width: 30%; }
+.width-33\%  { width: calc(100% / 3); }
+.width-40\%  { width: 40%; }
+.width-50\%  { width: 50%; }
+.width-60\%  { width: 60%; }
+.width-66\%  { width: calc(100% / 1.5); }
+.width-70\%  { width: 70%; }
+.width-75\%  { width: 75%; }
+.width-80\%  { width: 80%; }
+.width-90\%  { width: 90%; }
+.width-100\% { width: 100%; }
+.width-100vw { width: 100vw; }
+.width-auto  { width: auto; }
+
+
+// --------------------------------
+// Height
+// --------------------------------
+
+.height-0     { height: 0; }
+.height-10\%  { height: 10%; }
+.height-20\%  { height: 20%; }
+.height-25\%  { height: 25%; }
+.height-30\%  { height: 30%; }
+.height-33\%  { height: calc(100% / 3); }
+.height-40\%  { height: 40%; }
+.height-50\%  { height: 50%; }
+.height-60\%  { height: 60%; }
+.height-66\%  { height: calc(100% / 1.5); }
+.height-70\%  { height: 70%; }
+.height-75\%  { height: 75%; }
+.height-80\%  { height: 80%; }
+.height-90\%  { height: 90%; }
+.height-100\% { height: 100%; }
+.height-100vh { height: 100vh; }
+.height-auto  { height: auto; }
+
+
+// --------------------------------
+// Min-Width
+// --------------------------------
+
+.min-width-0     { min-width: 0; }
+.min-width-25\%  { min-width: 25%; }
+.min-width-33\%  { min-width: calc(100% / 3); }
+.min-width-50\%  { min-width: 50%; }
+.min-width-66\%  { min-width: calc(100% / 1.5); }
+.min-width-75\%  { min-width: 75%; }
+.min-width-100\% { min-width: 100%; }
+.min-width-100vw { min-width: 100vw; }
+
+// --------------------------------
+// Min-Height
+// --------------------------------
+
+.min-height-100\% { min-height: 100%; }
+.min-height-100vh { min-height: 100vh; }
+
+
+// --------------------------------
+// Max-Width
+// --------------------------------
+
+:root {
+  --max-width-xxxxxs: 180px;     // 180px
+  --max-width-xxxxs:  17.625rem; // 282px
+  --max-width-xxxs:   24rem;     // 384px
+  --max-width-xxs:    30.375rem; // 486px
+  --max-width-xs:     36.75rem;  // 588px
+  --max-width-sm:     43.125rem; // 690px
+  --max-width-md:     49.5rem;   // 792px
+  --max-width-lg:     55.875rem; // 894px
+  --max-width-xl:     62.25rem;  // 996px
+  --max-width-xxl:    68.625rem; // 1098px
+  --max-width-xxxl:   75rem;     // 1200px
+}
+
+.max-width-xxxxxs { max-width: var(--max-width-xxxxxs); }
+.max-width-xxxxs  { max-width: var(--max-width-xxxxs); }
+.max-width-xxxs   { max-width: var(--max-width-xxxs); }
+.max-width-xxs    { max-width: var(--max-width-xxs); }
+.max-width-xs     { max-width: var(--max-width-xs); }
+.max-width-sm     { max-width: var(--max-width-sm); }
+.max-width-md     { max-width: var(--max-width-md); }
+.max-width-lg     { max-width: var(--max-width-lg); }
+.max-width-xl     { max-width: var(--max-width-xl); }
+.max-width-xxl    { max-width: var(--max-width-xxl); }
+.max-width-xxxl   { max-width: var(--max-width-xxxl); }
+
+
+// Alt approach - max-width is equal to current breakpoint
+$breakpointsNr: length($breakpoints);
+@each $breakpoint, $value in $breakpoints {
+  $i: index($breakpoints, $breakpoint $value);
+  @if $i == 1 {
+    [class*="max-width-adaptive"] {
+      max-width: map-get($map: $breakpoints, $key: #{$breakpoint});
+    }
+  } @else {
+    $classList : "";
+    @each $subBreakpoint, $subValue in $breakpoints {
+      $j: index($breakpoints, $subBreakpoint $subValue);
+      @if $j == $i {
+        $classList: ".max-width-adaptive-#{$subBreakpoint}";
+      } @else if $j > $i {
+        $classList: $classList+", .max-width-adaptive-#{$subBreakpoint}";
+      }
+    }
+    @if $i < $breakpointsNr {
+      $classList: $classList+", .max-width-adaptive";
+    }
+    @include breakpoint(#{$breakpoint}) {
+      #{$classList} {
+        max-width: map-get($map: $breakpoints, $key: #{$breakpoint});
+      }
+    }
+  }
+}
+
+
+
+// --------------------------------
+// Border
+// --------------------------------
+
+[class*="border-"] { --border-o: 1; }
+
+.border { border: 1px solid alpha(var(--color-contrast-low), var(--border-o, 1)); }
+.border-top { border-top: 1px solid alpha(var(--color-contrast-low), var(--border-o, 1)); }
+.border-bottom { border-bottom: 1px solid alpha(var(--color-contrast-low), var(--border-o, 1)); }
+.border-left { border-left: 1px solid alpha(var(--color-contrast-low), var(--border-o, 1)); }
+.border-right { border-right: 1px solid alpha(var(--color-contrast-low), var(--border-o, 1)); }
+.border-2 { border-width: 2px; }
+.border-3 { border-width: 3px; }
+.border-4 { border-width: 4px; }
+
+.border-bg { border-color: alpha(var(--color-bg), var(--border-o, 1)); }
+.border-contrast-lower { border-color: alpha(var(--color-contrast-lower), var(--border-o, 1)); }
+.border-contrast-low { border-color: alpha(var(--color-contrast-low), var(--border-o, 1)); }
+.border-contrast-medium { border-color: alpha(var(--color-contrast-medium), var(--border-o, 1)); }
+.border-contrast-high { border-color: alpha(var(--color-contrast-high), var(--border-o, 1)); }
+.border-contrast-higher { border-color: alpha(var(--color-contrast-higher), var(--border-o, 1)); }
+.border-primary-darker { border-color: alpha(var(--color-primary-darker), var(--border-o, 1)); }
+.border-primary-dark { border-color: alpha(var(--color-primary-dark), var(--border-o, 1)); }
+.border-primary { border-color: alpha(var(--color-primary), var(--border-o, 1)); }
+.border-primary-light { border-color: alpha(var(--color-primary-light), var(--border-o, 1)); }
+.border-primary-lighter { border-color: alpha(var(--color-primary-lighter), var(--border-o, 1)); }
+.border-white { border-color: alpha(var(--color-white), var(--border-o, 1)); }
+.border-black { border-color: alpha(var(--color-black), var(--border-o, 1)); }
+
+@supports (--css: variables) {
+  .border-opacity-0    { --border-o: 0; }
+  .border-opacity-10\% { --border-o: 0.1; }
+  .border-opacity-20\% { --border-o: 0.2; }
+  .border-opacity-30\% { --border-o: 0.3; }
+  .border-opacity-40\% { --border-o: 0.4; }
+  .border-opacity-50\% { --border-o: 0.5; }
+  .border-opacity-60\% { --border-o: 0.6; }
+  .border-opacity-70\% { --border-o: 0.7; }
+  .border-opacity-80\% { --border-o: 0.8; }
+  .border-opacity-90\% { --border-o: 0.9; }
+}
+
+
+// --------------------------------
+// Border Radius
+// --------------------------------
+
+.radius-sm { border-radius: var(--radius-sm); }
+.radius-md { border-radius: var(--radius-md); }
+.radius-lg { border-radius: var(--radius-lg); }
+.radius-50\% { border-radius: 50%; }
+.radius-full { border-radius: 50em; }
+
+
+
+// --------------------------------
+// Responsive Variations
+// --------------------------------
+
+@each $breakpoint, $value in $breakpoints {
+
+  @include breakpoint(#{$breakpoint}) {
+
+    // Flexbox
+    .flex\@#{$breakpoint} { display: flex; }
+    .inline-flex\@#{$breakpoint} { display: inline-flex; }
+    .flex-wrap\@#{$breakpoint} { flex-wrap: wrap; }
+    .flex-column\@#{$breakpoint} { flex-direction: column; }
+    .flex-column-reverse\@#{$breakpoint} { flex-direction: column-reverse; }
+    .flex-row\@#{$breakpoint} { flex-direction: row; }
+    .flex-row-reverse\@#{$breakpoint} { flex-direction: row-reverse; }
+    .flex-center\@#{$breakpoint} { justify-content: center; align-items: center; }
+
+    .flex-grow-0\@#{$breakpoint} { flex-grow: 0; }
+    .flex-grow\@#{$breakpoint} { flex-grow: 1; }
+    .flex-shrink-0\@#{$breakpoint} { flex-shrink: 0; }
+    .flex-shrink\@#{$breakpoint} { flex-shrink: 1; }
+
+    // Justify-content
+    .justify-start\@#{$breakpoint} { justify-content: flex-start; }
+    .justify-end\@#{$breakpoint} { justify-content: flex-end; }
+    .justify-center\@#{$breakpoint} { justify-content: center; }
+    .justify-between\@#{$breakpoint} { justify-content: space-between; }
+
+    // Align-items
+    .items-center\@#{$breakpoint} { align-items: center; }
+    .items-start\@#{$breakpoint} { align-items: flex-start; }
+    .items-end\@#{$breakpoint} { align-items: flex-end; }
+    .items-baseline\@#{$breakpoint} { align-items: baseline; }
+
+    // Order
+    .order-1\@#{$breakpoint}  { order: 1; }
+    .order-2\@#{$breakpoint}  { order: 2; }
+    .order-3\@#{$breakpoint}  { order: 3; }
+
+    // Display
+    .block\@#{$breakpoint} { display: block; }
+    .inline-block\@#{$breakpoint} { display: inline-block; }
+    .inline\@#{$breakpoint} { display: inline; }
+
+    // Margin
+    @supports (--css: variables) {
+      .margin-xxxxs\@#{$breakpoint} { margin: var(--space-xxxxs); }
+      .margin-xxxs\@#{$breakpoint}  { margin: var(--space-xxxs); }
+      .margin-xxs\@#{$breakpoint}   { margin: var(--space-xxs); }
+      .margin-xs\@#{$breakpoint}    { margin: var(--space-xs); }
+      .margin-sm\@#{$breakpoint}    { margin: var(--space-sm); }
+      .margin-md\@#{$breakpoint}    { margin: var(--space-md); }
+      .margin-lg\@#{$breakpoint}    { margin: var(--space-lg); }
+      .margin-xl\@#{$breakpoint}    { margin: var(--space-xl); }
+      .margin-xxl\@#{$breakpoint}   { margin: var(--space-xxl); }
+      .margin-xxxl\@#{$breakpoint}  { margin: var(--space-xxxl); }
+      .margin-xxxxl\@#{$breakpoint} { margin: var(--space-xxxxl); }
+      .margin-0\@#{$breakpoint}     { margin: 0; }
+
+      .margin-top-xxxxs\@#{$breakpoint} { margin-top: var(--space-xxxxs); }
+      .margin-top-xxxs\@#{$breakpoint}  { margin-top: var(--space-xxxs); }
+      .margin-top-xxs\@#{$breakpoint}   { margin-top: var(--space-xxs); }
+      .margin-top-xs\@#{$breakpoint}    { margin-top: var(--space-xs); }
+      .margin-top-sm\@#{$breakpoint}    { margin-top: var(--space-sm); }
+      .margin-top-md\@#{$breakpoint}    { margin-top: var(--space-md); }
+      .margin-top-lg\@#{$breakpoint}    { margin-top: var(--space-lg); }
+      .margin-top-xl\@#{$breakpoint}    { margin-top: var(--space-xl); }
+      .margin-top-xxl\@#{$breakpoint}   { margin-top: var(--space-xxl); }
+      .margin-top-xxxl\@#{$breakpoint}  { margin-top: var(--space-xxxl); }
+      .margin-top-xxxxl\@#{$breakpoint} { margin-top: var(--space-xxxxl); }
+      .margin-top-0\@#{$breakpoint}     { margin-top: 0; }
+
+      .margin-bottom-xxxxs\@#{$breakpoint} { margin-bottom: var(--space-xxxxs); }
+      .margin-bottom-xxxs\@#{$breakpoint}  { margin-bottom: var(--space-xxxs); }
+      .margin-bottom-xxs\@#{$breakpoint}   { margin-bottom: var(--space-xxs); }
+      .margin-bottom-xs\@#{$breakpoint}    { margin-bottom: var(--space-xs); }
+      .margin-bottom-sm\@#{$breakpoint}    { margin-bottom: var(--space-sm); }
+      .margin-bottom-md\@#{$breakpoint}    { margin-bottom: var(--space-md); }
+      .margin-bottom-lg\@#{$breakpoint}    { margin-bottom: var(--space-lg); }
+      .margin-bottom-xl\@#{$breakpoint}    { margin-bottom: var(--space-xl); }
+      .margin-bottom-xxl\@#{$breakpoint}   { margin-bottom: var(--space-xxl); }
+      .margin-bottom-xxxl\@#{$breakpoint}  { margin-bottom: var(--space-xxxl); }
+      .margin-bottom-xxxxl\@#{$breakpoint} { margin-bottom: var(--space-xxxxl); }
+      .margin-bottom-0\@#{$breakpoint}     { margin-bottom: 0; }
+
+      .margin-right-xxxxs\@#{$breakpoint} { margin-right: var(--space-xxxxs); }
+      .margin-right-xxxs\@#{$breakpoint}  { margin-right: var(--space-xxxs); }
+      .margin-right-xxs\@#{$breakpoint}   { margin-right: var(--space-xxs); }
+      .margin-right-xs\@#{$breakpoint}    { margin-right: var(--space-xs); }
+      .margin-right-sm\@#{$breakpoint}    { margin-right: var(--space-sm); }
+      .margin-right-md\@#{$breakpoint}    { margin-right: var(--space-md); }
+      .margin-right-lg\@#{$breakpoint}    { margin-right: var(--space-lg); }
+      .margin-right-xl\@#{$breakpoint}    { margin-right: var(--space-xl); }
+      .margin-right-xxl\@#{$breakpoint}   { margin-right: var(--space-xxl); }
+      .margin-right-xxxl\@#{$breakpoint}  { margin-right: var(--space-xxxl); }
+      .margin-right-xxxxl\@#{$breakpoint} { margin-right: var(--space-xxxxl); }
+      .margin-right-0\@#{$breakpoint}     { margin-right: 0; }
+
+      .margin-left-xxxxs\@#{$breakpoint} { margin-left: var(--space-xxxxs); }
+      .margin-left-xxxs\@#{$breakpoint}  { margin-left: var(--space-xxxs); }
+      .margin-left-xxs\@#{$breakpoint}   { margin-left: var(--space-xxs); }
+      .margin-left-xs\@#{$breakpoint}    { margin-left: var(--space-xs); }
+      .margin-left-sm\@#{$breakpoint}    { margin-left: var(--space-sm); }
+      .margin-left-md\@#{$breakpoint}    { margin-left: var(--space-md); }
+      .margin-left-lg\@#{$breakpoint}    { margin-left: var(--space-lg); }
+      .margin-left-xl\@#{$breakpoint}    { margin-left: var(--space-xl); }
+      .margin-left-xxl\@#{$breakpoint}   { margin-left: var(--space-xxl); }
+      .margin-left-xxxl\@#{$breakpoint}  { margin-left: var(--space-xxxl); }
+      .margin-left-xxxxl\@#{$breakpoint} { margin-left: var(--space-xxxxl); }
+      .margin-left-0\@#{$breakpoint}     { margin-left: 0; }
+
+      .margin-x-xxxxs\@#{$breakpoint} { margin-left: var(--space-xxxxs); margin-right: var(--space-xxxxs); }
+      .margin-x-xxxs\@#{$breakpoint}  { margin-left: var(--space-xxxs); margin-right: var(--space-xxxs); }
+      .margin-x-xxs\@#{$breakpoint}   { margin-left: var(--space-xxs); margin-right: var(--space-xxs); }
+      .margin-x-xs\@#{$breakpoint}    { margin-left: var(--space-xs); margin-right: var(--space-xs); }
+      .margin-x-sm\@#{$breakpoint}    { margin-left: var(--space-sm); margin-right: var(--space-sm); }
+      .margin-x-md\@#{$breakpoint}    { margin-left: var(--space-md); margin-right: var(--space-md); }
+      .margin-x-lg\@#{$breakpoint}    { margin-left: var(--space-lg); margin-right: var(--space-lg); }
+      .margin-x-xl\@#{$breakpoint}    { margin-left: var(--space-xl); margin-right: var(--space-xl); }
+      .margin-x-xxl\@#{$breakpoint}   { margin-left: var(--space-xxl); margin-right: var(--space-xxl); }
+      .margin-x-xxxl\@#{$breakpoint}  { margin-left: var(--space-xxxl); margin-right: var(--space-xxxl); }
+      .margin-x-xxxxl\@#{$breakpoint} { margin-left: var(--space-xxxxl); margin-right: var(--space-xxxxl); }
+      .margin-x-0\@#{$breakpoint}     { margin-left: 0; margin-right: 0; }
+
+      .margin-y-xxxxs\@#{$breakpoint} { margin-top: var(--space-xxxxs); margin-bottom: var(--space-xxxxs); }
+      .margin-y-xxxs\@#{$breakpoint}  { margin-top: var(--space-xxxs); margin-bottom: var(--space-xxxs); }
+      .margin-y-xxs\@#{$breakpoint}   { margin-top: var(--space-xxs); margin-bottom: var(--space-xxs); }
+      .margin-y-xs\@#{$breakpoint}    { margin-top: var(--space-xs); margin-bottom: var(--space-xs); }
+      .margin-y-sm\@#{$breakpoint}    { margin-top: var(--space-sm); margin-bottom: var(--space-sm); }
+      .margin-y-md\@#{$breakpoint}    { margin-top: var(--space-md); margin-bottom: var(--space-md); }
+      .margin-y-lg\@#{$breakpoint}    { margin-top: var(--space-lg); margin-bottom: var(--space-lg); }
+      .margin-y-xl\@#{$breakpoint}    { margin-top: var(--space-xl); margin-bottom: var(--space-xl); }
+      .margin-y-xxl\@#{$breakpoint}   { margin-top: var(--space-xxl); margin-bottom: var(--space-xxl); }
+      .margin-y-xxxl\@#{$breakpoint}  { margin-top: var(--space-xxxl); margin-bottom: var(--space-xxxl); }
+      .margin-y-xxxxl\@#{$breakpoint} { margin-top: var(--space-xxxxl); margin-bottom: var(--space-xxxxl); }
+      .margin-y-0\@#{$breakpoint}     { margin-top: 0; margin-bottom: 0; }
+    }
+
+    // Padding
+    @supports (--css: variables) {
+      .padding-xxxxs\@#{$breakpoint} { padding: var(--space-xxxxs); }
+      .padding-xxxs\@#{$breakpoint}  { padding: var(--space-xxxs); }
+      .padding-xxs\@#{$breakpoint}   { padding: var(--space-xxs); }
+      .padding-xs\@#{$breakpoint}    { padding: var(--space-xs); }
+      .padding-sm\@#{$breakpoint}    { padding: var(--space-sm); }
+      .padding-md\@#{$breakpoint}    { padding: var(--space-md); }
+      .padding-lg\@#{$breakpoint}    { padding: var(--space-lg); }
+      .padding-xl\@#{$breakpoint}    { padding: var(--space-xl); }
+      .padding-xxl\@#{$breakpoint}   { padding: var(--space-xxl); }
+      .padding-xxxl\@#{$breakpoint}  { padding: var(--space-xxxl); }
+      .padding-xxxxl\@#{$breakpoint} { padding: var(--space-xxxxl); }
+      .padding-0\@#{$breakpoint}     { padding: 0; }
+
+      .padding-top-xxxxs\@#{$breakpoint} { padding-top: var(--space-xxxxs); }
+      .padding-top-xxxs\@#{$breakpoint}  { padding-top: var(--space-xxxs); }
+      .padding-top-xxs\@#{$breakpoint}   { padding-top: var(--space-xxs); }
+      .padding-top-xs\@#{$breakpoint}    { padding-top: var(--space-xs); }
+      .padding-top-sm\@#{$breakpoint}    { padding-top: var(--space-sm); }
+      .padding-top-md\@#{$breakpoint}    { padding-top: var(--space-md); }
+      .padding-top-lg\@#{$breakpoint}    { padding-top: var(--space-lg); }
+      .padding-top-xl\@#{$breakpoint}    { padding-top: var(--space-xl); }
+      .padding-top-xxl\@#{$breakpoint}   { padding-top: var(--space-xxl); }
+      .padding-top-xxxl\@#{$breakpoint}  { padding-top: var(--space-xxxl); }
+      .padding-top-xxxxl\@#{$breakpoint} { padding-top: var(--space-xxxxl); }
+      .padding-top-0\@#{$breakpoint}     { padding-top: 0; }
+
+      .padding-bottom-xxxxs\@#{$breakpoint} { padding-bottom: var(--space-xxxxs); }
+      .padding-bottom-xxxs\@#{$breakpoint}  { padding-bottom: var(--space-xxxs); }
+      .padding-bottom-xxs\@#{$breakpoint}   { padding-bottom: var(--space-xxs); }
+      .padding-bottom-xs\@#{$breakpoint}    { padding-bottom: var(--space-xs); }
+      .padding-bottom-sm\@#{$breakpoint}    { padding-bottom: var(--space-sm); }
+      .padding-bottom-md\@#{$breakpoint}    { padding-bottom: var(--space-md); }
+      .padding-bottom-lg\@#{$breakpoint}    { padding-bottom: var(--space-lg); }
+      .padding-bottom-xl\@#{$breakpoint}    { padding-bottom: var(--space-xl); }
+      .padding-bottom-xxl\@#{$breakpoint}   { padding-bottom: var(--space-xxl); }
+      .padding-bottom-xxxl\@#{$breakpoint}  { padding-bottom: var(--space-xxxl); }
+      .padding-bottom-xxxxl\@#{$breakpoint} { padding-bottom: var(--space-xxxxl); }
+      .padding-bottom-0\@#{$breakpoint}     { padding-bottom: 0; }
+
+      .padding-right-xxxxs\@#{$breakpoint} { padding-right: var(--space-xxxxs); }
+      .padding-right-xxxs\@#{$breakpoint}  { padding-right: var(--space-xxxs); }
+      .padding-right-xxs\@#{$breakpoint}   { padding-right: var(--space-xxs); }
+      .padding-right-xs\@#{$breakpoint}    { padding-right: var(--space-xs); }
+      .padding-right-sm\@#{$breakpoint}    { padding-right: var(--space-sm); }
+      .padding-right-md\@#{$breakpoint}    { padding-right: var(--space-md); }
+      .padding-right-lg\@#{$breakpoint}    { padding-right: var(--space-lg); }
+      .padding-right-xl\@#{$breakpoint}    { padding-right: var(--space-xl); }
+      .padding-right-xxl\@#{$breakpoint}   { padding-right: var(--space-xxl); }
+      .padding-right-xxxl\@#{$breakpoint}  { padding-right: var(--space-xxxl); }
+      .padding-right-xxxxl\@#{$breakpoint} { padding-right: var(--space-xxxxl); }
+      .padding-right-0\@#{$breakpoint}     { padding-right: 0; }
+
+      .padding-left-xxxxs\@#{$breakpoint} { padding-left: var(--space-xxxxs); }
+      .padding-left-xxxs\@#{$breakpoint}  { padding-left: var(--space-xxxs); }
+      .padding-left-xxs\@#{$breakpoint}   { padding-left: var(--space-xxs); }
+      .padding-left-xs\@#{$breakpoint}    { padding-left: var(--space-xs); }
+      .padding-left-sm\@#{$breakpoint}    { padding-left: var(--space-sm); }
+      .padding-left-md\@#{$breakpoint}    { padding-left: var(--space-md); }
+      .padding-left-lg\@#{$breakpoint}    { padding-left: var(--space-lg); }
+      .padding-left-xl\@#{$breakpoint}    { padding-left: var(--space-xl); }
+      .padding-left-xxl\@#{$breakpoint}   { padding-left: var(--space-xxl); }
+      .padding-left-xxxl\@#{$breakpoint}  { padding-left: var(--space-xxxl); }
+      .padding-left-xxxxl\@#{$breakpoint} { padding-left: var(--space-xxxxl); }
+      .padding-left-0\@#{$breakpoint}     { padding-left: 0; }
+
+      .padding-x-xxxxs\@#{$breakpoint} { padding-left: var(--space-xxxxs); padding-right: var(--space-xxxxs); }
+      .padding-x-xxxs\@#{$breakpoint}  { padding-left: var(--space-xxxs); padding-right: var(--space-xxxs); }
+      .padding-x-xxs\@#{$breakpoint}   { padding-left: var(--space-xxs); padding-right: var(--space-xxs); }
+      .padding-x-xs\@#{$breakpoint}    { padding-left: var(--space-xs); padding-right: var(--space-xs); }
+      .padding-x-sm\@#{$breakpoint}    { padding-left: var(--space-sm); padding-right: var(--space-sm); }
+      .padding-x-md\@#{$breakpoint}    { padding-left: var(--space-md); padding-right: var(--space-md); }
+      .padding-x-lg\@#{$breakpoint}    { padding-left: var(--space-lg); padding-right: var(--space-lg); }
+      .padding-x-xl\@#{$breakpoint}    { padding-left: var(--space-xl); padding-right: var(--space-xl); }
+      .padding-x-xxl\@#{$breakpoint}   { padding-left: var(--space-xxl); padding-right: var(--space-xxl); }
+      .padding-x-xxxl\@#{$breakpoint}  { padding-left: var(--space-xxxl); padding-right: var(--space-xxxl); }
+      .padding-x-xxxxl\@#{$breakpoint} { padding-left: var(--space-xxxxl); padding-right: var(--space-xxxxl); }
+      .padding-x-0\@#{$breakpoint}     { padding-left: 0; padding-right: 0; }
+
+      .padding-y-xxxxs\@#{$breakpoint} { padding-top: var(--space-xxxxs); padding-bottom: var(--space-xxxxs); }
+      .padding-y-xxxs\@#{$breakpoint}  { padding-top: var(--space-xxxs); padding-bottom: var(--space-xxxs); }
+      .padding-y-xxs\@#{$breakpoint}   { padding-top: var(--space-xxs); padding-bottom: var(--space-xxs); }
+      .padding-y-xs\@#{$breakpoint}    { padding-top: var(--space-xs); padding-bottom: var(--space-xs); }
+      .padding-y-sm\@#{$breakpoint}    { padding-top: var(--space-sm); padding-bottom: var(--space-sm); }
+      .padding-y-md\@#{$breakpoint}    { padding-top: var(--space-md); padding-bottom: var(--space-md); }
+      .padding-y-lg\@#{$breakpoint}    { padding-top: var(--space-lg); padding-bottom: var(--space-lg); }
+      .padding-y-xl\@#{$breakpoint}    { padding-top: var(--space-xl); padding-bottom: var(--space-xl); }
+      .padding-y-xxl\@#{$breakpoint}   { padding-top: var(--space-xxl); padding-bottom: var(--space-xxl); }
+      .padding-y-xxxl\@#{$breakpoint}  { padding-top: var(--space-xxxl); padding-bottom: var(--space-xxxl); }
+      .padding-y-xxxxl\@#{$breakpoint} { padding-top: var(--space-xxxxl); padding-bottom: var(--space-xxxxl); }
+      .padding-y-0\@#{$breakpoint}     { padding-top: 0; padding-bottom: 0; }
+    }
+
+    //Text align
+    @supports (--css: variables) {
+      .text-center\@#{$breakpoint} { text-align: center; }
+      .text-left\@#{$breakpoint}   { text-align: left; }
+      .text-right\@#{$breakpoint}  { text-align: right; }
+      .text-justify\@#{$breakpoint}  { text-align: justify; }
+    }
+
+    @supports (--css: variables) {
+
+      // Display
+      .block\@#{$breakpoint} { display: block; }
+      .inline-block\@#{$breakpoint} { display: inline-block; }
+      .inline\@#{$breakpoint} { display: inline; }
+
+      // Visibility
+      .hide\@#{$breakpoint} { display: none !important; }
+      .display\@#{$breakpoint} { display: block !important; }
+
+    }
+
+  }
+
+}

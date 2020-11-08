@@ -1,0 +1,258 @@
+{% set pageTitle       = "A once in a decade survey that gives us a better future" %}
+{% set pageDescription = "Trevor Saint has been heavily involved in the design and development of Census 2021, as well as the Office for National Statistics design system." %}
+{% set pageId          = "projects" %}
+
+{% extends "layout.njk" %}
+
+{% block content %}
+
+  <section class="padding-top-xs">
+
+    <div class="container">
+
+      {{ backLink({
+        "url": rootPath + 'projects',
+        "text": 'Back'
+      }) }}
+
+      <h1 class="heading-xxl margin-y-sm margin-y-lg@sm">A once in a decade survey that gives us a better future</h1>
+
+      <div class="hero">
+        <img srcset="{{rootPath}}images/projects/project/census-2021/hero.png 1x, {{rootPath}}images/projects/project/census-2021/hero@2x.png 2x, {{rootPath}}images/projects/project/census-2021/hero@3x.png 3x" src="{{rootPath}}images/projects/project/census-2021/hero.png" alt="A preview of Census 2021 on an iMac screen">
+      </div>
+
+      <div class="flex@sm justify-between items-start margin-top-md">
+
+        {{ entryDetails({
+          "rows": [
+            {
+              "key": {
+                "text": 'Client'
+              },
+              "value": {
+                "text": 'Office for National Statistics'
+              }
+            },
+            {
+              "key": {
+                "text": 'Industry'
+              },
+              "value": {
+                "text": 'Statistics'
+              }
+            },
+            {
+              "key": {
+                "text": 'Year'
+              },
+              "value": {
+                "text": '2020 (in progress)'
+              }
+            }
+          ]
+        }) }}
+
+        <p class="margin-xs margin-bottom-0 margin-0@sm">
+          <a class="link link--icon link--underline" href="https://census.gov.uk" rel="external">
+            Visit website
+            <svg class="icon icon--sm margin-left-xxxxs" width="24" height="24" viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+              <path d="M14,4c0,0.55,0.45,1,1,1h2.59l-9.13,9.13c-0.39,0.39-0.39,1.02,0,1.41s1.02,0.39,1.41,0L19,6.41V9c0,0.55,0.45,1,1,1s1-0.45,1-1V3h-6C14.45,3,14,3.45,14,4z M18,19H6c-0.55,0-1-0.45-1-1V6c0-0.55,0.45-1,1-1h5c0.55,0,1-0.45,1-1s-0.45-1-1-1H5C3.89,3,3,3.9,3,5v14c0,1.1,0.9,2,2,2h14c1.1,0,2-0.9,2-2v-6c0-0.55-0.45-1-1-1s-1,0.45-1,1v5C19,18.55,18.55,19,18,19z"/>
+            </svg>
+          </a>
+        </p>
+
+      </div>
+
+      <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
+
+        <div class="container text-component max-width-sm">
+
+          <h2>Overview</h2>
+
+          <div class="color-contrast-medium">
+            <p>I was appointed by the Office for National Statistics to work on Census 2021. Census 2021 will be the first digital-first census and is a survey that happens every ten years. My role was to join the team as an Interaction Designer, to focus on the engagement phase of the census website.</p>
+            <p>The engagement phase was for local authorities, community groups, media and campaigns, to help raise awareness and encourage people to fill in their census questionnaire. </p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <figure class="figure">
+        <div class="bg-contrast-lower">
+          <img srcset="{{rootPath}}images/projects/project/census-2021/engagement-landing-page-design-for-england.png 1x, {{rootPath}}images/projects/project/census-2021/engagement-landing-page-design-for-england@2x.png 2x, {{rootPath}}images/projects/project/census-2021/engagement-landing-page-design-for-england@3x.png 3x" src="{{rootPath}}images/projects/project/census-2021/engagement-landing-page-design-for-england.png" alt="">
+        </div>
+        <figcaption class="figure__caption margin-top-xxs">Engagement landing page design</figcaption>
+      </figure>
+
+      <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
+
+        <div class="container text-component max-width-sm">
+
+          <h2>User testing and research</h2>
+
+          <div class="color-contrast-medium">
+            <p>We had a defined set of user needs. We then met each of those needs with design. From design, we built prototypes that we tested with local authorities from around the country. </p>
+            <p>We would gather our findings, make changes where necessary, and take our prototypes out for further rounds of testing. This process was rigorous but ensured we were delivering a usable service to our users and not just the business.</p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <figure class="figure">
+        <div class="bg-contrast-lower">
+          <img srcset="{{rootPath}}images/projects/project/census-2021/downloadable-resources-pattern.png 1x, {{rootPath}}images/projects/project/census-2021/downloadable-resources-pattern@2x.png 2x, {{rootPath}}images/projects/project/census-2021/downloadable-resources-pattern@3x.png 3x" src="{{rootPath}}images/projects/project/census-2021/downloadable-resources-pattern.png" alt="">
+        </div>
+        <figcaption class="figure__caption margin-top-xxs">Downloadable resources pattern</figcaption>
+      </figure>
+
+      <figure class="figure margin-top-lg">
+        <div class="bg-contrast-lower">
+          <img srcset="{{rootPath}}images/projects/project/census-2021/prototyping-downloadable-resources.png 1x, {{rootPath}}images/projects/project/census-2021/prototyping-downloadable-resources@2x.png 2x, {{rootPath}}images/projects/project/census-2021/prototyping-downloadable-resources@3x.png 3x" src="{{rootPath}}images/projects/project/census-2021/prototyping-downloadable-resources.png" alt="">
+        </div>
+        <figcaption class="figure__caption margin-top-xxs">Prototyping code ready for user testing</figcaption>
+      </figure>
+
+      <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
+
+        <div class="container text-component max-width-sm">
+
+          <h2>Designing the look and feel</h2>
+
+          <div class="color-contrast-medium">
+            <p>A lot of care and attention was applied when designing new components and patterns to enhance the overall brand for Census 2021. Each item needed to be flexible and scalable for use on a desktop or mobile device. We also needed to take into account the Welsh language, which on some occasions meant adjusting patterns to cater for this change.</p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <figure class="figure figure--outset">
+        <div>
+          <img srcset="{{rootPath}}images/projects/project/census-2021/engage-phase-banner-design.png 1x, {{rootPath}}images/projects/project/census-2021/engage-phase-banner-design@2x.png 2x, {{rootPath}}images/projects/project/census-2021/engage-phase-banner-design@3x.png 3x" src="{{rootPath}}images/projects/project/census-2021/engage-phase-banner-design.png" alt="">
+        </div>
+        <figcaption class="figure__caption margin-top-xxs">Engage phase banner design</figcaption>
+      </figure>
+
+      <figure class="figure figure--outset margin-top-lg">
+        <div>
+          <img srcset="{{rootPath}}images/projects/project/census-2021/respond-phase-banner-design.png 1x, {{rootPath}}images/projects/project/census-2021/respond-phase-banner-design@2x.png 2x, {{rootPath}}images/projects/project/census-2021/respond-phase-banner-design@3x.png 3x" src="{{rootPath}}images/projects/project/census-2021/respond-phase-banner-design.png" alt="">
+        </div>
+        <figcaption class="figure__caption margin-top-xxs">Respond phase banner design</figcaption>
+      </figure>
+
+      <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
+
+        <div class="container text-component max-width-sm">
+
+          <h2>Contributing to a design system</h2>
+
+          <div class="color-contrast-medium">
+            <p>I also contribute heavily to the ONS design system, adding newly designed components, patterns, accessibility enhancements as well as fixing bugs to provide a reliable, flexible framework for powering many of the Office for National Statistics services including Census 2021.</p>
+            <p>A lot of components and patterns started based on user requirements from Census 2021. They would then be added into the design system, tested and made available for other services that may benefit from tried and tested patterns. It would take a few people to agree on the quality of coding and usefulness of patterns before being approved and merged.</p>
+            <p>In some cases, a pattern would be tagged as experimental to allow for user testing to confirm its usefulness before being introduced for use across services.</p>
+            <p>Each component would be flexible in its usage and would include detailed documentation and guidance on how to use and apply it.</p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <figure class="figure">
+        <div class="bg-contrast-lower">
+          <img srcset="{{rootPath}}images/projects/project/census-2021/design-system-involvement.png 1x, {{rootPath}}images/projects/project/census-2021/design-system-involvement@2x.png 2x, {{rootPath}}images/projects/project/census-2021/design-system-involvement@3x.png 3x" src="{{rootPath}}images/projects/project/census-2021/design-system-involvement.png" alt="">
+        </div>
+        <figcaption class="figure__caption margin-top-xxs">Hero banner added to design system</figcaption>
+      </figure>
+
+      <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg border-bottom">
+
+        <div class="container text-component max-width-sm">
+
+          <h2>Ongoing project</h2>
+
+          <div class="color-contrast-medium">
+            <p>This project is currently in progress. More information to follow in the coming months.</p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
+
+        <div class="container max-width-sm">
+
+          <div class="margin-bottom-sm">
+            <p class="font-bold text-sm text-center">Share this project</p>
+          </div>
+
+          {{ socialShare({
+            "twitter": {
+              "attributes": {
+                "data-social": 'twitter',
+                "data-text": 'Hi there! https://trevorsaint.uk via @trevorsaint',
+                "data-hashtags": '#census2021, #design, #dev, #ux, #interactiondesign'
+              }
+            },
+            "facebook": {
+              "attributes": {
+                "data-social": 'facebook',
+                "data-url": 'https://trevorsaint.uk'
+              }
+            },
+            "pinterest": {
+              "attributes": {
+                "data-social": 'pinterest',
+                "data-url": 'https://trevorsaint.uk',
+                "data-description": 'A once in a decade survey that gives us a better future',
+                "data-media": 'https://trevorsaint.uk/images/projects/project/census-2021/census2021-pinterest.jpg'
+              }
+            },
+            "linkedin": {
+              "attributes": {
+                "data-social": 'linkedin',
+                "data-url": 'https://trevorsaint.uk'
+              }
+            },
+            "email": {
+              "attributes": {
+                "data-social": 'mail',
+                "data-url": 'https://trevorsaint.uk',
+                "data-subject": 'A once in a decade survey that gives us a better future - Trevor Saint',
+                "data-body": 'https://trevorsaint.uk/projects/census-2021'
+              }
+            }
+          }) }}
+
+        </div>
+
+      </div>
+
+      <div class="padding-bottom-md padding-bottom-lg@sm padding-bottom-xxl@md padding-bottom-xxxxl@lg">
+
+        {{ previousNextLinks({
+          "previousNextLinksItems": [
+            {
+              "rel": 'prev',
+              "text": 'Previous project',
+              "url": rootPath + 'projects/rural-payments',
+              "label": 'Rural grants and payments to help the farming industry'
+            },
+            {
+              "rel": 'next',
+              "text": 'Next project',
+              "url": rootPath + 'projects/travalion',
+              "label": 'Designing for the happy travel campany ‘Travalion’'
+            }
+          ]
+        }) }}
+
+      </div>
+
+    </div>
+
+  </section>
+
+{% endblock %}

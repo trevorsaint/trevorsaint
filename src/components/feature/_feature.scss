@@ -1,0 +1,48 @@
+/* --------------------------------
+
+Feature
+Content group containing media element + text that outsets its container at a specific breakpoint
+
+-------------------------------- */
+
+
+.feature {
+  --feature-text-offset: 102px; // If value = higher -> overlapping text takes more space
+  position: relative;
+  z-index: 1;
+}
+
+
+.feature__image {
+  background-color: alpha(var(--color-black), 0.05);
+  border-radius: var(--radius-lg);
+  position: relative;
+}
+
+
+@include breakpoint(md) {
+
+  .feature__image {
+    margin-bottom: var(--space-lg);
+    margin-top: var(--space-lg);
+  }
+
+  .feature__image img {
+    margin-bottom: calc(var(--space-lg) * -1);
+    margin-top: calc(var(--space-lg) * -1);
+  }
+
+}
+
+
+@each $breakpoint, $value in $breakpoints {
+
+  @include breakpoint(#{$breakpoint}) {
+
+    .feature__text-offset\@#{$breakpoint} {
+      margin-left: calc(var(--feature-text-offset) * -1);
+    }
+
+  }
+
+}

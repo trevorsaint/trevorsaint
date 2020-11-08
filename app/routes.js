@@ -1,59 +1,80 @@
-const express = require('express');
-const router = express.Router();
+const routes = require('express').Router();
 
-router.get('/', function(req, res) {
+routes.get('/', function(req, res) {
   res.render('index');
 });
 
-router.get('/about', function(req, res) {
+routes.get('/about', function(req, res) {
   res.render('about/index');
 });
 
-router.get('/projects', function(req, res) {
+routes.get('/projects', function(req, res) {
   res.render('projects/index');
 });
 
-  router.get('/projects/judicial-case-manager', function(req, res) {
+  routes.get('/projects/judicial-case-manager', function(req, res) {
     res.render('projects/judicial-case-manager/index');
   });
 
-  router.get('/projects/max-powder', function(req, res) {
+  routes.get('/projects/max-powder', function(req, res) {
     res.render('projects/max-powder/index');
   });
 
-  router.get('/projects/hmcts-design-system', function(req, res) {
+  routes.get('/projects/hmcts-design-system', function(req, res) {
     res.render('projects/hmcts-design-system/index');
   });
 
-  router.get('/projects/paramount-packaging', function(req, res) {
+  routes.get('/projects/paramount-packaging', function(req, res) {
     res.render('projects/paramount-packaging/index');
   });
 
-  router.get('/projects/rural-payments', function(req, res) {
+  routes.get('/projects/rural-payments', function(req, res) {
     res.render('projects/rural-payments/index');
   });
 
-  router.get('/projects/servelec', function(req, res) {
-    res.render('projects/servelec/index');
+  routes.get('/projects/servelec-social-care', function(req, res) {
+    res.render('projects/servelec-social-care/index');
   });
 
-router.get('/feedback', function(req, res) {
-  res.render('feedback/index');
+  routes.get('/projects/government-digital-service', function(req, res) {
+    res.render('projects/government-digital-service/index');
+  });
+
+  routes.get('/projects/census-2021', function(req, res) {
+    res.render('projects/census-2021/index');
+  });
+
+  routes.get('/projects/travalion', function(req, res) {
+    res.render('projects/travalion/index');
+  });
+
+routes.get('/testimonials', function(req, res) {
+  res.render('testimonials/index');
 });
 
-router.get('/cookies', function(req, res) {
-  res.render('cookies/index');
+routes.get('/contact', function(req, res) {
+  res.render('contact/index');
 });
 
-router.get('/privacy-policy', function(req, res) {
-  res.render('privacy-policy/index');
+routes.post('/contact/thank-you', function(req, res) {
+  res.render('contact/thank-you/index');
 });
 
+routes.get('/support/cookies', function(req, res) {
+  res.render('support/cookies/index');
+});
 
-// Page not found 404
-router.get('*', function(req, res){
+routes.get('/support/privacy', function(req, res) {
+  res.render('support/privacy/index');
+});
+
+routes.get('/support/accessibility', function(req, res) {
+  res.render('support/accessibility/index');
+});
+
+// Page not found
+routes.get('*', function(req, res){
   res.render('page-not-found/index');
 });
 
-
-module.exports = router;
+module.exports = routes;
