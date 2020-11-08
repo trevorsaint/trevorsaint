@@ -6,277 +6,280 @@
 
 {% block content %}
 
-  <div class="container">
+  <section class="padding-top-xs">
 
-    {{ backLink({
-      "url": rootPath + 'projects',
-      "text": 'Back'
-    }) }}
+    <div class="container">
 
-    <h1 class="heading-xxl margin-y-sm margin-y-lg@sm">A design system to solve problems and avoid repetition</h1>
-
-    <div class="hero">
-      <img srcset="{{rootPath}}images/projects/project/hmcts-design-system/hero.png 1x, {{rootPath}}images/projects/project/hmcts-design-system/hero@2x.png 2x, {{rootPath}}images/projects/project/hmcts-design-system/hero@3x.png 3x" src="{{rootPath}}images/projects/project/hmcts-design-system/hero.png" alt="A preview of HMCTS design system on an iMac screen">
-    </div>
-
-    <div class="flex justify-between items-start margin-top-md">
-
-      {{ entryDetails({
-        "rows": [
-          {
-            "key": {
-              "text": 'Client'
-            },
-            "value": {
-              "text": 'HM Courts & Tribunals Service'
-            }
-          },
-          {
-            "key": {
-              "text": 'Industry'
-            },
-            "value": {
-              "text": 'Government'
-            }
-          },
-          {
-            "key": {
-              "text": 'Year'
-            },
-            "value": {
-              "text": '2018'
-            }
-          }
-        ]
+      {{ backLink({
+        "url": rootPath + 'projects',
+        "text": 'Back'
       }) }}
 
-    </div>
+      <h1 class="heading-xxl margin-y-sm margin-y-lg@sm">A design system to solve problems and avoid repetition</h1>
 
-    <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
-
-      <div class="container text-component max-width-sm">
-
-        <h2>Overview</h2>
-
-        <div class="color-contrast-medium">
-          <p>At HMCTS the design practice consisted of 18 teams made up of 62 people. This included 26 researchers, 14 interaction designers, 3 service designers and 15 content designers.</p>
-          <p>Given this, we wanted to reduce the effort it took to share good styles, components and patterns for reuse across the teams. Creating the HMCTS Design System solved all of these problems.</p>
-        </div>
-
+      <div class="hero">
+        <img srcset="{{rootPath}}images/projects/project/hmcts-design-system/hero.png 1x, {{rootPath}}images/projects/project/hmcts-design-system/hero@2x.png 2x, {{rootPath}}images/projects/project/hmcts-design-system/hero@3x.png 3x" src="{{rootPath}}images/projects/project/hmcts-design-system/hero.png" alt="A preview of HMCTS design system on an iMac screen">
       </div>
 
-    </div>
+      <div class="flex justify-between items-start margin-top-md">
 
-    <figure class="figure">
-      <div class="bg-contrast-lower">
-        <img srcset="{{rootPath}}images/projects/project/hmcts-design-system/home-page.png 1x, {{rootPath}}images/projects/project/hmcts-design-system/home-page@2x.png 2x, {{rootPath}}images/projects/project/hmcts-design-system/home-page@3x.png 3x" src="{{rootPath}}images/projects/project/hmcts-design-system/home-page.png" alt="">
-      </div>
-      <figcaption class="figure__caption margin-top-xxs">Landing page design</figcaption>
-    </figure>
-
-    <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
-
-      <div class="container text-component max-width-sm">
-
-        <h2>Our approach</h2>
-
-        <div class="color-contrast-medium">
-          <p>After consulting Government Digital Service (GDS), we created an alpha version of HMCTS Design System that closely matched the approach of the GOV.UK Design System.</p>
-          <p>This meant using the same words to describe things and the same format and layout for delivering the design system. It also meant creating an HMCTS Frontend project where the styles and component code would live just like GOV.UK Frontend.</p>
-        </div>
-
-      </div>
-
-    </div>
-
-    <figure class="figure">
-      <div class="bg-contrast-lower">
-        <img srcset="{{rootPath}}images/projects/project/hmcts-design-system/progress-bar-component.png 1x, {{rootPath}}images/projects/project/hmcts-design-system/progress-bar-component@2x.png 2x, {{rootPath}}images/projects/project/hmcts-design-system/progress-bar-component@3x.png 3x" src="{{rootPath}}images/projects/project/hmcts-design-system/progress-bar-component.png" alt="">
-      </div>
-      <figcaption class="figure__caption margin-top-xxs">Progress bar component in the design system</figcaption>
-    </figure>
-
-    <figure class="figure margin-top-lg">
-      <div class="bg-contrast-lower">
-        <img srcset="{{rootPath}}images/projects/project/hmcts-design-system/pagination-component.png 1x, {{rootPath}}images/projects/project/hmcts-design-system/pagination-component@2x.png 2x, {{rootPath}}images/projects/project/hmcts-design-system/pagination-component@3x.png 3x" src="{{rootPath}}images/projects/project/hmcts-design-system/pagination-component.png" alt="">
-      </div>
-      <figcaption class="figure__caption margin-top-xxs">Pagination component in the design system</figcaption>
-    </figure>
-
-    <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
-
-      <div class="container text-component max-width-sm">
-
-        <h2>Quality assurance</h2>
-
-        <div class="color-contrast-medium">
-          <p>We made sure that the HMCTS Design System was easy to use in projects and easy to contribute to as a designer by making releases possible.</p>
-          <p>We also ensured a good level of quality control, by making sure contributors couldn't push without two people’s review.</p>
-        </div>
-
-      </div>
-
-    </div>
-
-    <figure class="figure">
-      <div class="bg-contrast-lower">
-        <img srcset="{{rootPath}}images/projects/project/hmcts-design-system/service-using-design-system.png 1x, {{rootPath}}images/projects/project/hmcts-design-system/service-using-design-system@2x.png 2x, {{rootPath}}images/projects/project/hmcts-design-system/service-using-design-system@3x.png 3x" src="{{rootPath}}images/projects/project/hmcts-design-system/service-using-design-system.png" alt="">
-      </div>
-      <figcaption class="figure__caption margin-top-xxs">HMCTS service using components from the design system</figcaption>
-    </figure>
-
-    <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
-
-      <div class="container text-component max-width-sm">
-
-        <h2>Collaborative effort</h2>
-
-        <div class="color-contrast-medium">
-          <p>Various patterns that were either designed or required were discussed in weekly design crits. If good enough, they would be added into the backlog ready for development, and added to HMCTS Frontend, and documented in the HMCTS Design System.</p>
-        </div>
-
-      </div>
-
-    </div>
-
-    <figure class="figure">
-      <div class="bg-contrast-lower">
-        <img srcset="{{rootPath}}images/projects/project/hmcts-design-system/contributors-to-design-system.png 1x, {{rootPath}}images/projects/project/hmcts-design-system/contributors-to-design-system@2x.png 2x, {{rootPath}}images/projects/project/hmcts-design-system/contributors-to-design-system@3x.png 3x" src="{{rootPath}}images/projects/project/hmcts-design-system/contributors-to-design-system.png" alt="">
-      </div>
-      <figcaption class="figure__caption margin-top-xxs">Contributors to design system and frontend in GitHub repos</figcaption>
-    </figure>
-
-    <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
-
-      <div class="container text-component max-width-sm">
-
-        <h2>Our process</h2>
-
-        <div class="color-contrast-medium">
-          <p>When we designed and developed the Judicial case manager, a lot of the elements were useful for other service lines, which is why a lot of these were added into the HMCTS Design System as a foundation to build upon.</p>
-          <p>Each component needed to be made flexible and reusable, so time was spent making these into components which were customisable for each use case. We would ensure that each component was semantic, accessible and responsive.</p>
-          <p>We would also perform other checks such as various browser types and operating systems to ensure each component was good enough for reuse.</p>
-        </div>
-
-      </div>
-
-    </div>
-
-    <figure class="figure">
-      <div class="bg-contrast-lower">
-        <img srcset="{{rootPath}}images/projects/project/hmcts-design-system/collaboration-on-github.png 1x, {{rootPath}}images/projects/project/hmcts-design-system/collaboration-on-github@2x.png 2x, {{rootPath}}images/projects/project/hmcts-design-system/collaboration-on-github@3x.png 3x" src="{{rootPath}}images/projects/project/hmcts-design-system/collaboration-on-github.png" alt="">
-      </div>
-      <figcaption class="figure__caption margin-top-xxs">Collaboration about progress bar being used on GOV.UK divorce</figcaption>
-    </figure>
-
-    <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
-
-      <div class="container text-component max-width-sm">
-
-        <h2>The benefits</h2>
-
-        <div class="color-contrast-medium">
-          <p>The benefits of a Design System is that if a service is using a component, any changes or improvements we make to the design system are immediately reflected in the services using the component. We would perform these updates in ‘package releases’.</p>
-        </div>
-
-      </div>
-
-    </div>
-
-    <figure class="figure">
-      <div class="bg-contrast-lower">
-        <img srcset="{{rootPath}}images/projects/project/hmcts-design-system/frontend-package-release.png 1x, {{rootPath}}images/projects/project/hmcts-design-system/frontend-package-release@2x.png 2x, {{rootPath}}images/projects/project/hmcts-design-system/frontend-package-release@3x.png 3x" src="{{rootPath}}images/projects/project/hmcts-design-system/frontend-package-release.png" alt="">
-      </div>
-      <figcaption class="figure__caption margin-top-xxs">Frontend package releases</figcaption>
-    </figure>
-
-    <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg border-bottom">
-
-      <div class="container text-component max-width-sm">
-
-        <h2>The results</h2>
-
-        <div class="color-contrast-medium">
-          <p>A number of separate services teams are now using the design system and saving a lot of time because of that.</p>
-          <p>This ensured consistency throughout all service lines, with a significant reduction in time and effort spent in research, design, development and accessibility testing.</p>
-        </div>
-
-      </div>
-
-    </div>
-
-    <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
-
-      <div class="container max-width-sm">
-
-        <div class="margin-bottom-sm">
-          <p class="font-bold text-sm text-center">Share this project</p>
-        </div>
-
-        {{ socialShare({
-          "twitter": {
-            "attributes": {
-              "data-social": 'twitter',
-              "data-text": 'Hi there! https://trevorsaint.uk via @trevorsaint',
-              "data-hashtags": '#govuk, #government, #designsystem, #design, #dev, #ux, #interactiondesign'
+        {{ entryDetails({
+          "rows": [
+            {
+              "key": {
+                "text": 'Client'
+              },
+              "value": {
+                "text": 'HM Courts & Tribunals Service'
+              }
+            },
+            {
+              "key": {
+                "text": 'Industry'
+              },
+              "value": {
+                "text": 'Government'
+              }
+            },
+            {
+              "key": {
+                "text": 'Year'
+              },
+              "value": {
+                "text": '2018'
+              }
             }
-          },
-          "facebook": {
-            "attributes": {
-              "data-social": 'facebook',
-              "data-url": 'https://trevorsaint.uk'
+          ]
+        }) }}
+
+      </div>
+
+      <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
+
+        <div class="container text-component max-width-sm">
+
+          <h2>Overview</h2>
+
+          <div class="color-contrast-medium">
+            <p>At HMCTS the design practice consisted of 18 teams made up of 62 people. This included 26 researchers, 14 interaction designers, 3 service designers and 15 content designers.</p>
+            <p>Given this, we wanted to reduce the effort it took to share good styles, components and patterns for reuse across the teams. Creating the HMCTS Design System solved all of these problems.</p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <figure class="figure">
+        <div class="bg-contrast-lower">
+          <img srcset="{{rootPath}}images/projects/project/hmcts-design-system/home-page.png 1x, {{rootPath}}images/projects/project/hmcts-design-system/home-page@2x.png 2x, {{rootPath}}images/projects/project/hmcts-design-system/home-page@3x.png 3x" src="{{rootPath}}images/projects/project/hmcts-design-system/home-page.png" alt="">
+        </div>
+        <figcaption class="figure__caption margin-top-xxs">Landing page design</figcaption>
+      </figure>
+
+      <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
+
+        <div class="container text-component max-width-sm">
+
+          <h2>Our approach</h2>
+
+          <div class="color-contrast-medium">
+            <p>After consulting Government Digital Service (GDS), we created an alpha version of HMCTS Design System that closely matched the approach of the GOV.UK Design System.</p>
+            <p>This meant using the same words to describe things and the same format and layout for delivering the design system. It also meant creating an HMCTS Frontend project where the styles and component code would live just like GOV.UK Frontend.</p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <figure class="figure">
+        <div class="bg-contrast-lower">
+          <img srcset="{{rootPath}}images/projects/project/hmcts-design-system/progress-bar-component.png 1x, {{rootPath}}images/projects/project/hmcts-design-system/progress-bar-component@2x.png 2x, {{rootPath}}images/projects/project/hmcts-design-system/progress-bar-component@3x.png 3x" src="{{rootPath}}images/projects/project/hmcts-design-system/progress-bar-component.png" alt="">
+        </div>
+        <figcaption class="figure__caption margin-top-xxs">Progress bar component in the design system</figcaption>
+      </figure>
+
+      <figure class="figure margin-top-lg">
+        <div class="bg-contrast-lower">
+          <img srcset="{{rootPath}}images/projects/project/hmcts-design-system/pagination-component.png 1x, {{rootPath}}images/projects/project/hmcts-design-system/pagination-component@2x.png 2x, {{rootPath}}images/projects/project/hmcts-design-system/pagination-component@3x.png 3x" src="{{rootPath}}images/projects/project/hmcts-design-system/pagination-component.png" alt="">
+        </div>
+        <figcaption class="figure__caption margin-top-xxs">Pagination component in the design system</figcaption>
+      </figure>
+
+      <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
+
+        <div class="container text-component max-width-sm">
+
+          <h2>Quality assurance</h2>
+
+          <div class="color-contrast-medium">
+            <p>We made sure that the HMCTS Design System was easy to use in projects and easy to contribute to as a designer by making releases possible.</p>
+            <p>We also ensured a good level of quality control, by making sure contributors couldn't push without two people’s review.</p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <figure class="figure">
+        <div class="bg-contrast-lower">
+          <img srcset="{{rootPath}}images/projects/project/hmcts-design-system/service-using-design-system.png 1x, {{rootPath}}images/projects/project/hmcts-design-system/service-using-design-system@2x.png 2x, {{rootPath}}images/projects/project/hmcts-design-system/service-using-design-system@3x.png 3x" src="{{rootPath}}images/projects/project/hmcts-design-system/service-using-design-system.png" alt="">
+        </div>
+        <figcaption class="figure__caption margin-top-xxs">HMCTS service using components from the design system</figcaption>
+      </figure>
+
+      <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
+
+        <div class="container text-component max-width-sm">
+
+          <h2>Collaborative effort</h2>
+
+          <div class="color-contrast-medium">
+            <p>Various patterns that were either designed or required were discussed in weekly design crits. If good enough, they would be added into the backlog ready for development, and added to HMCTS Frontend, and documented in the HMCTS Design System.</p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <figure class="figure">
+        <div class="bg-contrast-lower">
+          <img srcset="{{rootPath}}images/projects/project/hmcts-design-system/contributors-to-design-system.png 1x, {{rootPath}}images/projects/project/hmcts-design-system/contributors-to-design-system@2x.png 2x, {{rootPath}}images/projects/project/hmcts-design-system/contributors-to-design-system@3x.png 3x" src="{{rootPath}}images/projects/project/hmcts-design-system/contributors-to-design-system.png" alt="">
+        </div>
+        <figcaption class="figure__caption margin-top-xxs">Contributors to design system and frontend in GitHub repos</figcaption>
+      </figure>
+
+      <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
+
+        <div class="container text-component max-width-sm">
+
+          <h2>Our process</h2>
+
+          <div class="color-contrast-medium">
+            <p>When we designed and developed the Judicial case manager, a lot of the elements were useful for other service lines, which is why a lot of these were added into the HMCTS Design System as a foundation to build upon.</p>
+            <p>Each component needed to be made flexible and reusable, so time was spent making these into components which were customisable for each use case. We would ensure that each component was semantic, accessible and responsive.</p>
+            <p>We would also perform other checks such as various browser types and operating systems to ensure each component was good enough for reuse.</p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <figure class="figure">
+        <div class="bg-contrast-lower">
+          <img srcset="{{rootPath}}images/projects/project/hmcts-design-system/collaboration-on-github.png 1x, {{rootPath}}images/projects/project/hmcts-design-system/collaboration-on-github@2x.png 2x, {{rootPath}}images/projects/project/hmcts-design-system/collaboration-on-github@3x.png 3x" src="{{rootPath}}images/projects/project/hmcts-design-system/collaboration-on-github.png" alt="">
+        </div>
+        <figcaption class="figure__caption margin-top-xxs">Collaboration about progress bar being used on GOV.UK divorce</figcaption>
+      </figure>
+
+      <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
+
+        <div class="container text-component max-width-sm">
+
+          <h2>The benefits</h2>
+
+          <div class="color-contrast-medium">
+            <p>The benefits of a Design System is that if a service is using a component, any changes or improvements we make to the design system are immediately reflected in the services using the component. We would perform these updates in ‘package releases’.</p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <figure class="figure">
+        <div class="bg-contrast-lower">
+          <img srcset="{{rootPath}}images/projects/project/hmcts-design-system/frontend-package-release.png 1x, {{rootPath}}images/projects/project/hmcts-design-system/frontend-package-release@2x.png 2x, {{rootPath}}images/projects/project/hmcts-design-system/frontend-package-release@3x.png 3x" src="{{rootPath}}images/projects/project/hmcts-design-system/frontend-package-release.png" alt="">
+        </div>
+        <figcaption class="figure__caption margin-top-xxs">Frontend package releases</figcaption>
+      </figure>
+
+      <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg border-bottom">
+
+        <div class="container text-component max-width-sm">
+
+          <h2>The results</h2>
+
+          <div class="color-contrast-medium">
+            <p>A number of separate services teams are now using the design system and saving a lot of time because of that.</p>
+            <p>This ensured consistency throughout all service lines, with a significant reduction in time and effort spent in research, design, development and accessibility testing.</p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
+
+        <div class="container max-width-sm">
+
+          <div class="margin-bottom-sm">
+            <p class="font-bold text-sm text-center">Share this project</p>
+          </div>
+
+          {{ socialShare({
+            "twitter": {
+              "attributes": {
+                "data-social": 'twitter',
+                "data-text": 'Hi there! https://trevorsaint.uk via @trevorsaint',
+                "data-hashtags": '#govuk, #government, #designsystem, #design, #dev, #ux, #interactiondesign'
+              }
+            },
+            "facebook": {
+              "attributes": {
+                "data-social": 'facebook',
+                "data-url": 'https://trevorsaint.uk'
+              }
+            },
+            "pinterest": {
+              "attributes": {
+                "data-social": 'pinterest',
+                "data-url": 'https://trevorsaint.uk',
+                "data-description": 'A design system to solve problems and avoid repetition',
+                "data-media": 'https://trevorsaint.uk/images/projects/project/hmcts-design-system/pinterest.jpg'
+              }
+            },
+            "linkedin": {
+              "attributes": {
+                "data-social": 'linkedin',
+                "data-url": 'https://trevorsaint.uk'
+              }
+            },
+            "email": {
+              "attributes": {
+                "data-social": 'mail',
+                "data-url": 'https://trevorsaint.uk',
+                "data-subject": 'A design system to solve problems and avoid repetition - Trevor Saint',
+                "data-body": 'https://trevorsaint.uk/projects/hmcts-design-system'
+              }
             }
-          },
-          "pinterest": {
-            "attributes": {
-              "data-social": 'pinterest',
-              "data-url": 'https://trevorsaint.uk',
-              "data-description": 'A design system to solve problems and avoid repetition',
-              "data-media": 'https://trevorsaint.uk/images/projects/project/hmcts-design-system/pinterest.jpg'
+          }) }}
+
+        </div>
+
+      </div>
+
+      <div class="padding-bottom-md padding-bottom-lg@sm padding-bottom-xxl@md padding-bottom-xxxxl@lg">
+
+        {{ previousNextLinks({
+          "previousNextLinksItems": [
+            {
+              "rel": 'prev',
+              "text": 'Previous project',
+              "url": rootPath + 'projects/judicial-case-manager',
+              "label": 'Manage cases in a simple, accessible and efficient way'
+            },
+            {
+              "rel": 'next',
+              "text": 'Next project',
+              "url": rootPath + 'projects/rural-payments',
+              "label": 'Rural grants and payments to help the farming industry'
             }
-          },
-          "linkedin": {
-            "attributes": {
-              "data-social": 'linkedin',
-              "data-url": 'https://trevorsaint.uk'
-            }
-          },
-          "email": {
-            "attributes": {
-              "data-social": 'mail',
-              "data-url": 'https://trevorsaint.uk',
-              "data-subject": 'A design system to solve problems and avoid repetition - Trevor Saint',
-              "data-body": 'https://trevorsaint.uk/projects/hmcts-design-system'
-            }
-          }
+          ]
         }) }}
 
       </div>
 
     </div>
 
-    <div class="padding-bottom-md padding-bottom-lg@sm padding-bottom-xxl@md padding-bottom-xxxxl@lg">
-
-      {{ previousNextLinks({
-        "previousNextLinksItems": [
-          {
-            "rel": 'prev',
-            "text": 'Previous project',
-            "url": rootPath + 'projects/judicial-case-manager',
-            "label": 'Manage cases in a simple, accessible and efficient way'
-          },
-          {
-            "rel": 'next',
-            "text": 'Next project',
-            "url": rootPath + 'projects/rural-payments',
-            "label": 'Rural grants and payments to help the farming industry'
-          }
-        ]
-      }) }}
-
-    </div>
-
-
-  </div>
+  </section>
 
 {% endblock %}
