@@ -5,7 +5,10 @@ Forms
 -------------------------------- */
 
 
-.form-control {
+.form {}
+
+
+.form__control {
   background-color: alpha(var(--color-black), 0.05);
   border: 2px solid transparent;
   border-radius: var(--radius-sm);
@@ -28,20 +31,20 @@ Forms
 }
 
 
-.form-label {
-  display: inline-block;
+.form__label {
+  display: block;
   margin-bottom: var(--space-xxxs);
 }
 
 
 // Error
-.form-group--error {
+.form__group--error {
   border-left: var(--space-xxxxs) solid var(--color-error);
   padding-left: var(--space-xxs);
 }
 
 
-.form-control--error {
+.form__control--error {
   background-color: var(--color-white);
   border-color: var(--color-error);
 
@@ -51,4 +54,13 @@ Forms
     outline: none;
   }
 
+}
+
+
+// Error message
+.form__error-message {
+  color: var(--color-error);
+  display: block;
+  font-weight: var(--font-bold);
+  margin-bottom: var(--space-xxxs);
 }

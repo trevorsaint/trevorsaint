@@ -8,13 +8,16 @@ Hero
 .hero {
   background-color: alpha(var(--color-black), 0.05);
   border-radius: var(--radius-lg);
-  margin-bottom: var(--space-xxl);
-  margin-top: var(--space-xxl);
   position: relative;
 }
 
 
 @include breakpoint(lg) {
+
+  .hero {
+    margin-bottom: var(--space-xxl);
+    margin-top: var(--space-xxl);
+  }
 
   .hero img {
     margin-bottom: calc(var(--space-xxl) * -1);

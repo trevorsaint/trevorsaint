@@ -4,8 +4,7 @@
   "version": "2.0.0",
   "private": true,
   "scripts": {
-    "start": "gulp build",
-    "heroku-postbuild": "gulp build && node server.js"
+    "start": "gulp build && node server.js"
   },
   "author": {
     "name": "Trevor Saint",

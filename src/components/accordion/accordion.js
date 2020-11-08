@@ -1,4 +1,6 @@
 (function() {
+
+
   var Accordion = function(element) {
     this.element = element;
     this.items = Util.getChildrenByClassName(this.element, 'js-accordion__item');
@@ -8,6 +10,7 @@
     this.multiItems = !(this.element.getAttribute('data-multi-items') == 'off');
     this.initAccordion();
   };
+
 
   Accordion.prototype.initAccordion = function() {
     // Set initial aria attributes
@@ -24,6 +27,7 @@
     this.initAccordionEvents();
   };
 
+
   Accordion.prototype.initAccordionEvents = function() {
     var self = this;
 
@@ -34,12 +38,14 @@
     });
   };
 
+
   Accordion.prototype.triggerAccordion = function(trigger) {
     var self = this;
     var bool = (trigger.getAttribute('aria-expanded') === 'true');
 
     this.animateAccordion(trigger, bool);
   };
+
 
   Accordion.prototype.animateAccordion = function(trigger, bool) {
     var self = this;
@@ -54,6 +60,7 @@
     if( !this.multiItems && !bool) this.closeSiblings(item);
   };
 
+
   Accordion.prototype.resetContentVisibility = function(item, content, bool) {
     Util.toggleClass(item, this.showClass, !bool);
     content.removeAttribute('style');
@@ -61,6 +68,7 @@
       this.moveContent();
     }
   };
+
 
   Accordion.prototype.closeSiblings = function(item) {
     // If only one accordion can be open -> search if there’s another one open
@@ -73,6 +81,7 @@
     }
   };
 
+
   Accordion.prototype.moveContent = function() { // Make sure title of the accordion just opened is inside the viewport
     var openAccordion = this.element.getElementsByClassName(this.showClass);
     if(openAccordion.length == 0) return;
@@ -83,7 +92,9 @@
     }
   };
 
+
   window.Accordion = Accordion;
+
 
   // Initialize the Accordion objects
   var accordions = document.getElementsByClassName('js-accordion');
@@ -92,4 +103,6 @@
       (function(i){new Accordion(accordions[i]);})(i);
     }
   }
+
+
 }());

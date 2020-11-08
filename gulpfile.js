@@ -156,7 +156,7 @@ function start() {
 
 
 // Define complex tasks
-const build = gulp.series(clean, gulp.parallel(styles, scripts, images, meta, fonts, nunjucks));
+const build = gulp.series(clean, gulp.parallel(styles, scripts, images, meta, fonts));
 const develop = gulp.parallel(watch, start);
 
 
