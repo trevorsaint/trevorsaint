@@ -145,7 +145,8 @@ function css() {
     gulp
       .src(configPaths.stylesheets + '*.css')
       .pipe(purgecss({
-        content: [configPaths.public + '**/*.html']
+        content: [configPaths.public + '**/*.html'],
+        whitelist: ['grid', 'outline']
       }))
       .pipe(gulp.dest(configPaths.stylesheets))
   )
