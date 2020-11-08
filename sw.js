@@ -401,7 +401,31 @@ var filesToCache = [
   '/images/projects/project/travalion/hero@2x.png',
 
   '/images/projects/project/travalion/project.png',
-  '/images/projects/project/travalion/project@2x.png'
+  '/images/projects/project/travalion/project@2x.png',
+
+  '/images/projects/project/travalion/happy-landing-page-design.png',
+  '/images/projects/project/travalion/happy-landing-page-design@2x.png',
+
+  '/images/projects/project/travalion/logo-ondark.png',
+  '/images/projects/project/travalion/logo-ondark@2x.png',
+
+  '/images/projects/project/travalion/logo-onlight.png',
+  '/images/projects/project/travalion/logo-onlight@2x.png',
+
+  '/images/projects/project/travalion/styleguide-design-foundations.png',
+  '/images/projects/project/travalion/styleguide-design-foundations@2x.png',
+
+  '/images/projects/project/travalion/styleguide-designed-components.png',
+  '/images/projects/project/travalion/styleguide-designed-components@2x.png',
+
+  '/images/projects/project/travalion/styleguide-reusable-patterns.png',
+  '/images/projects/project/travalion/styleguide-reusable-patterns@2x.png',
+
+  '/images/projects/project/travalion/accessible-code.png',
+  '/images/projects/project/travalion/accessible-code@2x.png',
+
+  '/images/projects/project/travalion/complete-user-journey-page-designs.png',
+  '/images/projects/project/travalion/complete-user-journey-page-designs@2x.png',
 
 
 ];
