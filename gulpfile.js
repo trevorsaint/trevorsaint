@@ -159,8 +159,7 @@ function meta() {
     gulp
       .src([
         'robots.txt',
-        'manifest.json',
-        'sw.js'
+        'manifest.json'
       ])
       .pipe(gulp.dest(configPaths.public))
     )
