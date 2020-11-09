@@ -3,9 +3,9 @@
   "source": "src/",
     "fonts": "src/assets/fonts/",
     "images": "src/assets/images/",
-  "public": "public/",
-    "stylesheets": "public/stylesheets/",
-    "javascripts": "public/javascripts/",
+  "build": "build/",
+    "stylesheets": "build/stylesheets/",
+    "javascripts": "build/javascripts/",
   "app": "app/",
     "sass": "app/sass/"
 }

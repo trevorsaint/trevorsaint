@@ -21,7 +21,7 @@ const configPaths = require('./config/paths.json');
 
 // Clean assets
 function clean() {
-  return del('public')
+  return del('build')
 };
 
 
@@ -77,7 +77,7 @@ function scripts() {
 };
 
 
-// Optimise images (compress and move into public)
+// Optimise images (compress and move into build)
 function images() {
   return (
     gulp
@@ -99,7 +99,7 @@ function images() {
       //     ]
       //   })
       // ]))
-      .pipe(gulp.dest(configPaths.public + 'images'))
+      .pipe(gulp.dest(configPaths.build + 'images'))
   )
 }
 
@@ -120,7 +120,7 @@ function nunjucks() {
           './app/views/partials/'
         ]
       }))
-      .pipe(gulp.dest('./public'))
+      .pipe(gulp.dest('./build'))
     )
 };
 
@@ -129,12 +129,12 @@ function nunjucks() {
 function html() {
   return (
     gulp
-      .src(configPaths.public + '**/*.html')
+      .src(configPaths.build + '**/*.html')
       .pipe(htmlmin({
         collapseWhitespace: true,
         removeComments: true
        }))
-      .pipe(gulp.dest(configPaths.public))
+      .pipe(gulp.dest(configPaths.build))
     )
 };
 
@@ -145,7 +145,7 @@ function css() {
     gulp
       .src(configPaths.stylesheets + '*.css')
       .pipe(purgecss({
-        content: [configPaths.public + '**/*.html'],
+        content: [configPaths.build + '**/*.html'],
         whitelist: ['grid', 'outline']
       }))
       .pipe(gulp.dest(configPaths.stylesheets))
@@ -153,7 +153,7 @@ function css() {
 };
 
 
-// Copy meta into public
+// Copy meta into build
 function meta() {
   return (
     gulp
@@ -162,17 +162,17 @@ function meta() {
         'manifest.json',
         'sw.js'
       ])
-      .pipe(gulp.dest(configPaths.public))
+      .pipe(gulp.dest(configPaths.build))
     )
 };
 
 
-// Copy fonts into public
+// Copy fonts into build
 function fonts() {
   return (
     gulp
       .src(configPaths.fonts + '**/*.+(woff|woff2)')
-      .pipe(gulp.dest(configPaths.public + 'fonts'))
+      .pipe(gulp.dest(configPaths.build + 'fonts'))
   )
 };
 

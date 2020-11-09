@@ -52,7 +52,7 @@ app.use(bodyParser.urlencoded({
 
 
 // Middleware to serve static assets
-app.use('/', express.static(path.join(__dirname, 'public')));
+app.use('/', express.static(path.join(__dirname, 'build')));
 
 
 // Use routes
