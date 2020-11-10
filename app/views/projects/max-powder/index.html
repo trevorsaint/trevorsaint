@@ -19,7 +19,11 @@
       <h1 class="heading-xxl margin-y-sm margin-y-lg@sm">A complete rebrand and design for Max Powder</h1>
 
       <div class="hero">
-        <img height="800" width="1200" srcset="{{rootPath}}images/projects/project/max-powder/hero.png 1x, {{rootPath}}images/projects/project/max-powder/hero@2x.png 2x" src="{{rootPath}}images/projects/project/max-powder/hero.png" alt="A preview of Max Powder on an iMac screen">
+        <picture>
+          <source type="image/webp" srcset="{{rootPath}}images/projects/project/max-powder/hero.webp, {{rootPath}}images/projects/project/max-powder/hero@2x.webp 2x">
+          <source type="image/png" srcset="{{rootPath}}images/projects/project/max-powder/hero.png, {{rootPath}}images/projects/project/max-powder/hero@2x.png 2x">
+          <img height="800" width="1200" src="{{rootPath}}images/projects/project/max-powder/hero.png" alt="A preview of Max Powder on an iMac screen">
+        </picture>
       </div>
 
       <div class="flex@sm justify-between items-start margin-top-md">

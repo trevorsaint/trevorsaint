@@ -82,7 +82,7 @@ function scripts() {
 function images() {
   return (
     gulp
-      .src(configPaths.images + '**/*.+(svg|png|jpg|jpeg|gif)')
+      .src(configPaths.images + '**/*.+(svg|png|jpg|jpeg|gif|webp)')
       // .pipe(imagemin([
       //   imagemin.mozjpeg({
       //     quality: 100,
@@ -199,7 +199,7 @@ function start() {
 
 
 // Define complex tasks
-const build = gulp.series(clean, gulp.parallel(styles, scripts, images, meta, fonts, nunjucks), html);
+const build = gulp.series(clean, gulp.parallel(styles, scripts, images, meta, fonts));
 const develop = gulp.parallel(watch, start);
 
 
