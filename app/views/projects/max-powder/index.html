@@ -1,5 +1,6 @@
 {% set pageTitle       = "A complete rebrand and design for Max Powder" %}
 {% set pageDescription = "Trevor Saint was responsible for the complete rebrand of Max Powder, an alloy wheel refurbishment company." %}
+{% set pageUrl         = "projects/max-powder" %}
 {% set pageId          = "projects" %}
 
 {% extends "layout.njk" %}
@@ -11,7 +12,7 @@
     <div class="container">
 
       {{ backLink({
-        "url": '/projects',
+        "url": rootPath + 'projects',
         "text": 'Back'
       }) }}
 
