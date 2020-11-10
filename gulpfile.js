@@ -200,6 +200,7 @@ function start() {
 
 // Define complex tasks
 const build = gulp.series(clean, gulp.parallel(styles, scripts, images, meta, fonts));
+const dist = gulp.series(clean, gulp.parallel(styles, scripts, images, meta, fonts, nunjucks), html);
 const develop = gulp.parallel(watch, start);
 
 
@@ -215,5 +216,6 @@ exports.meta = meta;
 exports.fonts = fonts;
 exports.watch = watch;
 exports.build = build;
+exports.dist = dist;
 exports.develop = develop;
 exports.default = develop;
