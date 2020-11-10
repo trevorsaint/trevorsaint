@@ -22,7 +22,7 @@ const configPaths = require('./config/paths.json');
 
 // Clean assets
 function clean() {
-  return del('build')
+  return del('dist')
 };
 
 
