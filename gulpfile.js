@@ -4,6 +4,7 @@
 const gulp = require('gulp');
 const del = require('del');
 const nodemon = require('gulp-nodemon');
+const data = require('gulp-data');
 const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
 const purgecss = require('gulp-purgecss');
@@ -110,15 +111,15 @@ function nunjucks() {
     gulp
       .src('./app/views/**/*.html')
       .pipe(nunjucksRender({
-        data: {
-          rootPath: '/',
-        },
         path: [
           './src/components/',
           './app/views/',
           './app/views/layouts/',
           './app/views/partials/'
-        ]
+        ],
+        data: {
+          rootPath: 'https://trevorsaint.uk/'
+        },
       }))
       .pipe(gulp.dest('./build'))
     )
