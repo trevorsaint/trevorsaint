@@ -121,7 +121,7 @@ function nunjucks() {
           rootPath: 'https://trevorsaint.uk/'
         },
       }))
-      .pipe(gulp.dest('./build'))
+      .pipe(gulp.dest('./dist'))
     )
 };
 
