@@ -160,6 +160,7 @@ function meta() {
       .src([
         'robots.txt',
         'manifest.json',
+        'sitemap.xml',
         'sw.js'
       ])
       .pipe(gulp.dest(configPaths.build))
