@@ -82,7 +82,7 @@ function scripts() {
 function images() {
   return (
     gulp
-      .src(configPaths.images + '**/*.+(svg|png|jpg|jpeg|gif)')
+      .src(configPaths.images + '**/*.+(svg|png|jpg|jpeg|gif|webp)')
       // .pipe(imagemin([
       //   imagemin.mozjpeg({
       //     quality: 100,
@@ -160,6 +160,7 @@ function meta() {
       .src([
         'robots.txt',
         'manifest.json',
+        'sitemap.xml',
         'sw.js'
       ])
       .pipe(gulp.dest(configPaths.build))
@@ -199,7 +200,8 @@ function start() {
 
 
 // Define complex tasks
-const build = gulp.series(clean, gulp.parallel(styles, scripts, images, meta, fonts, nunjucks), html);
+const build = gulp.series(clean, gulp.parallel(styles, scripts, images, meta, fonts));
+const dist = gulp.series(clean, gulp.parallel(styles, scripts, images, meta, fonts, nunjucks), html);
 const develop = gulp.parallel(watch, start);
 
 
@@ -215,5 +217,6 @@ exports.meta = meta;
 exports.fonts = fonts;
 exports.watch = watch;
 exports.build = build;
+exports.dist = dist;
 exports.develop = develop;
 exports.default = develop;
