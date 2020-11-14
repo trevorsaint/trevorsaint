@@ -22,7 +22,7 @@ const configPaths = require('./config/paths.json');
 
 // Clean assets
 function clean() {
-  return del('dist')
+  return del('public')
 };
 
 
@@ -100,7 +100,7 @@ function images() {
       //     ]
       //   })
       // ]))
-      .pipe(gulp.dest(configPaths.build + 'images'))
+      .pipe(gulp.dest(configPaths.public + 'images'))
   )
 }
 
@@ -121,7 +121,7 @@ function nunjucks() {
           rootPath: 'https://trevorsaint.uk/'
         },
       }))
-      .pipe(gulp.dest('./dist'))
+      .pipe(gulp.dest('./public'))
     )
 };
 
@@ -130,12 +130,12 @@ function nunjucks() {
 function html() {
   return (
     gulp
-      .src(configPaths.build + '**/*.html')
+      .src(configPaths.public + '**/*.html')
       .pipe(htmlmin({
         collapseWhitespace: true,
         removeComments: true
        }))
-      .pipe(gulp.dest(configPaths.build))
+      .pipe(gulp.dest(configPaths.public))
     )
 };
 
@@ -146,7 +146,7 @@ function css() {
     gulp
       .src(configPaths.stylesheets + '*.css')
       .pipe(purgecss({
-        content: [configPaths.build + '**/*.html']
+        content: [configPaths.public + '**/*.html']
       }))
       .pipe(gulp.dest(configPaths.stylesheets))
   )
@@ -163,7 +163,7 @@ function meta() {
         'sitemap.xml',
         'sw.js'
       ])
-      .pipe(gulp.dest(configPaths.build))
+      .pipe(gulp.dest(configPaths.public))
     )
 };
 
@@ -173,7 +173,7 @@ function fonts() {
   return (
     gulp
       .src(configPaths.fonts + '**/*.+(woff|woff2)')
-      .pipe(gulp.dest(configPaths.build + 'fonts'))
+      .pipe(gulp.dest(configPaths.public + 'fonts'))
   )
 };
 
