@@ -21,6 +21,26 @@ Logos
 }
 
 
+.logos__link {
+  display: flex;
+  border-radius: var(--radius-sm);
+  height: 100%;
+  width: 100%;
+
+  &:hover {
+    background-color: var(--color-white);
+    box-shadow: inset 0 0 0 2px var(--color-contrast-high);
+  }
+
+  &:focus {
+    background-color: var(--color-tertiary);
+    box-shadow: none;
+    color: var(--color-contrast-high);
+  }
+
+}
+
+
 .logos__img {
   display: block;
   margin: auto;
