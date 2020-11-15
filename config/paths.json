@@ -3,9 +3,13 @@
   "source": "src/",
     "fonts": "src/assets/fonts/",
     "images": "src/assets/images/",
+    "components": "src/components/",
   "public": "public/",
     "stylesheets": "public/stylesheets/",
     "javascripts": "public/javascripts/",
   "app": "app/",
-    "sass": "app/sass/"
+  "sass": "app/sass/",
+  "views": "app/views/",
+  "layouts": "app/views/layouts/",
+  "partials": "app/views/partials/"
 }

@@ -4,7 +4,6 @@
 const gulp = require('gulp');
 const del = require('del');
 const nodemon = require('gulp-nodemon');
-const data = require('gulp-data');
 const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
 const purgecss = require('gulp-purgecss');
@@ -16,13 +15,14 @@ const cssnano = require('cssnano');
 const nunjucksRender = require('gulp-nunjucks-render');
 const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
-const imagemin = require('gulp-imagemin');
+const uniqId = require('uniqid');
+const cacheBust = require('gulp-cache-bust');
 const configPaths = require('./config/paths.json');
 
 
 // Clean assets
 function clean() {
-  return del('public')
+  return del(configPaths.public)
 };
 
 
@@ -61,15 +61,15 @@ function scripts() {
   return (
     gulp
       .src([
-        'src/components/util.js',
-        'src/components/header/header.js',
-        'src/components/skip-link/skip-link.js',
-        'src/components/read-more/read-more.js',
-        'src/components/swipe-content/swipe-content.js',
-        'src/components/carousel/carousel.js',
-        'src/components/accordion/accordion.js',
-        'src/components/social-sharing/social-sharing.js',
-        'src/components/forms/forms.js'
+        configPaths.components + 'util.js',
+        configPaths.components + 'header/header.js',
+        configPaths.components + 'skip-link/skip-link.js',
+        configPaths.components + 'read-more/read-more.js',
+        configPaths.components + 'swipe-content/swipe-content.js',
+        configPaths.components + 'carousel/carousel.js',
+        configPaths.components + 'accordion/accordion.js',
+        configPaths.components + 'social-sharing/social-sharing.js',
+        configPaths.components + 'forms/forms.js'
       ])
       .pipe(uglify())
       .pipe(concat('scripts.min.js')) // Creates a minified version
@@ -78,51 +78,52 @@ function scripts() {
 };
 
 
-// Optimise images (compress and move into build)
+// Move images into public folder
 function images() {
   return (
     gulp
       .src(configPaths.images + '**/*.+(svg|png|jpg|jpeg|gif|webp)')
-      // .pipe(imagemin([
-      //   imagemin.mozjpeg({
-      //     quality: 100,
-      //     progressive: true
-      //   }),
-      //   imagemin.optipng(),
-      //   imagemin.svgo()
-      //   imagemin.svgo({
-      //     plugins: [
-      //       {progessive: true},
-      //       {interlaced: true},
-      //       {optimizationLevel: 2},
-      //       {removeViewBox: false},
-      //       {cleanupIDs: true}
-      //     ]
-      //   })
-      // ]))
       .pipe(gulp.dest(configPaths.public + 'images'))
   )
-}
+};
 
 
 // Render nunjucks templates
 function nunjucks() {
   return (
     gulp
-      .src('./app/views/**/*.html')
+      .src(configPaths.views + '**/*.html')
       .pipe(nunjucksRender({
         path: [
-          './src/components/',
-          './app/views/',
-          './app/views/layouts/',
-          './app/views/partials/'
+          configPaths.components,
+          configPaths.views,
+          configPaths.layouts,
+          configPaths.partials
         ],
         data: {
-          rootPath: 'https://trevorsaint.uk/'
+          rootPath: '/'
         },
       }))
       .pipe(gulp.dest('./public'))
     )
+};
+
+
+// Cache
+function cache() {
+
+  var versionNumber = uniqId();
+
+  return (
+    gulp
+      .src(configPaths.public + '**/*.html')
+      .pipe(cacheBust({
+        type: 'constant',
+        value: versionNumber
+      }))
+      .pipe(gulp.dest(configPaths.public))
+  )
+
 };
 
 
@@ -185,7 +186,7 @@ function watch() {
     configPaths.source + '**/*.scss',
   ], styles)
   gulp.watch (configPaths.javascripts + '**/*.js', scripts)
-  gulp.watch (configPaths.images + '**/*.+(svg|png|jpg|jpeg|gif)', images)
+  gulp.watch (configPaths.images + '**/*.+(svg|png|jpg|jpeg|gif|webp)', images)
 }
 
 
@@ -200,8 +201,7 @@ function start() {
 
 
 // Define complex tasks
-const build = gulp.series(clean, gulp.parallel(styles, scripts, images, meta, fonts));
-const dist = gulp.series(clean, gulp.parallel(styles, scripts, images, meta, fonts, nunjucks), html);
+const build = gulp.series(clean, gulp.parallel(styles, scripts, images, meta, fonts, nunjucks), cache, html);
 const develop = gulp.parallel(watch, start);
 
 
@@ -217,6 +217,5 @@ exports.meta = meta;
 exports.fonts = fonts;
 exports.watch = watch;
 exports.build = build;
-exports.dist = dist;
 exports.develop = develop;
 exports.default = develop;
