@@ -1,77 +1,82 @@
 {% set pageTitle       = "Contact" %}
-{% set pageDescription = "You can contact Trevor Saint on 07783 809 087 if you need any design, development, photography or general IT consultancy." %}
+{% set pageDescription = "Contact Trevor Saint on 07783 809 087 if you need any design, development, photography or general IT consultancy." %}
 {% set pageUrl         = "contact" %}
 {% set pageId          = "contact" %}
 
+
 {% extends "layout.njk" %}
+
 
 {% block content %}
 
-    <section class="padding-top-xs padding-bottom-md padding-bottom-lg@sm padding-bottom-xxl@md padding-bottom-xxxxl@lg">
 
-      <div class="container">
+  <section class="padding-top-xs padding-bottom-md padding-bottom-lg@sm padding-bottom-xxl@md padding-bottom-xxxxl@lg">
 
-        <div class="max-width-md">
+    <div class="container">
 
-          <h1 class="heading-xxxl margin-bottom-xxs margin-bottom-xs@md margin-bottom-lg@lg">Contact</h1>
+      <div class="max-width-md">
 
-          <div class="text-component color-contrast-medium body-lg">
-            <p>Do you have a project in mind? Call <strong>07783 809 087</strong>.</p>
-          </div>
+        <h1 class="heading-xxxl margin-bottom-xxs margin-bottom-xs@md margin-bottom-lg@lg">Contact</h1>
+
+        <div class="text-component color-contrast-medium body-lg">
+          <p>Do you have a project in mind? Call <strong>07783 809 087</strong>.</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section class="padding-bottom-md padding-bottom-lg@sm padding-bottom-xxl@md padding-bottom-xxxxl@lg">
+
+    <div class="container">
+
+      <h2 class="heading-xl padding-bottom-xxs margin-bottom-xs margin-bottom-lg@sm border-offscreen">Send message</h2>
+
+      <div class="grid gap-sm">
+
+        <div class="col-7@sm">
+
+          <form class="form js-form" name="contact-form" method="POST" autocomplete="off" action="https://getform.io/f/4661de5c-67d9-4fdd-b5ee-07724cf3f899">
+
+              <div class="margin-bottom-sm">
+                <label class="form__label" for="name">Name</label>
+                <span class="form__error-message is-hidden" id="name-error">Enter your name</span>
+                <input class="form__control" id="name" name="name">
+              </div>
+
+              <div class="margin-bottom-sm">
+                <label class="form__label" for="email">Email</label>
+                <span class="form__error-message is-hidden" id="email-error">Enter an email address, like name@example.com</span>
+                <input class="form__control" id="email" name="email" type="email">
+              </div>
+
+              <div class="margin-bottom-sm">
+                <label class="form__label" for="message">Message</label>
+                <span class="form__error-message is-hidden" id="message-error">Enter your message</span>
+                <textarea class="form__control" id="message" name="message" rows="8"></textarea>
+              </div>
+
+              <div class="is-hidden margin-bottom-sm">
+                <label class="form__label" for="bot">Don’t fill this out if you’re human</label>
+                <input class="form__control" id="bot" name="bot">
+              </div>
+
+              <button class="button button--full-width" type="submit">
+                <span class="button__label">Send your message</span>
+              </button>
+
+          </form>
 
         </div>
 
       </div>
 
-    </section>
+    </div>
 
-    <section class="padding-bottom-md padding-bottom-lg@sm padding-bottom-xxl@md padding-bottom-xxxxl@lg">
+  </section>
 
-      <div class="container">
-
-        <h2 class="heading-xl padding-bottom-xxs margin-bottom-xs margin-bottom-lg@sm border-offscreen">Send message</h2>
-
-        <div class="grid gap-sm">
-
-          <div class="col-7@sm">
-
-            <form class="form js-form" name="contact-form" method="POST" autocomplete="off" action="https://getform.io/f/4661de5c-67d9-4fdd-b5ee-07724cf3f899">
-
-                <div class="margin-bottom-sm">
-                  <label class="form__label" for="name">Name</label>
-                  <span class="form__error-message is-hidden" id="name-error">Enter your name</span>
-                  <input class="form__control" id="name" name="name">
-                </div>
-
-                <div class="margin-bottom-sm">
-                  <label class="form__label" for="email">Email</label>
-                  <span class="form__error-message is-hidden" id="email-error">Enter an email address, like name@example.com</span>
-                  <input class="form__control" id="email" name="email" type="email">
-                </div>
-
-                <div class="margin-bottom-sm">
-                  <label class="form__label" for="message">Message</label>
-                  <span class="form__error-message is-hidden" id="message-error">Enter your message</span>
-                  <textarea class="form__control" id="message" name="message" rows="8"></textarea>
-                </div>
-
-                <div class="is-hidden margin-bottom-sm">
-                  <label class="form__label" for="bot">Don’t fill this out if you’re human</label>
-                  <input class="form__control" id="bot" name="bot">
-                </div>
-
-                <button class="button button--full-width" type="submit">
-                  <span class="button__label">Send your message</span>
-                </button>
-
-            </form>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
 
 {% endblock %}

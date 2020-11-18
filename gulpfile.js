@@ -17,6 +17,8 @@ const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
 const uniqId = require('uniqid');
 const cacheBust = require('gulp-cache-bust');
+const stylelint = require('gulp-stylelint');
+
 const configPaths = require('./config/paths.json');
 
 
@@ -26,19 +28,31 @@ function clean() {
 };
 
 
-// Check for errors with SASS files
+// Style linter
 function lint() {
-  return (
-    gulp
-      .src([
-        configPaths.source + '**/*.scss'
-      ])
-      .pipe(sasslint({
-        configFile: configPaths.config + '.sass-lint.yml'
-      }))
-      .pipe(sasslint.format())
-      .pipe(sasslint.failOnError())
-    )
+
+  const stylelintConfig = {
+    'extends': 'stylelint-config-recommended',
+    'rules': {
+      'at-rule-no-unknown': [
+        true,
+        {
+          'ignoreAtRules': ['extend', 'include', 'mixin', 'function', 'if', 'else', 'each', 'return', 'for']
+        }
+      ]
+    }
+  };
+
+  return gulp
+    .src('src/**/*.scss')
+    .pipe(stylelint({
+      config: stylelintConfig,
+      reporters: [{
+        formatter: 'string',
+        console: true
+      }]
+  }));
+
 };
 
 
@@ -187,6 +201,7 @@ function watch() {
   ], styles)
   gulp.watch (configPaths.javascripts + '**/*.js', scripts)
   gulp.watch (configPaths.images + '**/*.+(svg|png|jpg|jpeg|gif|webp)', images)
+  gulp.watch (configPaths.views + '**/*.+(html|njk)', nunjucks)
 }
 
 

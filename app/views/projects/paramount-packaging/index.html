@@ -3,20 +3,27 @@
 {% set pageUrl         = "projects/paramount-packaging" %}
 {% set pageId          = "projects" %}
 
+
 {% extends "layout.njk" %}
+
 
 {% block content %}
 
+
   <section class="padding-top-xs">
 
+
     <div class="container">
+
 
       {{ backLink({
         "url": rootPath + 'projects',
         "text": 'Back to projects'
       }) }}
 
+
       <h1 class="heading-xxl margin-y-sm margin-y-lg@sm">Redesigning the look and feel throughout for Paramount</h1>
+
 
       <div class="hero">
         <picture>
@@ -25,6 +32,7 @@
           <img height="800" width="1200" src="{{rootPath}}images/projects/paramount-packaging/hero.png" loading="lazy" alt="A preview of Paramount Packaging on an iMac screen">
         </picture>
       </div>
+
 
       <div class="flex@sm justify-between items-start margin-top-md">
 
@@ -67,6 +75,7 @@
         </p>
 
       </div>
+
 
       <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
 
@@ -211,6 +220,7 @@
 
       </div>
 
+
       <figure class="figure">
         <div class="bg-contrast-lower media-wrapper media-wrapper--16:9">
           <picture>
@@ -221,6 +231,7 @@
         </div>
         <figcaption class="figure__caption margin-top-xxs">Styleguide includes design foundations</figcaption>
       </figure>
+
 
       <figure class="figure margin-top-lg">
         <div class="bg-contrast-lower media-wrapper media-wrapper--16:9">
@@ -233,6 +244,7 @@
         <figcaption class="figure__caption margin-top-xxs">Styleguide includes designed components</figcaption>
       </figure>
 
+
       <figure class="figure margin-top-lg">
         <div class="bg-contrast-lower media-wrapper media-wrapper--16:9">
           <picture>
@@ -244,23 +256,22 @@
         <figcaption class="figure__caption margin-top-xxs">Home page design utilising styleguide assets</figcaption>
       </figure>
 
+
       <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
 
-        <div class="grid gap-xs">
+        <div class="container text-component max-width-sm">
 
-          <div class="col-7@sm offset-1@sm">
-            <div class="text-component">
-              <h2>Managing their content</h2>
-              <div class="color-contrast-medium">
-                <p>ExpressionEngine was the content management system of choice. It’s incredibly flexible, secure, and was a perfect fit for Paramount. Everything was built from the ground up to allow them and their marketing company to manage and control all their website content.</p>
-                <p>They have the ability to manage news, machines, pack styles, employees and anything else that did not require design intervention.</p>
-              </div>
-            </div>
+          <h2>Managing their content</h2>
+
+          <div class="color-contrast-medium">
+            <p>ExpressionEngine was the content management system of choice. It’s incredibly flexible, secure, and was a perfect fit for Paramount. Everything was built from the ground up to allow them and their marketing company to manage and control all their website content.</p>
+            <p>They have the ability to manage news, machines, pack styles, employees and anything else that did not require design intervention.</p>
           </div>
 
         </div>
 
       </div>
+
 
       <figure class="figure">
         <div class="bg-contrast-lower media-wrapper media-wrapper--16:9">
@@ -273,31 +284,30 @@
         <figcaption class="figure__caption margin-top-xxs">Client management of online content</figcaption>
       </figure>
 
+
       <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg border-bottom">
 
-        <div class="grid gap-xs">
+        <div class="container text-component max-width-sm">
 
-          <div class="col-7@sm offset-1@sm">
-            <div class="text-component">
-              <h2>The results</h2>
-              <div class="color-contrast-medium">
-                <p>I delivered a website, which was exactly what Paramount Packaging were looking for. This met the needs of the client, their marketing team, and more importantly, their customers.</p>
-                <p class="font-bold">This includes:</p>
-                <ul>
-                  <li>design and development</li>
-                  <li>photography and videography</li>
-                  <li>MailChimp integration</li>
-                  <li>ExpressionEngine integration</li>
-                  <li>mobile friendly design</li>
-                  <li>continued support and maintenance</li>
-                </ul>
-              </div>
-            </div>
+          <h2>The results</h2>
+
+          <div class="color-contrast-medium">
+            <p>I delivered a website, which was exactly what Paramount Packaging were looking for. This met the needs of the client, their marketing team, and more importantly, their customers.</p>
+            <p class="font-bold">This includes:</p>
+            <ul>
+              <li>design and development</li>
+              <li>photography and videography</li>
+              <li>MailChimp integration</li>
+              <li>ExpressionEngine integration</li>
+              <li>mobile friendly design</li>
+              <li>continued support and maintenance</li>
+            </ul>
           </div>
 
         </div>
 
       </div>
+
 
       <div class="padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
 
@@ -349,6 +359,7 @@
 
       </div>
 
+
       <div class="padding-bottom-md padding-bottom-lg@sm padding-bottom-xxl@md padding-bottom-xxxxl@lg">
 
         {{ previousNextLinks({
@@ -370,8 +381,11 @@
 
       </div>
 
+
     </div>
 
+
   </section>
+
 
 {% endblock %}

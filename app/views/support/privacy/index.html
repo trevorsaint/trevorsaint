@@ -3,76 +3,79 @@
 {% set pageUrl         = "support/privacy" %}
 {% set pageId          = "privacy" %}
 
+
 {% extends "layout.njk" %}
+
 
 {% block content %}
 
-    <section class="padding-top-xs padding-bottom-md padding-bottom-lg@sm padding-bottom-xxl@md padding-bottom-xxxxl@lg">
+  <section class="padding-top-xs padding-bottom-md padding-bottom-lg@sm padding-bottom-xxl@md padding-bottom-xxxxl@lg">
 
-      <div class="container">
+    <div class="container">
 
-        <div class="grid gap-xs justify-between">
+      <div class="grid gap-xs justify-between">
 
-          <div class="col-8@sm">
+        <div class="col-8@sm">
 
-            <h1 class="heading-xxxl margin-bottom-xxs margin-bottom-xs@md margin-bottom-lg@lg">Privacy</h1>
+          <h1 class="heading-xxxl margin-bottom-xxs margin-bottom-xs@md margin-bottom-lg@lg">Privacy</h1>
 
-            <div class="text-component">
+          <div class="text-component">
 
-              <p class="font-bold">The personal data I collect from you includes:</p>
+            <p class="font-bold">The personal data I collect from you includes:</p>
 
-              <ul>
-                <li>questions or queries you leave including your email address if you contact me</li>
-                <li>your Internet Protocol (IP) address, and the details of which version of web browser you used</li>
-                <li>information on how you use the site, using <a class="link link--underline" href="{{rootPath}}support/cookies">cookies</a> and page tagging techniques</li>
-              </ul>
+            <ul>
+              <li>questions or queries you leave including your email address if you contact me</li>
+              <li>your Internet Protocol (IP) address, and the details of which version of web browser you used</li>
+              <li>information on how you use the site, using <a class="link link--underline" href="{{rootPath}}support/cookies">cookies</a> and page tagging techniques</li>
+            </ul>
 
-              <h2>Why I need it</h2>
+            <h2>Why I need it</h2>
 
-              <p>I use Google Analytics software to collect information about how you use https://trevorsaint.uk. I do this to help make sure the site is meeting the needs of its users and to help make improvements.</p>
+            <p>I use Google Analytics software to collect information about how you use https://trevorsaint.uk. I do this to help make sure the site is meeting the needs of its users and to help make improvements.</p>
 
-              <p class="font-bold">Google Analytics stores information about:</p>
+            <p class="font-bold">Google Analytics stores information about:</p>
 
-              <ul>
-                <li>the pages you visit</li>
-                <li>how long you spend on each page</li>
-                <li>how you got to the site</li>
-                <li>what you click on while you’re visiting the site</li>
-              </ul>
+            <ul>
+              <li>the pages you visit</li>
+              <li>how long you spend on each page</li>
+              <li>how you got to the site</li>
+              <li>what you click on while you’re visiting the site</li>
+            </ul>
 
-              <h2>What I do with your data</h2>
+            <h2>What I do with your data</h2>
 
-              <p class="font-bold">I will not:</p>
+            <p class="font-bold">I will not:</p>
 
-              <ul>
-                <li>sell or rent your data to third parties</li>
-                <li>share your data with third parties for marketing purposes</li>
-              </ul>
+            <ul>
+              <li>sell or rent your data to third parties</li>
+              <li>share your data with third parties for marketing purposes</li>
+            </ul>
 
-              <p>I will share your data if I am required to do so by law - for example, by court order, or to prevent fraud or other crime.</p>
-
-            </div>
-
-          </div>
-
-          <div class="col-3@sm">
-
-            <aside class="border-top border-primary border-4">
-
-              <ul class="list margin-top-xs">
-                <li class="list__item"><a class="link link--underline" href="{{rootPath}}support/accessibility"{% if pageId == "accessibility" %} aria-current="true"{% endif %}>Accessibility</a></li>
-                <li class="list__item"><a class="link link--underline" href="{{rootPath}}support/privacy"{% if pageId == "privacy" %} aria-current="true"{% endif %}>Privacy</a></li>
-                <li class="list__item"><a class="link link--underline" href="{{rootPath}}support/cookies"{% if pageId == "cookies" %} aria-current="true"{% endif %}>Cookies</a></li>
-              </ul>
-
-            </aside>
+            <p>I will share your data if I am required to do so by law - for example, by court order, or to prevent fraud or other crime.</p>
 
           </div>
 
         </div>
 
+        <div class="col-3@sm">
+
+          <aside class="border-top border-primary border-4">
+
+            <ul class="list margin-top-xs">
+              <li class="list__item"><a class="link link--underline" href="{{rootPath}}support/accessibility"{% if pageId == "accessibility" %} aria-current="true"{% endif %}>Accessibility</a></li>
+              <li class="list__item"><a class="link link--underline" href="{{rootPath}}support/privacy"{% if pageId == "privacy" %} aria-current="true"{% endif %}>Privacy</a></li>
+              <li class="list__item"><a class="link link--underline" href="{{rootPath}}support/cookies"{% if pageId == "cookies" %} aria-current="true"{% endif %}>Cookies</a></li>
+            </ul>
+
+          </aside>
+
+        </div>
+
       </div>
 
-    </section>
+    </div>
+
+  </section>
+
 
 {% endblock %}
