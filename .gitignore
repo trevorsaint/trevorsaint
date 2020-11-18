@@ -3,6 +3,7 @@ sass-cache
 .DS_Store
 public
 build
+application
 dist
 .vscode
 settings.json
