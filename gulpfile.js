@@ -7,7 +7,6 @@ const nodemon = require('gulp-nodemon');
 const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
 const purgecss = require('gulp-purgecss');
-const sasslint = require('gulp-sass-lint');
 const htmlmin = require('gulp-htmlmin');
 const rename = require('gulp-rename');
 const autoprefixer = require('autoprefixer');

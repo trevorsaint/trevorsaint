@@ -34,10 +34,10 @@
     "gulp-purgecss": "^3.0.0",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^4.1.0",
-    "gulp-sass-lint": "^1.4.0",
     "gulp-stylelint": "^13.0.0",
     "gulp-uglify": "^3.0.2",
     "nunjucks": "^3.2.2",
+    "stylelint": "^13.8.0",
     "stylelint-config-recommended": "^3.0.0",
     "uniqid": "^5.2.0"
   }
