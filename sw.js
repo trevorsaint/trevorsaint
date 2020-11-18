@@ -112,7 +112,6 @@ var filesToCache = [
   // Census 2021 images
   '/images/projects/census-2021/feature.png',
   '/images/projects/census-2021/feature@2x.png',
-  '/images/projects/census-2021/feature@3x.png',
 
   '/images/projects/census-2021/hero.png',
   '/images/projects/census-2021/hero@2x.png',
