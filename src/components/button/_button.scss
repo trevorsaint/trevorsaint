@@ -15,10 +15,7 @@ Buttons
   cursor: pointer;
   display: inline-flex;
   font-weight: var(--font-semibold);
-  padding-bottom: calc(var(--space-xxxs) + var(--space-xxxxs));
-  padding-left: var(--space-xxs);
-  padding-right: var(--space-xxs);
-  padding-top: calc(var(--space-xxxs) + var(--space-xxxxs));
+  padding: var(--space-xxxs) var(--space-xxs);
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
