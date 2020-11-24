@@ -17,17 +17,21 @@ const config = require('./app/config.js');
 const routes = require('./app/routes.js');
 
 
+// Paths
+const configPaths = require('./config/paths.json');
+
+
 // Port
 const port = process.env.PORT || config.port;
 
 
 // Setup application
 const appViews = [
-	path.join(__dirname, '/app/views'),
-	path.join(__dirname, '/app/views/layouts'),
-  path.join(__dirname, '/app/views/partials'),
-  path.join(__dirname, '/src'),
-  path.join(__dirname, '/src/components')
+	path.join(__dirname, configPaths.views),
+	path.join(__dirname, configPaths.layouts),
+  path.join(__dirname, configPaths.partials),
+  path.join(__dirname, configPaths.source),
+  path.join(__dirname, configPaths.components)
 ];
 
 
@@ -52,7 +56,7 @@ app.use(bodyParser.urlencoded({
 
 
 // Middleware to serve static assets
-app.use('/', express.static(path.join(__dirname, 'public')));
+app.use('/', express.static(path.join(__dirname, configPaths.public)));
 
 
 // Use routes

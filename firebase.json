@@ -1,7 +1,7 @@
 {
   "hosting": {
 
-    "public": "application",
+    "public": "prod",
 
     "ignore": [
       "firebase.json",
@@ -16,10 +16,22 @@
         "value": "*"
       } ]
     }, {
+      "source": "**/*.html",
+      "headers": [ {
+        "key": "Cache-Control",
+        "value": "max-age=0, no-cache"
+      } ]
+    }, {
       "source": "**/*.@(jpg|jpeg|gif|png|webp)",
       "headers": [ {
         "key": "Cache-Control",
-        "value": "max-age=7200"
+        "value": "max-age=3300"
+      } ]
+    }, {
+      "source": "**/*.@(css|js)",
+      "headers": [ {
+        "key": "Cache-Control",
+        "value": "max-age=3500"
       } ]
     }, {
       "source": "404.html",
