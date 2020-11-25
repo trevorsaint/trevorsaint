@@ -3,7 +3,7 @@
     <span class="skip-link__label">Skip to main content</span>
   </a>
 
-  <header class="header js-header">
+  <header class="header js-header" role="banner">
 
     <div class="header__container container">
 
@@ -26,7 +26,7 @@
         </svg>
       </button>
 
-      <nav class="header__nav js-header__nav" id="header-nav" aria-label="Main navigation">
+      <nav class="header__nav js-header__nav" id="header-nav" role="navigation" aria-label="Main navigation">
         <div class="header__nav-inner">
           <ul class="header__list">
             <li class="header__item"><a class="header__link" href="{{rootPath}}"{% if pageId == 'home' %} aria-current="true"{% endif %}>Home</a></li>
