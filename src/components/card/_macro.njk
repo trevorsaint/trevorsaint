@@ -4,19 +4,13 @@
 
     <div class="card__image media-wrapper media-wrapper--3:2">
 
-      <figure aria-hidden="true">
-
-        <a href="{{ params.url }}" tabindex="-1">
-
-          <picture>
-            <source type="image/webp" srcset="{{ params.image.src }}.webp, {{ params.image.src }}@2x.webp 2x">
-            <source type="image/png" srcset="{{ params.image.src }}.png, {{ params.image.src }}@2x.png 2x">
-            <img height="392" width="588" src="{{ params.image.src }}.png" loading="lazy" alt="{{ params.image.alt }}">
-          </picture>
-
-        </a>
-
-      </figure>
+      <a href="{{ params.url }}" tabindex="-1">
+        <picture>
+          <source type="image/webp" srcset="{{ params.image.src }}.webp, {{ params.image.src }}@2x.webp 2x">
+          <source type="image/png" srcset="{{ params.image.src }}.png, {{ params.image.src }}@2x.png 2x">
+          <img height="392" width="588" src="{{ params.image.src }}.png" loading="lazy" alt="{{ params.image.alt }}">
+        </picture>
+      </a>
 
     </div>
 

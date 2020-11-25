@@ -117,7 +117,7 @@ function nunjucks() {
           rootPath: '/'
         },
       }))
-      .pipe(gulp.dest('./public'))
+      .pipe(gulp.dest(configPaths.public))
     )
 };
 
