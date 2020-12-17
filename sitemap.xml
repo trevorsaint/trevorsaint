@@ -38,19 +38,7 @@
 </url>
 
 <url>
-  <loc>https://trevorsaint.uk/support/accessibility/</loc>
-  <lastmod>2020-11-10T16:08:55+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-
-<url>
-  <loc>https://trevorsaint.uk/support/privacy/</loc>
-  <lastmod>2020-11-10T16:08:55+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-
-<url>
-  <loc>https://trevorsaint.uk/support/cookies/</loc>
+  <loc>https://trevorsaint.uk/accessibility/</loc>
   <lastmod>2020-11-10T16:08:55+00:00</lastmod>
   <priority>0.80</priority>
 </url>

@@ -1,0 +1,64 @@
+{% set pageTitle       = "Accessibility" %}
+{% set pageDescription = "Trevor Saint wants as many people as possible to be able to use his website, which is why accessibility plays a big part in both design and development." %}
+{% set pageUrl         = "accessibility" %}
+{% set pageId          = "accessibility" %}
+
+
+{% extends "layout.njk" %}
+
+
+{% block content %}
+
+
+  <section class="padding-top-xs padding-bottom-md padding-bottom-lg@sm padding-bottom-xxl@md padding-bottom-xxxxl@lg">
+
+    <div class="container">
+
+      <div class="max-width-lg">
+
+        <h1 class="heading-xxxl margin-bottom-xxs margin-bottom-xs@md margin-bottom-lg@lg">Accessibility</h1>
+
+        <div class="text-component">
+
+          <p>This website is run by Trevor Saint. I want as many people as possible to be able to use this website.</p>
+
+          <p class="font-bold">For example, that means you should be able to:</p>
+
+          <ul>
+            <li>change colours, contrast levels and fonts</li>
+            <li>zoom in up to 300% without the text spilling off the screen</li>
+            <li>navigate most of the website using just a keyboard</li>
+            <li>navigate most of the website using speech recognition software</li>
+            <li>listen to most of the website using a screen reader (including the most recent versions of JAWS, NVDA and VoiceOver)</li>
+          </ul>
+
+          <p><a class="link link--underline" href="https://mcmw.abilitynet.org.uk" rel="external">AbilityNet</a> has advice on making your device easier to use if you have a disability.</p>
+
+          <h2>Reporting accessibility problems</h2>
+
+          <p>If you find any problems that are not listed on this page or you think I’m not meeting the accessibility requirements, <a class="link link--underline" href="{{rootPath}}contact">contact me</a></p>
+
+          <h2>Enforcement procedure</h2>
+
+          <p>If you contact me with a complaint and you’re not happy with my response contact the <a class="link link--underline" href="https://www.equalityadvisoryservice.com" rel="external">Equality Advisory and Support Service (EASS)</a></p>
+
+          <p>The Equality and Human Rights Commission (EHRC) is responsible for enforcing the Public Sector Bodies (Websites and Mobile Applications) (No. 2) Accessibility Regulations 2018 (the ‘accessibility regulations’).</p>
+
+          <h2>Technical information</h2>
+
+          <p>Trevor Saint is committed to making his website accessible, in accordance with the Public Sector Bodies (Websites and Mobile Applications) (No. 2) Accessibility Regulations 2018.</p>
+
+          <h2>Compliance status</h2>
+
+          <p>This website is fully compliant with the <a class="link link--underline" href="https://www.w3.org/TR/WCAG21" rel="external">Web Content Accessibility Guidelines version 2.1</a> AA standard.</p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+{% endblock %}

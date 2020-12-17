@@ -60,16 +60,8 @@ routes.post('/contact/thank-you', function(req, res) {
   res.render('contact/thank-you/index');
 });
 
-routes.get('/support/cookies', function(req, res) {
-  res.render('support/cookies/index');
-});
-
-routes.get('/support/privacy', function(req, res) {
-  res.render('support/privacy/index');
-});
-
-routes.get('/support/accessibility', function(req, res) {
-  res.render('support/accessibility/index');
+routes.get('/accessibility', function(req, res) {
+  res.render('accessibility/index');
 });
 
 // Page not found
