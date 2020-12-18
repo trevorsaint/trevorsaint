@@ -14,8 +14,7 @@ const cssnano = require('cssnano');
 const nunjucksRender = require('gulp-nunjucks-render');
 const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
-const uniqId = require('uniqid');
-const cacheBust = require('gulp-cache-bust');
+const version = require('gulp-version-number');
 const stylelint = require('gulp-stylelint');
 
 const configPaths = require('./config/paths.json');
@@ -122,17 +121,18 @@ function nunjucks() {
 };
 
 
-// Cache
+// Cachebust
 function cache() {
-
-  var versionNumber = uniqId();
 
   return (
     gulp
       .src(configPaths.public + '**/*.html')
-      .pipe(cacheBust({
-        type: 'constant',
-        value: versionNumber
+      .pipe(version({
+        value: '%DT%',
+        append: {
+          key: 'cachebust',
+          to: ['css', 'js'],
+        }
       }))
       .pipe(gulp.dest(configPaths.public))
   )
