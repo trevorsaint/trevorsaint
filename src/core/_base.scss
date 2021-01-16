@@ -1,8 +1,8 @@
-/* --------------------------------
+// --------------------------------
 
-Base
+// Base
 
--------------------------------- */
+// --------------------------------
 
 
 html {
@@ -24,18 +24,17 @@ html {
     466px auto;
 
   background-repeat: no-repeat;
-  // background-attachment: fixed;
   font-size: 100%;
   font-weight: var(--font-normal);
-  min-height: 100%; // Ensure page fills entire viewport
-  overflow-x: hidden; // Prevent horizontal scrolling
-  position: relative; // For background svg positioning
+  min-height: 100%; // ensure page fills entire viewport
+  overflow-x: hidden; // prevent horizontal scrolling
+  position: relative; // for background svg positioning
 
-  // Fix fonts that render as bold in Firefox - https://www.lockedownseo.com/firefox-font-weight-too-bold
+  // fix fonts that render as bold in Firefox - https://www.lockedownseo.com/firefox-font-weight-too-bold
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 
-  // Background adjustment at large breakpoint
+  // background adjustment at large breakpoint
   @include breakpoint(lg) {
 
     background-position:
@@ -51,7 +50,7 @@ html {
 }
 
 
-// Optional - enable smooth scrolling
+// optional - enable smooth scrolling
 @media screen and (prefers-reduced-motion: no-preference) {
   html {
     scroll-behavior: smooth;
@@ -64,13 +63,13 @@ body {
   color: var(--color-contrast-high);
   font-family: var(--font-secondary);
   font-weight: var(--font-regular);
-  overflow-x: hidden; // Prevent horizontal scrolling
+  overflow-x: hidden; // prevent horizontal scrolling
 }
 
 
 @include breakpoint(xl) {
 
-  // Styled scrollbars -- https://css-tricks.com/the-current-state-of-styling-scrollbars
+  // styled scrollbars -- https://css-tricks.com/the-current-state-of-styling-scrollbars
   body::-webkit-scrollbar {
     width: var(--space-xxs);
   }

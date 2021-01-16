@@ -1,8 +1,8 @@
-/* --------------------------------
+// --------------------------------
 
-Previous / Next Links
+// Previous / Next Links
 
--------------------------------- */
+// --------------------------------
 
 
 .pn-links {
@@ -13,34 +13,28 @@ Previous / Next Links
 
 .pn-links__item {
   display: block;
+  padding: var(--space-md);
+
+  position: relative;
 }
 
 
 .pn-links__item:first-child {
-
-  .pn-links__link {
-    border-bottom: 1px solid alpha(var(--color-black), .2);
-  }
-
+  border-bottom: 1px solid alpha(var(--color-black), .2);
 }
 
 
 .pn-links__link {
-  align-items: start;
+  @include link-common;
+  @include link-style-text;
+  align-items: flex-start;
   color: inherit;
   display: flex;
-  height: 100%;
-  padding: var(--space-md);
-  text-decoration: none;
 
-  &:hover {
-    background-color: alpha(var(--color-black), 0.05);
-    text-decoration: underline;
-  }
-
-  &:focus {
-    background-color: var(--color-tertiary);
-    color: var(--color-contrast-high);
+  // trick to make whole area clickable
+  &::after {
+    content: "";
+    position: absolute; left: 0; right: 0; bottom: 0; top: 0;
   }
 
 }
@@ -53,7 +47,7 @@ Previous / Next Links
 
 @include breakpoint(md) {
 
-  .pn-links__item:first-child .pn-links__link {
+  .pn-links__item:first-child {
     border-bottom: none;
     border-right: 1px solid alpha(var(--color-black), .2);
   }

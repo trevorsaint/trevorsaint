@@ -1,8 +1,8 @@
-/* --------------------------------
+// --------------------------------
 
-Reset
+// Reset
 
--------------------------------- */
+// --------------------------------
 
 
 *,
@@ -140,14 +140,14 @@ select {
 }
 
 
-// Fix unwanted button padding in Firefox
+// remove unwanted padding from buttons in Firefox
 button::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
 
 
-// Reset style of buttons + form controls
+// reset style of buttons + form controls
 button,
 input,
 select,
@@ -162,9 +162,8 @@ textarea {
 }
 
 
-// Hide Select default icon on IE
 select::-ms-expand {
-  display: none;
+  display: none; // hide Select default icon on IE
 }
 
 
@@ -175,9 +174,8 @@ textarea {
 }
 
 
-// Hide X icon in IE and Edge
 input::-ms-clear {
-  display: none;
+  display: none; // hide X icon in IE and Edge
 }
 
 

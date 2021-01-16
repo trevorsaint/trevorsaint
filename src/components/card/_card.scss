@@ -1,8 +1,8 @@
-/* --------------------------------
+// --------------------------------
 
-Card
+// Card
 
--------------------------------- */
+// --------------------------------
 
 
 .card {
@@ -14,7 +14,7 @@ Card
   background-color: alpha(var(--color-black), 0.05);
   border-radius: var(--radius-lg);
   position: relative;
-  text-align: right; // Added due to shadow cut-off between breakpoints
+  text-align: right; // added due to shadow cut-off between breakpoints
 }
 
 

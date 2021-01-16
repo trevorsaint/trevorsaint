@@ -41,17 +41,18 @@ Accordion
 
   .accordion__header {
     cursor: pointer;
-    text-decoration: underline;
 
-    &:hover {
-      text-decoration: none;
+    span {
+      text-underline-position: under;
+      text-decoration: underline solid var(--color-contrast-high) 1px;
+    }
+
+    &:hover span {
+      text-decoration-thickness: 2px;
     }
 
     &:focus span {
-      background-color: var(--color-tertiary);
-      color: var(--color-contrast-high);
-      box-shadow: 0 0 0 var(--space-xxxxs) var(--color-tertiary);
-      outline: none;
+      @include focused-text;
     }
 
   }

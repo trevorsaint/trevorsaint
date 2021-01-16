@@ -10,7 +10,6 @@ const purgecss = require('gulp-purgecss');
 const htmlmin = require('gulp-htmlmin');
 const rename = require('gulp-rename');
 const autoprefixer = require('autoprefixer');
-const cssnano = require('cssnano');
 const nunjucksRender = require('gulp-nunjucks-render');
 const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
@@ -59,9 +58,8 @@ function styles() {
   return (
     gulp
      .src(configPaths.sass + 'main.scss')
-      .pipe(sass({outputStyle: 'expanded'}))
-      .pipe(gulp.dest(configPaths.stylesheets)) // Creates an expanded version
-      .pipe(postcss([autoprefixer('Last 3 versions'), cssnano()]))
+      .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+      .pipe(postcss([autoprefixer()]))
       .pipe(rename({ suffix: '.min' })) // Creates a minified and autoprefixed version
       .pipe(gulp.dest(configPaths.stylesheets))
     )
@@ -77,11 +75,9 @@ function scripts() {
         configPaths.components + 'header/header.js',
         configPaths.components + 'skip-link/skip-link.js',
         configPaths.components + 'read-more/read-more.js',
-        configPaths.components + 'swipe-content/swipe-content.js',
-        configPaths.components + 'carousel/carousel.js',
         configPaths.components + 'accordion/accordion.js',
         configPaths.components + 'social-sharing/social-sharing.js',
-        configPaths.components + 'forms/forms.js'
+        configPaths.components + 'form/form.js'
       ])
       .pipe(uglify())
       .pipe(concat('scripts.min.js')) // Creates a minified version

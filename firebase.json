@@ -1,14 +1,11 @@
 {
   "hosting": {
-
-    "public": "public",
-
+    "public": "production",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
     ],
-
     "headers": [
       {
         "source": "/**",
@@ -29,10 +26,7 @@
         ]
       }
     ],
-
     "cleanUrls": true,
-
     "trailingSlash": false
-
   }
 }

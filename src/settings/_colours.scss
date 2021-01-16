@@ -1,17 +1,17 @@
-/* --------------------------------
+// --------------------------------
 
-Colours
+// Colours
 
--------------------------------- */
+// --------------------------------
 
 
-// Define HSL color variable
+// define HSL color variable
 @mixin defineColorHSL($color, $hue, $saturation, $lightness){
   #{$color}: unquote("hsl(#{$hue}, #{$saturation}, #{$lightness})");#{$color}-h: #{$hue};#{$color}-s: #{$saturation};#{$color}-l: #{$lightness};
 }
 
 
-// Return color with different opacity value
+// return color with different opacity value
 @function alpha($color, $opacity){
   $color: str-replace($color, "var(");
   $color: str-replace($color, ")");
@@ -22,7 +22,7 @@ Colours
 }
 
 
-// Return color with different lightness value
+// return color with different lightness value
 @function lightness($color, $lightnessMultiplier){
   $color: str-replace($color, "var(");
   $color: str-replace($color, ")");
@@ -33,7 +33,7 @@ Colours
 }
 
 
-// Replace substring with another string
+// replace substring with another string
 @function str-replace($string, $search, $replace: "") {
   $index: str-index($string, $search);
   @if $index {
@@ -45,34 +45,27 @@ Colours
 
 :root, [data-theme="default"] {
 
-  // Primary
+  // primary
   @include defineColorHSL(--color-primary, 338, 87%, 62%);
 
-  // Secondary
+  // secondary
   @include defineColorHSL(--color-secondary, 169, 80%, 75%);
 
-  // Tertiary
+  // tertiary
   @include defineColorHSL(--color-tertiary, 62, 87%, 62%);
 
-  // Quaternary
+  // quaternary
   @include defineColorHSL(--color-quaternary, 315, 58%, 88%);
 
-  // Black + white
+  // black + white
   @include defineColorHSL(--color-black, 0, 0%, 0%);
   @include defineColorHSL(--color-white, 0, 0%, 100%);
 
-  // Color contrasts
+  // color contrasts
   @include defineColorHSL(--color-bg, 0, 0%, 100%);
   @include defineColorHSL(--color-contrast-lower, 0, 0%, 96%);
   @include defineColorHSL(--color-contrast-low, 240, 2%, 83%);
   @include defineColorHSL(--color-contrast-medium, 257, 3%, 41%);
   @include defineColorHSL(--color-contrast-high, 258, 13%, 15%);
-
-  // Error
-  @include defineColorHSL(--color-error-darker, 348, 100%, 35%);
-  @include defineColorHSL(--color-error-dark, 348, 100%, 45%);
-  @include defineColorHSL(--color-error, 348, 100%, 55%);
-  @include defineColorHSL(--color-error-light, 348, 100%, 65%);
-  @include defineColorHSL(--color-error-lighter, 348, 100%, 75%);
 
 }

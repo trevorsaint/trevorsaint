@@ -1,96 +1,71 @@
-/* --------------------------------
+// --------------------------------
 
-Links
+// Links
 
--------------------------------- */
+// --------------------------------
 
 
 @mixin link-common {
-  text-decoration: none;
+  text-underline-position: under;
 
-  &:hover {
-    text-decoration: underline;
+  &:link,
+  &:visited {
+    text-decoration: underline solid var(--color-contrast-high) 1px;
   }
 
-  &:focus {
+  &:hover {
+    text-decoration-thickness: 2px;
+  }
+
+  &:focus,
+  &:active {
     @include focused-text;
   }
 
   &[aria-current] {
     color: var(--color-contrast-high) !important;
     font-weight: var(--font-bold);
+    text-decoration: none;
   }
 
 }
 
 
-// Default link style mixin
+// --------------------------------
 
-// Provides the default unvisited, visited, hover and active states for links.
-// If you use this mixin in a component you must also include the link-common
-// mixin in order to get the focus state.
+// Default link style mixin
+// Provides the default unvisited, visited, hover and active states for links. If you use this mixin in a component you must also include the link-common mixin in order to get the focus state.
+
+// --------------------------------
 
 @mixin link-style-default {
 
   &:link,
   &:visited {
     color: var(--color-primary);
+    text-decoration: underline solid var(--color-primary) 1px;
   }
+
 
   &:hover {
     color: var(--color-contrast-high);
-  }
-
-  &:focus,
-  &:active {
-    color: var(--color-contrast-high);
+    text-decoration-color: var(--color-contrast-high);
+    text-decoration-thickness: 2px;
   }
 
 }
 
 
-// Muted style link mixin
-
-/// Used for secondary links on a page - the link will appear in muted colours
-/// regardless of visited state.
-
-// If you use this mixin in a component you must also include the
-// link-common mixin in order to get the focus state.
-
-@mixin link-style-muted {
-
-  // Override link colour to use text colour
-  &:link,
-  &:visited,
-  &:active {
-    color: var(--color-contrast-medium);
-  }
-
-  &:hover {
-    color: var(--color-contrast-high);
-    text-decoration: underline;
-  }
-
-  // When focussed, the text colour needs to be darker to ensure that colour
-  // contrast is still acceptable
-  &:focus {
-    color: var(--color-contrast-high);
-  }
-
-}
-
+// --------------------------------
 
 // Text style link mixin
+// Overrides the colour of links to match the text colour. Generally used by navigation components, such as breadcrumbs or the back link. If you use this mixin in a component you must also include the link-common mixin in order to get the focus state.
 
-// Overrides the colour of links to match the text colour. Generally used by
-// navigation components, such as breadcrumbs or the back link.
-
-// If you use this mixin in a component you must also include the
-// link-common mixin in order to get the focus state.
+// --------------------------------
 
 @mixin link-style-text {
 
-  // Override link colour to use text colour
+  // override link colour to use text colour
   &:link,
   &:visited,
   &:active,

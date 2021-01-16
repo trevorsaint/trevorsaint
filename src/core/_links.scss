@@ -1,39 +1,13 @@
-/* --------------------------------
+// --------------------------------
 
-Link
+// Links
 
--------------------------------- */
+// --------------------------------
 
 
 .link {
   @include link-common;
   @include link-style-default;
-}
-
-
-.link--underline {
-  display: inline-block;
-  text-decoration: underline;
-
-  // Fine adjustments for icon
-  .icon {
-    position: relative;
-    top: 1px;
-  }
-
-  &:hover,
-  &:focus {
-    text-decoration: none;
-  }
-
-}
-
-
-.link--icon {
-  align-items: center;
-  display: inline-flex;
-  font-weight: var(--font-bold);
-  white-space: nowrap;
 }
 
 
@@ -43,7 +17,16 @@ Link
 }
 
 
-.link-muted {
-  @include link-common;
-  @include link-style-muted;
+.link--icon {
+  align-items: center;
+  display: inline-flex;
+  font-weight: var(--font-bold);
+  white-space: nowrap;
+
+  // finer adjustments for icon
+  .icon {
+    position: relative;
+    top: 1px;
+  }
+
 }

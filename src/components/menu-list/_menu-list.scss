@@ -1,8 +1,8 @@
-/* --------------------------------
+// --------------------------------
 
- Menu list
+// Menu list
 
--------------------------------- */
+// --------------------------------
 
 
 .menu-list {}
@@ -15,9 +15,11 @@
 
 
 .menu-list__link {
+  @include link-common;
+  @include link-style-text;
   display: block;
 
-  // Bigger hit area for mobile devices
+  // bigger hit area for mobile devices
   padding-top: var(--space-xxxs);
   padding-bottom: var(--space-xxxs);
 }

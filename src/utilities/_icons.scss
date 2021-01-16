@@ -1,4 +1,5 @@
 :root {
+  // default icon sizes
   --icon-xxxs: 8px;
   --icon-xxs:  12px;
   --icon-xs:   16px;
@@ -13,7 +14,7 @@
 
 .icon {
   color: inherit;
-  display: block;
+  display: inline-block;
   fill: currentColor;
   flex-shrink: 0;
   height: 1rem;
@@ -23,7 +24,7 @@
 }
 
 
-// Icon size
+// icon size
 .icon--xxxs {
   height: var(--icon-xxxs);
   width: var(--icon-xxxs);
@@ -70,12 +71,28 @@
 }
 
 
-.icon svg {
-  display: block;
+// rotate the icon infinitely
+.icon--is-spinning {
+  animation: icon-spin 1s infinite linear;
+}
+
+@keyframes icon-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 
-// Enable icon colour corrections
+// --------------------------------
+
+// SVG <symbol>
+
+// --------------------------------
+
+// enable icon color corrections
 .icon use {
   color: inherit;
   fill: currentColor;

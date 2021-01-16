@@ -1,8 +1,8 @@
-/* --------------------------------
+// --------------------------------
 
-Header
+// Header
 
--------------------------------- */
+// --------------------------------
 
 
 :root {
@@ -31,7 +31,6 @@ Header
 }
 
 
-// Logo
 .header__logo {
   display: block;
   flex-shrink: 0;
@@ -66,7 +65,12 @@ Header
 }
 
 
-// Navigation
+// --------------------------------
+
+// Header navigation
+
+// --------------------------------
+
 .header__nav {
   background-color: var(--color-bg);
   box-shadow: var(--shadow-lg);
@@ -81,14 +85,14 @@ Header
   overscroll-behavior: contain;
   -webkit-overflow-scrolling: touch;
 
-  // Top header bg + border
+  // top header bg + border
   &::before {
     background: inherit;
     border-bottom: 1px solid var(--color-contrast-low);
     content: "";
     display: block;
     position: sticky;
-    height: var(--header-height); // Same as height of header
+    height: var(--header-height); // same as height of header
     top: 0;
   }
 
@@ -106,7 +110,6 @@ Header
 }
 
 
-// Nav list item
 .header__item {
   display: block;
   margin-bottom: var(--space-xxxs);
@@ -115,13 +118,11 @@ Header
 }
 
 
-// Link within list item
 .header__link {
   @include link-common;
-  @include link-style-muted;
+  @include link-style-text;
   display: inline-block;
   outline-color: var(--color-primary);
-  text-decoration: none;
 
   &[aria-current] {
     color: var(--color-contrast-high);
@@ -139,7 +140,7 @@ Header
 
   }
 
-  // Trick to make full area clickable
+  // trick to make full area clickable
   &::after {
     bottom: 0;
     content: "";
@@ -152,7 +153,6 @@ Header
 }
 
 
-// Active
 .header__trigger[aria-expanded="true"] {
 
   .icon {
@@ -162,7 +162,6 @@ Header
 }
 
 
-// Menu trigger
 .header__trigger {
   margin-left: auto;
   position: relative;
@@ -176,7 +175,7 @@ Header
   .header__nav {
     margin-left: auto;
 
-    // Reset
+    // reset
     background-color: transparent;
     box-shadow: none;
     display: block;
@@ -206,7 +205,7 @@ Header
 
 
   .header__nav-inner {
-    padding: 0; // Reset
+    padding: 0;
   }
 
 
@@ -219,7 +218,7 @@ Header
   .header__item {
     display: flex;
     margin-bottom: 0;
-    padding: 0; // Reset
+    padding: 0;
     padding-bottom: var(--space-xs);
 
     &:not(:first-child) {
@@ -242,7 +241,7 @@ Header
     }
 
     &::after {
-      content: none; // Reset
+      content: none;
     }
 
     &[aria-current] {

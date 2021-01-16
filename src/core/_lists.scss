@@ -1,9 +1,8 @@
-/* --------------------------------
+// --------------------------------
 
-List
-Custom list component
+// Lists
 
--------------------------------- */
+// --------------------------------
 
 
 .list {
@@ -11,7 +10,7 @@ Custom list component
 
   ul,
   ol {
-    margin: 0; // Reset
+    margin: 0;
     padding-left: var(--space-xs);
     padding-top: var(--space-xxxs);
   }
@@ -51,19 +50,24 @@ Custom list component
 }
 
 
-// Unordered list
-.list--ul {
-  --bullet-size: 6px; // Dot width and height
-  --bullet-margin-right: var(--space-xxs); // Gap between bullet and content
+// --------------------------------
 
-  // Bullet
+// Unordered list
+
+// --------------------------------
+
+.list--ul {
+  --bullet-size: 6px; // dot width and height
+  --bullet-margin-right: var(--space-xxs); // gap between bullet and content
+
+  // bullet
   li::before {
     background-color: currentColor;
     border: 2px solid currentColor;
     border-radius: 50%;
-    color: inherit; // Bullet color
+    color: inherit; // bullet color
     content: "";
-    margin-top: calc(-1 * var(--bullet-size) / 2); // Half bullet size
+    margin-top: calc(-1 * var(--bullet-size) / 2); // half bullet size
   }
 
   ul li::before {
@@ -73,10 +77,15 @@ Custom list component
 }
 
 
+// --------------------------------
+
 // Ordered list
+
+// --------------------------------
+
 .list--ol {
-  --bullet-size: 24px; // Circle width and height
-  --bullet-margin-right: var(--space-xxxs); // Ggap between circle and content
+  --bullet-size: 24px; // circle width and height
+  --bullet-margin-right: var(--space-xxxs); // gap between circle and content
 
   counter-reset: list-items;
 
@@ -106,7 +115,7 @@ Custom list component
 }
 
 
-// Badges list
+// badges list
 .list--badges {
   display: flex;
   flex-wrap: wrap;

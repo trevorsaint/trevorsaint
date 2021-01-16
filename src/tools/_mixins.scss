@@ -1,27 +1,27 @@
 // --------------------------------
+
 // Typography
+
 // --------------------------------
 
-// Edit font rendering -> tip: use for light text on dark backgrounds
+// edit font rendering -> tip: use for light text on dark backgrounds
 @mixin fontSmooth {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-
-// Crop top space on text elements - caused by line height
+// crop top space on text elements - caused by line height
 @mixin lhCrop($line-height, $capital-letter: 1) {
   &::before {
-    content: "";
+    content: '';
     display: block;
     height: 0;
-    margin-top: calc((#{$capital-letter} - #{$line-height}) * 0.5em);
     width: 0;
+    margin-top: calc((#{$capital-letter} - #{$line-height}) * 0.5em);
   }
 }
 
-
-// Edit text unit on a component level
+// edit text unit on a component level
 @mixin textUnit($text-unit) {
   --text-unit: #{$text-unit};
   font-size: var(--text-unit);
@@ -29,70 +29,130 @@
 
 
 // --------------------------------
+
 // Spacing
+
 // --------------------------------
 
-// Edit space unit on a component level
+// edit space unit on a component level
 @mixin spaceUnit($space-unit) {
   --space-unit:  #{$space-unit};
 }
 
 
 // --------------------------------
+
 // Reset
+
 // --------------------------------
 
-// Reset user agent style
+// reset user agent style
 @mixin reset {
-  appearance: none;
   background-color: transparent;
+  padding: 0;
   border: 0;
   border-radius: 0;
   color: inherit;
   line-height: inherit;
-  padding: 0;
+  appearance: none;
 }
 
 
 // --------------------------------
-// Accessibility
+
+// Colors
+
 // --------------------------------
 
-// Hide - content made available only to screen readers
+// define HSL color variable
+@mixin defineColorHSL($color, $hue, $saturation, $lightness) {
+  #{$color}: unquote("hsl(#{$hue}, #{$saturation}, #{$lightness})");#{$color}-h: #{$hue};#{$color}-s: #{$saturation};#{$color}-l: #{$lightness};
+}
+
+// return color with different opacity value
+@function alpha($color, $opacity) {
+  $color: str-replace($color, 'var(');
+  $color: str-replace($color, ')');
+  $color-h: var(#{$color+'-h'});
+  $color-s: var(#{$color+'-s'});
+  $color-l: var(#{$color+'-l'});
+  @return hsla($color-h, $color-s, $color-l, $opacity);
+}
+
+// return color with different lightness value
+@function lightness($color, $lightnessMultiplier) {
+  $color: str-replace($color, 'var(');
+  $color: str-replace($color, ')');
+  $color-h: var(#{$color+'-h'});
+  $color-s: var(#{$color+'-s'});
+  $color-l: var(#{$color+'-l'});
+  @return hsl($color-h, $color-s, calc(#{$color-l} * #{$lightnessMultiplier}));
+}
+
+// modify color HSLA values
+@function adjustHSLA($color, $hueMultiplier: 1, $saturationMultiplier: 1, $lightnessMultiplier: 1, $opacity: 1) {
+  $color: str-replace($color, 'var(');
+  $color: str-replace($color, ')');
+  $color-h: var(#{$color+'-h'});
+  $color-s: var(#{$color+'-s'});
+  $color-l: var(#{$color+'-l'});
+  @return hsla(calc(#{$color-h} * #{$hueMultiplier}), calc(#{$color-s} * #{$saturationMultiplier}), calc(#{$color-l} * #{$lightnessMultiplier}), $opacity);
+}
+
+// replace substring with another string
+// credits: https://css-tricks.com/snippets/sass/str-replace-function/
+@function str-replace($string, $search, $replace: '') {
+  $index: str-index($string, $search);
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+  @return $string;
+}
+
+
+// --------------------------------
+
+// Accessibility
+
+// --------------------------------
+
+// hide - content made available only to screen readers
 @mixin srHide {
+  position: absolute;
   clip: rect(1px, 1px, 1px, 1px);
   clip-path: inset(50%);
-  position: absolute;
 }
 
-// Show
+// show
 @mixin srShow {
+  position: static;
   clip: auto;
   clip-path: none;
-  position: static;
 }
 
 
 // --------------------------------
+
 // Grid & Layout
+
 // --------------------------------
 
 $grid-columns: 12 !default;
 
-// Used to round width to a number with 2 decimal places - used for IE fallback
+// used to round width to a number with 2 decimal places - used for IE fallback
 @function round-width ($i) {
   $width : floor(100% * $i * 100/ $grid-columns) / 100;
   @return $width;
 }
 
-// Used to create the auto-size columns of the grid system (.col class)
+// used to create the auto-size columns of the grid system (.col class)
 @mixin autoSizedColumn {
   flex-grow: 1;
   flex-basis: 0;
   max-width: 100%;
 }
 
-// CSS Grid Layout fallback
+// css grid Layout fallback
 @mixin gridFallback($gap: null) {
   display: flex;
   flex-wrap: wrap;
@@ -118,7 +178,7 @@ $grid-columns: 12 !default;
 }
 
 @mixin column($width) {
-  @if unit($width) != "%" {
+  @if unit($width) != '%' {
     $width: $width * 100%;
   }
   flex-basis: #{$width};
@@ -127,13 +187,15 @@ $grid-columns: 12 !default;
 
 
 // --------------------------------
+
 // CSS Triangle
+
 // --------------------------------
 
-@mixin triangle ($direction: up, $width: 8px, $color: red) {
-  border: $width solid transparent;
-  height: 0;
+@mixin triangle ($direction: up, $width: 12px, $color: red) {
   width: 0;
+  height: 0;
+  border: $width solid transparent;
 
   @if( $direction == left ) {
     border-right-color: $color;
@@ -144,5 +206,4 @@ $grid-columns: 12 !default;
   } @else {
     border-bottom-color: $color;
   }
-
 }

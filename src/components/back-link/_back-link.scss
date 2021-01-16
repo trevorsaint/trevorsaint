@@ -1,8 +1,8 @@
-/* --------------------------------
+// --------------------------------
 
-Back link
+// Back link
 
--------------------------------- */
+// --------------------------------
 
 
 .back-link {
@@ -11,13 +11,5 @@ Back link
   align-items: center;
   display: inline-flex;
   left: calc(var(--space-xxxs) * -1);
-  line-height: (24/18); // Line height override
   position: relative;
-  vertical-align: top;
-  text-decoration: underline;
-
-  &:hover {
-    text-decoration: none;
-  }
-
 }

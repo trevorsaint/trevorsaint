@@ -1,5 +1,9 @@
+// default spacing scale
 :root {
   --space-unit:  16px;
+}
+
+:root, * {
   --space-xxxxs: calc(0.25 * var(--space-unit)); // 4px
   --space-xxxs:  calc(0.5 * var(--space-unit));  // 8px
   --space-xxs:   calc(1 * var(--space-unit));    // 16px

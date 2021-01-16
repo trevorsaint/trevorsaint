@@ -1,12 +1,11 @@
-/* --------------------------------
+// --------------------------------
 
-Skip Link
+// Skip link
 
--------------------------------- */
+// --------------------------------
 
 
 .skip-link {
-  @include fontSmooth;
   background-color: var(--color-white);
   color: var(--color-contrast-high);
   display: inline-block;
@@ -14,21 +13,23 @@ Skip Link
   left: var(--space-xxs);
   padding: var(--space-xxxs) var(--space-xxs);
   position: absolute;
+  text-decoration: underline solid var(--color-contrast-high) 1px;
+  text-underline-position: under;
   top: var(--space-xxs);
   z-index: var(--zindex-fixed-element);
 
   &:hover {
-    color: var(--color-primary);
+    text-decoration-thickness: 2px;
   }
 
-  // Hide
+  // hide
   clip: rect(1px, 1px, 1px, 1px);
   clip-path: inset(50%);
 
   &:focus,
   &.skip-link--focus {
 
-    // Show
+    // show
     box-shadow: 0 0 0 var(--space-xxxxs) var(--color-focus);
     clip: auto;
     clip-path: none;
