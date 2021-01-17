@@ -1,0 +1,14 @@
+// --------------------------------
+
+// Assets
+
+// --------------------------------
+
+// path to the assets directory, with trailing slash
+$assets-path: "/" !default;
+
+// path to the images folder, with trailing slash
+$images-path: "#{$assets-path}images/" !default;
+
+// path to the fonts folder, with trailing slash
+$fonts-path: "#{$assets-path}fonts/" !default;

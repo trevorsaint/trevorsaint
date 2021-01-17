@@ -1,11 +1,10 @@
-'use strict';
-
-
 const gulp = require('gulp');
-const del = require('del');
-const nodemon = require('gulp-nodemon');
 const sass = require('gulp-sass');
+const sassGlob = require('gulp-sass-glob');
+const browserSync = require('browser-sync').create();
 const postcss = require('gulp-postcss');
+const cssvariables = require('postcss-css-variables');
+const calc = require('postcss-calc');
 const purgecss = require('gulp-purgecss');
 const htmlmin = require('gulp-htmlmin');
 const rename = require('gulp-rename');
@@ -14,218 +13,192 @@ const nunjucksRender = require('gulp-nunjucks-render');
 const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
 const version = require('gulp-version-number');
-const stylelint = require('gulp-stylelint');
 
+
+// Path configurations
 const configPaths = require('./config/paths.json');
 
 
-// Clean assets
-function clean() {
-  return del(configPaths.public)
+function reload(done) {
+  browserSync.reload();
+  done();
 };
 
 
-// Style linter
-function lint() {
-
-  const stylelintConfig = {
-    'extends': 'stylelint-config-recommended',
-    'rules': {
-      'at-rule-no-unknown': [
-        true,
-        {
-          'ignoreAtRules': ['extend', 'include', 'mixin', 'function', 'if', 'else', 'each', 'return', 'for']
-        }
-      ]
-    }
-  };
-
-  return gulp
-    .src('src/**/*.scss')
-    .pipe(stylelint({
-      config: stylelintConfig,
-      reporters: [{
-        formatter: 'string',
-        console: true
-      }]
-  }));
-
-};
+// Convert the SCSS to CSS and compress it. No fallback for IE is created
+gulp.task('sass', function() {
+  return gulp.src(configPaths.source + '**/*.scss')
+    .pipe(sassGlob())
+    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(postcss([autoprefixer()]))
+    .pipe(gulp.dest(configPaths.stylesheets))
+    .pipe(browserSync.reload({
+      stream: true
+    }));
+});
 
 
-// Compile SASS (vendor prefix, minify and move into pulic)
-function styles() {
-  return (
-    gulp
-     .src(configPaths.sass + 'main.scss')
-      .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-      .pipe(postcss([autoprefixer()]))
-      .pipe(rename({ suffix: '.min' })) // Creates a minified and autoprefixed version
-      .pipe(gulp.dest(configPaths.stylesheets))
-    )
-};
+// Convert the SCSS to CSS and compress it. A fallback for IE (style-fallback.css) is created
+gulp.task('sass-ie', function() {
+  return gulp.src(configPaths.source + 'main.scss')
+    .pipe(sassGlob())
+    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(postcss([autoprefixer()]))
+    .pipe(gulp.dest(configPaths.stylesheets))
+    .pipe(browserSync.reload({
+      stream: true
+    }))
+    .pipe(rename('main-fallback.css'))
+    .pipe(postcss([cssvariables(), calc()]))
+    .pipe(gulp.dest(configPaths.stylesheets))
+});
 
 
-// Compile javascript (concatenation and minification)
-function scripts() {
-  return (
-    gulp
-      .src([
-        configPaths.components + 'util.js',
-        configPaths.components + 'header/header.js',
-        configPaths.components + 'skip-link/skip-link.js',
-        configPaths.components + 'read-more/read-more.js',
-        configPaths.components + 'accordion/accordion.js',
-        configPaths.components + 'social-sharing/social-sharing.js',
-        configPaths.components + 'form/form.js'
-      ])
-      .pipe(uglify())
-      .pipe(concat('scripts.min.js')) // Creates a minified version
-      .pipe(gulp.dest(configPaths.javascripts))
-    )
-};
-
-
-// Move images into public folder
-function images() {
-  return (
-    gulp
-      .src(configPaths.images + '**/*.+(svg|png|jpg|jpeg|gif|webp)')
-      .pipe(gulp.dest(configPaths.public + 'images'))
-  )
-};
+// Concatenate and compress JS
+gulp.task('scripts', function() {
+  return gulp.src([configPaths.scripts + 'util.js', configPaths.components + '**/*.js'])
+    .pipe(concat('main.js'))
+    .pipe(gulp.dest(configPaths.javascripts))
+    .pipe(browserSync.reload({
+      stream: true
+    }))
+    .pipe(rename('main.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest(configPaths.javascripts))
+    .pipe(browserSync.reload({
+      stream: true
+    }));
+});
 
 
 // Render nunjucks templates
-function nunjucks() {
-  return (
-    gulp
-      .src(configPaths.views + '**/*.html')
-      .pipe(nunjucksRender({
-        path: [
-          configPaths.components,
-          configPaths.views,
-          configPaths.layouts,
-          configPaths.partials
-        ],
-        data: {
-          rootPath: '/'
-        },
-      }))
-      .pipe(gulp.dest(configPaths.public))
-    )
-};
+gulp.task('nunjucks', function() {
+  return gulp.src(configPaths.views + '**/*.html')
+    .pipe(nunjucksRender({
+      path: [
+        configPaths.components,
+        configPaths.views,
+        configPaths.layouts,
+        configPaths.partials
+      ],
+      data: {
+        rootPath: '/'
+      }
+    }))
+    .pipe(gulp.dest(configPaths.public))
+    .pipe(browserSync.reload({
+      stream: true
+    }));
+});
 
 
-// Cachebust
-function cache() {
-
-  return (
-    gulp
-      .src(configPaths.public + '**/*.html')
-      .pipe(version({
-        value: '%DT%',
-        append: {
-          key: 'cachebust',
-          to: ['css', 'js'],
-        }
-      }))
-      .pipe(gulp.dest(configPaths.public))
-  )
-
-};
-
-
-// Minify HTML
-function html() {
-  return (
-    gulp
-      .src(configPaths.public + '**/*.html')
-      .pipe(htmlmin({
-        collapseWhitespace: true,
-        removeComments: true
-       }))
-      .pipe(gulp.dest(configPaths.public))
-    )
-};
-
-
-// Remove unused styles
-function css() {
-  return (
-    gulp
-      .src(configPaths.stylesheets + '*.css')
-      .pipe(purgecss({
-        content: [configPaths.public + '**/*.html']
-      }))
-      .pipe(gulp.dest(configPaths.stylesheets))
-  )
-};
-
-
-// Copy meta into build
-function meta() {
-  return (
-    gulp
-      .src([
-        'robots.txt',
-        'manifest.json',
-        'sitemap.xml',
-        'sw.js'
-      ])
-      .pipe(gulp.dest(configPaths.public))
-    )
-};
-
-
-// Copy fonts into build
-function fonts() {
-  return (
-    gulp
-      .src(configPaths.fonts + '**/*.+(woff|woff2)')
-      .pipe(gulp.dest(configPaths.public + 'fonts'))
-  )
-};
-
-
-// Watch task (when a file is changed, re-run the build task)
-function watch() {
-  gulp.watch ([
-    configPaths.sass + 'main.scss',
-    configPaths.source + '**/*.scss',
-  ], styles)
-  gulp.watch (configPaths.javascripts + '**/*.js', scripts)
-  gulp.watch (configPaths.images + '**/*.+(svg|png|jpg|jpeg|gif|webp)', images)
-  gulp.watch (configPaths.views + '**/*.+(html|njk)', nunjucks)
-}
-
-
-// Start server
-function start() {
-  nodemon({
-    script: 'server.js',
-    ignore: 'node_modules',
-    ext: 'js',
+gulp.task('browserSync', gulp.series(function (done) {
+  browserSync.init({
+    server: {
+      baseDir: configPaths.public
+    },
+    notify: false
   })
+  done();
+}));
+
+
+gulp.task('watch', gulp.series(['browserSync', 'sass', 'scripts'], function() {
+  gulp.watch(configPaths.public + '**/*.html', gulp.series(reload));
+  gulp.watch(configPaths.app + '**/*.njk', gulp.series(['nunjucks']));
+  gulp.watch(configPaths.source + '**/*.scss', gulp.series(['sass']));
+  gulp.watch(configPaths.source + '**/*.js', gulp.series(['scripts']));
+}));
+
+
+gulp.task('watch-ie', gulp.series(['browserSync', 'sass-ie', 'scripts'], function() {
+  gulp.watch(configPaths.public + '**/*.html', gulp.series(reload));
+  gulp.watch(configPaths.app + '**/*.njk', gulp.series(['nunjucks']));
+  gulp.watch(configPaths.source + '**/*.scss', gulp.series(['sass-ie']));
+  gulp.watch(configPaths.source + '**/*.js', gulp.series(['scripts']));
+}));
+
+
+// Distribution
+gulp.task('dist', async function() {
+  // Remove unused classes from the style.css file with PurgeCSS
+  await purgeCSS();
+  // Add version number to CSS and JS files
+  await cacheBust();
+  // Minify HTML
+  await minifyHTML();
+  // Move images and fonts
+  await moveAssets();
+  console.log('Distribution task completed!');
+});
+
+
+function purgeCSS() {
+
+  // Configurations - https://www.npmjs.com/package/gulp-purgecss
+  return new Promise(function(resolve, reject) {
+    let stream = gulp.src(configPaths.stylesheets + 'main.css')
+    .pipe(purgecss({
+      content: [configPaths.public + '**/*.html'],
+      safelist: ['is-hidden', 'is-visible'],
+      defaultExtractor: content => content.match(/[\w-/:%@]+(?<!:)/g) || []
+    }))
+    .pipe(gulp.dest(configPaths.stylesheets));
+    stream.on('finish', function() {
+      resolve();
+    });
+  });
+
 };
 
 
-// Define complex tasks
-const build = gulp.series(clean, gulp.parallel(styles, scripts, images, meta, fonts, nunjucks), cache, html);
-const develop = gulp.parallel(watch, start);
+function cacheBust() {
+
+  // Configurations - https://www.npmjs.com/package/gulp-version-number
+  return new Promise(function(resolve, reject) {
+    let stream = gulp.src(configPaths.public + '**/*.html')
+    .pipe(version({
+      value: '%DT%',
+      append: {
+        key: 'cachebust',
+        to: ['css', 'js'],
+      }
+    }))
+    .pipe(gulp.dest(configPaths.public));
+    stream.on('finish', function() {
+      resolve();
+    });
+  });
+
+};
 
 
-exports.clean = clean;
-exports.lint = lint;
-exports.styles = styles;
-exports.scripts = scripts;
-exports.images = images;
-exports.nunjucks = nunjucks;
-exports.css = css;
-exports.html = html;
-exports.meta = meta;
-exports.fonts = fonts;
-exports.watch = watch;
-exports.build = build;
-exports.develop = develop;
-exports.default = develop;
+function minifyHTML() {
+
+  // Configuration - https://www.npmjs.com/package/gulp-htmlmin
+  return new Promise(function(resolve, reject) {
+    let stream = gulp.src(configPaths.public + '**/*.html')
+    .pipe(htmlmin({
+      collapseWhitespace: true,
+      removeComments: true
+    }))
+    .pipe(gulp.dest(configPaths.public));
+    stream.on('finish', function() {
+      resolve();
+    });
+  });
+
+};
+
+
+function moveAssets() {
+
+  return new Promise(function(resolve, reject) {
+    var stream = gulp.src([configPaths.assets + '**/*'], { allowEmpty: true })
+    .pipe(gulp.dest(configPaths.public));
+    stream.on('finish', function() {
+      resolve();
+    });
+  });
+
+};

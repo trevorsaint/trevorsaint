@@ -1,0 +1,46 @@
+// --------------------------------
+
+// Shared styles
+
+// --------------------------------
+
+:root {
+
+  // radius
+  --radius: 4px;
+  --radius-sm: calc(var(--radius)*2); // 8px
+  --radius-md: calc(var(--radius)*3); // 12px
+  --radius-lg: calc(var(--radius)*4); // 16px
+
+  // box shadow
+  --shadow-xs: 0 4px 4px 0 rgba(0, 0, 0, .06), 0 2px 2px 0 rgba(0, 0, 0, .06), 0 0 1px 0 rgba(0, 0, 0, .03);
+  --shadow-sm: 0 8px 8px 0 rgba(0, 0, 0, .06), 0 4px 4px 0 rgba(0, 0, 0, .06), 0 2px 2px 0 rgba(0, 0, 0, .06), 0 0 1px 0 rgba(0, 0, 0, .03);
+  --shadow-md: 0 16px 16px 0 rgba(0, 0, 0, .06), 0 8px 8px 0 rgba(0, 0, 0, .06), 0 4px 4px 0 rgba(0, 0, 0, .06), 0 2px 2px 0 rgba(0, 0, 0, .06), 0 0 1px 0 rgba(0, 0, 0, .03);
+  --shadow-lg: 0 32px 32px 0 rgba(0, 0, 0, .06), 0 16px 16px 0 rgba(0, 0, 0, .06), 0 8px 8px 0 rgba(0, 0, 0, .06), 0 4px 4px 0 rgba(0, 0, 0, .06), 0 2px 2px 0 rgba(0, 0, 0, .06), 0 0 1px 0 rgba(0, 0, 0, .03);
+  --shadow-xl: 0 64px 64px 0 rgba(0, 0, 0, .06), 0 32px 32px 0 rgba(0, 0, 0, .06), 0 16px 16px 0 rgba(0, 0, 0, .06), 0 8px 8px 0 rgba(0, 0, 0, .06), 0 4px 4px 0 rgba(0, 0, 0, .06), 0 2px 2px 0 rgba(0, 0, 0, .06), 0 0 1px 0 rgba(0, 0, 0, .03);
+
+  // font weights
+  --font-thin: 100;
+  --font-extralight: 200;
+  --font-light: 300;
+  --font-normal: 400;
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --font-extrabold: 800;
+  --font-heavy: 900;
+
+  // timing functions
+  --ease-in-out: cubic-bezier(0.645, 0.045, 0.355, 1);
+  --ease-in: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  --ease-out: cubic-bezier(0.215, 0.61, 0.355, 1);
+  --ease-out-back: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  // z-index
+  --zindex-header: 3; // e.g., main header
+  --zindex-popover: 5; // e.g., tooltips and dropdown
+  --zindex-fixed-element: 10; // e.g., 'back to top' button
+  --zindex-overlay: 15; // e.g., modals and dialogs
+
+}

@@ -1,0 +1,467 @@
+// --------------------------------
+
+// Typography
+
+// --------------------------------
+
+// edit font rendering -> tip: use for light text on dark backgrounds
+@mixin fontSmooth {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// crop top space on text elements - caused by line height
+@mixin lhCrop($line-height, $capital-letter: 1) {
+  &::before {
+    content: '';
+    display: block;
+    height: 0;
+    width: 0;
+    margin-top: calc((#{$capital-letter} - #{$line-height}) * 0.5em);
+  }
+}
+
+// edit text unit on a component level
+@mixin textUnit($text-unit) {
+  --text-unit: #{$text-unit};
+  font-size: var(--text-unit);
+}
+
+// --------------------------------
+
+// Spacing
+
+// --------------------------------
+
+// edit space unit on a component level
+@mixin spaceUnit($space-unit) {
+  --space-unit:  #{$space-unit};
+}
+
+// --------------------------------
+
+// Reset
+
+// --------------------------------
+
+// reset user agent style
+@mixin reset {
+  background-color: transparent;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  color: inherit;
+  line-height: inherit;
+  appearance: none;
+}
+
+// --------------------------------
+
+// Colors
+
+// --------------------------------
+
+// define HSL color variable
+@mixin defineColorHSL($color, $hue, $saturation, $lightness) {
+  #{$color}: unquote("hsl(#{$hue}, #{$saturation}, #{$lightness})");#{$color}-h: #{$hue};#{$color}-s: #{$saturation};#{$color}-l: #{$lightness};
+}
+
+// return color with different opacity value
+@function alpha($color, $opacity) {
+  $color: str-replace($color, 'var(');
+  $color: str-replace($color, ')');
+  $color-h: var(#{$color+'-h'});
+  $color-s: var(#{$color+'-s'});
+  $color-l: var(#{$color+'-l'});
+  @return hsla($color-h, $color-s, $color-l, $opacity);
+}
+
+// return color with different lightness value
+@function lightness($color, $lightnessMultiplier) {
+  $color: str-replace($color, 'var(');
+  $color: str-replace($color, ')');
+  $color-h: var(#{$color+'-h'});
+  $color-s: var(#{$color+'-s'});
+  $color-l: var(#{$color+'-l'});
+  @return hsl($color-h, $color-s, calc(#{$color-l} * #{$lightnessMultiplier}));
+}
+
+// modify color HSLA values
+@function adjustHSLA($color, $hueMultiplier: 1, $saturationMultiplier: 1, $lightnessMultiplier: 1, $opacity: 1) {
+  $color: str-replace($color, 'var(');
+  $color: str-replace($color, ')');
+  $color-h: var(#{$color+'-h'});
+  $color-s: var(#{$color+'-s'});
+  $color-l: var(#{$color+'-l'});
+  @return hsla(calc(#{$color-h} * #{$hueMultiplier}), calc(#{$color-s} * #{$saturationMultiplier}), calc(#{$color-l} * #{$lightnessMultiplier}), $opacity);
+}
+
+// replace substring with another string
+// credits: https://css-tricks.com/snippets/sass/str-replace-function/
+@function str-replace($string, $search, $replace: '') {
+  $index: str-index($string, $search);
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+  @return $string;
+}
+
+// --------------------------------
+
+// Accessibility
+
+// --------------------------------
+
+// hide - content made available only to screen readers
+@mixin srHide {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+}
+
+// show
+@mixin srShow {
+  position: static;
+  clip: auto;
+  clip-path: none;
+}
+
+// --------------------------------
+
+// Grid & Layout
+
+// --------------------------------
+
+$grid-columns: 12 !default;
+
+// used to round width to a number with 2 decimal places - used for IE fallback
+@function round-width ($i) {
+  $width : floor(100% * $i * 100/ $grid-columns) / 100;
+  @return $width;
+}
+
+// used to create the auto-size columns of the grid system (.col class)
+@mixin autoSizedColumn {
+  flex-grow: 1;
+  flex-basis: 0;
+  max-width: 100%;
+}
+
+// css grid Layout fallback
+@mixin gridFallback($gap: null) {
+  display: flex;
+  flex-wrap: wrap;
+  @if( $gap == null ) {
+    $gap: var(--space-md);
+  }
+
+  margin: calc(#{$gap} * -1) 0 0 calc(#{$gap} * -1);
+
+  > * {
+    padding: #{$gap} 0 0 #{$gap};
+    background-clip: content-box;
+  }
+
+  @supports (grid-area: auto) {
+    margin: 0;
+
+    > * {
+      padding: 0;
+      max-width: none!important;
+    }
+  }
+}
+
+@mixin column($width) {
+  @if unit($width) != '%' {
+    $width: $width * 100%;
+  }
+  flex-basis: #{$width};
+  max-width: #{$width};
+}
+
+// --------------------------------
+
+// CSS Triangle
+
+// --------------------------------
+
+@mixin triangle ($direction: up, $width: 12px, $color: red) {
+  width: 0;
+  height: 0;
+  border: $width solid transparent;
+
+  @if( $direction == left ) {
+    border-right-color: $color;
+  } @else if( $direction == right ) {
+    border-left-color: $color;
+  } @else if( $direction == down ) {
+    border-top-color: $color;
+  } @else {
+    border-bottom-color: $color;
+  }
+}
+
+// --------------------------------
+
+// Focused text - provides an outline to clearly indicate when the target element is focused.
+
+// --------------------------------
+
+@mixin focused-text {
+
+  // --------------------------------
+
+  // When colours are overridden, for example when users have a dark mode,
+  // backgrounds and box-shadows disappear, so we need to ensure there’s a
+  // transparent outline which will be set to a visible colour.
+
+  // --------------------------------
+
+  background-color: var(--color-tertiary);
+  box-shadow: 0 -2px 0 0 var(--color-tertiary), 0 4px var(--color-black);
+  color: var(--color-contrast-high) !important;
+  text-decoration-line: none !important; // produces no text decoration
+}
+
+// --------------------------------
+
+// Links
+
+// --------------------------------
+
+
+@mixin link-common {
+  text-underline-position: under;
+
+  &:link,
+  &:visited {
+    text-decoration: underline solid var(--color-contrast-high) 1px;
+  }
+
+  &:hover {
+    text-decoration-thickness: 2px;
+  }
+
+  &:focus,
+  &:active {
+    @include focused-text;
+  }
+
+  &[aria-current] {
+    color: var(--color-contrast-high) !important;
+    font-weight: var(--font-bold);
+    text-decoration: none;
+  }
+
+}
+
+// --------------------------------
+
+// Default link style mixin
+// Provides the default unvisited, visited, hover and active states for links. If you use this mixin in a component you must also include the link-common mixin in order to get the focus state.
+
+// --------------------------------
+
+@mixin link-style-default {
+
+  &:link,
+  &:visited {
+    color: var(--color-primary);
+    text-decoration: underline solid var(--color-primary) 1px;
+  }
+
+
+  &:hover {
+    color: var(--color-contrast-high);
+    text-decoration-color: var(--color-contrast-high);
+    text-decoration-thickness: 2px;
+  }
+
+}
+
+// --------------------------------
+
+// Text style link mixin
+// Overrides the colour of links to match the text colour. Generally used by navigation components, such as breadcrumbs or the back link. If you use this mixin in a component you must also include the link-common mixin in order to get the focus state.
+
+// --------------------------------
+
+@mixin link-style-text {
+
+  // override link colour to use text colour
+  &:link,
+  &:visited,
+  &:active,
+  &:hover,
+  &:focus {
+    color: var(--color-contrast-high);
+  }
+
+}
+
+// --------------------------------
+
+// Font sizes - (https://www.liquidlight.co.uk/blog/article/responsive-typography-in-scss)
+
+// How to use:
+// @include typography(84);
+
+// --------------------------------
+
+
+// --------------------------------
+
+// Root font size
+
+// This is used to calculate rem sizes for the typography, and should match the _effective_ font-size of your root (or html) element.
+// Ideally you should not be setting the font-size on the html or root element in order to allow it to scale with user-preference, in which case this should be set to 16px.
+
+// --------------------------------
+
+$root-font-size: 16px !default;
+
+
+// --------------------------------
+
+// Responsive typograhy map
+
+// This is used to generate responsive typography that adapts according to the breakpoints.
+// Font size and font weight can be defined for each breakpoint. You can define different behaviour on table and desktop. The 'base' breakpoint is for mobile.
+// Line-heights will automatically be converted from pixel measurements into relative values. For example, with a font-size of 16px and a line height of 24px, the line height will be converted to 1.5 before output.
+
+// --------------------------------
+
+$typography-scale: (
+
+  144: (
+
+    base: (
+      font-size: 48px,
+      line-height: (56/48)
+    ),
+
+    md: (
+      font-size: 84px,
+      line-height: (96/84)
+    ),
+
+    xxl: (
+      font-size: 144px,
+      line-height: (144/144)
+    )
+
+  ),
+
+  84: (
+
+    base: (
+      font-size: 48px,
+      line-height: (56/48)
+    ),
+
+    md: (
+      font-size: 84px,
+      line-height: (96/84)
+    )
+
+  ),
+
+  48: (
+
+    base: (
+      font-size: 36px,
+      line-height: (40/36)
+    ),
+
+    md: (
+      font-size: 48px,
+      line-height: (56/48)
+    )
+
+  ),
+
+  36: (
+
+    base: (
+      font-size: 24px,
+      line-height: (32/24)
+    ),
+
+    md: (
+      font-size: 36px,
+      line-height: (40/36)
+    )
+
+  ),
+
+  24: (
+
+    base: (
+      font-size: 18px,
+      line-height: (24/18)
+    ),
+
+    md: (
+      font-size: 24px,
+      line-height: (40/24)
+    )
+
+  ),
+
+  20: (
+
+    base: (
+      font-size: 18px,
+      line-height: (24/18)
+    ),
+
+    md: (
+      font-size: 20px,
+      line-height: (32/20)
+    )
+
+  ),
+
+  16: (
+
+    base: (
+      font-size: 16px,
+      line-height: (24/16)
+    )
+
+  ),
+
+  14: (
+
+    base: (
+      font-size: 14px,
+      line-height: (24/14)
+    )
+
+  )
+
+) !default;
+
+@mixin prop-value($map) {
+  @each $prop, $value in $map {
+    #{$prop}: #{$value};
+  }
+}
+
+@mixin typography($element) {
+
+  $map: map-get($typography-scale, $element);
+  $base: map-get($map, base);
+
+  @include prop-value($base);
+
+  $mq: map-remove($map, base);
+
+  @each $breakpoints, $attr in $mq {
+    @include breakpoint($breakpoints) {
+      @include prop-value($attr);
+    }
+  }
+
+}
