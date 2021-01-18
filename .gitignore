@@ -12,3 +12,4 @@ npm-debug.log
 .env
 .firebaserc
 .firebase
+package-lock.json

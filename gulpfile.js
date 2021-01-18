@@ -56,7 +56,10 @@ gulp.task('sass-ie', function() {
 
 // Concatenate and compress JS
 gulp.task('scripts', function() {
-  return gulp.src([configPaths.scripts + 'util.js', configPaths.components + '**/*.js'])
+  return gulp.src([
+      configPaths.scripts + 'util.js',
+      configPaths.components + '**/*.js'
+    ])
     .pipe(concat('main.js'))
     .pipe(gulp.dest(configPaths.javascripts))
     .pipe(browserSync.reload({
@@ -127,7 +130,7 @@ gulp.task('dist', async function() {
   await cacheBust();
   // Minify HTML
   await minifyHTML();
-  // Move images and fonts
+  // Move all assets
   await moveAssets();
   console.log('Distribution task completed!');
 });
@@ -139,8 +142,14 @@ function purgeCSS() {
   return new Promise(function(resolve, reject) {
     let stream = gulp.src(configPaths.stylesheets + 'main.css')
     .pipe(purgecss({
-      content: [configPaths.public + '**/*.html'],
-      safelist: ['is-hidden', 'is-visible'],
+      content: [
+        configPaths.public + '**/*.html',
+        configPaths.javascripts + 'main.js'
+      ],
+      safelist: [
+        'is-hidden',
+        'is-visible'
+      ],
       defaultExtractor: content => content.match(/[\w-/:%@]+(?<!:)/g) || []
     }))
     .pipe(gulp.dest(configPaths.stylesheets));
@@ -194,7 +203,10 @@ function minifyHTML() {
 function moveAssets() {
 
   return new Promise(function(resolve, reject) {
-    var stream = gulp.src([configPaths.assets + '**/*'], { allowEmpty: true })
+    var stream = gulp.src([
+      configPaths.assets + '**/*',
+      '!src/assets/scripts/**'
+    ], { allowEmpty: true })
     .pipe(gulp.dest(configPaths.public));
     stream.on('finish', function() {
       resolve();

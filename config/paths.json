@@ -1,4 +1,5 @@
 {
+  "root": "/",
   "config": "config/",
   "source": "src/",
     "assets": "src/assets/",
@@ -6,9 +7,9 @@
     "images": "src/assets/images/",
     "scripts": "src/assets/scripts/",
     "components": "src/components/",
-  "public": "production/",
-    "stylesheets": "production/stylesheets/",
-    "javascripts": "production/javascripts/",
+  "public": "public/",
+    "stylesheets": "public/stylesheets/",
+    "javascripts": "public/javascripts/",
   "app": "app/",
     "views": "app/views/",
     "layouts": "app/views/layouts/",
