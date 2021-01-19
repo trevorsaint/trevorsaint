@@ -1,0 +1,11 @@
+{
+  "name": "Trevor Saint",
+  "short_name": "Trevor Saint",
+  "icons": [{
+    "src": "google-touch-icon.png",
+    "sizes": "512x512"
+  }],
+  "background_color": "#F24B88",
+  "theme_color": "#F24B88",
+  "display": "fullscreen"
+}

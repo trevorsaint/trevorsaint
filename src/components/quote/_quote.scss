@@ -13,9 +13,23 @@
 .quote__cite-name {
   display: block;
   font-weight: var(--font-bold);
+  padding-left: var(--space-md);
+  position: relative;
+
+  &::before {
+    background-color: var(--color-contrast-high);
+    content: "";
+    height: 1px;
+    left: 0;
+    position: absolute;
+    top: 50%;
+    width: 24px;
+  }
+
 }
 
 
 .quote__cite-role {
   color: var(--color-contrast-medium);
+  padding-left: var(--space-md);
 }
