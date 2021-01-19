@@ -108,7 +108,10 @@ gulp.task('browserSync', gulp.series(function (done) {
 
 gulp.task('watch', gulp.series(['browserSync', 'sass', 'scripts'], function() {
   gulp.watch(configPaths.public + '**/*.html', gulp.series(reload));
-  gulp.watch(configPaths.app + '**/*.njk', gulp.series(['nunjucks']));
+  gulp.watch([
+    configPaths.app + '**/*.njk',
+    configPaths.app + '**/*.html'
+  ], gulp.series(['nunjucks']));
   gulp.watch(configPaths.source + '**/*.scss', gulp.series(['sass']));
   gulp.watch(configPaths.source + '**/*.js', gulp.series(['scripts']));
 }));

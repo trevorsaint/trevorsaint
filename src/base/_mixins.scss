@@ -187,9 +187,9 @@ $grid-columns: 12 !default;
 // --------------------------------
 
 @mixin triangle ($direction: up, $width: 12px, $color: red) {
-  width: 0;
-  height: 0;
   border: $width solid transparent;
+  height: 0;
+  width: 0;
 
   @if( $direction == left ) {
     border-right-color: $color;

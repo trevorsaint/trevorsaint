@@ -770,7 +770,10 @@ $breakpointsNr: length($breakpoints);
 
 // --------------------------------
 
-[class*="border-"] { --border-o: 1; }
+[class*="border-"] {
+  --border-o: 1;
+  mix-blend-mode: multiply;
+}
 
 .border        { border: 1px solid alpha(var(--color-contrast-low), var(--border-o, 1)); }
 .border-top    { border-top: 1px solid alpha(var(--color-contrast-low), var(--border-o, 1)); }
@@ -997,14 +1000,22 @@ $breakpointsNr: length($breakpoints);
     .items-baseline\@#{$breakpoint} { align-items: baseline; }
 
     // order
-    .order-1\@#{$breakpoint}  { order: 1; }
-    .order-2\@#{$breakpoint}  { order: 2; }
-    .order-3\@#{$breakpoint}  { order: 3; }
+    .order-1\@#{$breakpoint} { order: 1; }
+    .order-2\@#{$breakpoint} { order: 2; }
+    .order-3\@#{$breakpoint} { order: 3; }
 
     // display
-    .block\@#{$breakpoint} { display: block; }
+    .block\@#{$breakpoint}        { display: block; }
     .inline-block\@#{$breakpoint} { display: inline-block; }
-    .inline\@#{$breakpoint} { display: inline; }
+    .inline\@#{$breakpoint}       { display: inline; }
+
+    // border
+    .border\@#{$breakpoint}        { border: 1px solid alpha(var(--color-contrast-low), var(--border-o, 1)); }
+    .border-top\@#{$breakpoint}    { border-top: 1px solid alpha(var(--color-contrast-low), var(--border-o, 1)); }
+    .border-bottom\@#{$breakpoint} { border-bottom: 1px solid alpha(var(--color-contrast-low), var(--border-o, 1)); }
+    .border-left\@#{$breakpoint}   { border-left: 1px solid alpha(var(--color-contrast-low), var(--border-o, 1)); }
+    .border-right\@#{$breakpoint}  { border-right: 1px solid alpha(var(--color-contrast-low), var(--border-o, 1)); }
+
 
     // margin
     @supports (--css: variables) {
