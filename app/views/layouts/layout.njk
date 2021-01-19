@@ -11,29 +11,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>{{pageTitle}} - Trevor Saint</title>
-
-    <!-- Stylesheet -->
-    <link href="{{rootPath}}stylesheets/main.min.css" rel="stylesheet">
+    <title>{{pageTitle}} - {{serviceName}}</title>
 
     <!-- Add home screen for Safari on iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="Trevor Saint">
-
-    <!-- Apple icons -->
-    <link rel="apple-touch-icon" sizes="57x57" href="{{rootPath}}images/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="{{rootPath}}images/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="{{rootPath}}images/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="{{rootPath}}images/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="{{rootPath}}images/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="{{rootPath}}images/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="{{rootPath}}images/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="{{rootPath}}images/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{rootPath}}images/apple-icon-180x180.png">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="{{rootPath}}images/favicon.svg">
+    <meta name="apple-mobile-web-app-title" content="{{serviceName}}">
 
     <!-- Search Engine -->
     <meta name="description" content="{{pageDescription}}">
@@ -44,7 +27,7 @@
     <meta property="og:title" content="{{pageTitle}}">
     <meta property="og:image" content="{{rootPath}}images/opengraph.png">
     <meta property="og:description" content="{{pageDescription}}">
-    <meta property="og:site_name" content="Trevor Saint">
+    <meta property="og:site_name" content="{{serviceName}}">
     <meta property="og:locale" content="en_GB">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1200">
@@ -59,16 +42,31 @@
     <meta name="twitter:description" content="{{pageDescription}}">
     <meta name="twitter:image" content="{{rootPath}}images/twitter.png">
 
+    <!-- Android’s Chrome browser -->
+    <meta name="theme-color" content="#F24B88">
+
+    <!-- Favicon -->
+    <link rel="icon" href="{{rootPath}}images/favicon.svg">
+
+    <!-- Mask icon (Safari) -->
+    <link rel="mask-icon" href="{{rootPath}}images/mask-icon.svg" color="#F24B88">
+
+    <!-- Apple touch icon -->
+    <link rel="apple-touch-icon" href="{{rootPath}}images/apple-touch-icon.png">
+
     <!-- Manifest -->
     <link href="{{rootPath}}manifest.json" rel="manifest">
-    <meta name="theme-color" content="#F24B88">
 
     <!-- Font preloading -->
     <link rel="preload" as="font" type="font/woff2" href="/fonts/Baskerville.woff2" crossorigin="anonymous">
     <link rel="preload" as="font" type="font/woff2" href="/fonts/Moderat-Bold.woff2" crossorigin="anonymous">
     <link rel="preload" as="font" type="font/woff2" href="/fonts/Moderat-Regular.woff2" crossorigin="anonymous">
 
-    <script>document.getElementsByTagName("html")[0].className += " js";</script>
+    <!-- Stylesheet -->
+    <link id="trevorsaint" href="{{rootPath}}stylesheets/main.css" rel="stylesheet">
+
+    <!--script>if(!('CSS' in window) || !CSS.supports('color', 'var(--color-var)')) {var main = document.getElementById('trevorsaint');if(main) {var href = main.getAttribute('href');href = href.replace('main.css', 'main-fallback.css');main.setAttribute('href', href);}}</script-->
+    <script>document.getElementsByTagName('html')[0].className += ' js';</script>
 
   </head>
   <body>

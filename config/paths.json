@@ -1,15 +1,17 @@
 {
+  "root": "/",
   "config": "config/",
   "source": "src/",
+    "assets": "src/assets/",
     "fonts": "src/assets/fonts/",
     "images": "src/assets/images/",
+    "scripts": "src/assets/scripts/",
     "components": "src/components/",
-  "public": "production/",
-    "stylesheets": "production/stylesheets/",
-    "javascripts": "production/javascripts/",
+  "public": "distribution/",
+    "stylesheets": "distribution/stylesheets/",
+    "javascripts": "distribution/javascripts/",
   "app": "app/",
-  "sass": "app/sass/",
-  "views": "app/views/",
-  "layouts": "app/views/layouts/",
-  "partials": "app/views/partials/"
+    "views": "app/views/",
+    "layouts": "app/views/layouts/",
+    "partials": "app/views/partials/"
 }

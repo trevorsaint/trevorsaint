@@ -1,0 +1,32 @@
+// --------------------------------
+
+// Colours
+
+// --------------------------------
+
+:root, [data-theme="default"] {
+
+  // primary
+  @include defineColorHSL(--color-primary, 338, 87%, 62%);
+
+  // secondary
+  @include defineColorHSL(--color-secondary, 169, 80%, 75%);
+
+  // tertiary
+  @include defineColorHSL(--color-tertiary, 62, 87%, 62%);
+
+  // quaternary
+  @include defineColorHSL(--color-quaternary, 315, 58%, 88%);
+
+  // black + white
+  @include defineColorHSL(--color-black, 0, 0%, 0%);
+  @include defineColorHSL(--color-white, 0, 0%, 100%);
+
+  // color contrasts
+  @include defineColorHSL(--color-bg, 0, 0%, 100%);
+  @include defineColorHSL(--color-contrast-lower, 0, 0%, 96%);
+  @include defineColorHSL(--color-contrast-low, 240, 2%, 83%);
+  @include defineColorHSL(--color-contrast-medium, 257, 3%, 41%);
+  @include defineColorHSL(--color-contrast-high, 258, 13%, 15%);
+
+}

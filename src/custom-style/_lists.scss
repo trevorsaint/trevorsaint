@@ -1,0 +1,128 @@
+// --------------------------------
+
+// Lists
+
+// --------------------------------
+
+.list {
+  padding-left: 0;
+
+  ul,
+  ol {
+    margin: 0;
+    padding-left: var(--space-xs);
+    padding-top: var(--space-xxxs);
+  }
+
+  li {
+    display: block;
+    margin-bottom: var(--space-xxxs);
+  }
+
+  > li:last-child, ul > li:last-child, ol > li:last-child {
+    margin-bottom: 0;
+  }
+
+  ul > li:last-child, ol > li:last-child {
+    padding-bottom: 0;
+  }
+
+}
+
+.list--ul,
+.list--ol {
+
+  li {
+    padding-left: calc(var(--bullet-size) + var(--bullet-margin-right));
+  }
+
+  li::before {
+    display: inline-flex;
+    height: var(--bullet-size);
+    left: calc(var(--bullet-margin-right) * -1);
+    margin-left: calc(var(--bullet-size) * -1);
+    position: relative;
+    vertical-align: middle;
+    width: var(--bullet-size);
+  }
+
+}
+
+// --------------------------------
+
+// Unordered list
+
+// --------------------------------
+
+.list--ul {
+  --bullet-size: 6px; // dot width and height
+  --bullet-margin-right: var(--space-xxs); // gap between bullet and content
+
+  // bullet
+  li::before {
+    background-color: currentColor;
+    border: 2px solid currentColor;
+    border-radius: 50%;
+    color: inherit; // bullet color
+    content: "";
+    margin-top: calc(-1 * var(--bullet-size) / 2); // half bullet size
+  }
+
+  ul li::before {
+    background-color: transparent;
+  }
+
+}
+
+// --------------------------------
+
+// Ordered list
+
+// --------------------------------
+
+.list--ol {
+  --bullet-size: 24px; // circle width and height
+  --bullet-margin-right: var(--space-xxxs); // gap between circle and content
+
+  counter-reset: list-items;
+
+  li {
+    counter-increment: list-items;
+  }
+
+  ol {
+    counter-reset: list-items;
+  }
+
+  li::before {
+    @include typography(16);
+    align-items: center;
+    background-color: var(--color-contrast-lower);
+    border: 2px solid var(--color-contrast-lower);
+    border-radius: 50%;
+    color: inherit;
+    content: counter(list-items);
+    justify-content: center;
+  }
+
+  ol li::before {
+    background-color: transparent;
+  }
+
+}
+
+// --------------------------------
+
+// Badges list
+
+// --------------------------------
+
+.list--badges {
+  display: flex;
+  flex-wrap: wrap;
+
+  li {
+    display: flex;
+  }
+
+}
