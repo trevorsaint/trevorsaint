@@ -85,6 +85,7 @@ gulp.task('nunjucks', function() {
         configPaths.partials
       ],
       data: {
+        serviceName: 'Trevor Saint',
         rootPath: '/'
       }
     }))
