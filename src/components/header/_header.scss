@@ -34,8 +34,6 @@
 .header__logo {
   display: block;
   flex-shrink: 0;
-  position: absolute;
-  left: 24px;
   z-index: 2;
 
   a,
@@ -172,6 +170,17 @@
 @include breakpoint(sm) {
 
 
+  .header__logo {
+    left: 24px;
+    position: absolute;
+    top: 20px;
+  }
+
+  .header__logo-svg {
+    height: 80px;
+    width: 85px;
+  }
+
   .header__nav {
     margin-left: auto;
 
@@ -203,17 +212,14 @@
 
   }
 
-
   .header__nav-inner {
     padding: 0;
   }
-
 
   .header__list {
     align-items: center;
     display: flex;
   }
-
 
   .header__item {
     display: flex;
@@ -227,11 +233,9 @@
 
   }
 
-
   .header__trigger {
     display: none !important;
   }
-
 
   .header__link {
     padding: 0;
@@ -258,16 +262,7 @@
 
   }
 
-
 }
-
-
-
-
-
-
-
-
 
 
 // // No JS fallback
@@ -338,16 +333,3 @@
 //   }
 
 // }
-
-
-
-
-
-@include breakpoint(sm) {
-
-  .header__logo-svg {
-    height: 80px;
-    width: 85px;
-  }
-
-}
