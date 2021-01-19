@@ -232,12 +232,10 @@ $grid-columns: 12 !default;
 
 
 @mixin link-common {
-  text-underline-position: under;
-
-  &:link,
-  &:visited {
-    text-decoration: underline solid var(--color-contrast-high) 1px;
-  }
+  text-underline-position: under; // improve placement of underline
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: 1px;
 
   &:hover {
     text-decoration-thickness: 2px;
@@ -264,18 +262,18 @@ $grid-columns: 12 !default;
 // --------------------------------
 
 @mixin link-style-default {
+  text-decoration-color: var(--color-primary);
 
   &:link,
   &:visited {
     color: var(--color-primary);
-    text-decoration: underline solid var(--color-primary) 1px;
   }
 
-
-  &:hover {
+  &:hover,
+  &:focus,
+  &:active {
     color: var(--color-contrast-high);
     text-decoration-color: var(--color-contrast-high);
-    text-decoration-thickness: 2px;
   }
 
 }
@@ -288,6 +286,7 @@ $grid-columns: 12 !default;
 // --------------------------------
 
 @mixin link-style-text {
+  text-decoration-color: var(--color-contrast-high);
 
   // override link colour to use text colour
   &:link,

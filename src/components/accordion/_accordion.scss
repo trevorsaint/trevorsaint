@@ -7,12 +7,10 @@ Accordion
 
 .accordion {}
 
-
 .accordion__item {
   border-bottom: 1px solid alpha(var(--color-black), .2);
   display: block;
 }
-
 
 .accordion__header {
   @include typography(24);
@@ -25,11 +23,9 @@ Accordion
   width: 100%;
 }
 
-
 .accordion__panel {
   padding-bottom: var(--space-xxs);
 }
-
 
 .accordion__item--is-open > .accordion__header .accordion__icon {
   transform: rotate(-180deg);
@@ -38,35 +34,32 @@ Accordion
 
 .js {
 
-
   .accordion__header {
     cursor: pointer;
 
     span {
       text-underline-position: under;
-      text-decoration: underline solid var(--color-contrast-high) 1px;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
     }
 
-    &:hover span {
+    &:hover > span {
       text-decoration-thickness: 2px;
     }
 
-    &:focus span {
+    &:focus > span {
       @include focused-text;
     }
 
   }
 
-
   .accordion__panel {
     display: none;
   }
 
-
   .accordion__item--is-open > .accordion__panel {
     display: block;
   }
-
 
 }
 
