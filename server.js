@@ -45,7 +45,7 @@ const nunjucksEnvironment = nunjucks.configure(appViews, {
 
 
 // Set view engine
-app.set('view engine', 'njk');
+app.set('view engine', 'html');
 
 
 // Support for parsing data in POSTs
