@@ -4,13 +4,11 @@
 
 // --------------------------------
 
-
 .hero {
   background-color: alpha(var(--color-black), 0.05);
   border-radius: var(--radius-lg);
   position: relative;
 }
-
 
 @include breakpoint(lg) {
 

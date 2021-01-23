@@ -4,12 +4,10 @@
 
 // --------------------------------
 
-
 .pn-links {
   border-bottom: 1px solid alpha(var(--color-black), .2);
   border-top: 1px solid alpha(var(--color-black), .2);
 }
-
 
 .pn-links__item {
   display: block;
@@ -18,11 +16,9 @@
   position: relative;
 }
 
-
 .pn-links__item:first-child {
   border-bottom: 1px solid alpha(var(--color-black), .2);
 }
-
 
 .pn-links__link {
   @include link-common;
@@ -39,11 +35,9 @@
 
 }
 
-
 .pn-links__icon {
   flex-shrink: 0;
 }
-
 
 @include breakpoint(md) {
 

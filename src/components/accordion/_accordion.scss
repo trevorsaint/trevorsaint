@@ -1,9 +1,8 @@
-/* --------------------------------
+// --------------------------------
 
-Accordion
+// Accordion
 
--------------------------------- */
-
+// --------------------------------
 
 .accordion {}
 
@@ -30,7 +29,6 @@ Accordion
 .accordion__item--is-open > .accordion__header .accordion__icon {
   transform: rotate(-180deg);
 }
-
 
 .js {
 
@@ -64,7 +62,6 @@ Accordion
   }
 
 }
-
 
 @include breakpoint(sm) {
 

@@ -4,7 +4,6 @@
 
 // --------------------------------
 
-
 .badge {
   @include typography(16);
   align-items: center;
@@ -13,7 +12,6 @@
   display: inline-flex;
   padding: var(--space-xxxxs) var(--space-xxs);
 }
-
 
 .badge--contrast-higher {
   background-color: var(--color-contrast-high);

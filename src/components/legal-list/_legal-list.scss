@@ -4,11 +4,9 @@
 
 // --------------------------------
 
-
 .legal-list {
   display: flex;
 }
-
 
 .legal-list__item {
   @include typography(14);

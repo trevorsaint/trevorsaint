@@ -4,9 +4,7 @@
 
 // --------------------------------
 
-
 .form {}
-
 
 .form__control {
   background-color: alpha(var(--color-black), 0.05);
@@ -30,19 +28,16 @@
 
 }
 
-
 .form__label {
   display: inline-block;
   margin-bottom: var(--space-xxxs);
 }
-
 
 // error
 .form__group--error {
   border-left: var(--space-xxxxs) solid var(--color-primary);
   padding-left: var(--space-xxs);
 }
-
 
 .form__control--error {
   background-color: var(--color-white);
@@ -55,7 +50,6 @@
   }
 
 }
-
 
 // error message
 .form__error-message {

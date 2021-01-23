@@ -4,20 +4,17 @@
 
 // --------------------------------
 
-
 .feature {
   --feature-text-offset: 102px; // if value = higher -> overlapping text takes more space
   position: relative;
   z-index: 1;
 }
 
-
 .feature__image {
   background-color: alpha(var(--color-black), 0.05);
   border-radius: var(--radius-lg);
   position: relative;
 }
-
 
 @include breakpoint(md) {
 
@@ -32,7 +29,6 @@
   }
 
 }
-
 
 @each $breakpoint, $value in $breakpoints {
 

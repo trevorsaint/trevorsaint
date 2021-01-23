@@ -4,9 +4,7 @@
 
 // --------------------------------
 
-
 .logos {}
-
 
 .logos__item {
   background-color: alpha(var(--color-black), 0.05);
@@ -19,7 +17,6 @@
   max-width: 268px;
   width: 100%;
 }
-
 
 .logos__link {
   display: flex;
@@ -40,19 +37,16 @@
 
 }
 
-
 .logos__img {
   display: block;
   margin: auto;
 }
-
 
 // --------------------------------
 
 // Logo
 
 // --------------------------------
-
 
 .logo {
   color: var(--color-contrast-high);

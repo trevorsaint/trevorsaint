@@ -4,7 +4,6 @@
 
 // --------------------------------
 
-
 .button {
   @include fontSmooth;
   align-items: center;
@@ -37,30 +36,25 @@
 
 }
 
-
 .button--full-width {
   display: flex;
   justify-content: center;
   width: 100%;
 }
 
-
 .button__label {
   position: relative;
   top: -2px;
 }
-
 
 .button--small {
   @include typography(16);
   padding: var(--space-xxxs) var(--space-xxs);
 }
 
-
 .button--icon-leading {
   padding-left: calc(var(--space-xxs) - var(--space-xxxxs)); // 12px
 }
-
 
 .button--icon-trailing {
   padding-right: calc(var(--space-xxs) - var(--space-xxxxs)); // 12px

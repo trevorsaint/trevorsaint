@@ -4,11 +4,9 @@
 
 // --------------------------------
 
-
 .quote__cite {
   @include typography(16);
 }
-
 
 .quote__cite-name {
   display: block;
@@ -27,7 +25,6 @@
   }
 
 }
-
 
 .quote__cite-role {
   color: var(--color-contrast-medium);

@@ -4,11 +4,9 @@
 
 // --------------------------------
 
-
 .card {
   overflow: hidden;
 }
-
 
 .card__image {
   background-color: alpha(var(--color-black), 0.05);
@@ -16,7 +14,6 @@
   position: relative;
   text-align: right; // added due to shadow cut-off between breakpoints
 }
-
 
 .card__content {
   padding: var(--space-xs);

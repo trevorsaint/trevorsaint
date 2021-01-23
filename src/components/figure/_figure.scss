@@ -4,11 +4,9 @@
 
 // --------------------------------
 
-
 .figure {
   text-align: center;
 }
-
 
 @include breakpoint(xl) {
 
@@ -17,14 +15,12 @@
     width: 100vw;
   }
 
-
   .figure--outset {
     margin-left: -240px;
     width: 1680px;
   }
 
 }
-
 
 .figure__caption {
   @include typography(14);

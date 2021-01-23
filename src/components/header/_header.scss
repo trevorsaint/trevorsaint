@@ -4,7 +4,6 @@
 
 // --------------------------------
 
-
 :root {
   --header-height: 72px;
 
@@ -14,7 +13,6 @@
 
 }
 
-
 .header {
   height: var(--header-height);
   position: relative;
@@ -22,14 +20,12 @@
   z-index: var(--zindex-header);
 }
 
-
 .header__container {
   align-items: center;
   display: flex;
   height: 100%;
   justify-content: space-between;
 }
-
 
 .header__logo {
   display: block;
@@ -44,13 +40,11 @@
 
 }
 
-
 .header__logo-svg {
   display: block;
   height: 48px;
   width: 51px;
 }
-
 
 .header__logo-link {
   color: var(--color-contrast-high);
@@ -61,7 +55,6 @@
   }
 
 }
-
 
 // --------------------------------
 
@@ -96,17 +89,14 @@
 
 }
 
-
 .header__nav--is-visible {
   display: block;
 }
-
 
 .header__nav-inner {
   padding-top: var(--component-padding);
   padding-bottom: var(--component-padding);
 }
-
 
 .header__item {
   display: block;
@@ -114,7 +104,6 @@
   padding: calc(var(--space-xxs) - var(--space-xxxxs)) var(--space-xs);
   position: relative;
 }
-
 
 .header__link {
   @include link-common;
@@ -150,7 +139,6 @@
 
 }
 
-
 .header__trigger[aria-expanded="true"] {
 
   .icon {
@@ -159,16 +147,13 @@
 
 }
 
-
 .header__trigger {
   margin-left: auto;
   position: relative;
   z-index: 2;
 }
 
-
 @include breakpoint(sm) {
-
 
   .header__logo {
     left: 24px;
@@ -264,7 +249,6 @@
 
 }
 
-
 // // No JS fallback
 // html:not(.js) {
 
@@ -324,7 +308,6 @@
 //   }
 
 // }
-
 
 // @include breakpoint(xl) {
 

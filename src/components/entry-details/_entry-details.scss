@@ -4,11 +4,9 @@
 
 // --------------------------------
 
-
 .entry-details {
   border-left: 1px solid alpha(var(--color-black), .2);
 }
-
 
 .entry-details__item {
   padding: var(--space-xs);
@@ -25,16 +23,13 @@
 
 }
 
-
 .entry-details__title {
   font-weight: var(--font-bold);
 }
 
-
 .entry-details__description {
   color: var(--color-contrast-medium);
 }
-
 
 @include breakpoint(md) {
 
@@ -55,7 +50,6 @@
   }
 
 }
-
 
 @include breakpoint(lg) {
 

@@ -4,14 +4,11 @@
 
 // --------------------------------
 
-
 .social-share {}
-
 
 .social-share__item {
   display: block;
 }
-
 
 .social-share__link {
   background-color: alpha(var(--color-black), 0.05);
@@ -46,7 +43,6 @@
   }
 
 }
-
 
 @include breakpoint(md) {
 

@@ -4,15 +4,12 @@
 
 // --------------------------------
 
-
 .menu-list {}
-
 
 .menu-list__item {
   @include typography(20);
   display: flex;
 }
-
 
 .menu-list__link {
   @include link-common;
@@ -23,7 +20,6 @@
   padding-top: var(--space-xxxs);
   padding-bottom: var(--space-xxxs);
 }
-
 
 @include breakpoint(sm) {
 
