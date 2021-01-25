@@ -1,18 +1,15 @@
 (function() {
 
-
   var Form = function(element) {
     this.element = element;
     this.fields = ['name', 'email', 'message'];
     this.initForm();
   };
 
-
   Form.prototype.initForm = function() {
-    this.element.setAttribute('novalidate', true); // Stop HTML5 validation, in favour of our own
+    this.element.setAttribute('novalidate', true); // stop HTML5 validation, in favour of our own
     this.validateForm();
   };
-
 
   Form.prototype.validateForm = function() {
 
@@ -30,7 +27,6 @@
     });
 
   };
-
 
   Form.prototype.validateFields = function(input) {
 
@@ -53,13 +49,12 @@
       }
     }
 
-    // If no errors exist, submit form
+    // if no errors exist, submit form
     if( errors.length === 0 ) {
       this.element.submit();
     }
 
   };
-
 
   Form.prototype.setStatus = function(input, status) {
 
@@ -69,28 +64,26 @@
 
     if (status === 'success') {
       Util.removeClass(input, 'form__control--error');
-      Util.addClass(errorMessage, 'is-hidden'); // Hide error message
+      Util.addClass(errorMessage, 'is-hidden'); // hide error message
       Util.removeClass(formGroup, 'form__group--error');
-      input.removeAttribute('aria-describedby'); // Remove aria-describedby attribute
+      input.removeAttribute('aria-describedby'); // remove aria-describedby attribute
     }
 
     if (status === 'error') {
       Util.addClass(input, 'form__control--error');
-      Util.removeClass(errorMessage, 'is-hidden'); // Show error message
+      Util.removeClass(errorMessage, 'is-hidden'); // show error message
       Util.addClass(formGroup, 'form__group--error');
-      input.setAttribute('aria-describedby', messageID) // Add aria-describedby attribute to form control
+      input.setAttribute('aria-describedby', messageID) // add aria-describedby attribute to form control
     }
 
   };
 
-
-  // Initialize the Form objects
+  // initialize the Form objects
   var form = document.getElementsByClassName('js-form');
   if( form.length > 0 ) {
     for( var i = 0; i < form.length; i++) {
       (function(i){new Form(form[i]);})(i);
     }
   }
-
 
 })();
