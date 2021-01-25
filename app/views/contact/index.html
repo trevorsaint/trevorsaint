@@ -32,19 +32,28 @@
 
               <div class="margin-bottom-sm">
                 <label class="form__label" for="name">Name</label>
-                <span class="form__error-message is-hidden" id="name-error">Enter your name</span>
+                <span class="form__error-message is-hidden" id="name-error">
+                  <span class="sr-only">Error:</span>
+                  <strong>You must enter your name</strong>
+                </span>
                 <input class="form__control" id="name" name="name">
               </div>
 
               <div class="margin-bottom-sm">
                 <label class="form__label" for="email">Email</label>
-                <span class="form__error-message is-hidden" id="email-error">Enter an email address, like name@example.com</span>
+                <span class="form__error-message is-hidden" id="email-error">
+                  <span class="sr-only">Error:</span>
+                  <strong>You must enter your email address, like name@example.com</strong>
+                </span>
                 <input class="form__control" id="email" name="email" type="email">
               </div>
 
               <div class="margin-bottom-sm">
                 <label class="form__label" for="message">Message</label>
-                <span class="form__error-message is-hidden" id="message-error">Enter your message</span>
+                <span class="form__error-message is-hidden" id="message-error">
+                  <span class="sr-only">Error:</span>
+                  <strong>You must enter your message</strong>
+                </span>
                 <textarea class="form__control" id="message" name="message" rows="8"></textarea>
               </div>
 
