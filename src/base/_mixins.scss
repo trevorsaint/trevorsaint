@@ -250,6 +250,11 @@ $grid-columns: 12 !default;
     color: var(--color-contrast-high) !important;
     font-weight: var(--font-bold);
     text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
   }
 
 }

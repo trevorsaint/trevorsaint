@@ -66,14 +66,14 @@
   background-color: var(--color-bg);
   box-shadow: var(--shadow-lg);
   display: none;
-  position: absolute;
-  top: 0;
   left: 0;
   max-height: 100vh;
+  position: absolute;
+  top: 0;
   overflow: auto;
+  overscroll-behavior: contain;
   width: 100%;
   z-index: 1;
-  overscroll-behavior: contain;
   -webkit-overflow-scrolling: touch;
 
   // top header bg + border
@@ -82,8 +82,8 @@
     border-bottom: 1px solid var(--color-contrast-low);
     content: "";
     display: block;
-    position: sticky;
     height: var(--header-height); // same as height of header
+    position: sticky;
     top: 0;
   }
 
@@ -94,8 +94,8 @@
 }
 
 .header__nav-inner {
-  padding-top: var(--component-padding);
   padding-bottom: var(--component-padding);
+  padding-top: var(--component-padding);
 }
 
 .header__item {
@@ -112,8 +112,6 @@
   outline-color: var(--color-primary);
 
   &[aria-current] {
-    color: var(--color-contrast-high);
-    font-weight: var(--font-bold);
 
     &:before {
       background-color: var(--color-primary);
@@ -224,10 +222,6 @@
 
   .header__link {
     padding: 0;
-
-    &:hover {
-      text-decoration: underline;
-    }
 
     &::after {
       content: none;

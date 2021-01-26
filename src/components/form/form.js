@@ -61,6 +61,7 @@
     var formGroup = input.parentElement;
     var errorMessage = input.parentElement.querySelector('.form__error-message');
     var messageID = errorMessage.id;
+    var title = document.getElementsByTagName('title')[0];
 
     if (status === 'success') {
       Util.removeClass(input, 'form__control--error');
