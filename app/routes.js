@@ -65,7 +65,7 @@ routes.get('/accessibility', function(req, res) {
 });
 
 // Page not found
-routes.get('*', function(req, res){
+routes.get('*', function(req, res) {
   res.render('404');
 });
 
