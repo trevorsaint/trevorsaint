@@ -86,9 +86,22 @@ gulp.task('nunjucks', function() {
       ],
       data: {
         serviceName: 'Trevor Saint',
-        rootPath: '/'
+        rootPath: 'https://trevorsaint.uk/'
       }
     }))
+    .pipe(gulp.dest(configPaths.public))
+    .pipe(browserSync.reload({
+      stream: true
+    }));
+});
+
+
+// Move all assets
+gulp.task('assets', function() {
+  return gulp.src([
+    configPaths.assets + '**/*',
+    '!src/assets/scripts/**'
+  ], {allowEmpty: true })
     .pipe(gulp.dest(configPaths.public))
     .pipe(browserSync.reload({
       stream: true
