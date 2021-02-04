@@ -1,31 +1,31 @@
-// Core dependencies
+// core dependencies
 const path = require('path');
 
 
-// NPM dependencies
+// npm dependencies
 const express    = require('express');
 const nunjucks   = require('nunjucks');
 const bodyParser = require('body-parser');
 const app        = express();
 
 
-// Local dependencies
+// local dependencies
 const config = require('./app/config.js');
 
 
-// Routing
+// routing
 const routes = require('./app/routes.js');
 
 
-// Paths
+// paths
 const configPaths = require('./config/paths.json');
 
 
-// Port
+// port
 const port = process.env.PORT || config.port;
 
 
-// Setup application
+// setup application
 const appViews = [
 	path.join(__dirname, configPaths.views),
 	path.join(__dirname, configPaths.layouts),
@@ -35,7 +35,7 @@ const appViews = [
 ];
 
 
-// Configurations
+// configurations
 const nunjucksEnvironment = nunjucks.configure(appViews, {
   autoescape: true,
   express: app,
@@ -44,31 +44,31 @@ const nunjucksEnvironment = nunjucks.configure(appViews, {
 });
 
 
-// Set view engine
+// set view engine
 app.set('view engine', 'html');
 
 
-// Support for parsing data in POSTs
+// support for parsing data in POSTs
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
 	extended: true
 }));
 
 
-// Middleware to serve static assets
+// middleware to serve static assets
 app.use('/', express.static(path.join(__dirname, configPaths.public)));
 
 
-// Use routes
+// use routes
 app.use(routes);
 
 
-// Add variables that are available in all views
+// add variables that are available in all views
 app.locals.serviceName = config.serviceName;
 app.locals.rootPath = config.rootPath;
 
 
-// Start app
+// start app
 app.listen(port, (err) => {
 
   if (err) {
