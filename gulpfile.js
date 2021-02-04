@@ -243,7 +243,7 @@ function createServiceWorker() {
   return workboxBuild.generateSW({
     globDirectory: 'public',
     globPatterns: [
-      '**/*.{html,json,js,css}',
+      '**/*.{html,json,js,css,woff2}',
     ],
     swDest: 'public/sw.js',
     sourcemap: false,
