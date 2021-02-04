@@ -241,11 +241,11 @@ function createServiceWorker() {
 
   // configurations - https://developers.google.com/web/tools/workbox/guides/generate-service-worker/workbox-build
   return workboxBuild.generateSW({
-    globDirectory: 'public',
+    globDirectory: configPaths.public,
     globPatterns: [
       '**/*.{html,json,js,css,woff2}',
     ],
-    swDest: 'public/sw.js',
+    swDest: configPaths.public + 'sw.js',
     sourcemap: false,
     mode: 'production',
     runtimeCaching: [{
