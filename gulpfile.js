@@ -13,9 +13,10 @@ const nunjucksRender = require('gulp-nunjucks-render');
 const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
 const version = require('gulp-version-number');
+const workboxBuild = require('workbox-build');
 
 
-// Path configurations
+// path configurations
 const configPaths = require('./config/paths.json');
 
 
@@ -25,7 +26,7 @@ function reload(done) {
 };
 
 
-// Convert the SCSS to CSS and compress it. No fallback for IE is created
+// convert the SCSS to CSS and compress it. No fallback for IE is created
 gulp.task('sass', function() {
   return gulp.src(configPaths.source + '**/*.scss')
     .pipe(sassGlob())
@@ -38,7 +39,7 @@ gulp.task('sass', function() {
 });
 
 
-// Convert the SCSS to CSS and compress it. A fallback for IE (style-fallback.css) is created
+// convert the SCSS to CSS and compress it. A fallback for IE (style-fallback.css) is created
 gulp.task('sass-ie', function() {
   return gulp.src(configPaths.source + 'main.scss')
     .pipe(sassGlob())
@@ -54,7 +55,7 @@ gulp.task('sass-ie', function() {
 });
 
 
-// Concatenate and compress JS
+// concatenate and compress JS
 gulp.task('scripts', function() {
   return gulp.src([
       configPaths.scripts + 'util.js',
@@ -74,7 +75,7 @@ gulp.task('scripts', function() {
 });
 
 
-// Render nunjucks templates
+// render nunjucks templates
 gulp.task('nunjucks', function() {
   return gulp.src(configPaths.views + '**/*.html')
     .pipe(nunjucksRender({
@@ -86,7 +87,7 @@ gulp.task('nunjucks', function() {
       ],
       data: {
         serviceName: 'Trevor Saint',
-        rootPath: 'https://trevorsaint.uk/'
+        rootPath: '/'
       }
     }))
     .pipe(gulp.dest(configPaths.public))
@@ -96,7 +97,7 @@ gulp.task('nunjucks', function() {
 });
 
 
-// Move all assets
+// move all assets
 gulp.task('assets', function() {
   return gulp.src([
     configPaths.assets + '**/*',
@@ -109,6 +110,7 @@ gulp.task('assets', function() {
 });
 
 
+// browserSync
 gulp.task('browserSync', gulp.series(function (done) {
   browserSync.init({
     server: {
@@ -141,21 +143,23 @@ gulp.task('watch-ie', gulp.series(['browserSync', 'sass-ie', 'scripts'], functio
 
 // Distribution
 gulp.task('dist', async function() {
-  // Remove unused classes from the style.css file with PurgeCSS
+  // remove unused classes from the style.css file with PurgeCSS
   await purgeCSS();
-  // Add version number to CSS and JS files
+  // add version number to CSS and JS files
   await cacheBust();
-  // Minify HTML
+  // minify HTML
   await minifyHTML();
-  // Move all assets
+  // move all assets
   await moveAssets();
+  // create service worker - PWA
+  await createServiceWorker();
   console.log('Distribution task completed!');
 });
 
 
 function purgeCSS() {
 
-  // Configurations - https://www.npmjs.com/package/gulp-purgecss
+  // configurations - https://www.npmjs.com/package/gulp-purgecss
   return new Promise(function(resolve, reject) {
     let stream = gulp.src(configPaths.stylesheets + 'main.css')
     .pipe(purgecss({
@@ -180,7 +184,7 @@ function purgeCSS() {
 
 function cacheBust() {
 
-  // Configurations - https://www.npmjs.com/package/gulp-version-number
+  // configurations - https://www.npmjs.com/package/gulp-version-number
   return new Promise(function(resolve, reject) {
     let stream = gulp.src(configPaths.public + '**/*.html')
     .pipe(version({
@@ -201,7 +205,7 @@ function cacheBust() {
 
 function minifyHTML() {
 
-  // Configuration - https://www.npmjs.com/package/gulp-htmlmin
+  // configuration - https://www.npmjs.com/package/gulp-htmlmin
   return new Promise(function(resolve, reject) {
     let stream = gulp.src(configPaths.public + '**/*.html')
     .pipe(htmlmin({
@@ -220,7 +224,7 @@ function minifyHTML() {
 function moveAssets() {
 
   return new Promise(function(resolve, reject) {
-    var stream = gulp.src([
+    let stream = gulp.src([
       configPaths.assets + '**/*',
       '!src/assets/scripts/**'
     ], { allowEmpty: true })
@@ -228,6 +232,41 @@ function moveAssets() {
     stream.on('finish', function() {
       resolve();
     });
+  });
+
+};
+
+
+function createServiceWorker() {
+
+  // configurations - https://developers.google.com/web/tools/workbox/guides/generate-service-worker/workbox-build
+  return workboxBuild.generateSW({
+    globDirectory: 'public',
+    globPatterns: [
+      '**/*.{html,json,js,css,woff2}',
+    ],
+    swDest: 'public/sw.js',
+    sourcemap: false,
+    mode: 'production',
+    runtimeCaching: [{
+
+        // match any request that ends with .png, .jpg, .jpeg, .svg or .webp
+        urlPattern: /\.(?:png|jpg|jpeg|svg|webp)$/,
+
+        // apply a cache-first strategy
+        handler: 'CacheFirst',
+        options: {
+
+        // use a custom cache name
+        cacheName: 'images',
+
+        // only cache 10 images
+        expiration: {
+          maxEntries: 10
+        }
+
+      }
+    }]
   });
 
 };
