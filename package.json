@@ -38,8 +38,6 @@
     "postcss": "^8.2.4",
     "postcss-calc": "^8.0.0",
     "postcss-css-variables": "git+https://github.com/CodyHouse/postcss-css-variables",
-    "stylelint": "^13.8.0",
-    "stylelint-config-recommended": "^3.0.0",
     "workbox-build": "^6.1.0"
   }
 }
