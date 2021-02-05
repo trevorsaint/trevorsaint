@@ -2,6 +2,7 @@
   "name": "Trevor Saint | Interaction Designer",
   "short_name": "Trevor Saint",
   "lang": "en-GB",
+  "orientation": "any",
   "icons": [
     {
       "src": "https://trevorsaint.uk/images/google-touch-icon-192x192.png",
