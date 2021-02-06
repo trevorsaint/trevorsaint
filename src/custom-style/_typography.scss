@@ -155,12 +155,17 @@
     margin-bottom: var(--space-xxs);
   }
 
+  ul,
+  ol {
+    @extend .list;
+  }
+
   ul:not([class]) {
-    @extend .list--ul;
+    @extend .list-ul;
   }
 
   ol:not([class]) {
-    @extend .list--ol;
+    @extend .list-ol;
   }
 
   ul:not([class]) li,

@@ -10,8 +10,8 @@
   background-color: alpha(var(--color-black), 0.05);
   border: 2px solid transparent;
   border-radius: var(--radius-sm);
-  padding: calc(var(--space-xxxs) - 2px); // minus border width
-  resize: none;
+  height: var(--space-lg); // IE11 fix (48px)
+  padding: calc(var(--space-xxxs) - 2px);
   width: 100%;
 
   &::placeholder {
@@ -26,6 +26,11 @@
     outline: none;
   }
 
+}
+
+.form__control--textarea {
+  resize: none;
+  height: auto;
 }
 
 .form__label {

@@ -1,8 +1,8 @@
 {% macro card(params) %}
 
-  <div class="card{% if params.classes is defined %} {{ params.classes }}{% endif %}">
+  <div class="card{{ ' ' + params.classes if params.classes else '' }}">
 
-    <div class="card__image aspect-ratio-3:2">
+    <div class="card__image">
 
       <a href="{{ params.url }}" tabindex="-1">
         <picture>

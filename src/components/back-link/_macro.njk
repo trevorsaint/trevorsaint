@@ -1,8 +1,13 @@
 {% macro backLink(params) %}
-  <a class="back-link{% if params.classes is defined %} {{ params.classes }}{% endif %}" href="{{ params.url }}">
-    <svg class="icon icon--sm" viewBox="0 0 24 24" focusable="false" aria-hidden="true">
-      <path d="M15 6.7a.996.996 0 00-1.41 0L9 11.3a.996.996 0 000 1.41l4.59 4.59A.996.996 0 1015 15.89L11.12 12 15 8.11c.39-.39.38-1.02 0-1.41z"/>
-    </svg>
+
+  {%- from "icons/_macro.njk" import icon -%}
+
+  <a class="back-link{{ ' ' + params.classes if params.classes else '' }}" href="{{ params.url }}">
+    {{
+      icon({
+        "icon": 'chevron-left'
+      })
+    }}
     {{ params.text }}
   </a>
 {% endmacro %}

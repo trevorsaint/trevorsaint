@@ -1,5 +1,5 @@
 {% macro entryDetails(params) %}
-  <dl class="entry-details{%- if params.classes %} {{ params.classes }}{% endif %}"{% for attribute, value in params.attributes %} {{attribute}}="{{value}}"{% endfor %}>
+  <dl class="entry-details{{ ' ' + params.classes if params.classes else '' }}"{% for attribute, value in params.attributes %} {{attribute}}="{{value}}"{% endfor %}>
     {% for row in params.rows %}
     {% if row %}
     <div class="entry-details__item{%- if row.classes %} {{ row.classes }}{% endif %}">

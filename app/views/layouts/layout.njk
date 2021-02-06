@@ -4,6 +4,8 @@
 {%- from "social-sharing/_macro.njk" import socialShare -%}
 {%- from "card/_macro.njk" import card -%}
 {%- from "quote/_macro.njk" import quote -%}
+{%- from "logos/_macro.njk" import logo -%}
+{%- from "icons/_macro.njk" import icon -%}
 <!DOCTYPE html>
 <html lang="en-GB">
   <head>
@@ -64,6 +66,11 @@
 
     <!-- Stylesheet -->
     <link id="trevorsaint" href="{{rootPath}}stylesheets/main.css" rel="stylesheet">
+
+    <!-- No CSS variables support fallback -->
+    <script>
+      if(!('CSS' in window) || !CSS.supports('color', 'var(--color-var)')) {var main = document.getElementById('trevorsaint');if(main) {var href = main.getAttribute('href');href = href.replace('main.css', 'main-fallback.css');main.setAttribute('href', href);}}
+    </script>
 
     <!-- Progressive enhancement -->
     <script>document.getElementsByTagName('html')[0].className += ' js';</script>

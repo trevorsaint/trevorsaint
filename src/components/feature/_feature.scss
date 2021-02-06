@@ -5,7 +5,6 @@
 // --------------------------------
 
 .feature {
-  --feature-text-offset: 102px; // if value = higher -> overlapping text takes more space
   position: relative;
   z-index: 1;
 }
@@ -35,7 +34,7 @@
   @include breakpoint(#{$breakpoint}) {
 
     .feature__text-offset\@#{$breakpoint} {
-      margin-left: calc(var(--feature-text-offset) * -1);
+      margin-left: -102px;
     }
 
   }

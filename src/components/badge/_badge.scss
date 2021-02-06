@@ -8,9 +8,10 @@
   @include typography(16);
   align-items: center;
   background-color: alpha(var(--color-black), 0.05);
+  border: 1px solid transparent; // High Contrast Mode
   border-radius: var(--radius-lg);
   display: inline-flex;
-  padding: var(--space-xxxxs) var(--space-xxs);
+  padding: calc(var(--space-xxxxs) - 1px) calc(var(--space-xxs) - 1px);
 }
 
 .badge--contrast-higher {

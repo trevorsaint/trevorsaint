@@ -16,6 +16,7 @@
 
   &:after {
     background-color: alpha(var(--color-black), 0.2);
+    border-top: 1px solid transparent; // High Contrast Mode
     bottom: 0;
     content: "";
     display: block;

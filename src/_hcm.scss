@@ -1,0 +1,13 @@
+// --------------------------------
+
+// High Contrast Mode
+
+// --------------------------------
+
+@media screen and (-ms-high-contrast: active), (forced-colors: active) {
+
+  .logos__item, [class*="border-"] {
+    mix-blend-mode: normal;
+  }
+
+}
