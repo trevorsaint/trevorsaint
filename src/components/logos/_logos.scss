@@ -11,7 +11,7 @@
   background-blend-mode: multiply;
   border: 2px solid transparent; // High Contrast Mode
   border-radius: var(--radius-sm);
-  display: flex;
+  display: block;
   height: 112px;
   mix-blend-mode: multiply;
   min-width: 204px;
@@ -20,7 +20,7 @@
 }
 
 .logos__link {
-  display: flex;
+  display: block;
   border-radius: var(--radius-sm);
   height: 100%;
   width: 100%;
@@ -42,6 +42,12 @@
   display: block;
   fill: currentColor;
   margin: auto;
+
+
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+
 }
 
 // --------------------------------
