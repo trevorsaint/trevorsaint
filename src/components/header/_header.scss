@@ -115,6 +115,7 @@
 
     &:before {
       background-color: var(--color-primary);
+      border-left: 4px solid transparent; // High Contrast Mode
       content: "";
       height: 100%;
       left: 0;
@@ -183,6 +184,7 @@
 
     &:after {
       background-color: alpha(var(--color-black), 0.2);
+      border-top: 1px solid transparent; // High Contrast Mode
       bottom: 0;
       content: "";
       display: block;
@@ -230,6 +232,7 @@
     &[aria-current] {
 
         &:before {
+          border-top: 4px solid transparent; // High Contrast Mode
           height: 4px;
           top: auto;
           bottom: 0;

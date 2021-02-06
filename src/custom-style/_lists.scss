@@ -4,6 +4,7 @@
 
 // --------------------------------
 
+
 .list {
   padding-left: 0;
 
@@ -29,24 +30,6 @@
 
 }
 
-.list--ul,
-.list--ol {
-
-  li {
-    padding-left: calc(var(--bullet-size) + var(--bullet-margin-right));
-  }
-
-  li::before {
-    display: inline-flex;
-    height: var(--bullet-size);
-    left: calc(var(--bullet-margin-right) * -1);
-    margin-left: calc(var(--bullet-size) * -1);
-    position: relative;
-    vertical-align: middle;
-    width: var(--bullet-size);
-  }
-
-}
 
 // --------------------------------
 
@@ -54,9 +37,13 @@
 
 // --------------------------------
 
-.list--ul {
+.list-ul {
   --bullet-size: 6px; // dot width and height
   --bullet-margin-right: var(--space-xxs); // gap between bullet and content
+
+  li {
+    padding-left: calc(var(--bullet-size) + var(--bullet-margin-right));
+  }
 
   // bullet
   li::before {
@@ -64,8 +51,15 @@
     border: 2px solid currentColor;
     border-radius: 50%;
     color: inherit; // bullet color
+    display: inline-flex;
     content: "";
+    height: var(--bullet-size);
+    left: calc(var(--bullet-margin-right) * -1);
     margin-top: calc(-1 * var(--bullet-size) / 2); // half bullet size
+    margin-left: calc(var(--bullet-size) * -1);
+    position: relative;
+    vertical-align: middle;
+    width: var(--bullet-size);
   }
 
   ul li::before {
@@ -74,13 +68,14 @@
 
 }
 
+
 // --------------------------------
 
 // Ordered list
 
 // --------------------------------
 
-.list--ol {
+.list-ol {
   --bullet-size: 24px; // circle width and height
   --bullet-margin-right: var(--space-xxxs); // gap between circle and content
 
@@ -103,6 +98,13 @@
     color: inherit;
     content: counter(list-items);
     justify-content: center;
+    display: inline-flex;
+    height: var(--bullet-size);
+    left: calc(var(--bullet-margin-right) * -1);
+    margin-left: calc(var(--bullet-size) * -1);
+    position: relative;
+    vertical-align: middle;
+    width: var(--bullet-size);
   }
 
   ol li::before {
@@ -111,13 +113,14 @@
 
 }
 
+
 // --------------------------------
 
 // Badges list
 
 // --------------------------------
 
-.list--badges {
+.list-badges {
   display: flex;
   flex-wrap: wrap;
 

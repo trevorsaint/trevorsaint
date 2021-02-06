@@ -8,7 +8,7 @@
   margin-left: auto;
   margin-right: auto;
   max-width: 1200px;
-  width: calc(100% - 2*var(--component-padding));
+  width: calc(100% - 2 * var(--component-padding));
 }
 
 // --------------------------------
@@ -19,9 +19,9 @@
 
 .grid {
   --gap: 0px;
-  --gap-x: var(--gap);
-  --gap-y: var(--gap);
-  --offset: var(--gap-x);
+  --gap-x: var(--gap, 0);
+  --gap-y: var(--gap, 0);
+  --offset: var(--gap-x, 0);
   display: flex;
   flex-wrap: wrap;
 
@@ -66,11 +66,11 @@
 
 @supports (--css: variables) {
   .grid {
-    margin-bottom: calc(-1 * var(--gap-y));
-    margin-left: calc(-1 * var(--gap-x));
+    margin-bottom: calc(-1 * var(--gap-y, 0));
+    margin-left: calc(-1 * var(--gap-x, 0));
 
     > * {
-      margin-bottom: var(--gap-y);
+      margin-bottom: var(--gap-y, 0);
       margin-left: var(--offset);
     }
   }
@@ -171,7 +171,7 @@
     }
 
     .offset-0\@#{$breakpoint} {
-      --offset: var(--gap-x);
+      --offset: var(--gap-x, 0);
     }
 
     @supports (--css: variables) {

@@ -222,6 +222,7 @@ $grid-columns: 12 !default;
   box-shadow: 0 -2px 0 0 var(--color-tertiary), 0 4px var(--color-black);
   color: var(--color-contrast-high) !important;
   text-decoration-line: none !important; // produces no text decoration
+  text-decoration: none;
 }
 
 // --------------------------------
