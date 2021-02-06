@@ -70,8 +70,8 @@
       return;
     }
 
-    var buttonShow = '<button class="button width-100% flex justify-center js-read-more__button ' + readMore.buttonClasses + '"><span class="button__label">' + readMore.buttonShowLabel + '</span><svg class="icon icon--sm" viewBox="0 0 24 24" focusable="false" aria-hidden="true"><path d="M17.29 9c.39.39.39 1.02 0 1.41L12.7 15a.996.996 0 01-1.41 0L6.7 10.41c-.38-.39-.38-1.02 0-1.41s1.02-.39 1.41 0l3.88 3.88L15.88 9c.38-.39 1.02-.38 1.41 0z"></path></svg></button>';
-    var buttonHide = '<button class="button width-100% flex justify-center js-read-more__button is-hidden ' + readMore.buttonClasses + '"><span class="button__label">' + readMore.buttonHideLabel + '</span><svg class="icon icon--sm" viewBox="0 0 24 24" focusable="false" aria-hidden="true"><path d="M6.71 15a.996.996 0 010-1.41L11.3 9a.996.996 0 011.41 0l4.59 4.59A.996.996 0 1115.89 15l-3.88-3.88L8.12 15c-.39.39-1.02.38-1.41 0z"></path></svg></button>';
+    var buttonShow = '<button class="button width-100% flex justify-center js-read-more__button ' + readMore.buttonClasses + '"><span class="button__label">' + readMore.buttonShowLabel + '</span><svg class="icon icon--sm margin-left-xxxxs" viewBox="0 0 24 24" focusable="false" aria-hidden="true"><path d="M17.29 9c.39.39.39 1.02 0 1.41L12.7 15a.996.996 0 01-1.41 0L6.7 10.41c-.38-.39-.38-1.02 0-1.41s1.02-.39 1.41 0l3.88 3.88L15.88 9c.38-.39 1.02-.38 1.41 0z" fill="currentColor"></path></svg></button>';
+    var buttonHide = '<button class="button width-100% flex justify-center js-read-more__button is-hidden ' + readMore.buttonClasses + '"><span class="button__label">' + readMore.buttonHideLabel + '</span><svg class="icon icon--sm margin-left-xxxxs" viewBox="0 0 24 24" focusable="false" aria-hidden="true"><path d="M6.71 15a.996.996 0 010-1.41L11.3 9a.996.996 0 011.41 0l4.59 4.59A.996.996 0 1115.89 15l-3.88-3.88L8.12 15c-.39.39-1.02.38-1.41 0z" fill="currentColor"></path></svg></button>';
 
     if(readMore.ellipsis) {
       buttonShow = '<span class="js-read-more__ellipsis" aria-hidden="true">...</span>'+ buttonShow;

@@ -8,13 +8,13 @@
   @include fontSmooth;
   align-items: center;
   background-color: var(--color-primary);
+  border: 2px solid transparent; // High Contrast Mode
   border-radius: var(--radius-sm);
-  border: none;
   color: var(--color-white);
   cursor: pointer;
   display: inline-flex;
   font-weight: var(--font-semibold);
-  padding: var(--space-xxxs) var(--space-xxs);
+  padding: calc(var(--space-xxxs) - 2px) calc(var(--space-xxs) - 2px);
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
@@ -49,7 +49,6 @@
 
 .button--small {
   @include typography(16);
-  padding: var(--space-xxxs) var(--space-xxs);
 }
 
 .button--icon-leading {

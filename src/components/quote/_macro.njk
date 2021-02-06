@@ -1,6 +1,6 @@
 {% macro quote(params) %}
 
-  <blockquote class="quote text-component{%- if params.classes is defined %} {{ params.classes }}{% endif %}"{%- for attribute, value in params.attributes %} {{attribute}}="{{value}}"{% endfor %}>
+  <blockquote class="quote text-component{{ ' ' + params.classes if params.classes else '' }}"{%- for attribute, value in params.attributes %} {{attribute}}="{{value}}"{% endfor %}>
 
     {% if params.text %}<p>{{ params.text }}</p>{% else %}{{ params.html | safe }}{% endif %}
 

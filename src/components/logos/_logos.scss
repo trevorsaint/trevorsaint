@@ -9,6 +9,7 @@
 .logos__item {
   background-color: alpha(var(--color-black), 0.05);
   background-blend-mode: multiply;
+  border: 2px solid transparent; // High Contrast Mode
   border-radius: var(--radius-sm);
   display: flex;
   height: 112px;
@@ -26,7 +27,7 @@
 
   &:hover {
     background-color: var(--color-white);
-    box-shadow: inset 0 0 0 2px var(--color-contrast-high);
+    box-shadow: 0 0 0 2px var(--color-contrast-high);
   }
 
   &:focus {
@@ -39,6 +40,7 @@
 
 .logos__img {
   display: block;
+  fill: currentColor;
   margin: auto;
 }
 
