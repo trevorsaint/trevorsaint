@@ -4,7 +4,6 @@
 
 // --------------------------------
 
-
 .list {
   padding-left: 0;
 
@@ -82,6 +81,7 @@
   counter-reset: list-items;
 
   li {
+    padding-left: calc(var(--bullet-size) + var(--bullet-margin-right));
     counter-increment: list-items;
   }
 
@@ -97,9 +97,9 @@
     border-radius: 50%;
     color: inherit;
     content: counter(list-items);
-    justify-content: center;
     display: inline-flex;
     height: var(--bullet-size);
+    justify-content: center;
     left: calc(var(--bullet-margin-right) * -1);
     margin-left: calc(var(--bullet-size) * -1);
     position: relative;
