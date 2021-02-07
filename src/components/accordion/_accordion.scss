@@ -30,17 +30,15 @@
   transform: rotate(-180deg);
 }
 
+// progressive enhancement
 .js {
 
   .accordion__header {
     cursor: pointer;
 
     span {
-      text-underline-position: under;
-      text-decoration-color: var(--color-contrast-high);
-      text-decoration-line: underline;
-      text-decoration-style: solid;
-      text-decoration-thickness: 1px;
+      text-underline-position: under;  // improve placement of underline
+      text-decoration: underline solid 1px var(--color-contrast-high);
     }
 
     &:hover > span {
