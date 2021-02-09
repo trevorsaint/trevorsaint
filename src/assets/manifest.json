@@ -5,8 +5,8 @@
   "orientation": "any",
   "icons": [
     {
-      "src": "https://trevorsaint.uk/images/google-touch-icon-192x192.png",
-      "sizes": "192x192",
+      "src": "https://trevorsaint.uk/images/google-touch-icon-196x196.png",
+      "sizes": "196x196",
       "purpose": "maskable any"
     },
     {
