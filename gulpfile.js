@@ -2,6 +2,7 @@ const gulp = require('gulp');
 const sass = require('gulp-sass');
 const sassGlob = require('gulp-sass-glob');
 const browserSync = require('browser-sync').create();
+const del = require('del');
 const postcss = require('gulp-postcss');
 const cssvariables = require('postcss-css-variables');
 const calc = require('postcss-calc');
@@ -24,6 +25,12 @@ function reload(done) {
   browserSync.reload();
   done();
 };
+
+
+// clean public folder
+gulp.task('clean', function() {
+  return del(configPaths.public);
+});
 
 
 // convert the SCSS to CSS and compress it. No fallback for IE is created
@@ -141,6 +148,10 @@ gulp.task('watch-ie', gulp.series(['browserSync', 'sass-ie', 'scripts'], functio
 }));
 
 
+// Build
+gulp.task('build', gulp.series('clean', gulp.parallel('sass', 'sass-ie', 'scripts', 'nunjucks', 'assets')));
+
+
 // Distribution
 gulp.task('dist', async function() {
   // remove unused classes from the style.css file with PurgeCSS
@@ -149,8 +160,6 @@ gulp.task('dist', async function() {
   await cacheBust();
   // minify HTML
   await minifyHTML();
-  // move all assets
-  await moveAssets();
   // create service worker - PWA
   await createServiceWorker();
   console.log('Distribution task completed!');
@@ -212,22 +221,6 @@ function minifyHTML() {
       collapseWhitespace: true,
       removeComments: true
     }))
-    .pipe(gulp.dest(configPaths.public));
-    stream.on('finish', function() {
-      resolve();
-    });
-  });
-
-};
-
-
-function moveAssets() {
-
-  return new Promise(function(resolve, reject) {
-    let stream = gulp.src([
-      configPaths.assets + '**/*',
-      '!src/assets/scripts/**'
-    ], { allowEmpty: true })
     .pipe(gulp.dest(configPaths.public));
     stream.on('finish', function() {
       resolve();

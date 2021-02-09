@@ -7,17 +7,17 @@
     {
       "src": "https://trevorsaint.uk/images/google-touch-icon-196x196.png",
       "sizes": "196x196",
-      "purpose": "maskable"
+      "purpose": "maskable any"
     },
     {
       "src": "https://trevorsaint.uk/images/google-touch-icon-512x512.png",
       "sizes": "512x512",
-      "purpose": "maskable"
+      "purpose": "maskable any"
     },
     {
       "src": "https://trevorsaint.uk/images/google-touch-icon.svg",
-      "sizes": "any",
-      "purpose": "maskable"
+      "sizes": "257x257",
+      "purpose": "maskable any"
     }
   ],
   "start_url": "https://trevorsaint.uk",
