@@ -1,0 +1,27 @@
+{
+  "name": "Trevor Saint | Interaction Designer",
+  "short_name": "Trevor Saint",
+  "lang": "en-GB",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "https://trevorsaint.uk/images/google-touch-icon-196x196.png",
+      "sizes": "196x196",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "https://trevorsaint.uk/images/google-touch-icon-512x512.png",
+      "sizes": "512x512",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "https://trevorsaint.uk/images/google-touch-icon.svg",
+      "sizes": "257x257",
+      "purpose": "maskable any"
+    }
+  ],
+  "start_url": "https://trevorsaint.uk",
+  "background_color": "#F24B88",
+  "theme_color": "#F24B88",
+  "display": "fullscreen"
+}

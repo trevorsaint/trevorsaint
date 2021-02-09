@@ -4,8 +4,84 @@
 
     <div class="footer__content">
 
-      <div class="max-width-sm">
-        <h2 class="heading-xl padding-bottom-xs padding-bottom-lg@sm padding-bottom-xxl@md padding-bottom-xxxxl@lg">Do you have a project in mind? <a class="link" href="{{rootPath}}contact">Contact me</a></h2>
+      <div class="flex@lg items-start justify-between">
+
+        <div class="padding-bottom-xs padding-bottom-lg@md padding-bottom-xxl@lg padding-bottom-xxxxl@xl max-width-sm">
+          {% if pageId == 'contact' %}
+            <h2 class="heading-xl">Do you have a project in mind? Call <span class="sr-only">Trevor Saint</span> <a class="link" href="tel:+4407783809087" rel="nofollow">07783 809 087</a></a></h2>
+          {% else %}
+            <h2 class="heading-xl">Do you have a project in mind? <a class="link" href="{{rootPath}}contact">Contact me</a></h2>
+          {% endif %}
+        </div>
+
+        <div class="padding-bottom-xs margin-top-xxxs">
+
+          <ul class="social-share flex flex-wrap gap-xxs">
+
+            <li class="social-share__item">
+              <a class="social-share__link" href="https://github.com/trevorsaint" rel="external">
+                {{
+                  icon({
+                    "icon": 'github',
+                    "iconSize": 'md'
+                  })
+                }}
+                <span class="sr-only">Follow Trevor Saint on Github</span>
+              </a>
+            </li>
+
+            <li class="social-share__item">
+              <a class="social-share__link" href="https://pinterest.co.uk/trevorsaint" rel="external">
+                {{
+                  icon({
+                    "icon": 'pinterest',
+                    "iconSize": 'md'
+                  })
+                }}
+                <span class="sr-only">Follow Trevor Saint on Pinterest</span>
+              </a>
+            </li>
+
+            <li class="social-share__item">
+              <a class="social-share__link" href="https://twitter.com/trevorsaint" rel="external">
+                {{
+                  icon({
+                    "icon": 'twitter',
+                    "iconSize": 'md'
+                  })
+                }}
+                <span class="sr-only">Follow Trevor Saint on Twitter</span>
+              </a>
+            </li>
+
+            <li class="social-share__item">
+              <a class="social-share__link" href="https://linkedin.com/in/trevorsaint" rel="external">
+                {{
+                  icon({
+                    "icon": 'linkedin',
+                    "iconSize": 'md'
+                  })
+                }}
+                <span class="sr-only">Follow Trevor Saint on LinkedIn</span>
+              </a>
+            </li>
+
+            <li class="social-share__item">
+              <a class="social-share__link" href="https://instagram.com/trevorsaint" rel="external">
+                {{
+                  icon({
+                    "icon": 'instagram',
+                    "iconSize": 'md'
+                  })
+                }}
+                <span class="sr-only">Follow Trevor Saint on Instagram</span>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
       </div>
 
       <div class="flex@md items-center justify-between">

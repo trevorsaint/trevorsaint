@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Projects by Trevor Saint | I design websites for all sorts of companies small, medium and large</title>
+
+    <!-- Disable telephone number styling in iOS -->
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- Add home screen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Trevor Saint">
+
+    <!-- Search Engine -->
+    <meta name="description" content="I have worked with a range of clients like GOV, Office for National Statistics, HMCTS, Rural Payments, as well as small startups like Paramount Packaging.">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/projects">
+    <meta property="og:title" content="Projects by Trevor Saint | I design websites for all sorts of companies small, medium and large">
+    <meta property="og:image" content="/images/opengraph.png">
+    <meta property="og:description" content="I have worked with a range of clients like GOV, Office for National Statistics, HMCTS, Rural Payments, as well as small startups like Paramount Packaging.">
+    <meta property="og:site_name" content="Trevor Saint">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@trevorsaint">
+    <meta name="twitter:creator" content="trevorsaint">
+    <meta name="twitter:url" content="/projects">
+    <meta name="twitter:title" content="Projects by Trevor Saint | I design websites for all sorts of companies small, medium and large">
+    <meta name="twitter:description" content="I have worked with a range of clients like GOV, Office for National Statistics, HMCTS, Rural Payments, as well as small startups like Paramount Packaging.">
+    <meta name="twitter:image" content="/images/twitter.png">
+
+    <!-- Android’s Chrome browser -->
+    <meta name="theme-color" content="#F24B88">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/images/favicon.svg">
+
+    <!-- Mask icon (Safari) -->
+    <link rel="mask-icon" href="/images/mask-icon.svg" color="#F24B88">
+
+    <!-- Apple touch icon -->
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+
+    <!-- Manifest -->
+    <link href="/manifest.json" rel="manifest">
+
+    <!-- Font preloading -->
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/Baskerville.woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/Moderat-Bold.woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/Moderat-Regular.woff2" crossorigin="anonymous">
+
+    <!-- Stylesheet -->
+    <link id="trevorsaint" href="/stylesheets/main.css" rel="stylesheet">
+
+    <!-- No CSS variables support fallback -->
+    <script>
+      if(!('CSS' in window) || !CSS.supports('color', 'var(--color-var)')) {var main = document.getElementById('trevorsaint');if(main) {var href = main.getAttribute('href');href = href.replace('main.css', 'main-fallback.css');main.setAttribute('href', href);}}
+    </script>
+
+    <!-- Progressive enhancement -->
+    <script>document.getElementsByTagName('html')[0].className += 'js';</script>
+
+  </head>
+  <body>
+
+  <a class="skip-link" href="#content">
+  <span class="skip-link__label">Skip to main content</span>
+</a>
+
+<header class="header js-header" role="banner">
+
+  <div class="header__container container">
+
+    <div class="header__logo">
+      <a class="header__logo-link" href="/">
+        <svg class="header__logo-svg" viewBox="0 0 85 80">
+          <title>Trevor Saint</title>
+          <path fill="#EDF24B" d="M81.7 23.04c6.06 14.67 3.06 36.12-11.09 47.6-14.09 11.48-39.27 12.84-54.31 1.63-15.1-11.2-20-35.04-13.47-50.45S27.46-.45 44 .02C60.61.5 75.65 8.38 81.7 23.04z"></path>
+          <path fill="#8DF2E0" d="M78.16 35.4c3.67 16.15-1.56 30.26-12.03 38.06s-26.16 9.23-39.75.95-25-26.12-20.86-42.94S29.51-1.09 45.75.06C61.93 1.21 74.5 19.33 78.16 35.4z"></path>
+          <path fill="#F24B88" d="M72.87 24.98C77.12 36.62 74 52.1 61.83 62.68c-12.16 10.58-33.43 16.2-44.39 8.2C6.41 62.81 5.68 41.12 11.99 26.7 18.3 12.22 31.79 5.08 44.35 5.34c12.57.33 24.2 8.07 28.52 19.64z"></path>
+          <path fill="#FFFFFF" d="M65.92 46.46c.9-.81 2.39-.6 3.05.35.03.05.07.1.1.15.99 1.45-.98 3.22-2.59 2.33-.05-.03-.11-.06-.17-.09-1.06-.59-1.29-1.93-.39-2.74zM2.2 24.79c17.61-4.3 36.48-10.46 55.02-8.37 1.86.21 1.98 2.64 0 2.68-8.91.19-17.65.87-26.26 2.14-.03.08-.07.16-.11.23-.02 11.57 1.12 24.28 4.17 35.7 2.07-3.42 4.27-6.77 6.44-10.15 1-1.56 2.81-3.74 4.5-6.07-.38-.91-.39-1.57-.5-3.47-.16-2.7 3.12-6.46 6.04-7.04 1.58-.31 2.64.83 2.42 2.16-.42 2.49-1.88 5.02-3.53 7.45 1.78 3.4 5.85 7.09 6.63 8.97 1.05 2.53 1.65 4.86.01 7.37-1.53 2.34-5.36 2.97-7.57 1.34-.65-.48-.78-1.37-.61-2.06.54-2.15 2.2-3.14 4.22-3.99-1.55-2.34-3.18-5.46-4.35-6.66-.34-.4-.68-.8-1.01-1.2-.56.78-1.09 1.55-1.55 2.28-3.52 5.56-6.77 11.22-10.02 16.91-.81 1.42-3.22 1-3.66-.43-4.03-12.86-5.17-27.37-5.35-40.75-8.43 1.42-16.76 3.41-25.04 6.06-1.79.57-2.94-1.95-1.28-2.73l.45-.21c.32-.14.64-.19.94-.16z"></path>
+        </svg>
+      </a>
+    </div>
+
+    <button class="header__trigger js-header__trigger button button--small button--icon-trailing" aria-label="Toggle menu" aria-expanded="false" aria-controls="header-nav">
+      <span class="button__label">Menu</span>
+      <svg class="icon icon--sm" viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+        <path d="M17.29 9c.39.39.39 1.02 0 1.41L12.7 15a.996.996 0 01-1.41 0L6.7 10.41c-.38-.39-.38-1.02 0-1.41s1.02-.39 1.41 0l3.88 3.88L15.88 9c.38-.39 1.02-.38 1.41 0z"></path>
+      </svg>
+    </button>
+
+    <nav class="header__nav js-header__nav" id="header-nav" role="navigation" aria-label="Main navigation">
+      <div class="header__nav-inner">
+        <ul class="header__list">
+          <li class="header__item"><a class="header__link" href="/">Home</a></li>
+          <li class="header__item"><a class="header__link" href="/about">About</a></li>
+          <li class="header__item"><a class="header__link" href="/projects" aria-current="true">Projects</a></li>
+          <li class="header__item"><a class="header__link" href="/testimonials">Testimonials</a></li>
+          <li class="header__item"><a class="header__link" href="/contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+  <main class="content" id="content" role="main">
+    
+
+
+  <section class="padding-top-xs padding-bottom-md padding-bottom-lg@sm padding-bottom-xxl@md padding-bottom-xxxxl@lg">
+
+    <div class="container">
+
+      <div class="max-width-md">
+
+        <h1 class="heading-xxxl margin-bottom-xxs margin-bottom-xs@md margin-bottom-lg@lg">Projects</h1>
+
+        <div class="text-component color-contrast-medium body-lg">
+          <p>Pleasure in the job puts perfection into the work.</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section class="padding-bottom-md padding-bottom-lg@sm padding-bottom-xxl@md padding-bottom-xxxxl@lg">
+
+    <div class="container">
+
+      <h2 class="heading-xl padding-bottom-xxs margin-bottom-xs margin-bottom-lg@sm border-offscreen">Featured project</h2>
+
+      <div class="feature">
+
+        <div class="feature__grid grid gap-xs items-center">
+
+          <div class="col-8@md">
+
+            <div class="feature__image">
+              <a href="/projects/census-2021" tabindex="-1">
+                <picture>
+                  <source type="image/webp" srcset="/images/projects/census-2021/feature.webp, /images/projects/census-2021/feature@2x.webp 2x">
+                  <source type="image/png" srcset="/images/projects/census-2021/feature.png, /images/projects/census-2021/feature@2x.png 2x">
+                  <img height="528" width="792" src="/images/projects/census-2021/feature.png" alt="" loading="lazy">
+                </picture>
+              </a>
+            </div>
+
+          </div>
+
+          <div class="col-4@md position-relative z-index-1">
+
+            <div class="feature__text-offset@md">
+              <span class="badge badge--contrast-higher">In progress</span>
+              <h2 class="heading-xl margin-y-xxs">Census 2021</h2>
+              <p class="body-lg margin-bottom-xxs color-contrast-medium">Designing a once in a century survey for all households in England and Wales.</p>
+              <p>
+                <a class="link link--icon" href="/projects/census-2021" aria-label="View Census 2021 project">
+                  View project
+                  
+
+  
+
+  
+    <svg class="icon icon--sm margin-left-xxxxs" height="24" width="24" viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+      <path d="M3.71 11.02h13.17L14 8.14a.996.996 0 111.41-1.41L20 11.32c.39.39.39 1.02 0 1.41l-4.59 4.59A.996.996 0 1114 15.91l2.88-2.89H3.71c-.55 0-1-.45-1-1s.45-1 1-1z" fill="currentColor"></path>
+    </svg>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+                </a>
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section class="container padding-bottom-md padding-bottom-lg@sm padding-bottom-xxl@md padding-bottom-xxxxl@lg">
+
+    <h2 class="heading-xl padding-bottom-xxs margin-bottom-xs margin-bottom-lg@sm border-offscreen">Other projects</h2>
+
+    <div class="grid gap-xs">
+
+      <div class="col-6@sm">
+
+        
+
+  <div class="card">
+
+    <div class="card__image">
+
+      <a href="/projects/government-digital-service" tabindex="-1">
+        <picture>
+          <source type="image/webp" srcset="/images/projects/government-digital-service/project.webp, /images/projects/government-digital-service/project@2x.webp 2x">
+          <source type="image/png" srcset="/images/projects/government-digital-service/project.png, /images/projects/government-digital-service/project@2x.png 2x">
+          <img src="/images/projects/government-digital-service/project.png" height="392" width="588" alt="" loading="lazy">
+        </picture>
+      </a>
+
+    </div>
+
+    <div class="card__content">
+
+      <div class="text-component">
+        <h3>Government Digital Service</h3>
+        <p class="color-contrast-medium">Helping GDS with Interaction Design.</p>
+        <p>
+          <a class="link link--icon" href="/projects/government-digital-service" aria-label="View Government Digital Service project">
+            View project
+            <svg class="icon icon--sm margin-left-xxxxs" height="24" width="24" viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+              <path d="M3.71 11.02h13.17L14 8.14a.996.996 0 111.41-1.41L20 11.32c.39.39.39 1.02 0 1.41l-4.59 4.59A.996.996 0 1114 15.91l2.88-2.89H3.71c-.55 0-1-.45-1-1s.45-1 1-1z"></path>
+            </svg>
+          </a>
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+      </div>
+
+      <div class="col-6@sm">
+
+        
+
+  <div class="card">
+
+    <div class="card__image">
+
+      <a href="/projects/travalion" tabindex="-1">
+        <picture>
+          <source type="image/webp" srcset="/images/projects/travalion/project.webp, /images/projects/travalion/project@2x.webp 2x">
+          <source type="image/png" srcset="/images/projects/travalion/project.png, /images/projects/travalion/project@2x.png 2x">
+          <img src="/images/projects/travalion/project.png" height="392" width="588" alt="" loading="lazy">
+        </picture>
+      </a>
+
+    </div>
+
+    <div class="card__content">
+
+      <div class="text-component">
+        <h3>Travalion</h3>
+        <p class="color-contrast-medium">Design for the happy travel company, Travalion.</p>
+        <p>
+          <a class="link link--icon" href="/projects/travalion" aria-label="View Travalion project">
+            View project
+            <svg class="icon icon--sm margin-left-xxxxs" height="24" width="24" viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+              <path d="M3.71 11.02h13.17L14 8.14a.996.996 0 111.41-1.41L20 11.32c.39.39.39 1.02 0 1.41l-4.59 4.59A.996.996 0 1114 15.91l2.88-2.89H3.71c-.55 0-1-.45-1-1s.45-1 1-1z"></path>
+            </svg>
+          </a>
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+      </div>
+
+      <div class="col-6@sm">
+
+        
+
+  <div class="card">
+
+    <div class="card__image">
+
+      <a href="/projects/max-powder" tabindex="-1">
+        <picture>
+          <source type="image/webp" srcset="/images/projects/max-powder/project.webp, /images/projects/max-powder/project@2x.webp 2x">
+          <source type="image/png" srcset="/images/projects/max-powder/project.png, /images/projects/max-powder/project@2x.png 2x">
+          <img src="/images/projects/max-powder/project.png" height="392" width="588" alt="" loading="lazy">
+        </picture>
+      </a>
+
+    </div>
+
+    <div class="card__content">
+
+      <div class="text-component">
+        <h3>Max Powder</h3>
+        <p class="color-contrast-medium">A complete rebrand and design for Max Powder.</p>
+        <p>
+          <a class="link link--icon" href="/projects/max-powder" aria-label="View Max Powder project">
+            View project
+            <svg class="icon icon--sm margin-left-xxxxs" height="24" width="24" viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+              <path d="M3.71 11.02h13.17L14 8.14a.996.996 0 111.41-1.41L20 11.32c.39.39.39 1.02 0 1.41l-4.59 4.59A.996.996 0 1114 15.91l2.88-2.89H3.71c-.55 0-1-.45-1-1s.45-1 1-1z"></path>
+            </svg>
+          </a>
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+      </div>
+
+      <div class="col-6@sm">
+
+        
+
+  <div class="card">
+
+    <div class="card__image">
+
+      <a href="/projects/paramount-packaging" tabindex="-1">
+        <picture>
+          <source type="image/webp" srcset="/images/projects/paramount-packaging/project.webp, /images/projects/paramount-packaging/project@2x.webp 2x">
+          <source type="image/png" srcset="/images/projects/paramount-packaging/project.png, /images/projects/paramount-packaging/project@2x.png 2x">
+          <img src="/images/projects/paramount-packaging/project.png" height="392" width="588" alt="" loading="lazy">
+        </picture>
+      </a>
+
+    </div>
+
+    <div class="card__content">
+
+      <div class="text-component">
+        <h3>Paramount Packaging</h3>
+        <p class="color-contrast-medium">Redesign the look and feel for Paramount.</p>
+        <p>
+          <a class="link link--icon" href="/projects/paramount-packaging" aria-label="View Paramount Packaging project">
+            View project
+            <svg class="icon icon--sm margin-left-xxxxs" height="24" width="24" viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+              <path d="M3.71 11.02h13.17L14 8.14a.996.996 0 111.41-1.41L20 11.32c.39.39.39 1.02 0 1.41l-4.59 4.59A.996.996 0 1114 15.91l2.88-2.89H3.71c-.55 0-1-.45-1-1s.45-1 1-1z"></path>
+            </svg>
+          </a>
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+      </div>
+
+      <div class="col-6@sm">
+
+        
+
+  <div class="card">
+
+    <div class="card__image">
+
+      <a href="/projects/servelec-social-care" tabindex="-1">
+        <picture>
+          <source type="image/webp" srcset="/images/projects/servelec-social-care/project.webp, /images/projects/servelec-social-care/project@2x.webp 2x">
+          <source type="image/png" srcset="/images/projects/servelec-social-care/project.png, /images/projects/servelec-social-care/project@2x.png 2x">
+          <img src="/images/projects/servelec-social-care/project.png" height="392" width="588" alt="" loading="lazy">
+        </picture>
+      </a>
+
+    </div>
+
+    <div class="card__content">
+
+      <div class="text-component">
+        <h3>Servelec Social Care</h3>
+        <p class="color-contrast-medium">An improved UX in Mosaic for Servelec’s Social Care.</p>
+        <p>
+          <a class="link link--icon" href="/projects/servelec-social-care" aria-label="View Servelec Social Care project">
+            View project
+            <svg class="icon icon--sm margin-left-xxxxs" height="24" width="24" viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+              <path d="M3.71 11.02h13.17L14 8.14a.996.996 0 111.41-1.41L20 11.32c.39.39.39 1.02 0 1.41l-4.59 4.59A.996.996 0 1114 15.91l2.88-2.89H3.71c-.55 0-1-.45-1-1s.45-1 1-1z"></path>
+            </svg>
+          </a>
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+      </div>
+
+      <div class="col-6@sm">
+
+        
+
+  <div class="card">
+
+    <div class="card__image">
+
+      <a href="/projects/judicial-case-manager" tabindex="-1">
+        <picture>
+          <source type="image/webp" srcset="/images/projects/judicial-case-manager/project.webp, /images/projects/judicial-case-manager/project@2x.webp 2x">
+          <source type="image/png" srcset="/images/projects/judicial-case-manager/project.png, /images/projects/judicial-case-manager/project@2x.png 2x">
+          <img src="/images/projects/judicial-case-manager/project.png" height="392" width="588" alt="" loading="lazy">
+        </picture>
+      </a>
+
+    </div>
+
+    <div class="card__content">
+
+      <div class="text-component">
+        <h3>Judicial Case Manager</h3>
+        <p class="color-contrast-medium">Manage cases in a simple, accessible and efficient way.</p>
+        <p>
+          <a class="link link--icon" href="/projects/judicial-case-manager" aria-label="View Judicial Case Manager project">
+            View project
+            <svg class="icon icon--sm margin-left-xxxxs" height="24" width="24" viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+              <path d="M3.71 11.02h13.17L14 8.14a.996.996 0 111.41-1.41L20 11.32c.39.39.39 1.02 0 1.41l-4.59 4.59A.996.996 0 1114 15.91l2.88-2.89H3.71c-.55 0-1-.45-1-1s.45-1 1-1z"></path>
+            </svg>
+          </a>
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+      </div>
+
+      <div class="col-6@sm">
+
+        
+
+  <div class="card">
+
+    <div class="card__image">
+
+      <a href="/projects/hmcts-design-system" tabindex="-1">
+        <picture>
+          <source type="image/webp" srcset="/images/projects/hmcts-design-system/project.webp, /images/projects/hmcts-design-system/project@2x.webp 2x">
+          <source type="image/png" srcset="/images/projects/hmcts-design-system/project.png, /images/projects/hmcts-design-system/project@2x.png 2x">
+          <img src="/images/projects/hmcts-design-system/project.png" height="392" width="588" alt="" loading="lazy">
+        </picture>
+      </a>
+
+    </div>
+
+    <div class="card__content">
+
+      <div class="text-component">
+        <h3>HMCTS Design System</h3>
+        <p class="color-contrast-medium">A design system to solve problems and avoid repetition.</p>
+        <p>
+          <a class="link link--icon" href="/projects/hmcts-design-system" aria-label="View HMCTS Design System project">
+            View project
+            <svg class="icon icon--sm margin-left-xxxxs" height="24" width="24" viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+              <path d="M3.71 11.02h13.17L14 8.14a.996.996 0 111.41-1.41L20 11.32c.39.39.39 1.02 0 1.41l-4.59 4.59A.996.996 0 1114 15.91l2.88-2.89H3.71c-.55 0-1-.45-1-1s.45-1 1-1z"></path>
+            </svg>
+          </a>
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+      </div>
+
+      <div class="col-6@sm">
+
+        
+
+  <div class="card">
+
+    <div class="card__image">
+
+      <a href="/projects/rural-payments" tabindex="-1">
+        <picture>
+          <source type="image/webp" srcset="/images/projects/rural-payments/project.webp, /images/projects/rural-payments/project@2x.webp 2x">
+          <source type="image/png" srcset="/images/projects/rural-payments/project.png, /images/projects/rural-payments/project@2x.png 2x">
+          <img src="/images/projects/rural-payments/project.png" height="392" width="588" alt="" loading="lazy">
+        </picture>
+      </a>
+
+    </div>
+
+    <div class="card__content">
+
+      <div class="text-component">
+        <h3>Rural Payments (GOV.UK)</h3>
+        <p class="color-contrast-medium">Rural grants and payments to help the farming industry.</p>
+        <p>
+          <a class="link link--icon" href="/projects/rural-payments" aria-label="View Rural Payments (GOV.UK) project">
+            View project
+            <svg class="icon icon--sm margin-left-xxxxs" height="24" width="24" viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+              <path d="M3.71 11.02h13.17L14 8.14a.996.996 0 111.41-1.41L20 11.32c.39.39.39 1.02 0 1.41l-4.59 4.59A.996.996 0 1114 15.91l2.88-2.89H3.71c-.55 0-1-.45-1-1s.45-1 1-1z"></path>
+            </svg>
+          </a>
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+
+  <div class="footer__container container padding-y-md padding-y-lg@sm padding-y-xxl@md padding-y-xxxxl@lg">
+
+    <div class="footer__content">
+
+      <div class="flex@lg items-start justify-between">
+
+        <div class="padding-bottom-xs padding-bottom-lg@md padding-bottom-xxl@lg padding-bottom-xxxxl@xl max-width-sm">
+          
+            <h2 class="heading-xl">Do you have a project in mind? <a class="link" href="/contact">Contact me</a></h2>
+          
+        </div>
+
+        <div class="padding-bottom-xs margin-top-xxxs">
+
+          <ul class="social-share flex flex-wrap gap-xxs">
+
+            <li class="social-share__item">
+              <a class="social-share__link" href="https://github.com/trevorsaint" rel="external">
+                
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <svg class="icon icon--md" viewBox="0 0 32 32" focusable="false" aria-hidden="true">
+      <path d="M16,6C10.5,6,6,10.6,6,16.3c0,4.5,2.9,8.4,6.8,9.7c0.5,0.1,0.7-0.2,0.7-0.5c0-0.2,0-0.9,0-1.7c-2.8,0.6-3.4-1.4-3.4-1.4C9.7,21.2,9,20.9,9,20.9c-0.9-0.6,0.1-0.6,0.1-0.6c1,0.1,1.5,1.1,1.5,1.1c0.9,1.6,2.3,1.1,2.9,0.9c0.1-0.7,0.3-1.1,0.6-1.4c-2.2-0.3-4.6-1.1-4.6-5.1c0-1.1,0.4-2,1-2.8c-0.1-0.3-0.4-1.3,0.1-2.7c0,0,0.8-0.3,2.7,1.1c0.8-0.2,1.7-0.3,2.5-0.3c0.8,0,1.7,0.1,2.5,0.3c1.9-1.3,2.7-1.1,2.7-1.1c0.5,1.4,0.2,2.5,0.1,2.7c0.6,0.7,1,1.6,1,2.8c0,3.9-2.3,4.8-4.6,5.1c0.4,0.3,0.7,0.9,0.7,1.9c0,1.4,0,2.5,0,2.8c0,0.3,0.2,0.6,0.7,0.5c4-1.4,6.8-5.2,6.8-9.7C26,10.6,21.5,6,16,6" fill="currentColor"></path>
+    </svg>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+                <span class="sr-only">Follow Trevor Saint on Github</span>
+              </a>
+            </li>
+
+            <li class="social-share__item">
+              <a class="social-share__link" href="https://pinterest.co.uk/trevorsaint" rel="external">
+                
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <svg class="icon icon--md" viewBox="0 0 32 32" focusable="false" aria-hidden="true">
+      <path d="M21.7,8c-1.4-1.3-3.3-2-5.4-2c-3.2,0-5.1,1.3-6.2,2.4C8.8,9.7,8,11.5,8,13.3c0,2.2,0.9,3.9,2.5,4.6c0.1,0,0.2,0.1,0.3,0.1c0.3,0,0.6-0.2,0.7-0.6c0.1-0.2,0.2-0.7,0.2-0.9c0.1-0.4,0-0.6-0.2-0.9c-0.5-0.5-0.7-1.2-0.7-2c0-2.4,1.8-5,5.2-5c2.7,0,4.3,1.5,4.3,4c0,1.5-0.3,3-0.9,4c-0.4,0.7-1.2,1.6-2.3,1.6c-0.5,0-0.9-0.2-1.2-0.6c-0.3-0.3-0.3-0.8-0.2-1.2c0.1-0.5,0.3-1,0.4-1.5c0.3-0.9,0.6-1.8,0.6-2.5c0-1.2-0.7-2-1.8-2c-1.4,0-2.5,1.4-2.5,3.2c0,0.9,0.2,1.5,0.3,1.8c-0.2,0.7-1.2,5.2-1.4,6c-0.1,0.5-0.8,4.3,0.3,4.6c1.3,0.3,2.4-3.4,2.5-3.8c0.1-0.3,0.4-1.6,0.6-2.4c0.6,0.6,1.6,1,2.6,1c1.8,0,3.5-0.8,4.6-2.3c1.1-1.4,1.7-3.5,1.7-5.7C23.7,11,23,9.3,21.7,8z" fill="currentColor"><path>
+    </svg>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+                <span class="sr-only">Follow Trevor Saint on Pinterest</span>
+              </a>
+            </li>
+
+            <li class="social-share__item">
+              <a class="social-share__link" href="https://twitter.com/trevorsaint" rel="external">
+                
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <svg class="icon icon--md" viewBox="0 0 32 32" focusable="false" aria-hidden="true">
+      <path d="M12.3,24.3C19.8,24.3,24,18,24,12.6c0-0.2,0-0.4,0-0.5c0.8-0.6,1.5-1.3,2-2.1c-0.7,0.3-1.5,0.5-2.4,0.6c0.8-0.5,1.5-1.3,1.8-2.3c-0.8,0.5-1.7,0.8-2.6,1C22.1,8.5,21,8,19.8,8c-2.3,0-4.1,1.8-4.1,4.1c0,0.3,0,0.6,0.1,0.9c-3.4-0.2-6.4-1.8-8.5-4.3C7,9.4,6.8,10.1,6.8,10.8c0,1.4,0.7,2.7,1.8,3.4c-0.7,0-1.3-0.2-1.9-0.5v0.1c0,2,1.4,3.6,3.3,4c-0.3,0.1-0.7,0.1-1.1,0.1c-0.3,0-0.5,0-0.8-0.1c0.5,1.6,2,2.8,3.8,2.8c-1.4,1.1-3.2,1.8-5.1,1.8c-0.3,0-0.7,0-1-0.1C7.8,23.6,10,24.3,12.3,24.3" fill="currentColor"></path>
+    </svg>
+  
+
+  
+
+  
+
+  
+
+  
+
+
+                <span class="sr-only">Follow Trevor Saint on Twitter</span>
+              </a>
+            </li>
+
+            <li class="social-share__item">
+              <a class="social-share__link" href="https://linkedin.com/in/trevorsaint" rel="external">
+                
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <svg class="icon icon--md" viewBox="0 0 32 32" focusable="false" aria-hidden="true">
+      <path d="M21.1,11.9c-2.3,0-3.3,1.2-3.9,2.1v0h0c0,0,0,0,0,0v-1.8h-4.3c0.1,1.2,0,12.8,0,12.8h4.3v-7.2c0-0.4,0-0.8,0.1-1c0.3-0.8,1-1.6,2.2-1.6c1.6,0,2.2,1.2,2.2,2.9V25H26v-7.3C26,13.7,23.9,11.9,21.1,11.9L21.1,11.9z M6.3,25h4.3V12.2H6.3V25z M10.8,8.2c0,1.2-0.9,2.2-2.4,2.2h0c-1.4,0-2.4-1-2.4-2.2C6,7,7,6,8.4,6C9.9,6,10.8,7,10.8,8.2L10.8,8.2z" fill="currentColor"></path>
+    </svg>
+  
+
+  
+
+  
+
+  
+
+
+                <span class="sr-only">Follow Trevor Saint on LinkedIn</span>
+              </a>
+            </li>
+
+            <li class="social-share__item">
+              <a class="social-share__link" href="https://instagram.com/trevorsaint" rel="external">
+                
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <svg class="icon icon--md" viewBox="0 0 32 32" focusable="false" aria-hidden="true">
+      <path d="M16.5,6c0.1,0,0.2,0,0.2,0l0.7,0c1.4,0,1.8,0,2.7,0.1c1.1,0,1.8,0.2,2.4,0.5c0.7,0.3,1.2,0.6,1.8,1.2c0.6,0.6,0.9,1.1,1.2,1.8c0.2,0.6,0.4,1.4,0.5,2.4c0,0.9,0.1,1.3,0.1,2.9l0,0.5c0,0.1,0,0.2,0,0.2v1.1c0,0.1,0,0.2,0,0.2l0,0.5c0,1.6,0,2-0.1,2.9c0,1.1-0.2,1.8-0.5,2.4c-0.3,0.7-0.6,1.2-1.2,1.8c-0.6,0.6-1.1,0.9-1.8,1.2c-0.6,0.2-1.4,0.4-2.4,0.5c-0.9,0-1.3,0.1-2.9,0.1l-0.5,0c-0.1,0-0.2,0-0.2,0h-1.1c-0.1,0-0.2,0-0.2,0l-0.5,0c-1.6,0-2,0-2.9-0.1c-1.1,0-1.8-0.2-2.4-0.5c-0.7-0.3-1.2-0.6-1.8-1.2c-0.6-0.6-0.9-1.1-1.2-1.8c-0.2-0.6-0.4-1.4-0.5-2.4C6,19.3,6,18.9,6,17.4l0-0.7c0-0.1,0-0.2,0-0.2v-1.1c0-0.1,0-0.2,0-0.2l0-0.7c0-1.4,0-1.8,0.1-2.7c0-1.1,0.2-1.8,0.5-2.4c0.3-0.7,0.6-1.2,1.2-1.8c0.6-0.6,1.1-0.9,1.8-1.2c0.6-0.2,1.4-0.4,2.4-0.5C12.7,6,13.1,6,14.6,6l0.7,0c0.1,0,0.2,0,0.2,0H16.5z M16.6,7.8h-1.1c-0.1,0-0.2,0-0.3,0l-0.5,0c-1.6,0-1.9,0-2.8,0.1c-1,0-1.5,0.2-1.9,0.3C9.6,8.4,9.3,8.6,9,9c-0.3,0.3-0.6,0.7-0.7,1.1C8.1,10.5,7.9,11,7.9,12c0,0.9-0.1,1.2-0.1,2.8l0,0.5c0,0.1,0,0.2,0,0.3v1.1c0,0.1,0,0.2,0,0.3l0,0.5c0,1.6,0,1.9,0.1,2.8c0,1,0.2,1.5,0.3,1.9C8.4,22.4,8.6,22.7,9,23c0.3,0.3,0.7,0.6,1.1,0.7c0.4,0.1,0.9,0.3,1.9,0.3c0.9,0,1.3,0.1,3.2,0.1h1.6c1.9,0,2.3,0,3.2-0.1c1,0,1.5-0.2,1.9-0.3c0.5-0.2,0.8-0.4,1.1-0.7c0.3-0.3,0.6-0.7,0.7-1.1c0.1-0.4,0.3-0.9,0.3-1.9c0-0.9,0.1-1.3,0.1-3.2v-1.6c0-1.9,0-2.3-0.1-3.2c0-1-0.2-1.5-0.3-1.9C23.6,9.6,23.4,9.3,23,9c-0.3-0.3-0.7-0.6-1.1-0.7C21.5,8.1,21,7.9,20,7.9c-0.9,0-1.2-0.1-2.8-0.1l-0.5,0C16.7,7.8,16.6,7.8,16.6,7.8z M16,10.9c2.8,0,5.1,2.3,5.1,5.1c0,2.8-2.3,5.1-5.1,5.1c-2.8,0-5.1-2.3-5.1-5.1C10.9,13.2,13.2,10.9,16,10.9z M16,12.7c-1.8,0-3.3,1.5-3.3,3.3c0,1.8,1.5,3.3,3.3,3.3c1.8,0,3.3-1.5,3.3-3.3C19.3,14.2,17.8,12.7,16,12.7z M21.3,9.5c0.7,0,1.2,0.5,1.2,1.2c0,0.7-0.5,1.2-1.2,1.2s-1.2-0.5-1.2-1.2C20.1,10,20.7,9.5,21.3,9.5z" fill="currentColor"></path>
+    </svg>
+  
+
+  
+
+  
+
+
+                <span class="sr-only">Follow Trevor Saint on Instagram</span>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+      <div class="flex@md items-center justify-between">
+
+        <ul class="menu-list margin-bottom-xs margin-bottom-0@md">
+          <li class="menu-list__item"><a class="menu-list__link" href="/">Home</a></li>
+          <li class="menu-list__item"><a class="menu-list__link" href="/about">About</a></li>
+          <li class="menu-list__item"><a class="menu-list__link" href="/projects" aria-current="true">Projects</a></li>
+          <li class="menu-list__item"><a class="menu-list__link" href="/testimonials">Testimonials</a></li>
+          <li class="menu-list__item"><a class="menu-list__link" href="/contact">Contact</a></li>
+        </ul>
+
+        <ul class="legal-list">
+          <li class="legal-list__item"><a class="link-text" href="/accessibility">Accessibility</a></li>
+          <li class="legal-list__item color-contrast-medium">&copy;2021 All rights reserved</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</footer>
+  <script src="/javascripts/main.min.js"></script>
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js');
+    });
+  }
+</script>
+
+  </body>
+</html>

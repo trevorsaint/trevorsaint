@@ -94,7 +94,7 @@ gulp.task('nunjucks', function() {
       ],
       data: {
         serviceName: 'Trevor Saint',
-        rootPath: 'https://trevorsaint.uk/'
+        rootPath: '/'
       }
     }))
     .pipe(gulp.dest(configPaths.public))
@@ -236,7 +236,8 @@ function createServiceWorker() {
   return workboxBuild.generateSW({
     globDirectory: configPaths.public,
     globPatterns: [
-      '**/*.{html,json,js,css,woff2}',
+      '**/*.{html,json,woff2}',
+      '**/*.{js,css}',
     ],
     swDest: configPaths.public + 'sw.js',
     sourcemap: false,
@@ -253,9 +254,9 @@ function createServiceWorker() {
         // use a custom cache name
         cacheName: 'images',
 
-        // only cache 10 images
+        // only cache 50 images
         expiration: {
-          maxEntries: 10
+          maxEntries: 50
         }
 
       }

@@ -2,7 +2,7 @@
 
   {%- from "icons/_macro.njk" import icon -%}
 
-  <ul class="social-share flex flex-wrap gap-xxs gap-xs@md justify-center{{ ' ' + params.classes if params.classes else '' }}"{% for attribute, value in params.attributes %} {{attribute}}="{{value}}"{% endfor %}>
+  <ul class="social-share social-share--large flex flex-wrap gap-xxs gap-xs@md justify-center{{ ' ' + params.classes if params.classes else '' }}"{% for attribute, value in params.attributes %} {{attribute}}="{{value}}"{% endfor %}>
 
     {% if params.twitter %}
     <li class="social-share__item">
