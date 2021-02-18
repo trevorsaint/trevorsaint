@@ -148,7 +148,7 @@ gulp.task('watch-ie', gulp.series(['browserSync', 'sass-ie', 'scripts'], functio
 }));
 
 
-// Build
+// build
 gulp.task('build', gulp.series('clean', gulp.parallel('sass', 'sass-ie', 'scripts', 'nunjucks', 'assets')));
 
 
@@ -160,6 +160,8 @@ gulp.task('dist', async function() {
   await cacheBust();
   // minify HTML
   await minifyHTML();
+  // move all assets
+  await moveAssets();
   // create service worker - PWA
   await createServiceWorker();
   console.log('Distribution task completed!');
@@ -230,14 +232,29 @@ function minifyHTML() {
 };
 
 
+function moveAssets() {
+
+  return new Promise(function(resolve, reject) {
+    var stream = gulp.src([
+      configPaths.assets + '**/*',
+      '!src/assets/scripts/**'
+    ], { allowEmpty: true })
+    .pipe(gulp.dest(configPaths.public));
+    stream.on('finish', function() {
+      resolve();
+    });
+  });
+
+};
+
+
 function createServiceWorker() {
 
   // configurations - https://developers.google.com/web/tools/workbox/guides/generate-service-worker/workbox-build
   return workboxBuild.generateSW({
     globDirectory: configPaths.public,
     globPatterns: [
-      '**/*.{html,json,woff2}',
-      '**/*.{js,css}',
+      '**/*.{html,json,js,css,woff2}'
     ],
     swDest: configPaths.public + 'sw.js',
     sourcemap: false,
