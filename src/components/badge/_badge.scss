@@ -6,12 +6,12 @@
 
 .badge {
   @include typography(16);
-  align-items: center;
   background-color: alpha(var(--color-black), 0.05);
-  border: 1px solid transparent; // High Contrast Mode
+  border: 1px solid transparent; // high contrast mode
   border-radius: var(--radius-lg);
-  display: inline-flex;
+  display: inline-block;
   padding: calc(var(--space-xxxxs) - 1px) calc(var(--space-xxs) - 1px);
+  vertical-align: top;
 }
 
 .badge--contrast-higher {
