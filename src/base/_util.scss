@@ -20,7 +20,6 @@
 .flex-shrink-0 { flex-shrink: 0; }
 .flex-basis-0  { flex-basis: 0; }
 
-
 // --------------------------------
 
 // Justify Content
@@ -31,7 +30,6 @@
 .justify-end     { justify-content: flex-end; }
 .justify-center  { justify-content: center; }
 .justify-between { justify-content: space-between; }
-
 
 // --------------------------------
 
@@ -44,7 +42,6 @@
 .items-end      { align-items: flex-end; }
 .items-baseline { align-items: baseline; }
 
-
 // --------------------------------
 
 // Order
@@ -54,7 +51,6 @@
 .order-1 { order: 1; }
 .order-2 { order: 2; }
 .order-3 { order: 3; }
-
 
 // --------------------------------
 
@@ -86,7 +82,6 @@
 .aspect-ratio-3\:2  { padding-bottom: calc(100%/(3/2)); }
 .aspect-ratio-1\:1  { padding-bottom: calc(100%/(1/1)); }
 
-
 // --------------------------------
 
 // Display
@@ -97,7 +92,6 @@
 .inline-block { display: inline-block; }
 .inline       { display: inline; }
 
-
 // --------------------------------
 
 // Space unit
@@ -107,7 +101,6 @@
 .space-unit-rem { --space-unit: 1rem; }
 .space-unit-em  { --space-unit: 1em; }
 .space-unit-px  { --space-unit: 16px; }
-
 
 // --------------------------------
 
@@ -213,7 +206,6 @@
 .margin-y-auto  { margin-top: auto; margin-bottom: auto; }
 .margin-y-0     { margin-top: 0; margin-bottom: 0; }
 
-
 // --------------------------------
 
 // Padding
@@ -318,7 +310,6 @@
 .padding-y-0     { padding-top: 0; padding-bottom: 0; }
 .padding-y-component { padding-top: var(--component-padding); padding-bottom: var(--component-padding); }
 
-
 // --------------------------------
 
 // Vertical Align
@@ -329,7 +320,6 @@
 .align-top      { vertical-align: top; }
 .align-middle   { vertical-align: middle; }
 .align-bottom   { vertical-align: bottom; }
-
 
 // --------------------------------
 
@@ -355,14 +345,6 @@
   min-width: 0;
 }
 
-
-// --------------------------------
-
-// Font Size
-
-// --------------------------------
-
-
 // --------------------------------
 
 // Text Transform
@@ -371,7 +353,6 @@
 
 .text-uppercase  { text-transform: uppercase; }
 .text-capitalize { text-transform: capitalize; }
-
 
 // --------------------------------
 
@@ -382,7 +363,6 @@
 .letter-spacing-sm { letter-spacing: -0.05em; }
 .letter-spacing-md { letter-spacing: 0.05em; }
 .letter-spacing-lg { letter-spacing: 0.1em; }
-
 
 // --------------------------------
 
@@ -400,7 +380,6 @@
 .font-extrabold  { font-weight: 800; }
 .font-heavy      { font-weight: 900; }
 
-
 // --------------------------------
 
 // Font Style
@@ -409,8 +388,7 @@
 
 .font-italic { font-style: italic; }
 
-
- // --------------------------------
+// --------------------------------
 
 // Font Smooth
 
@@ -421,7 +399,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-
 // --------------------------------
 
 // Font Family
@@ -430,7 +407,6 @@
 
 .font-primary   { font-family: var(--font-primary); }
 .font-secondary { font-family: var(--font-secondary); }
-
 
 // --------------------------------
 
@@ -443,7 +419,6 @@
 .text-right   { text-align: right; }
 .text-justify { text-align: justify; }
 
-
 // --------------------------------
 
 // Text Decoration
@@ -454,7 +429,6 @@
 .text-underline       { text-decoration: underline; }
 .text-decoration-none { text-decoration: none; }
 
-
 // --------------------------------
 
 // White Space
@@ -462,7 +436,6 @@
 // --------------------------------
 
 .text-nowrap { white-space: nowrap; }
-
 
 // --------------------------------
 
@@ -473,7 +446,6 @@
 .cursor-pointer { cursor: pointer; }
 .cursor-default { cursor: default; }
 
-
 // --------------------------------
 
 // Pointer Events
@@ -483,7 +455,6 @@
 .pointer-events-auto { pointer-events: auto; }
 .pointer-events-none { pointer-events: none; }
 
-
 // --------------------------------
 
 // User Select
@@ -492,7 +463,6 @@
 
 .user-select-none { user-select: none; }
 .user-select-all  { user-select: all; }
-
 
 // --------------------------------
 
@@ -518,7 +488,6 @@
 .color-contrast-medium { color: alpha(var(--color-contrast-medium), var(--color-o, 1)); }
 .color-contrast-high { color: alpha(var(--color-contrast-high), var(--color-o, 1)); }
 
-
 // --------------------------------
 
 // Gradients
@@ -531,7 +500,6 @@
     background-clip: text;
   }
 }
-
 
 // --------------------------------
 
@@ -557,7 +525,6 @@
 .width-100vw { width: 100vw; }
 .width-auto  { width: auto; }
 
-
 // --------------------------------
 
 // Height
@@ -582,7 +549,6 @@
 .height-100vh { height: 100vh; }
 .height-auto  { height: auto; }
 
-
 // --------------------------------
 
 // Min-Width
@@ -598,7 +564,6 @@
 .min-width-100\% { min-width: 100%; }
 .min-width-100vw { min-width: 100vw; }
 
-
 // --------------------------------
 
 // Min-Height
@@ -607,7 +572,6 @@
 
 .min-height-100\% { min-height: 100%; }
 .min-height-100vh { min-height: 100vh; }
-
 
 // --------------------------------
 
@@ -641,7 +605,6 @@
 .max-width-xxl    { max-width: var(--max-width-xxl); }
 .max-width-xxxl   { max-width: var(--max-width-xxxl); }
 
-
 // alt approach - max-width is equal to current breakpoint
 $breakpointsNr: length($breakpoints);
 @each $breakpoint, $value in $breakpoints {
@@ -671,7 +634,6 @@ $breakpointsNr: length($breakpoints);
   }
 }
 
-
 // --------------------------------
 
 // Max-Height
@@ -680,7 +642,6 @@ $breakpointsNr: length($breakpoints);
 
 .max-height-100\% { max-height: 100%; }
 .max-height-100vh { max-height: 100vh; }
-
 
 // --------------------------------
 
@@ -698,7 +659,6 @@ $breakpointsNr: length($breakpoints);
 .left-0   { left: 0; }
 .right-0  { right: 0; }
 
-
 // --------------------------------
 
 // Z-Index
@@ -714,7 +674,6 @@ $breakpointsNr: length($breakpoints);
 .zindex-2, .z-index-2 { z-index: 2; }
 .zindex-3, .z-index-3 { z-index: 3; }
 
-
 // --------------------------------
 
 // Overflow
@@ -727,7 +686,6 @@ $breakpointsNr: length($breakpoints);
 
 // overscroll-behavior
 .overscroll-contain { overscroll-behavior: contain; }
-
 
 // --------------------------------
 
@@ -746,7 +704,6 @@ $breakpointsNr: length($breakpoints);
 .opacity-80\% { opacity: 0.8; }
 .opacity-90\% { opacity: 0.9; }
 
-
 // --------------------------------
 
 // Float
@@ -761,7 +718,6 @@ $breakpointsNr: length($breakpoints);
   display: table;
   clear: both;
 }
-
 
 // --------------------------------
 
@@ -789,8 +745,6 @@ $breakpointsNr: length($breakpoints);
 .border-contrast-medium { border-color: alpha(var(--color-contrast-medium), var(--border-o, 1)); }
 .border-contrast-high   { border-color: alpha(var(--color-contrast-high), var(--border-o, 1)); }
 
-
-
 [class*="color-"] { --color-o: 1; }
 
 .color-inherit { color: inherit; }
@@ -817,7 +771,6 @@ $breakpointsNr: length($breakpoints);
   .border-opacity-90\% { --border-o: 0.9; }
 }
 
-
 // --------------------------------
 
 // Border Radius
@@ -835,7 +788,6 @@ $breakpointsNr: length($breakpoints);
 .radius-bottom-right-0 { border-bottom-right-radius: 0; }
 .radius-bottom-left-0  { border-bottom-left-radius: 0; }
 
-
 // --------------------------------
 
 // Box-Shadow
@@ -848,7 +800,6 @@ $breakpointsNr: length($breakpoints);
 .shadow-lg   { box-shadow: var(--shadow-lg); }
 .shadow-xl   { box-shadow: var(--shadow-xl); }
 .shadow-none { box-shadow: none; }
-
 
 // --------------------------------
 
@@ -892,7 +843,6 @@ $breakpointsNr: length($breakpoints);
 .bg-center    { background-position: center; }
 .bg-no-repeat { background-repeat: no-repeat; }
 
-
 // --------------------------------
 
 // Backdrop Filter
@@ -901,7 +851,6 @@ $breakpointsNr: length($breakpoints);
 
 .backdrop-blur-10 { backdrop-filter: blur(10px); }
 .backdrop-blur-20 { backdrop-filter: blur(20px); }
-
 
 // --------------------------------
 
@@ -914,7 +863,6 @@ $breakpointsNr: length($breakpoints);
 .blend-overlay    { mix-blend-mode: overlay; }
 .blend-difference { mix-blend-mode: difference; }
 
-
 // --------------------------------
 
 // Object-Fit
@@ -923,7 +871,6 @@ $breakpointsNr: length($breakpoints);
 
 .object-contain { object-fit: contain; }
 .object-cover   { object-fit: cover; }
-
 
 // --------------------------------
 
@@ -937,7 +884,6 @@ $breakpointsNr: length($breakpoints);
 .perspective-lg { perspective: 1500px; }
 .perspective-xl { perspective: 3000px; }
 
-
 // --------------------------------
 
 // Transform
@@ -947,7 +893,6 @@ $breakpointsNr: length($breakpoints);
 .flip   { transform: scale(-1); }
 .flip-x { transform: scaleX(-1); }
 .flip-y { transform: scaleY(-1); }
-
 
 // --------------------------------
 
@@ -964,7 +909,6 @@ $breakpointsNr: length($breakpoints);
 .origin-top-right    { transform-origin: right top; }
 .origin-bottom-left  { transform-origin: left bottom; }
 .origin-bottom-right { transform-origin: right bottom; }
-
 
 // --------------------------------
 
