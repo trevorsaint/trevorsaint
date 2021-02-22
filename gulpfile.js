@@ -152,7 +152,7 @@ gulp.task('watch-ie', gulp.series(['browserSync', 'sass-ie', 'scripts'], functio
 gulp.task('build', gulp.series('clean', gulp.parallel('sass', 'sass-ie', 'scripts', 'nunjucks', 'assets')));
 
 
-// Distribution
+// distribution
 gulp.task('dist', async function() {
   // remove unused classes from the style.css file with PurgeCSS
   await purgeCSS();
