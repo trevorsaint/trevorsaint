@@ -19,14 +19,6 @@
     margin-bottom: var(--space-xxxs);
   }
 
-  > li:last-child, ul > li:last-child, ol > li:last-child {
-    margin-bottom: 0;
-  }
-
-  ul > li:last-child, ol > li:last-child {
-    padding-bottom: 0;
-  }
-
 }
 
 
@@ -111,16 +103,4 @@
     background-color: transparent;
   }
 
-}
-
-
-// --------------------------------
-
-// Badges list
-
-// --------------------------------
-
-.list-badges {
-  display: flex;
-  flex-wrap: wrap;
 }
