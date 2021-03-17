@@ -7,6 +7,7 @@ dist
 prod
 deploy
 launch
+release
 .vscode
 settings.json
 npm-debug.log
