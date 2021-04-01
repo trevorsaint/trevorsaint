@@ -40,7 +40,7 @@
               <label class="form__label" for="email">Email address</label>
               <span class="form__error-message is-hidden" id="email-error">
                 <span class="sr-only">Error: </span>
-                <strong>Enter your email address, like name@example.com</strong>
+                <strong>Enter your email address</strong>
               </span>
               <input class="form__control" id="email" name="email" type="email">
             </div>
@@ -58,6 +58,8 @@
               <label class="form__label" for="bot">Don’t fill this out if you’re human</label>
               <input class="form__control" id="bot" name="bot">
             </div>
+
+            <input id="captchaResponse" name="g-recaptcha-response" type="hidden">
 
             <button class="button button--full-width" type="submit">
               <span class="button__label">Send your message</span>

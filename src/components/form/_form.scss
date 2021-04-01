@@ -62,3 +62,8 @@
   display: block;
   margin-bottom: var(--space-xxxs);
 }
+
+// reCAPTCHA
+.grecaptcha-badge {
+  display: none;
+}
