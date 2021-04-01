@@ -1,2 +1,7 @@
 <script src="{{rootPath}}javascripts/main.min.js"></script>
 <script>"serviceWorker"in navigator&&window.addEventListener("load",()=>{navigator.serviceWorker.register("/sw.js")});</script>
+
+{% if pageId == 'contact' %}
+<script src="https://www.google.com/recaptcha/api.js?render=6Lf33JcaAAAAAN5oC8LMQjEKbH4Nl-jn55bbk-3o"></script>
+<script>grecaptcha.ready(function(){grecaptcha.execute("6Lf33JcaAAAAAN5oC8LMQjEKbH4Nl-jn55bbk-3o",{action:"homepage"}).then(function(e){document.getElementById("captchaResponse").value=e})});</script>
+{% endif %}
