@@ -28,11 +28,11 @@
     <nav class="header__nav js-header__nav" id="header-nav" role="navigation" aria-label="Main navigation">
       <div class="header__nav-inner">
         <ul class="header__list">
-          <li class="header__item"><a class="header__link" href="{{rootPath}}"{% if pageId == 'home' %} aria-current="true"{% endif %}>Home</a></li>
-          <li class="header__item"><a class="header__link" href="{{rootPath}}about"{% if pageId == 'about' %} aria-current="true"{% endif %}>About</a></li>
-          <li class="header__item"><a class="header__link" href="{{rootPath}}projects"{% if pageId == 'projects' %} aria-current="true"{% endif %}>Projects</a></li>
-          <li class="header__item"><a class="header__link" href="{{rootPath}}testimonials"{% if pageId == 'testimonials' %} aria-current="true"{% endif %}>Testimonials</a></li>
-          <li class="header__item"><a class="header__link" href="{{rootPath}}contact"{% if pageId == 'contact' %} aria-current="true"{% endif %}>Contact</a></li>
+          <li class="header__item"><a class="header__link" href="{{rootPath}}"{% if pageId == 'home' %} aria-current="page"{% endif %}>Home</a></li>
+          <li class="header__item"><a class="header__link" href="{{rootPath}}about"{% if pageId == 'about' %} aria-current="page"{% endif %}>About</a></li>
+          <li class="header__item"><a class="header__link" href="{{rootPath}}projects"{% if pageId == 'projects' %} aria-current="page"{% endif %}>Projects</a></li>
+          <li class="header__item"><a class="header__link" href="{{rootPath}}testimonials"{% if pageId == 'testimonials' %} aria-current="page"{% endif %}>Testimonials</a></li>
+          <li class="header__item"><a class="header__link" href="{{rootPath}}contact"{% if pageId == 'contact' %} aria-current="page"{% endif %}>Contact</a></li>
         </ul>
       </div>
     </nav>
