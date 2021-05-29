@@ -94,7 +94,7 @@ gulp.task('nunjucks', function() {
       ],
       data: {
         serviceName: 'Trevor Saint',
-        rootPath: '/'
+        rootPath: 'https://trevorsaint.uk/'
       }
     }))
     .pipe(gulp.dest(configPaths.public))
