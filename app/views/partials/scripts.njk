@@ -1,22 +1,5 @@
 <script src="{{rootPath}}javascripts/main.js"></script>
-
-<script>
-
-if ('serviceWorker' in navigator) {
-
-  navigator.serviceWorker.getRegistrations().then(function (registrations) {
-    for (let registration of registrations) {
-      // Unregister service worker for old domain
-      registration.unregister()
-    }
-  }).catch(function (err) {
-    // Fail state, which is fine as we just don’t want a service worker
-    console.log('Fail: ', err);
-  });
-
-}
-
-</script>
+<script>"serviceWorker"in navigator&&navigator.serviceWorker.getRegistrations().then(function(e){for(let o of e)o.unregister()}).catch(function(e){console.log("Fail: ",e)});</script>
 
 {% if pageId == 'contact' %}
 <script src="https://www.google.com/recaptcha/api.js?render=6Lf33JcaAAAAAN5oC8LMQjEKbH4Nl-jn55bbk-3o"></script>
