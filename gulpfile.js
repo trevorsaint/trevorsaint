@@ -14,7 +14,6 @@ const nunjucksRender = require('gulp-nunjucks-render');
 const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
 const version = require('gulp-version-number');
-const workboxBuild = require('workbox-build');
 
 
 // path configurations
@@ -69,11 +68,6 @@ gulp.task('scripts', function() {
       configPaths.components + '**/*.js'
     ])
     .pipe(concat('main.js'))
-    .pipe(gulp.dest(configPaths.javascripts))
-    .pipe(browserSync.reload({
-      stream: true
-    }))
-    .pipe(rename('main.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest(configPaths.javascripts))
     .pipe(browserSync.reload({
@@ -162,9 +156,6 @@ gulp.task('dist', async function() {
   await minifyHTML();
   // move all assets
   await moveAssets();
-  // create service worker - PWA
-  await createServiceWorker();
-  console.log('Distribution task completed!');
 });
 
 
@@ -201,8 +192,20 @@ function cacheBust() {
     .pipe(version({
       value: '%DT%',
       append: {
-        key: 'cachebust',
-        to: ['css', 'js'],
+        to: [
+          {
+            type: 'css',
+            key: 'cachebust',
+            cover: 1,
+            files: ['main.css']
+          },
+          {
+            type: 'js',
+            key: 'cachebust',
+            cover: 1,
+            files: ['main.js']
+          }
+        ]
       }
     }))
     .pipe(gulp.dest(configPaths.public));
@@ -243,41 +246,6 @@ function moveAssets() {
     stream.on('finish', function() {
       resolve();
     });
-  });
-
-};
-
-
-function createServiceWorker() {
-
-  // configurations - https://developers.google.com/web/tools/workbox/guides/generate-service-worker/workbox-build
-  return workboxBuild.generateSW({
-    globDirectory: configPaths.public,
-    globPatterns: [
-      '**/*.{html,json,js,css,woff2}'
-    ],
-    swDest: configPaths.public + 'sw.js',
-    sourcemap: false,
-    mode: 'production',
-    runtimeCaching: [{
-
-        // match any request that ends with .png, .jpg, .jpeg, .svg or .webp
-        urlPattern: /\.(?:png|jpg|jpeg|svg|webp)$/,
-
-        // apply a cache-first strategy
-        handler: 'CacheFirst',
-        options: {
-
-        // use a custom cache name
-        cacheName: 'images',
-
-        // only cache 50 images
-        expiration: {
-          maxEntries: 50
-        }
-
-      }
-    }]
   });
 
 };
