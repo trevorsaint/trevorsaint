@@ -15,18 +15,18 @@
 
     <title>{{pageTitle}}</title>
 
-    <!-- Disable telephone number styling in iOS -->
+    {# Disable telephone number styling in iOS #}
     <meta name="format-detection" content="telephone=no">
 
-    <!-- Add home screen for Safari on iOS -->
+    {# Add home screen for Safari on iOS #}
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="{{serviceName}}">
 
-    <!-- Search Engine -->
+    {# Search Engine #}
     <meta name="description" content="{{pageDescription}}">
 
-    <!-- Open Graph -->
+    {# Open Graph #}
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{rootPath}}{{pageUrl}}">
     <meta property="og:title" content="{{pageTitle}}">
@@ -38,7 +38,7 @@
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
 
-    <!-- Twitter -->
+    {# Twitter #}
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@trevorsaint">
     <meta name="twitter:creator" content="trevorsaint">
@@ -47,35 +47,35 @@
     <meta name="twitter:description" content="{{pageDescription}}">
     <meta name="twitter:image" content="{{rootPath}}images/twitter.png">
 
-    <!-- Android’s Chrome browser -->
+    {# Android’s Chrome browser #}
     <meta name="theme-color" content="#F24B88">
 
-    <!-- Favicon -->
+    {# Favicon #}
     <link rel="icon" href="{{rootPath}}images/favicon.svg">
 
-    <!-- Mask icon (Safari) -->
+    {# Mask icon (Safari) #}
     <link rel="mask-icon" href="{{rootPath}}images/mask-icon.svg" color="#F24B88">
 
-    <!-- Apple touch icon -->
+    {# Apple touch icon #}
     <link rel="apple-touch-icon" href="{{rootPath}}images/apple-touch-icon.png">
 
-    <!-- Manifest -->
+    {# Manifest #}
     <link href="{{rootPath}}manifest.json" rel="manifest">
 
-    <!-- Font preloading -->
+    {# Font preloading #}
     <link rel="preload" as="font" type="font/woff2" href="{{rootPath}}fonts/Baskerville.woff2" crossorigin="anonymous">
     <link rel="preload" as="font" type="font/woff2" href="{{rootPath}}fonts/Moderat-Bold.woff2" crossorigin="anonymous">
     <link rel="preload" as="font" type="font/woff2" href="{{rootPath}}fonts/Moderat-Regular.woff2" crossorigin="anonymous">
 
-    <!-- Stylesheet -->
+    {# Stylesheet #}
     <link id="trevorsaint" href="{{rootPath}}stylesheets/main.css" rel="stylesheet">
 
-    <!-- No CSS variables support fallback -->
+    {# No CSS variables support fallback #}
     <script>
       if(!('CSS' in window) || !CSS.supports('color', 'var(--color-var)')) {var main = document.getElementById('trevorsaint');if(main) {var href = main.getAttribute('href');href = href.replace('main.css', 'main-fallback.css');main.setAttribute('href', href);}}
     </script>
 
-    <!-- Progressive enhancement -->
+    {# Progressive enhancement #}
     <script>document.getElementsByTagName('html')[0].className += 'js';</script>
 
   </head>
