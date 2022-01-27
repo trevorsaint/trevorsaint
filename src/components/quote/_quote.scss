@@ -9,7 +9,7 @@
 }
 
 .quote__cite-name {
-  display: block;
+  display: inline-block;
   font-weight: var(--font-bold);
   padding-left: var(--space-md);
   position: relative;
@@ -24,9 +24,17 @@
     width: 24px;
   }
 
+  // Is it a link, if it is style it
+  &[href] {
+    @include link-common;
+    @include link-style-default;
+  }
+
 }
+
 
 .quote__cite-role {
   color: var(--color-contrast-medium);
+  display: block;
   padding-left: var(--space-md);
 }

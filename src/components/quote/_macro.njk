@@ -5,7 +5,11 @@
     {% if params.text %}<p>{{ params.text }}</p>{% else %}{{ params.html | safe }}{% endif %}
 
     <footer class="quote__cite">
-      <span class="quote__cite-name">{{ params.cite.name }}</span>
+      {% if params.cite.url %}
+        <a class="quote__cite-name" href="{{ params.cite.url }}" rel="nofollow">{{ params.cite.name }}</a>
+      {% else %}
+        <span class="quote__cite-name">{{ params.cite.name }}</span>
+      {% endif %}
       <span class="quote__cite-role">{{ params.cite.role }}</span>
     </footer>
 
