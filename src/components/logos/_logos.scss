@@ -1,12 +1,10 @@
 // --------------------------------
 
-// Logos
+// Logo
 
 // --------------------------------
 
-.logos {}
-
-.logos__item {
+.logo {
   background-color: alpha(var(--color-black), 0.05);
   background-blend-mode: multiply;
   border: 2px solid transparent; // High Contrast Mode
@@ -19,9 +17,9 @@
   width: 100%;
 }
 
-.logos__link {
-  display: block;
+.logo__link {
   border-radius: var(--radius-sm);
+  display: block;
   height: 100%;
   width: 100%;
 
@@ -38,25 +36,11 @@
 
 }
 
-.logos__img {
+.logo__img {
   display: block;
   fill: currentColor;
   margin: auto;
-
-
   position: relative;
   top: 50%;
   transform: translateY(-50%);
-
-}
-
-// --------------------------------
-
-// Logo
-
-// --------------------------------
-
-.logo {
-  color: var(--color-contrast-high);
-  fill: currentColor;
 }

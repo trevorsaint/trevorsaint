@@ -1,0 +1,114 @@
+/* --------------------------------
+
+Title: Animated Cards
+Description: A collection of cards that slides over time
+-------------------------------- */
+
+:root {
+  --anim-cards-width: 280px; // Single card width
+  --anim-cards-gap: var(--space-xxxs);  // Gap
+}
+
+// Default style
+.anim-cards {
+  margin-top: var(--anim-cards-gap);
+  margin-bottom: var(--anim-cards-gap);
+  overflow: hidden;
+}
+
+.anim-cards__list {
+  display: flex;
+  overflow: auto;
+}
+
+.anim-cards__item {
+  float: left; // Flex fallback
+  flex-shrink: 0;
+  list-style-type: none;
+  margin-right: var(--anim-cards-gap);
+  width: var(--anim-cards-width);
+}
+
+// Pause/play button
+.anim-cards-control {
+  background-color: alpha(var(--color-contrast-higher), 0.75);
+  border-radius: 50%;
+  display: inline-flex;
+  height: 40px;
+  transition: .2s;
+  width: 40px;
+
+  // Icon
+  i {
+    position: relative;
+    display: block;
+    width: 16px;
+    height: 16px;
+    margin: auto;
+    color: var(--color-white); // Icon color
+
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: currentColor;
+      transition: clip-path .2s var(--ease-out);
+    }
+
+    &::before {
+      clip-path: polygon(1px 1px, 5px 1px, 5px calc(100% - 1px), 1px calc(100% - 1px));
+    }
+
+    &::after {
+      clip-path: polygon(calc(100% - 5px) 1px, calc(100% - 1px) 1px, calc(100% - 1px) calc(100% - 1px), calc(100% - 5px) calc(100% - 1px));
+    }
+  }
+
+  &:hover {
+    background-color: alpha(var(--color-contrast-higher), 0.95);
+    cursor: pointer;
+  }
+
+  &[aria-pressed="true"] {
+
+    i {
+
+      &::before {
+        clip-path: polygon(2px 0%, 100% 50%, 100% 50%, 2px 100%);
+      }
+
+      &::after {
+        clip-path: polygon(calc(100% - 5px) calc(100% - 1px), calc(100% - 1px) calc(100% - 1px), calc(100% - 1px) calc(100% - 1px), calc(100% - 5px) calc(100% - 1px));
+      }
+
+    }
+
+  }
+
+}
+
+// js enabled style
+.js {
+
+  // Anim-cards--anim-off class turns off translate animation (added in js if reduced-motion option is on)
+  .anim-cards:not(.anim-cards--anim-off) .anim-cards__list {
+    backface-visibility: hidden;
+    overflow: visible;
+    transform: translateZ(0);
+    will-change: transform;
+  }
+
+  .anim-cards--reverse:not(.anim-cards--anim-off) .anim-cards__list{
+    flex-direction: row-reverse;
+  }
+
+}
+
+
+// Hide control button if js is disabed
+html:not(.js) .anim-cards-control {
+  display: none;
+}
