@@ -87,8 +87,8 @@ gulp.task('nunjucks', function() {
         configPaths.partials
       ],
       data: {
-        serviceName: 'Trevor Saint',
-        rootPath: 'http://localhost:3000/'
+        serviceName: configPaths.name,
+        rootPath: configPaths.root
       }
     }))
     .pipe(gulp.dest(configPaths.public))
