@@ -6,7 +6,7 @@
 
     {% if params.twitter %}
     <li class="social-share__item">
-      <a class="social-share__link js-social-share" href="https://twitter.com/intent/tweet"{% for attribute, value in params.twitter.attributes %} {{attribute}}="{{value}}"{% endfor %}>
+      <a class="social-share__link js-tooltip-trigger js-social-share" href="https://twitter.com/intent/tweet"{% for attribute, value in params.twitter.attributes %} {{attribute}}="{{value}}"{% endfor %} title="Twitter">
         {{
           icon({
             "icon": 'twitter',
@@ -20,7 +20,7 @@
 
     {% if params.facebook %}
     <li class="social-share__item">
-      <a class="social-share__link js-social-share" href="https://facebook.com/sharer.php"{% for attribute, value in params.facebook.attributes %} {{attribute}}="{{value}}"{% endfor %}>
+      <a class="social-share__link js-tooltip-trigger js-social-share" href="https://facebook.com/sharer.php"{% for attribute, value in params.facebook.attributes %} {{attribute}}="{{value}}"{% endfor %} title="Facebook">
         {{
           icon({
             "icon": 'facebook',
@@ -34,7 +34,7 @@
 
     {% if params.pinterest %}
     <li class="social-share__item">
-      <a class="social-share__link js-social-share" href="https://pinterest.com/pin/create/button"{% for attribute, value in params.pinterest.attributes %} {{attribute}}="{{value}}"{% endfor %}>
+      <a class="social-share__link js-tooltip-trigger js-social-share" href="https://pinterest.com/pin/create/button"{% for attribute, value in params.pinterest.attributes %} {{attribute}}="{{value}}"{% endfor %} title="Pinterest">
         {{
           icon({
             "icon": 'pinterest',
@@ -48,7 +48,7 @@
 
     {% if params.linkedin %}
     <li class="social-share__item">
-      <a class="social-share__link js-social-share" href="https://linkedin.com/shareArticle"{% for attribute, value in params.linkedin.attributes %} {{attribute}}="{{value}}"{% endfor %}>
+      <a class="social-share__link js-tooltip-trigger js-social-share" href="https://linkedin.com/shareArticle"{% for attribute, value in params.linkedin.attributes %} {{attribute}}="{{value}}"{% endfor %} title="LinkedIn">
         {{
           icon({
             "icon": 'linkedin',
@@ -62,7 +62,7 @@
 
     {% if params.email %}
     <li class="social-share__item">
-      <a class="social-share__link js-social-share" href="mailto:"{% for attribute, value in params.email.attributes %} {{attribute}}="{{value}}"{% endfor %}>
+      <a class="social-share__link js-tooltip-trigger js-social-share" href="mailto:"{% for attribute, value in params.email.attributes %} {{attribute}}="{{value}}"{% endfor %} title="Email">
         {{
           icon({
             "icon": 'email',
