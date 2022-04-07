@@ -1,23 +1,24 @@
 {
   "name": "Trevor Saint | Interaction Designer",
   "short_name": "Trevor Saint",
+  "description": "I’m a digital perfectionist with over 18 years of experience designing and developing impressive services for Government departments and digital agencies.",
   "lang": "en-GB",
   "orientation": "any",
   "icons": [
     {
-      "src": "https://trevorsaint.uk/images/google-touch-icon-512x512.png",
+      "src": "http://localhost:3000/images/google-touch-icon-512x512.png",
       "sizes": "512x512"
     },
     {
-      "src": "https://trevorsaint.uk/images/google-touch-icon-257x257.png",
+      "src": "http://localhost:3000/images/google-touch-icon-257x257.png",
       "sizes": "257x257"
     },
     {
-      "src": "https://trevorsaint.uk/images/google-touch-icon-192x192.png",
+      "src": "http://localhost:3000/images/google-touch-icon-192x192.png",
       "sizes": "192x192"
     }
   ],
-  "start_url": "https://trevorsaint.uk/",
+  "start_url": "http://localhost:3000/",
   "background_color": "#F24B88",
   "theme_color": "#F24B88",
   "display": "fullscreen"
