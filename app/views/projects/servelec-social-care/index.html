@@ -19,11 +19,13 @@
       <h1 class="text-xxl margin-y-sm margin-y-lg@sm">An improved User Experience in Mosaic for Servelec’s Social Care</h1>
 
       <div class="hero">
-        <picture>
-          <source type="image/webp" srcset="{{rootPath}}images/projects/servelec-social-care/hero.webp, {{rootPath}}images/projects/servelec-social-care/hero@2x.webp 2x">
-          <source type="image/png" srcset="{{rootPath}}images/projects/servelec-social-care/hero.png, {{rootPath}}images/projects/servelec-social-care/hero@2x.png 2x">
-          <img height="800" width="1200" src="{{rootPath}}images/projects/servelec-social-care/hero.png" alt="" loading="lazy">
-        </picture>
+        {{ picture({
+          "image": {
+            "src": rootPath + 'images/projects/servelec-social-care/hero',
+            "height": '800',
+            "width": '1200'
+          }
+        }) }}
       </div>
 
       <div class="flex@sm justify-between items-start margin-top-md">
@@ -88,11 +90,16 @@
 
       <figure class="figure">
         <div class="bg-contrast-lower aspect-ratio-16:9">
-          <picture>
-            <source type="image/webp" srcset="{{rootPath}}images/projects/servelec-social-care/design-system.webp, {{rootPath}}images/projects/servelec-social-care/design-system@2x.webp 2x">
-            <source type="image/png" srcset="{{rootPath}}images/projects/servelec-social-care/design-system.png, {{rootPath}}images/projects/servelec-social-care/design-system@2x.png 2x">
-            <img height="675" width="1200" src="{{rootPath}}images/projects/servelec-social-care/design-system.png" alt="" loading="lazy">
-          </picture>
+          {{ picture({
+            "image": {
+              "src": rootPath + 'images/projects/servelec-social-care/design-system',
+              "height": '675',
+              "width": '1200'
+            },
+            "attributes": {
+              "loading": 'lazy'
+            }
+          }) }}
         </div>
         <figcaption class="figure__caption margin-top-xxs">Mosaic Design System building blocks</figcaption>
       </figure>
@@ -115,11 +122,16 @@
 
       <figure class="figure">
         <div class="bg-contrast-lower aspect-ratio-16:9">
-          <picture>
-            <source type="image/webp" srcset="{{rootPath}}images/projects/servelec-social-care/panel-components.webp, {{rootPath}}images/projects/servelec-social-care/panel-components@2x.webp 2x">
-            <source type="image/png" srcset="{{rootPath}}images/projects/servelec-social-care/panel-components.png, {{rootPath}}images/projects/servelec-social-care/panel-components@2x.png 2x">
-            <img height="675" width="1200" src="{{rootPath}}images/projects/servelec-social-care/panel-components.png" alt="" loading="lazy">
-          </picture>
+          {{ picture({
+            "image": {
+              "src": rootPath + 'images/projects/servelec-social-care/panel-components',
+              "height": '675',
+              "width": '1200'
+            },
+            "attributes": {
+              "loading": 'lazy'
+            }
+          }) }}
         </div>
         <figcaption class="figure__caption margin-top-xxs">Mosaic panel components</figcaption>
       </figure>
@@ -140,11 +152,16 @@
 
       <figure class="figure">
         <div class="bg-contrast-lower aspect-ratio-16:9">
-          <picture>
-            <source type="image/webp" srcset="{{rootPath}}images/projects/servelec-social-care/demographic-information-panel.webp, {{rootPath}}images/projects/servelec-social-care/demographic-information-panel@2x.webp 2x">
-            <source type="image/png" srcset="{{rootPath}}images/projects/servelec-social-care/demographic-information-panel.png, {{rootPath}}images/projects/servelec-social-care/demographic-information-panel@2x.png 2x">
-            <img height="675" width="1200" src="{{rootPath}}images/projects/servelec-social-care/demographic-information-panel.png" alt="" loading="lazy">
-          </picture>
+          {{ picture({
+            "image": {
+              "src": rootPath + 'images/projects/servelec-social-care/demographic-information-panel',
+              "height": '675',
+              "width": '1200'
+            },
+            "attributes": {
+              "loading": 'lazy'
+            }
+          }) }}
         </div>
         <figcaption class="figure__caption margin-top-xxs">Demographic Information panel in Mosaic</figcaption>
       </figure>
@@ -166,22 +183,32 @@
 
       <figure class="figure">
         <div class="bg-contrast-lower aspect-ratio-16:9">
-          <picture>
-            <source type="image/webp" srcset="{{rootPath}}images/projects/servelec-social-care/personal-summary.webp, {{rootPath}}images/projects/servelec-social-care/personal-summary@2x.webp 2x">
-            <source type="image/png" srcset="{{rootPath}}images/projects/servelec-social-care/personal-summary.png, {{rootPath}}images/projects/servelec-social-care/personal-summary@2x.png 2x">
-            <img height="675" width="1200" src="{{rootPath}}images/projects/servelec-social-care/personal-summary.png" alt="" loading="lazy">
-          </picture>
+          {{ picture({
+            "image": {
+              "src": rootPath + 'images/projects/servelec-social-care/personal-summary',
+              "height": '675',
+              "width": '1200'
+            },
+            "attributes": {
+              "loading": 'lazy'
+            }
+          }) }}
         </div>
         <figcaption class="figure__caption margin-top-xxs">Personal summary page design</figcaption>
       </figure>
 
       <figure class="figure margin-top-lg">
         <div class="bg-contrast-lower aspect-ratio-16:9">
-          <picture>
-            <source type="image/webp" srcset="{{rootPath}}images/projects/servelec-social-care/team-workview.webp, {{rootPath}}images/projects/servelec-social-care/team-workview@2x.webp 2x">
-            <source type="image/png" srcset="{{rootPath}}images/projects/servelec-social-care/team-workview.png, {{rootPath}}images/projects/servelec-social-care/team-workview@2x.png 2x">
-            <img height="675" width="1200" src="{{rootPath}}images/projects/servelec-social-care/team-workview.png" alt="" loading="lazy">
-          </picture>
+          {{ picture({
+            "image": {
+              "src": rootPath + 'images/projects/servelec-social-care/team-workview',
+              "height": '675',
+              "width": '1200'
+            },
+            "attributes": {
+              "loading": 'lazy'
+            }
+          }) }}
         </div>
         <figcaption class="figure__caption margin-top-xxs">Team work view page design</figcaption>
       </figure>
@@ -219,36 +246,28 @@
             "twitter": {
               "attributes": {
                 "data-social": 'twitter',
-                "data-text": 'Hi there! https://trevorsaint.uk/projects/servelec-social-care via @trevorsaint',
+                "data-text": 'Hi there! ' + rootPath + 'projects/servelec-social-care via @trevorsaint',
                 "data-hashtags": '#socialcare, #design, #mosaic, #designsystem, #ux, #interactiondesign'
               }
             },
             "facebook": {
               "attributes": {
                 "data-social": 'facebook',
-                "data-url": 'https://trevorsaint.uk/projects/servelec-social-care'
+                "data-url": rootPath + 'projects/servelec-social-care'
               }
             },
             "pinterest": {
               "attributes": {
                 "data-social": 'pinterest',
-                "data-url": 'https://trevorsaint.uk/projects/servelec-social-care',
+                "data-url": rootPath + 'projects/servelec-social-care',
                 "data-description": 'An improved User Experience in Mosaic for Servelec’s Social Care',
-                "data-media": 'https://trevorsaint.uk/images/projects/servelec-social-care/pinterest.png'
+                "data-media": rootPath + 'images/projects/servelec-social-care/pinterest.png'
               }
             },
             "linkedin": {
               "attributes": {
                 "data-social": 'linkedin',
-                "data-url": 'https://trevorsaint.uk/projects/servelec-social-care'
-              }
-            },
-            "email": {
-              "attributes": {
-                "data-social": 'mail',
-                "data-url": 'https://trevorsaint.uk/projects/servelec-social-care',
-                "data-subject": 'An improved User Experience in Mosaic for Servelec’s Social Care - Trevor Saint',
-                "data-body": 'https://trevorsaint.uk/projects/servelec-social-care'
+                "data-url": rootPath + 'projects/servelec-social-care'
               }
             }
           }) }}

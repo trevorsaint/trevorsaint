@@ -19,11 +19,13 @@
       <h1 class="text-xxl margin-y-sm margin-y-lg@sm">Redesigning the look and feel throughout for Paramount</h1>
 
       <div class="hero">
-        <picture>
-          <source type="image/webp" srcset="{{rootPath}}images/projects/paramount-packaging/hero.webp, {{rootPath}}images/projects/paramount-packaging/hero@2x.webp 2x">
-          <source type="image/png" srcset="{{rootPath}}images/projects/paramount-packaging/hero.png, {{rootPath}}images/projects/paramount-packaging/hero@2x.png 2x">
-          <img height="800" width="1200" src="{{rootPath}}images/projects/paramount-packaging/hero.png" alt="" loading="lazy">
-        </picture>
+        {{ picture({
+          "image": {
+            "src": rootPath + 'images/projects/paramount-packaging/hero',
+            "height": '800',
+            "width": '1200'
+          }
+        }) }}
       </div>
 
       <div class="flex@sm justify-between items-start margin-top-md">
@@ -100,11 +102,16 @@
         <div class="col-6@sm">
           <figure class="figure">
             <div class="bg-contrast-lower aspect-ratio-1:1">
-              <picture>
-                <source type="image/webp" srcset="{{rootPath}}images/projects/paramount-packaging/on-iphone.webp, {{rootPath}}images/projects/paramount-packaging/on-iphone@2x.webp 2x">
-                <source type="image/png" srcset="{{rootPath}}images/projects/paramount-packaging/on-iphone.png, {{rootPath}}images/projects/paramount-packaging/on-iphone@2x.png 2x">
-                <img height="588" width="588" src="{{rootPath}}images/projects/paramount-packaging/on-iphone.png" alt="" loading="lazy">
-              </picture>
+              {{ picture({
+                "image": {
+                  "src": rootPath + 'images/projects/paramount-packaging/on-iphone',
+                  "height": '588',
+                  "width": '588'
+                },
+                "attributes": {
+                  "loading": 'lazy'
+                }
+              }) }}
             </div>
             <figcaption class="figure__caption margin-top-xxs">Responsive design for mobile</figcaption>
           </figure>
@@ -212,33 +219,48 @@
 
       <figure class="figure">
         <div class="bg-contrast-lower aspect-ratio-16:9">
-          <picture>
-            <source type="image/webp" srcset="{{rootPath}}images/projects/paramount-packaging/styleguide-design-foundations.webp, {{rootPath}}images/projects/paramount-packaging/styleguide-design-foundations@2x.webp 2x">
-            <source type="image/png" srcset="{{rootPath}}images/projects/paramount-packaging/styleguide-design-foundations.png, {{rootPath}}images/projects/paramount-packaging/styleguide-design-foundations@2x.png 2x">
-            <img height="675" width="1200" src="{{rootPath}}images/projects/paramount-packaging/styleguide-design-foundations.png" alt="" loading="lazy">
-          </picture>
+          {{ picture({
+            "image": {
+              "src": rootPath + 'images/projects/paramount-packaging/styleguide-design-foundations',
+              "height": '675',
+              "width": '1200'
+            },
+            "attributes": {
+              "loading": 'lazy'
+            }
+          }) }}
         </div>
         <figcaption class="figure__caption margin-top-xxs">Styleguide includes design foundations</figcaption>
       </figure>
 
       <figure class="figure margin-top-lg">
         <div class="bg-contrast-lower aspect-ratio-16:9">
-          <picture>
-            <source type="image/webp" srcset="{{rootPath}}images/projects/paramount-packaging/styleguide-designed-components.webp, {{rootPath}}images/projects/paramount-packaging/styleguide-designed-components@2x.webp 2x">
-            <source type="image/png" srcset="{{rootPath}}images/projects/paramount-packaging/styleguide-designed-components.png, {{rootPath}}images/projects/paramount-packaging/styleguide-designed-components@2x.png 2x">
-            <img height="675" width="1200" src="{{rootPath}}images/projects/paramount-packaging/styleguide-designed-components.png" alt="" loading="lazy">
-          </picture>
+          {{ picture({
+            "image": {
+              "src": rootPath + 'images/projects/paramount-packaging/styleguide-designed-components',
+              "height": '675',
+              "width": '1200'
+            },
+            "attributes": {
+              "loading": 'lazy'
+            }
+          }) }}
         </div>
         <figcaption class="figure__caption margin-top-xxs">Styleguide includes designed components</figcaption>
       </figure>
 
       <figure class="figure margin-top-lg">
         <div class="bg-contrast-lower aspect-ratio-16:9">
-          <picture>
-            <source type="image/webp" srcset="{{rootPath}}images/projects/paramount-packaging/home-page-design.webp, {{rootPath}}images/projects/paramount-packaging/home-page-design@2x.webp 2x">
-            <source type="image/png" srcset="{{rootPath}}images/projects/paramount-packaging/home-page-design.png, {{rootPath}}images/projects/paramount-packaging/home-page-design@2x.png 2x">
-            <img height="675" width="1200" src="{{rootPath}}images/projects/paramount-packaging/home-page-design.png" alt="" loading="lazy">
-          </picture>
+          {{ picture({
+            "image": {
+              "src": rootPath + 'images/projects/paramount-packaging/home-page-design',
+              "height": '675',
+              "width": '1200'
+            },
+            "attributes": {
+              "loading": 'lazy'
+            }
+          }) }}
         </div>
         <figcaption class="figure__caption margin-top-xxs">Home page design utilising styleguide assets</figcaption>
       </figure>
@@ -260,11 +282,16 @@
 
       <figure class="figure">
         <div class="bg-contrast-lower aspect-ratio-16:9">
-          <picture>
-            <source type="image/webp" srcset="{{rootPath}}images/projects/paramount-packaging/client-management-online-content.webp, {{rootPath}}images/projects/paramount-packaging/client-management-online-content@2x.webp 2x">
-            <source type="image/png" srcset="{{rootPath}}images/projects/paramount-packaging/client-management-online-content.png, {{rootPath}}images/projects/paramount-packaging/client-management-online-content@2x.png 2x">
-            <img height="675" width="1200" src="{{rootPath}}images/projects/paramount-packaging/client-management-online-content.png" alt="" loading="lazy">
-          </picture>
+          {{ picture({
+            "image": {
+              "src": rootPath + 'images/projects/paramount-packaging/client-management-online-content',
+              "height": '675',
+              "width": '1200'
+            },
+            "attributes": {
+              "loading": 'lazy'
+            }
+          }) }}
         </div>
         <figcaption class="figure__caption margin-top-xxs">Client management of online content</figcaption>
       </figure>
@@ -279,12 +306,12 @@
             <p>I delivered a website, which was exactly what Paramount Packaging were looking for. This met the needs of the client, their marketing team, and more importantly, their customers.</p>
             <p class="font-bold">This includes:</p>
             <ul>
-              <li>design and development</li>
-              <li>photography and videography</li>
-              <li>MailChimp integration</li>
-              <li>ExpressionEngine integration</li>
-              <li>mobile friendly design</li>
-              <li>continued support and maintenance</li>
+              <li>Design and Development</li>
+              <li>Photography and Videography</li>
+              <li>MailChimp Integration</li>
+              <li>ExpressionEngine Integration</li>
+              <li>Mobile Friendly Design</li>
+              <li>Continued Support and Maintenance</li>
             </ul>
           </div>
 
@@ -304,36 +331,28 @@
             "twitter": {
               "attributes": {
                 "data-social": 'twitter',
-                "data-text": 'Hi there! https://trevorsaint.uk/projects/paramount-packaging via @trevorsaint',
+                "data-text": 'Hi there! ' + rootPath + 'projects/paramount-packaging via @trevorsaint',
                 "data-hashtags": '#packaging, #japan, #branding, #design, #dev, #ux, #interactiondesign'
               }
             },
             "facebook": {
               "attributes": {
                 "data-social": 'facebook',
-                "data-url": 'https://trevorsaint.uk/projects/paramount-packaging'
+                "data-url": rootPath + 'projects/paramount-packaging'
               }
             },
             "pinterest": {
               "attributes": {
                 "data-social": 'pinterest',
-                "data-url": 'https://trevorsaint.uk/projects/paramount-packaging',
+                "data-url": rootPath + 'projects/paramount-packaging',
                 "data-description": 'Redesigning the look and feel throughout for Paramount Packaging',
-                "data-media": 'https://trevorsaint.uk/images/projects/paramount-packaging/pinterest.png'
+                "data-media": rootPath + 'images/projects/paramount-packaging/pinterest.png'
               }
             },
             "linkedin": {
               "attributes": {
                 "data-social": 'linkedin',
-                "data-url": 'https://trevorsaint.uk/projects/paramount-packaging'
-              }
-            },
-            "email": {
-              "attributes": {
-                "data-social": 'mail',
-                "data-url": 'https://trevorsaint.uk/projects/paramount-packaging',
-                "data-subject": 'Redesigning the look and feel throughout for Paramount Packaging - Trevor Saint',
-                "data-body": 'https://trevorsaint.uk/projects/paramount-packaging'
+                "data-url": rootPath + 'projects/paramount-packaging'
               }
             }
           }) }}

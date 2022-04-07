@@ -1,0 +1,15 @@
+{%- macro picture(params) -%}
+
+{% if params.image.fileType is defined and params.image.fileType %}
+  {% set fileExt = params.image.fileType %}
+{% else %}
+  {% set fileExt = 'png' %}
+{% endif %}
+
+<picture{% if params.classes %} class="{{ params.classes }}"{% endif %}>
+  <source type="image/webp" srcset="{{ params.image.src }}.webp, {{ params.image.src }}@2x.webp 2x">
+  <source type="image/png" srcset="{{ params.image.src }}.{{ fileExt }}, {{ params.image.src }}@2x.{{ fileExt }} 2x">
+  <img height="{{ params.image.height }}" width="{{ params.image.width }}" src="{{ params.image.src }}.{{ fileExt }}" alt="{{ params.image.alt }}"{% for attribute, value in params.attributes %} {{attribute}}="{{value}}"{% endfor %}>
+</picture>
+
+{%- endmacro -%}

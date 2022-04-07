@@ -19,11 +19,13 @@
       <h1 class="text-xxl margin-y-sm margin-y-lg@sm">Helping Government Digital Service with Interaction Design</h1>
 
       <div class="hero">
-        <picture>
-          <source type="image/webp" srcset="{{rootPath}}images/projects/government-digital-service/hero.webp, {{rootPath}}images/projects/government-digital-service/hero@2x.webp 2x">
-          <source type="image/png" srcset="{{rootPath}}images/projects/government-digital-service/hero.png, {{rootPath}}images/projects/government-digital-service/hero@2x.png 2x">
-          <img height="800" width="1200" src="{{rootPath}}images/projects/government-digital-service/hero.png" alt="" loading="lazy">
-        </picture>
+        {{ picture({
+          "image": {
+            "src": rootPath + 'images/projects/government-digital-service/hero',
+            "height": '800',
+            "width": '1200'
+          }
+        }) }}
       </div>
 
       <div class="flex@sm justify-between items-start margin-top-md">
@@ -109,11 +111,17 @@
       </div>
 
       <figure class="figure figure--outset">
-        <picture class="block">
-          <source type="image/webp" srcset="{{rootPath}}images/projects/government-digital-service/brexit-checker-user-flow-on-mobile.webp, {{rootPath}}images/projects/government-digital-service/brexit-checker-user-flow-on-mobile@2x.webp 2x">
-          <source type="image/png" srcset="{{rootPath}}images/projects/government-digital-service/brexit-checker-user-flow-on-mobile.png, {{rootPath}}images/projects/government-digital-service/brexit-checker-user-flow-on-mobile@2x.png 2x">
-          <img height="675" width="1472" src="{{rootPath}}images/projects/government-digital-service/brexit-checker-user-flow-on-mobile.png" alt="" loading="lazy">
-        </picture>
+        {{ picture({
+          "classes": 'block',
+          "image": {
+            "src": rootPath + 'images/projects/government-digital-service/brexit-checker-user-flow-on-mobile',
+            "height": '675',
+            "width": '1472'
+          },
+          "attributes": {
+            "loading": 'lazy'
+          }
+        }) }}
         <figcaption class="figure__caption margin-top-xxs">Brexit checker user journey interaction design</figcaption>
       </figure>
 
@@ -184,13 +192,17 @@
       </div>
 
       <figure class="figure figure--outset">
-        <div>
-          <picture>
-            <source type="image/webp" srcset="{{rootPath}}images/projects/government-digital-service/business-sector-interaction-design-on-mobile.webp, {{rootPath}}images/projects/government-digital-service/business-sector-interaction-design-on-mobile@2x.webp 2x">
-            <source type="image/png" srcset="{{rootPath}}images/projects/government-digital-service/business-sector-interaction-design-on-mobile.png, {{rootPath}}images/projects/government-digital-service/business-sector-interaction-design-on-mobile@2x.png 2x">
-            <img height="675" width="1472" src="{{rootPath}}images/projects/government-digital-service/business-sector-interaction-design-on-mobile.png" alt="" loading="lazy">
-          </picture>
-        </div>
+        {{ picture({
+          "classes": 'block',
+          "image": {
+            "src": rootPath + 'images/projects/government-digital-service/business-sector-interaction-design-on-mobile',
+            "height": '675',
+            "width": '1472'
+          },
+          "attributes": {
+            "loading": 'lazy'
+          }
+        }) }}
         <figcaption class="figure__caption margin-top-xxs">Interaction design for selecting a business sector</figcaption>
       </figure>
 
@@ -336,36 +348,28 @@
             "twitter": {
               "attributes": {
                 "data-social": 'twitter',
-                "data-text": 'Hi there! https://trevorsaint.uk/projects/government-digital-service via @trevorsaint',
+                "data-text": 'Hi there! ' + rootPath + 'projects/government-digital-service via @trevorsaint',
                 "data-hashtags": '#govuk, #government, #mobiledesign, #design, #dev, #ux, #interactiondesign'
               }
             },
             "facebook": {
               "attributes": {
                 "data-social": 'facebook',
-                "data-url": 'https://trevorsaint.uk/projects/government-digital-service'
+                "data-url": rootPath + 'projects/government-digital-service'
               }
             },
             "pinterest": {
               "attributes": {
                 "data-social": 'pinterest',
-                "data-url": 'https://trevorsaint.uk/projects/government-digital-service',
+                "data-url": rootPath + 'projects/government-digital-service',
                 "data-description": 'Helping Government Digital Service with Interaction Design',
-                "data-media": 'https://trevorsaint.uk/images/projects/government-digital-service/pinterest.png'
+                "data-media": rootPath + 'images/projects/government-digital-service/pinterest.png'
               }
             },
             "linkedin": {
               "attributes": {
                 "data-social": 'linkedin',
-                "data-url": 'https://trevorsaint.uk/projects/government-digital-service'
-              }
-            },
-            "email": {
-              "attributes": {
-                "data-social": 'mail',
-                "data-url": 'https://trevorsaint.uk/projects/government-digital-service',
-                "data-subject": 'Helping Government Digital Service with Interaction Design - Trevor Saint',
-                "data-body": 'https://trevorsaint.uk/projects/government-digital-service'
+                "data-url": rootPath + 'projects/government-digital-service'
               }
             }
           }) }}

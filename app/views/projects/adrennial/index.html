@@ -21,11 +21,13 @@
       <h1 class="text-xxl margin-y-sm margin-y-lg@sm">A video app to showcase video creators from around the world</h1>
 
       <div class="hero">
-        <picture>
-          <source type="image/webp" srcset="{{rootPath}}images/projects/adrennial/hero.webp, {{rootPath}}images/projects/adrennial/hero@2x.webp 2x">
-          <source type="image/png" srcset="{{rootPath}}images/projects/adrennial/hero.png, {{rootPath}}images/projects/adrennial/hero@2x.png 2x">
-          <img height="800" width="1200" src="{{rootPath}}images/projects/adrennial/hero.png" alt="" loading="lazy">
-        </picture>
+        {{ picture({
+          "image": {
+            "src": rootPath + 'images/projects/adrennial/hero',
+            "height": '800',
+            "width": '1200'
+          }
+        }) }}
       </div>
 
       <div class="flex@sm justify-between items-start margin-top-md">
@@ -91,21 +93,33 @@
 
       <figure class="figure">
         <div class="bg-contrast-lower">
-          <picture>
-            <source type="image/webp" srcset="{{rootPath}}images/projects/adrennial/landing-page-design.webp, {{rootPath}}images/projects/adrennial/landing-page-design@2x.webp 2x">
-            <source type="image/png" srcset="{{rootPath}}images/projects/adrennial/landing-page-design.png, {{rootPath}}images/projects/adrennial/landing-page-design@2x.png 2x">
-            <img height="1132" width="1200" src="{{rootPath}}images/projects/adrennial/landing-page-design.png" alt="" loading="lazy">
-          </picture>
+          {{ picture({
+            "image": {
+              "src": rootPath + 'images/projects/adrennial/landing-page-design',
+              "height": '1132',
+              "width": '1200'
+            },
+            "attributes": {
+              "loading": 'lazy'
+            }
+          }) }}
         </div>
         <figcaption class="figure__caption margin-top-xxs">Landing page design for Adrennial’s alpha release</figcaption>
       </figure>
 
       <figure class="figure margin-top-lg">
-        <picture class="block">
-          <source type="image/webp" srcset="{{rootPath}}images/projects/adrennial/about-page-design.webp, {{rootPath}}images/projects/adrennial/about-page-design@2x.webp 2x">
-          <source type="image/png" srcset="{{rootPath}}images/projects/adrennial/about-page-design.png, {{rootPath}}images/projects/adrennial/about-page-design@2x.png 2x">
-          <img height="1754" width="1200" src="{{rootPath}}images/projects/adrennial/about-page-design.png" alt="" loading="lazy">
-        </picture>
+        <div class="bg-contrast-lower">
+          {{ picture({
+            "image": {
+              "src": rootPath + 'images/projects/adrennial/about-page-design',
+              "height": '1754',
+              "width": '1200'
+            },
+            "attributes": {
+              "loading": 'lazy'
+            }
+          }) }}
+        </div>
         <figcaption class="figure__caption margin-top-xxs">About page design for Adrennial’s alpha release</figcaption>
       </figure>
 
@@ -125,11 +139,18 @@
       </div>
 
       <figure class="figure">
-        <picture class="block">
-          <source type="image/webp" srcset="{{rootPath}}images/projects/adrennial/membership-options-page-design.webp, {{rootPath}}images/projects/adrennial/membership-options-page-design@2x.webp 2x">
-          <source type="image/png" srcset="{{rootPath}}images/projects/adrennial/membership-options-page-design.png, {{rootPath}}images/projects/adrennial/membership-options-page-design@2x.png 2x">
-          <img height="1073" width="1200" src="{{rootPath}}images/projects/adrennial/membership-options-page-design.png" alt="" loading="lazy">
-        </picture>
+        <div class="bg-contrast-lower">
+          {{ picture({
+            "image": {
+              "src": rootPath + 'images/projects/adrennial/membership-options-page-design',
+              "height": '1073',
+              "width": '1200'
+            },
+            "attributes": {
+              "loading": 'lazy'
+            }
+          }) }}
+        </div>
         <figcaption class="figure__caption margin-top-xxs">Page design for a three step registration process for an Adrennial account</figcaption>
       </figure>
 
@@ -151,20 +172,32 @@
       </div>
 
       <figure class="figure figure--outset">
-        <picture class="block">
-          <source type="image/webp" srcset="{{rootPath}}images/projects/adrennial/ios-design-for-dark-mode.webp, {{rootPath}}images/projects/adrennial/ios-design-for-dark-mode@2x.webp 2x">
-          <source type="image/png" srcset="{{rootPath}}images/projects/adrennial/ios-design-for-dark-mode.png, {{rootPath}}images/projects/adrennial/ios-design-for-dark-mode@2x.png 2x">
-          <img height="670" width="1472" src="{{rootPath}}images/projects/adrennial/ios-design-for-dark-mode.png" alt="" loading="lazy">
-        </picture>
+        {{ picture({
+          "classes": 'block',
+          "image": {
+            "src": rootPath + 'images/projects/adrennial/ios-design-for-dark-mode',
+            "height": '670',
+            "width": '1472'
+          },
+          "attributes": {
+            "loading": 'lazy'
+          }
+        }) }}
         <figcaption class="figure__caption margin-top-xxs">Collection of iOS screen designs for dark mode</figcaption>
       </figure>
 
       <figure class="figure figure--outset margin-top-lg">
-        <picture class="block">
-          <source type="image/webp" srcset="{{rootPath}}images/projects/adrennial/ios-design-for-light-mode.webp, {{rootPath}}images/projects/adrennial/ios-design-for-light-mode@2x.webp 2x">
-          <source type="image/png" srcset="{{rootPath}}images/projects/adrennial/ios-design-for-light-mode.png, {{rootPath}}images/projects/adrennial/ios-design-for-light-mode@2x.png 2x">
-          <img height="670" width="1472" src="{{rootPath}}images/projects/adrennial/ios-design-for-light-mode.png" alt="" loading="lazy">
-        </picture>
+        {{ picture({
+          "classes": 'block',
+          "image": {
+            "src": rootPath + 'images/projects/adrennial/ios-design-for-light-mode',
+            "height": '670',
+            "width": '1472'
+          },
+          "attributes": {
+            "loading": 'lazy'
+          }
+        }) }}
         <figcaption class="figure__caption margin-top-xxs">Collection of iOS screen designs for light mode</figcaption>
       </figure>
 
@@ -186,68 +219,108 @@
 
       <figure class="figure">
         <div class="bg-contrast-lower aspect-ratio-16:9">
-          <picture>
-            <source type="image/webp" srcset="{{rootPath}}images/projects/adrennial/miro-wireframe-mockup.webp, {{rootPath}}images/projects/adrennial/miro-wireframe-mockup@2x.webp 2x">
-            <source type="image/png" srcset="{{rootPath}}images/projects/adrennial/miro-wireframe-mockup.png, {{rootPath}}images/projects/adrennial/miro-wireframe-mockup@2x.png 2x">
-            <img height="675" width="1200" src="{{rootPath}}images/projects/adrennial/miro-wireframe-mockup.png" alt="" loading="lazy">
-          </picture>
+          {{ picture({
+            "image": {
+              "src": rootPath + 'images/projects/adrennial/miro-wireframe-mockup',
+              "height": '675',
+              "width": '1200'
+            },
+            "attributes": {
+              "loading": 'lazy'
+            }
+          }) }}
         </div>
         <figcaption class="figure__caption margin-top-xxs">Miro board to include low-fidelity wireframe mockup’s</figcaption>
       </figure>
 
       <figure class="figure margin-top-lg">
         <div class="bg-contrast-lower aspect-ratio-16:9">
-          <picture>
-            <source type="image/webp" srcset="{{rootPath}}images/projects/adrennial/design-system-components-and-patterns.webp, {{rootPath}}images/projects/adrennial/design-system-components-and-patterns@2x.webp 2x">
-            <source type="image/png" srcset="{{rootPath}}images/projects/adrennial/design-system-components-and-patterns.png, {{rootPath}}images/projects/adrennial/design-system-components-and-patterns@2x.png 2x">
-            <img height="675" width="1200" src="{{rootPath}}images/projects/adrennial/design-system-components-and-patterns.png" alt="" loading="lazy">
-          </picture>
+          {{ picture({
+            "image": {
+              "src": rootPath + 'images/projects/adrennial/design-system-components-and-patterns',
+              "height": '675',
+              "width": '1200'
+            },
+            "attributes": {
+              "loading": 'lazy'
+            }
+          }) }}
         </div>
         <figcaption class="figure__caption margin-top-xxs">Design System components and patterns for Focus</figcaption>
       </figure>
 
       <figure class="figure margin-top-lg">
-        <picture class="block">
-          <source type="image/webp" srcset="{{rootPath}}images/projects/adrennial/sign-in-page-design.webp, {{rootPath}}images/projects/adrennial/sign-in-page-design@2x.webp 2x">
-          <source type="image/png" srcset="{{rootPath}}images/projects/adrennial/sign-in-page-design.png, {{rootPath}}images/projects/adrennial/sign-in-page-design@2x.png 2x">
-          <img height="732" width="1200" src="{{rootPath}}images/projects/adrennial/sign-in-page-design.png" alt="" loading="lazy">
-        </picture>
+        {{ picture({
+          "classes": 'block',
+          "image": {
+            "src": rootPath + 'images/projects/adrennial/sign-in-page-design',
+            "height": '732',
+            "width": '1200'
+          },
+          "attributes": {
+            "loading": 'lazy'
+          }
+        }) }}
         <figcaption class="figure__caption margin-top-xxs">Sign in design for Focus</figcaption>
       </figure>
 
       <figure class="figure margin-top-lg">
-        <picture class="block">
-          <source type="image/webp" srcset="{{rootPath}}images/projects/adrennial/dashboard-page-design.webp, {{rootPath}}images/projects/adrennial/dashboard-page-design@2x.webp 2x">
-          <source type="image/png" srcset="{{rootPath}}images/projects/adrennial/dashboard-page-design.png, {{rootPath}}images/projects/adrennial/dashboard-page-design@2x.png 2x">
-          <img height="790" width="1200" src="{{rootPath}}images/projects/adrennial/dashboard-page-design.png" alt="" loading="lazy">
-        </picture>
+        {{ picture({
+          "classes": 'block',
+          "image": {
+            "src": rootPath + 'images/projects/adrennial/dashboard-page-design',
+            "height": '790',
+            "width": '1200'
+          },
+          "attributes": {
+            "loading": 'lazy'
+          }
+        }) }}
         <figcaption class="figure__caption margin-top-xxs">Dashboard design for Focus</figcaption>
       </figure>
 
       <figure class="figure figure--outset margin-top-lg">
-        <picture class="block">
-          <source type="image/webp" srcset="{{rootPath}}images/projects/adrennial/mobile-friendly-designs.webp, {{rootPath}}images/projects/adrennial/mobile-friendly-designs@2x.webp 2x">
-          <source type="image/png" srcset="{{rootPath}}images/projects/adrennial/mobile-friendly-designs.png, {{rootPath}}images/projects/adrennial/mobile-friendly-designs@2x.png 2x">
-          <img height="670" width="1472" src="{{rootPath}}images/projects/adrennial/mobile-friendly-designs.png" alt="" loading="lazy">
-        </picture>
+        {{ picture({
+          "classes": 'block',
+          "image": {
+            "src": rootPath + 'images/projects/adrennial/mobile-friendly-designs',
+            "height": '670',
+            "width": '1472'
+          },
+          "attributes": {
+            "loading": 'lazy'
+          }
+        }) }}
         <figcaption class="figure__caption margin-top-xxs">Collection of mobile friendly designs for Focus</figcaption>
       </figure>
 
       <figure class="figure margin-top-lg">
-        <picture class="block">
-          <source type="image/webp" srcset="{{rootPath}}images/projects/adrennial/video-library-page-design.webp, {{rootPath}}images/projects/adrennial/video-library-page-design@2x.webp 2x">
-          <source type="image/png" srcset="{{rootPath}}images/projects/adrennial/video-library-page-design.png, {{rootPath}}images/projects/adrennial/video-library-page-design@2x.png 2x">
-          <img height="1287" width="1200" src="{{rootPath}}images/projects/adrennial/video-library-page-design.png" alt="" loading="lazy">
-        </picture>
+        {{ picture({
+          "classes": 'block',
+          "image": {
+            "src": rootPath + 'images/projects/adrennial/video-library-page-design',
+            "height": '1287',
+            "width": '1472'
+          },
+          "attributes": {
+            "loading": 'lazy'
+          }
+        }) }}
         <figcaption class="figure__caption margin-top-xxs">Video library design for Focus</figcaption>
       </figure>
 
       <figure class="figure margin-top-lg">
-        <picture class="block">
-          <source type="image/webp" srcset="{{rootPath}}images/projects/adrennial/manage-video-page-design.webp, {{rootPath}}images/projects/adrennial/manage-video-page-design@2x.webp 2x">
-          <source type="image/png" srcset="{{rootPath}}images/projects/adrennial/manage-video-page-design.png, {{rootPath}}images/projects/adrennial/manage-video-page-design@2x.png 2x">
-          <img height="810" width="1200" src="{{rootPath}}images/projects/adrennial/manage-video-page-design.png" alt="" loading="lazy">
-        </picture>
+        {{ picture({
+          "classes": 'block',
+          "image": {
+            "src": rootPath + 'images/projects/adrennial/manage-video-page-design',
+            "height": '810',
+            "width": '1200'
+          },
+          "attributes": {
+            "loading": 'lazy'
+          }
+        }) }}
         <figcaption class="figure__caption margin-top-xxs">Video management design for Focus</figcaption>
       </figure>
 
@@ -269,11 +342,16 @@
 
       <figure class="figure">
         <div class="bg-contrast-lower aspect-ratio-16:9">
-          <picture class="block">
-            <source type="image/webp" srcset="{{rootPath}}images/projects/adrennial/github-design-system-coded-components.webp, {{rootPath}}images/projects/adrennial/github-design-system-coded-components@2x.webp 2x">
-            <source type="image/png" srcset="{{rootPath}}images/projects/adrennial/github-design-system-coded-components.png, {{rootPath}}images/projects/adrennial/github-design-system-coded-components@2x.png 2x">
-            <img height="675" width="1200" src="{{rootPath}}images/projects/adrennial/github-design-system-coded-components.png" alt="" loading="lazy">
-          </picture>
+          {{ picture({
+            "image": {
+              "src": rootPath + 'images/projects/adrennial/github-design-system-coded-components',
+              "height": '675',
+              "width": '1200'
+            },
+            "attributes": {
+              "loading": 'lazy'
+            }
+          }) }}
         </div>
         <figcaption class="figure__caption margin-top-xxs">Github repository containing Design System components carefully built from scratch</figcaption>
       </figure>
@@ -321,36 +399,28 @@
             "twitter": {
               "attributes": {
                 "data-social": 'twitter',
-                "data-text": 'Hi there! https://trevorsaint.uk/projects/adrennial via @trevorsaint',
+                "data-text": 'Hi there! ' + rootPath + 'projects/adrennial via @trevorsaint',
                 "data-hashtags": '#adrennial, #design, #dev, #ux, #interactiondesign, #cms, #html, #ios, #designsystem'
               }
             },
             "facebook": {
               "attributes": {
                 "data-social": 'facebook',
-                "data-url": 'https://trevorsaint.uk/projects/adrennial'
+                "data-url": rootPath + 'projects/adrennial'
               }
             },
             "pinterest": {
               "attributes": {
                 "data-social": 'pinterest',
-                "data-url": 'https://trevorsaint.uk/projects/adrennial',
+                "data-url": rootPath + 'projects/adrennial',
                 "data-description": 'A video app to showcase video creators from around the world',
-                "data-media": 'https://trevorsaint.uk/images/projects/adrennial/pinterest.png'
+                "data-media": rootPath + 'images/projects/adrennial/pinterest.png'
               }
             },
             "linkedin": {
               "attributes": {
                 "data-social": 'linkedin',
-                "data-url": 'https://trevorsaint.uk/projects/adrennial'
-              }
-            },
-            "email": {
-              "attributes": {
-                "data-social": 'mail',
-                "data-url": 'https://trevorsaint.uk/projects/adrennial',
-                "data-subject": 'A video app to showcase video creators from around the world - Trevor Saint',
-                "data-body": 'https://trevorsaint.uk/projects/adrennial'
+                "data-url": rootPath + 'projects/adrennial'
               }
             }
           }) }}

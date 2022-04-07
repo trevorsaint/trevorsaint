@@ -17,25 +17,6 @@
   width: 100%;
 }
 
-.logo__link {
-  border-radius: var(--radius-sm);
-  display: block;
-  height: 100%;
-  width: 100%;
-
-  &:hover {
-    background-color: var(--color-white);
-    box-shadow: 0 0 0 2px var(--color-contrast-high);
-  }
-
-  &:focus {
-    background-color: var(--color-tertiary);
-    box-shadow: none;
-    color: var(--color-contrast-high);
-  }
-
-}
-
 .logo__img {
   display: block;
   fill: currentColor;

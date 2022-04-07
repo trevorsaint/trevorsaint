@@ -39,11 +39,13 @@
 
             <div class="feature__image">
               <a href="{{rootPath}}projects/adrennial" tabindex="-1" aria-hidden="true">
-                <picture>
-                  <source type="image/webp" srcset="{{rootPath}}images/projects/adrennial/feature.webp, {{rootPath}}images/projects/adrennial/feature@2x.webp 2x">
-                  <source type="image/png" srcset="{{rootPath}}images/projects/adrennial/feature.png, {{rootPath}}images/projects/adrennial/feature@2x.png 2x">
-                  <img height="528" width="792" src="{{rootPath}}images/projects/adrennial/feature.png" alt="" loading="lazy">
-                </picture>
+                {{ picture({
+                  "image": {
+                    "src": rootPath + 'images/projects/adrennial/feature',
+                    "height": '528',
+                    "width": '792'
+                  }
+                }) }}
               </a>
             </div>
 

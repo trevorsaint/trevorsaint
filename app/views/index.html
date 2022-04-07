@@ -1,4 +1,4 @@
-{% set pageTitle       = "Trevor Saint | Interaction Designer" %}
+{% set pageTitle       = "Hi, I’m Trevor Saint | Interaction Designer" %}
 {% set pageDescription = "I’m a digital perfectionist with over 18 years of experience designing and developing impressive services for Government departments and digital agencies." %}
 {% set pageId          = "home" %}
 
@@ -38,11 +38,13 @@
 
             <div class="feature__image">
               <a href="{{rootPath}}projects/adrennial" tabindex="-1" aria-hidden="true">
-                <picture>
-                  <source type="image/webp" srcset="{{rootPath}}images/projects/adrennial/feature.webp, {{rootPath}}images/projects/adrennial/feature@2x.webp 2x">
-                  <source type="image/png" srcset="{{rootPath}}images/projects/adrennial/feature.png, {{rootPath}}images/projects/adrennial/feature@2x.png 2x">
-                  <img height="528" width="792" src="{{rootPath}}images/projects/adrennial/feature.png" alt="" loading="lazy">
-                </picture>
+                {{ picture({
+                  "image": {
+                    "src": rootPath + 'images/projects/adrennial/feature',
+                    "height": '528',
+                    "width": '792'
+                  }
+                }) }}
               </a>
             </div>
 
@@ -91,9 +93,7 @@
           <li class="anim-cards__item">
             <div class="card-v2 radius-md">
               <div class="logo">
-                <a class="logo__link" href="{{rootPath}}projects/census-2021">
-                  <img class="logo__img" src="{{rootPath}}images/clients/ons.svg" height="32" width="161" alt="Office for National Statistics logo" loading="lazy">
-                </a>
+                <img class="logo__img" src="{{rootPath}}images/clients/ons.svg" height="32" width="161" alt="Office for National Statistics logo">
               </div>
             </div>
           </li>
@@ -101,7 +101,7 @@
           <li class="anim-cards__item">
             <div class="card-v2 radius-md">
               <div class="logo">
-                <img class="logo__img" src="{{rootPath}}images/clients/adrennial.svg" height="32" width="154" alt="Adrennial" loading="lazy">
+                <img class="logo__img" src="{{rootPath}}images/clients/adrennial.svg" height="32" width="154" alt="Adrennial">
               </div>
             </div>
           </li>
@@ -109,9 +109,7 @@
           <li class="anim-cards__item">
             <div class="card-v2 radius-md">
               <div class="logo">
-                <a class="logo__link" href="{{rootPath}}projects/government-digital-service">
-                  <img class="logo__img" src="{{rootPath}}images/clients/govuk.svg" height="24" width="149" alt="GOV.UK logo" loading="lazy">
-                </a>
+                <img class="logo__img" src="{{rootPath}}images/clients/govuk.svg" height="24" width="149" alt="GOV.UK logo">
               </div>
             </div>
           </li>
@@ -119,9 +117,7 @@
           <li class="anim-cards__item">
             <div class="card-v2 radius-md">
               <div class="logo">
-                <a class="logo__link" href="{{rootPath}}projects/servelec-social-care">
-                  <img class="logo__img" src="{{rootPath}}images/clients/servelec.svg" height="48" width="126" alt="Servelec logo" loading="lazy">
-                </a>
+                <img class="logo__img" src="{{rootPath}}images/clients/servelec.svg" height="48" width="126" alt="Servelec logo">
               </div>
             </div>
           </li>
@@ -129,7 +125,7 @@
           <li class="anim-cards__item">
             <div class="card-v2 radius-md">
               <div class="logo">
-                <img class="logo__img" src="{{rootPath}}images/clients/elsevier.svg" height="56" width="51" alt="Elsevier logo" loading="lazy">
+                <img class="logo__img" src="{{rootPath}}images/clients/elsevier.svg" height="56" width="51" alt="Elsevier logo">
               </div>
             </div>
           </li>
@@ -137,9 +133,7 @@
           <li class="anim-cards__item">
             <div class="card-v2 radius-md">
               <div class="logo">
-                <a class="logo__link" href="{{rootPath}}projects/judicial-case-manager">
-                  <img class="logo__img" src="{{rootPath}}images/clients/hmcts.svg" height="56" width="121" alt="HM Courts and Tribunals Service logo" loading="lazy">
-                </a>
+                <img class="logo__img" src="{{rootPath}}images/clients/hmcts.svg" height="56" width="121" alt="HM Courts and Tribunals Service logo">
               </div>
             </div>
           </li>
@@ -147,7 +141,7 @@
           <li class="anim-cards__item">
             <div class="card-v2 radius-md">
               <div class="logo">
-                <img class="logo__img" src="{{rootPath}}images/clients/moj.svg" height="56" width="72" alt="Ministry of Justice logo" loading="lazy">
+                <img class="logo__img" src="{{rootPath}}images/clients/moj.svg" height="56" width="72" alt="Ministry of Justice logo">
               </div>
             </div>
           </li>
@@ -155,7 +149,7 @@
           <li class="anim-cards__item">
             <div class="card-v2 radius-md">
               <div class="logo">
-                <img class="logo__img" src="{{rootPath}}images/clients/premier-league.svg" height="40" width="95" alt="Premier League logo" loading="lazy">
+                <img class="logo__img" src="{{rootPath}}images/clients/premier-league.svg" height="40" width="95" alt="Premier League logo">
               </div>
             </div>
           </li>
@@ -163,9 +157,7 @@
           <li class="anim-cards__item">
             <div class="card-v2 radius-md">
               <div class="logo">
-                <a class="logo__link" href="{{rootPath}}projects/rural-payments">
-                  <img class="logo__img" src="{{rootPath}}images/clients/rural-payments-agency.svg" height="56" width="108" alt="Rural Payments Agency logo" loading="lazy">
-                </a>
+                <img class="logo__img" src="{{rootPath}}images/clients/rural-payments-agency.svg" height="56" width="108" alt="Rural Payments Agency logo">
               </div>
             </div>
           </li>
@@ -173,7 +165,7 @@
           <li class="anim-cards__item">
             <div class="card-v2 radius-md">
               <div class="logo">
-                <img class="logo__img" src="{{rootPath}}images/clients/nike.svg" height="32" width="90" alt="Nike logo" loading="lazy">
+                <img class="logo__img" src="{{rootPath}}images/clients/nike.svg" height="32" width="90" alt="Nike logo">
               </div>
             </div>
           </li>
@@ -181,7 +173,7 @@
           <li class="anim-cards__item">
             <div class="card-v2 radius-md">
               <div class="logo">
-                <img class="logo__img" src="{{rootPath}}images/clients/akqa.svg" height="32" width="67" alt="AKQA logo" loading="lazy">
+                <img class="logo__img" src="{{rootPath}}images/clients/akqa.svg" height="32" width="67" alt="AKQA logo">
               </div>
             </div>
           </li>
@@ -189,7 +181,7 @@
           <li class="anim-cards__item">
             <div class="card-v2 radius-md">
               <div class="logo">
-                <img class="logo__img" src="{{rootPath}}images/clients/thefa.svg" height="56" width="39" alt="The Football Association logo" loading="lazy">
+                <img class="logo__img" src="{{rootPath}}images/clients/thefa.svg" height="56" width="39" alt="The Football Association logo">
               </div>
             </div>
           </li>
@@ -197,7 +189,7 @@
           <li class="anim-cards__item">
             <div class="card-v2 radius-md">
               <div class="logo">
-                <img class="logo__img" src="{{rootPath}}images/clients/capita.svg" height="37" width="116" alt="Capita logo" loading="lazy">
+                <img class="logo__img" src="{{rootPath}}images/clients/capita.svg" height="37" width="116" alt="Capita logo">
               </div>
             </div>
           </li>
@@ -205,7 +197,7 @@
           <li class="anim-cards__item">
             <div class="card-v2 radius-md">
               <div class="logo">
-                <img class="logo__img" src="{{rootPath}}images/clients/kainos.svg" height="20" width="138" alt="Kainos logo" loading="lazy">
+                <img class="logo__img" src="{{rootPath}}images/clients/kainos.svg" height="20" width="138" alt="Kainos logo">
               </div>
             </div>
           </li>

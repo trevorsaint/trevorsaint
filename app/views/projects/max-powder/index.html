@@ -19,11 +19,13 @@
       <h1 class="text-xxl margin-y-sm margin-y-lg@sm">A complete rebrand and design for Max Powder</h1>
 
       <div class="hero">
-        <picture>
-          <source type="image/webp" srcset="{{rootPath}}images/projects/max-powder/hero.webp, {{rootPath}}images/projects/max-powder/hero@2x.webp 2x">
-          <source type="image/png" srcset="{{rootPath}}images/projects/max-powder/hero.png, {{rootPath}}images/projects/max-powder/hero@2x.png 2x">
-          <img height="800" width="1200" src="{{rootPath}}images/projects/max-powder/hero.png" alt="" loading="lazy">
-        </picture>
+        {{ picture({
+          "image": {
+            "src": rootPath + 'images/projects/max-powder/hero',
+            "height": '800',
+            "width": '1200'
+          }
+        }) }}
       </div>
 
       <div class="flex@sm justify-between items-start margin-top-md">
@@ -100,11 +102,16 @@
         <div class="col-6@sm">
           <figure class="figure">
             <div class="bg-contrast-lower aspect-ratio-1:1">
-              <picture>
-                <source type="image/webp" srcset="{{rootPath}}images/projects/max-powder/on-samsung-phone.webp, {{rootPath}}images/projects/max-powder/on-samsung-phone@2x.webp 2x">
-                <source type="image/png" srcset="{{rootPath}}images/projects/max-powder/on-samsung-phone.png, {{rootPath}}images/projects/max-powder/on-samsung-phone@2x.png 2x">
-                <img height="588" width="588" src="{{rootPath}}images/projects/max-powder/on-samsung-phone.png" alt="" loading="lazy">
-              </picture>
+              {{ picture({
+                "image": {
+                  "src": rootPath + 'images/projects/max-powder/on-samsung-phone',
+                  "height": '588',
+                  "width": '588'
+                },
+                "attributes": {
+                  "loading": 'lazy'
+                }
+              }) }}
             </div>
             <figcaption class="figure__caption margin-top-xxs">Responsive design for mobile</figcaption>
           </figure>
@@ -132,11 +139,16 @@
         <div class="col-6@sm">
           <figure class="figure">
             <div class="bg-contrast-lower aspect-ratio-3:2">
-              <picture>
-                <source type="image/webp" srcset="{{rootPath}}images/projects/max-powder/logo-ondark.webp, {{rootPath}}images/projects/max-powder/logo-ondark@2x.webp 2x">
-                <source type="image/png" srcset="{{rootPath}}images/projects/max-powder/logo-ondark.png, {{rootPath}}images/projects/max-powder/logo-ondark@2x.png 2x">
-                <img height="392" width="588" src="{{rootPath}}images/projects/max-powder/logo-ondark.png" alt="" loading="lazy">
-              </picture>
+              {{ picture({
+                "image": {
+                  "src": rootPath + 'images/projects/max-powder/logo-ondark',
+                  "height": '392',
+                  "width": '588'
+                },
+                "attributes": {
+                  "loading": 'lazy'
+                }
+              }) }}
             </div>
             <figcaption class="figure__caption margin-top-xxs">Max Powder logo on dark background</figcaption>
           </figure>
@@ -145,11 +157,16 @@
         <div class="col-6@sm">
           <figure class="figure">
             <div class="bg-contrast-lower aspect-ratio-3:2">
-              <picture>
-                <source type="image/webp" srcset="{{rootPath}}images/projects/max-powder/logo-onlight.webp, {{rootPath}}images/projects/max-powder/logo-onlight@2x.webp 2x">
-                <source type="image/png" srcset="{{rootPath}}images/projects/max-powder/logo-onlight.png, {{rootPath}}images/projects/max-powder/logo-onlight@2x.png 2x">
-                <img height="392" width="588" src="{{rootPath}}images/projects/max-powder/logo-onlight.png" alt="" loading="lazy">
-              </picture>
+              {{ picture({
+                "image": {
+                  "src": rootPath + 'images/projects/max-powder/logo-onlight',
+                  "height": '392',
+                  "width": '588'
+                },
+                "attributes": {
+                  "loading": 'lazy'
+                }
+              }) }}
             </div>
             <figcaption class="figure__caption margin-top-xxs">Max Powder logo on light background</figcaption>
           </figure>
@@ -174,44 +191,64 @@
 
       <figure class="figure">
         <div class="bg-contrast-lower aspect-ratio-16:9">
-          <picture>
-            <source type="image/webp" srcset="{{rootPath}}images/projects/max-powder/styleguide-styles.webp, {{rootPath}}images/projects/max-powder/styleguide-styles@2x.webp 2x">
-            <source type="image/png" srcset="{{rootPath}}images/projects/max-powder/styleguide-styles.png, {{rootPath}}images/projects/max-powder/styleguide-styles@2x.png 2x">
-            <img height="675" width="1200" src="{{rootPath}}images/projects/max-powder/styleguide-styles.png" alt="" loading="lazy">
-          </picture>
+          {{ picture({
+            "image": {
+              "src": rootPath + 'images/projects/max-powder/styleguide-styles',
+              "height": '675',
+              "width": '1200'
+            },
+            "attributes": {
+              "loading": 'lazy'
+            }
+          }) }}
         </div>
         <figcaption class="figure__caption margin-top-xxs">Styleguide includes design foundations</figcaption>
       </figure>
 
       <figure class="figure margin-top-lg">
         <div class="bg-contrast-lower aspect-ratio-16:9">
-          <picture>
-            <source type="image/webp" srcset="{{rootPath}}images/projects/max-powder/styleguide-components.webp, {{rootPath}}images/projects/max-powder/styleguide-components@2x.webp 2x">
-            <source type="image/png" srcset="{{rootPath}}images/projects/max-powder/styleguide-components.png, {{rootPath}}images/projects/max-powder/styleguide-components@2x.png 2x">
-            <img height="675" width="1200" src="{{rootPath}}images/projects/max-powder/styleguide-components.png" alt="" loading="lazy">
-          </picture>
+          {{ picture({
+            "image": {
+              "src": rootPath + 'images/projects/max-powder/styleguide-components',
+              "height": '675',
+              "width": '1200'
+            },
+            "attributes": {
+              "loading": 'lazy'
+            }
+          }) }}
         </div>
         <figcaption class="figure__caption margin-top-xxs">Styleguide includes designed components</figcaption>
       </figure>
 
       <figure class="figure margin-top-lg">
         <div class="bg-contrast-lower aspect-ratio-16:9">
-          <picture>
-            <source type="image/webp" srcset="{{rootPath}}images/projects/max-powder/home-page-design.webp, {{rootPath}}images/projects/max-powder/home-page-design@2x.webp 2x">
-            <source type="image/png" srcset="{{rootPath}}images/projects/max-powder/home-page-design.png, {{rootPath}}images/projects/max-powder/home-page-design@2x.png 2x">
-            <img height="675" width="1200" src="{{rootPath}}images/projects/max-powder/home-page-design.png" alt="" loading="lazy">
-          </picture>
+          {{ picture({
+            "image": {
+              "src": rootPath + 'images/projects/max-powder/home-page-design',
+              "height": '675',
+              "width": '1200'
+            },
+            "attributes": {
+              "loading": 'lazy'
+            }
+          }) }}
         </div>
         <figcaption class="figure__caption margin-top-xxs">Home page design utilising styleguide assets</figcaption>
       </figure>
 
       <figure class="figure margin-top-lg">
         <div class="bg-contrast-lower aspect-ratio-16:9">
-          <picture>
-            <source type="image/webp" srcset="{{rootPath}}images/projects/max-powder/gallery-page-design.webp, {{rootPath}}images/projects/max-powder/gallery-page-design@2x.webp 2x">
-            <source type="image/png" srcset="{{rootPath}}images/projects/max-powder/gallery-page-design.png, {{rootPath}}images/projects/max-powder/gallery-page-design@2x.png 2x">
-            <img height="675" width="1200" src="{{rootPath}}images/projects/max-powder/gallery-page-design.png" alt="" loading="lazy">
-          </picture>
+          {{ picture({
+            "image": {
+              "src": rootPath + 'images/projects/max-powder/gallery-page-design',
+              "height": '675',
+              "width": '1200'
+            },
+            "attributes": {
+              "loading": 'lazy'
+            }
+          }) }}
         </div>
         <figcaption class="figure__caption margin-top-xxs">Gallery page design utilising styleguide assets</figcaption>
       </figure>
@@ -239,12 +276,12 @@
             <p>I delivered a complete brand identity including logo design to be used on various materials from signage, business cards and invoices. I also designed and built the website from scratch to fulfil the needs of the client.</p>
             <p class="font-bold">This includes:</p>
             <ul>
-              <li>logo design</li>
-              <li>design and development</li>
-              <li>ExpressionEngine integration</li>
+              <li>Logo Design</li>
+              <li>Design and Development</li>
+              <li>ExpressionEngine Integration</li>
               <li>Google Cloud Platform</li>
-              <li>mobile friendly design</li>
-              <li>continued support and maintenance</li>
+              <li>Mobile Friendly Design</li>
+              <li>Continued Support and Maintenance</li>
             </ul>
           </div>
 
@@ -264,36 +301,28 @@
             "twitter": {
               "attributes": {
                 "data-social": 'twitter',
-                "data-text": 'Hi there! https://trevorsaint.uk/projects/max-powder via @trevorsaint',
+                "data-text": 'Hi there! ' + rootPath + 'projects/max-powder via @trevorsaint',
                 "data-hashtags": '#alloywheels, #logodesign, #branding, #design, #dev, #ux, #interactiondesign'
               }
             },
             "facebook": {
               "attributes": {
                 "data-social": 'facebook',
-                "data-url": 'https://trevorsaint.uk/projects/max-powder'
+                "data-url": rootPath + 'projects/max-powder'
               }
             },
             "pinterest": {
               "attributes": {
                 "data-social": 'pinterest',
-                "data-url": 'https://trevorsaint.uk/projects/max-powder',
+                "data-url": rootPath + 'projects/max-powder',
                 "data-description": 'A complete rebrand and design for Max Powder',
-                "data-media": 'https://trevorsaint.uk/images/projects/max-powder/pinterest.png'
+                "data-media": rootPath + 'images/projects/max-powder/pinterest.png'
               }
             },
             "linkedin": {
               "attributes": {
                 "data-social": 'linkedin',
-                "data-url": 'https://trevorsaint.uk/projects/max-powder'
-              }
-            },
-            "email": {
-              "attributes": {
-                "data-social": 'mail',
-                "data-url": 'https://trevorsaint.uk/projects/max-powder',
-                "data-subject": 'A complete rebrand and design for Max Powder - Trevor Saint',
-                "data-body": 'https://trevorsaint.uk/projects/max-powder'
+                "data-url": rootPath + 'projects/max-powder'
               }
             }
           }) }}

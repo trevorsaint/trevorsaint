@@ -19,11 +19,13 @@
       <h1 class="text-xxl margin-y-sm margin-y-lg@sm">A design system to solve problems and avoid repetition</h1>
 
       <div class="hero">
-        <picture>
-          <source type="image/webp" srcset="{{rootPath}}images/projects/hmcts-design-system/hero.webp, {{rootPath}}images/projects/hmcts-design-system/hero@2x.webp 2x">
-          <source type="image/png" srcset="{{rootPath}}images/projects/hmcts-design-system/hero.png, {{rootPath}}images/projects/hmcts-design-system/hero@2x.png 2x">
-          <img height="800" width="1200" src="{{rootPath}}images/projects/hmcts-design-system/hero.png" alt="" loading="lazy">
-        </picture>
+        {{ picture({
+          "image": {
+            "src": rootPath + 'images/projects/hmcts-design-system/hero',
+            "height": '800',
+            "width": '1200'
+          }
+        }) }}
       </div>
 
       <div class="flex@sm justify-between items-start margin-top-md">
@@ -88,11 +90,16 @@
 
       <figure class="figure">
         <div class="bg-contrast-lower aspect-ratio-16:9">
-          <picture>
-            <source type="image/webp" srcset="{{rootPath}}images/projects/hmcts-design-system/landing-page.webp, {{rootPath}}images/projects/hmcts-design-system/landing-page@2x.webp 2x">
-            <source type="image/png" srcset="{{rootPath}}images/projects/hmcts-design-system/landing-page.png, {{rootPath}}images/projects/hmcts-design-system/landing-page@2x.png 2x">
-            <img height="675" width="1200" src="{{rootPath}}images/projects/hmcts-design-system/landing-page.png" alt="" loading="lazy">
-          </picture>
+          {{ picture({
+            "image": {
+              "src": rootPath + 'images/projects/hmcts-design-system/landing-page',
+              "height": '675',
+              "width": '1200'
+            },
+            "attributes": {
+              "loading": 'lazy'
+            }
+          }) }}
         </div>
         <figcaption class="figure__caption margin-top-xxs">Landing page design concept for desktop, tablet and mobile</figcaption>
       </figure>
@@ -114,33 +121,48 @@
 
       <figure class="figure">
         <div class="bg-contrast-lower aspect-ratio-16:9">
-          <picture>
-            <source type="image/webp" srcset="{{rootPath}}images/projects/hmcts-design-system/hmcts-and-gov-design-system.webp, {{rootPath}}images/projects/hmcts-design-system/hmcts-and-gov-design-system@2x.webp 2x">
-            <source type="image/png" srcset="{{rootPath}}images/projects/hmcts-design-system/hmcts-and-gov-design-system.png, {{rootPath}}images/projects/hmcts-design-system/hmcts-and-gov-design-system@2x.png 2x">
-            <img height="675" width="1200" src="{{rootPath}}images/projects/hmcts-design-system/hmcts-and-gov-design-system.png" alt="" loading="lazy">
-          </picture>
+          {{ picture({
+            "image": {
+              "src": rootPath + 'images/projects/hmcts-design-system/hmcts-and-gov-design-system',
+              "height": '675',
+              "width": '1200'
+            },
+            "attributes": {
+              "loading": 'lazy'
+            }
+          }) }}
         </div>
         <figcaption class="figure__caption margin-top-xxs">Filter component using GOV.UK design system components</figcaption>
       </figure>
 
       <figure class="figure margin-top-lg">
         <div class="bg-contrast-lower aspect-ratio-16:9">
-          <picture>
-            <source type="image/webp" srcset="{{rootPath}}images/projects/hmcts-design-system/progress-bar-component.webp, {{rootPath}}images/projects/hmcts-design-system/progress-bar-component@2x.webp 2x">
-            <source type="image/png" srcset="{{rootPath}}images/projects/hmcts-design-system/progress-bar-component.png, {{rootPath}}images/projects/hmcts-design-system/progress-bar-component@2x.png 2x">
-            <img height="675" width="1200" src="{{rootPath}}images/projects/hmcts-design-system/progress-bar-component.png" alt="" loading="lazy">
-          </picture>
+          {{ picture({
+            "image": {
+              "src": rootPath + 'images/projects/hmcts-design-system/progress-bar-component',
+              "height": '675',
+              "width": '1200'
+            },
+            "attributes": {
+              "loading": 'lazy'
+            }
+          }) }}
         </div>
         <figcaption class="figure__caption margin-top-xxs">Progress bar component in the design system</figcaption>
       </figure>
 
       <figure class="figure margin-top-lg">
         <div class="bg-contrast-lower aspect-ratio-16:9">
-          <picture>
-            <source type="image/webp" srcset="{{rootPath}}images/projects/hmcts-design-system/pagination-component.webp, {{rootPath}}images/projects/hmcts-design-system/pagination-component@2x.webp 2x">
-            <source type="image/png" srcset="{{rootPath}}images/projects/hmcts-design-system/pagination-component.png, {{rootPath}}images/projects/hmcts-design-system/pagination-component@2x.png 2x">
-            <img height="675" width="1200" src="{{rootPath}}images/projects/hmcts-design-system/pagination-component.png" alt="" loading="lazy">
-          </picture>
+          {{ picture({
+            "image": {
+              "src": rootPath + 'images/projects/hmcts-design-system/pagination-component',
+              "height": '675',
+              "width": '1200'
+            },
+            "attributes": {
+              "loading": 'lazy'
+            }
+          }) }}
         </div>
         <figcaption class="figure__caption margin-top-xxs">Pagination component in the design system</figcaption>
       </figure>
@@ -162,11 +184,16 @@
 
       <figure class="figure">
         <div class="bg-contrast-lower aspect-ratio-16:9">
-          <picture>
-            <source type="image/webp" srcset="{{rootPath}}images/projects/hmcts-design-system/service-using-design-system.webp, {{rootPath}}images/projects/hmcts-design-system/service-using-design-system@2x.webp 2x">
-            <source type="image/png" srcset="{{rootPath}}images/projects/hmcts-design-system/service-using-design-system.png, {{rootPath}}images/projects/hmcts-design-system/service-using-design-system@2x.png 2x">
-            <img height="675" width="1200" src="{{rootPath}}images/projects/hmcts-design-system/service-using-design-system.png" alt="" loading="lazy">
-          </picture>
+          {{ picture({
+            "image": {
+              "src": rootPath + 'images/projects/hmcts-design-system/service-using-design-system',
+              "height": '675',
+              "width": '1200'
+            },
+            "attributes": {
+              "loading": 'lazy'
+            }
+          }) }}
         </div>
         <figcaption class="figure__caption margin-top-xxs">HMCTS service using components from the design system</figcaption>
       </figure>
@@ -187,11 +214,16 @@
 
       <figure class="figure">
         <div class="bg-contrast-lower aspect-ratio-16:9">
-          <picture>
-            <source type="image/webp" srcset="{{rootPath}}images/projects/hmcts-design-system/contributors-to-design-system.webp, {{rootPath}}images/projects/hmcts-design-system/contributors-to-design-system@2x.webp 2x">
-            <source type="image/png" srcset="{{rootPath}}images/projects/hmcts-design-system/contributors-to-design-system.png, {{rootPath}}images/projects/hmcts-design-system/contributors-to-design-system@2x.png 2x">
-            <img height="675" width="1200" src="{{rootPath}}images/projects/hmcts-design-system/contributors-to-design-system.png" alt="" loading="lazy">
-          </picture>
+          {{ picture({
+            "image": {
+              "src": rootPath + 'images/projects/hmcts-design-system/contributors-to-design-system',
+              "height": '675',
+              "width": '1200'
+            },
+            "attributes": {
+              "loading": 'lazy'
+            }
+          }) }}
         </div>
         <figcaption class="figure__caption margin-top-xxs">Contributors to design system and frontend in GitHub repos</figcaption>
       </figure>
@@ -214,11 +246,16 @@
 
       <figure class="figure">
         <div class="bg-contrast-lower aspect-ratio-16:9">
-          <picture>
-            <source type="image/webp" srcset="{{rootPath}}images/projects/hmcts-design-system/collaboration-on-github.webp, {{rootPath}}images/projects/hmcts-design-system/collaboration-on-github@2x.webp 2x">
-            <source type="image/png" srcset="{{rootPath}}images/projects/hmcts-design-system/collaboration-on-github.png, {{rootPath}}images/projects/hmcts-design-system/collaboration-on-github@2x.png 2x">
-            <img height="675" width="1200" src="{{rootPath}}images/projects/hmcts-design-system/collaboration-on-github.png" alt="" loading="lazy">
-          </picture>
+          {{ picture({
+            "image": {
+              "src": rootPath + 'images/projects/hmcts-design-system/collaboration-on-github',
+              "height": '675',
+              "width": '1200'
+            },
+            "attributes": {
+              "loading": 'lazy'
+            }
+          }) }}
         </div>
         <figcaption class="figure__caption margin-top-xxs">Collaboration about progress bar being used on GOV.UK divorce</figcaption>
       </figure>
@@ -239,11 +276,16 @@
 
       <figure class="figure">
         <div class="bg-contrast-lower">
-          <picture>
-            <source type="image/webp" srcset="{{rootPath}}images/projects/hmcts-design-system/frontend-package-release.webp, {{rootPath}}images/projects/hmcts-design-system/frontend-package-release@2x.webp 2x">
-            <source type="image/png" srcset="{{rootPath}}images/projects/hmcts-design-system/frontend-package-release.png, {{rootPath}}images/projects/hmcts-design-system/frontend-package-release@2x.png 2x">
-            <img height="675" width="1200" src="{{rootPath}}images/projects/hmcts-design-system/frontend-package-release.png" alt="" loading="lazy">
-          </picture>
+          {{ picture({
+            "image": {
+              "src": rootPath + 'images/projects/hmcts-design-system/frontend-package-release',
+              "height": '675',
+              "width": '1200'
+            },
+            "attributes": {
+              "loading": 'lazy'
+            }
+          }) }}
         </div>
         <figcaption class="figure__caption margin-top-xxs">Frontend package releases</figcaption>
       </figure>
@@ -275,36 +317,28 @@
             "twitter": {
               "attributes": {
                 "data-social": 'twitter',
-                "data-text": 'Hi there! https://trevorsaint.uk/projects/hmcts-design-system via @trevorsaint',
+                "data-text": 'Hi there! ' + rootPath + 'projects/hmcts-design-system via @trevorsaint',
                 "data-hashtags": '#govuk, #government, #designsystem, #design, #dev, #ux, #interactiondesign'
               }
             },
             "facebook": {
               "attributes": {
                 "data-social": 'facebook',
-                "data-url": 'https://trevorsaint.uk/projects/hmcts-design-system'
+                "data-url": rootPath + 'projects/hmcts-design-system'
               }
             },
             "pinterest": {
               "attributes": {
                 "data-social": 'pinterest',
-                "data-url": 'https://trevorsaint.uk/projects/hmcts-design-system',
+                "data-url": rootPath + 'projects/hmcts-design-system',
                 "data-description": 'A design system to solve problems and avoid repetition',
-                "data-media": 'https://trevorsaint.uk/images/projects/hmcts-design-system/pinterest.png'
+                "data-media": rootPath + 'images/projects/hmcts-design-system/pinterest.png'
               }
             },
             "linkedin": {
               "attributes": {
                 "data-social": 'linkedin',
-                "data-url": 'https://trevorsaint.uk/projects/hmcts-design-system'
-              }
-            },
-            "email": {
-              "attributes": {
-                "data-social": 'mail',
-                "data-url": 'https://trevorsaint.uk/projects/hmcts-design-system',
-                "data-subject": 'A design system to solve problems and avoid repetition - Trevor Saint',
-                "data-body": 'https://trevorsaint.uk/projects/hmcts-design-system'
+                "data-url": rootPath + 'projects/hmcts-design-system'
               }
             }
           }) }}

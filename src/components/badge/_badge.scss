@@ -18,3 +18,18 @@
   background-color: var(--color-contrast-high);
   color: var(--color-white);
 }
+
+.badge--secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-black);
+}
+
+.badge--tertiary {
+  background-color: var(--color-tertiary);
+  color: var(--color-black);
+}
+
+.badge--quaternary {
+  background-color: var(--color-quaternary);
+  color: var(--color-black);
+}
