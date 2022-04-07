@@ -6,19 +6,19 @@
   "orientation": "any",
   "icons": [
     {
-      "src": "http://localhost:3000/images/google-touch-icon-512x512.png",
+      "src": "https://trevorsaint.uk/images/google-touch-icon-512x512.png",
       "sizes": "512x512"
     },
     {
-      "src": "http://localhost:3000/images/google-touch-icon-257x257.png",
+      "src": "https://trevorsaint.uk/images/google-touch-icon-257x257.png",
       "sizes": "257x257"
     },
     {
-      "src": "http://localhost:3000/images/google-touch-icon-192x192.png",
+      "src": "https://trevorsaint.uk/images/google-touch-icon-192x192.png",
       "sizes": "192x192"
     }
   ],
-  "start_url": "http://localhost:3000/",
+  "start_url": "https://trevorsaint.uk/",
   "background_color": "#F24B88",
   "theme_color": "#F24B88",
   "display": "fullscreen"
