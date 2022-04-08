@@ -65,8 +65,8 @@ gulp.task('sass-ie', function() {
 gulp.task('scripts', function() {
   return gulp.src([
       configPaths.scripts + 'util.js',
-      configPaths.components + '**/*.js',
-      configPaths.scripts + 'sw.js'
+      configPaths.components + '**/*.js'
+      // configPaths.scripts + 'sw.js'
     ])
     .pipe(concat('main.js'))
     .pipe(uglify())
