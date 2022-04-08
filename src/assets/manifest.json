@@ -1,6 +1,6 @@
 {
-  "name": "Trevor Saint | Interaction Designer",
-  "short_name": "Trevor Saint",
+  "name": "Trevor Saint",
+  "short_name": "TS",
   "description": "I’m a digital perfectionist with over 18 years of experience designing and developing impressive services for Government departments and digital agencies.",
   "lang": "en-GB",
   "orientation": "portrait",
@@ -19,6 +19,12 @@
       "src": "https://trevorsaint.uk/images/icon-192x192.png",
       "sizes": "192x192",
       "type": "image/png"
+    },
+    {
+      "src": "https://trevorsaint.uk/images/maskable-icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ],
   "start_url": "https://trevorsaint.uk/",
