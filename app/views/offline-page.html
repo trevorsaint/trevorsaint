@@ -1,0 +1,27 @@
+{% set pageTitle       = "You’re offline" %}
+{% set pageDescription = "It looks like you’re offline. Go to the home page when you’re back online." %}
+
+{% extends "layout.njk" %}
+
+{% block content %}
+
+  <section class="padding-top-xs padding-bottom-md padding-bottom-lg@sm padding-bottom-xxl@md padding-bottom-xxxxl@lg">
+
+    <div class="container">
+
+      <div class="max-width-lg">
+
+        <h1 class="text-xxxl margin-bottom-xxs margin-bottom-xs@md margin-bottom-lg@lg">You’re offline</h1>
+
+        <div class="text-component color-contrast-medium text-md">
+          <p>It looks like you’re offline.</p>
+          <p>Go to the <a class="link" href="{{rootPath}}">home page</a> when you’re back online.</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+{% endblock %}
