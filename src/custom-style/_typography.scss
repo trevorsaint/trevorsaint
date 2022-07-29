@@ -1,3 +1,5 @@
+@use "../base" as *;
+
 // --------------------------------
 
 // Typography
@@ -75,15 +77,88 @@
 
   ul,
   ol {
-    @extend .list;
+    padding-left: 0;
+
+    ul,
+    ol {
+      margin: 0;
+      padding-left: var(--space-xs);
+      padding-top: var(--space-xxxs);
+    }
+
+    li {
+      display: block;
+      margin-bottom: var(--space-xxxs);
+    }
+
   }
 
   ul:not([class]) {
-    @extend .list-ul;
+    --bullet-size: 6px; // dot width and height
+    --bullet-margin-right: var(--space-xxs); // gap between bullet and content
+
+    li {
+      padding-left: calc(var(--bullet-size) + var(--bullet-margin-right));
+    }
+
+    // bullet
+    li::before {
+      background-color: currentColor;
+      border: 2px solid currentColor;
+      border-radius: 50%;
+      color: inherit; // bullet color
+      display: inline-flex;
+      content: "";
+      height: var(--bullet-size);
+      left: calc(var(--bullet-margin-right) * -1);
+      margin-top: calc(-1 * var(--bullet-size) / 2); // half bullet size
+      margin-left: calc(var(--bullet-size) * -1);
+      position: relative;
+      vertical-align: middle;
+      width: var(--bullet-size);
+    }
+
+    ul li::before {
+      background-color: transparent;
+    }
   }
 
   ol:not([class]) {
-    @extend .list-ol;
+    --bullet-size: 24px; // circle width and height
+    --bullet-margin-right: var(--space-xxxs); // gap between circle and content
+
+    counter-reset: list-items;
+
+    li {
+      padding-left: calc(var(--bullet-size) + var(--bullet-margin-right));
+      counter-increment: list-items;
+    }
+
+    ol {
+      counter-reset: list-items;
+    }
+
+    li::before {
+      @include typography(16);
+      align-items: center;
+      background-color: var(--color-contrast-lower);
+      border: 2px solid var(--color-contrast-lower);
+      border-radius: 50%;
+      color: inherit;
+      content: counter(list-items);
+      display: inline-flex;
+      height: var(--bullet-size);
+      justify-content: center;
+      left: calc(var(--bullet-margin-right) * -1);
+      margin-left: calc(var(--bullet-size) * -1);
+      position: relative;
+      vertical-align: middle;
+      width: var(--bullet-size);
+    }
+
+    ol li::before {
+      background-color: transparent;
+    }
   }
 
   ul:not([class]) li,

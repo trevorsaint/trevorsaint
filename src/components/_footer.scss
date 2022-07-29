@@ -1,0 +1,30 @@
+@use "../base" as *;
+
+// --------------------------------
+
+// Footer
+
+// --------------------------------
+
+.footer__container {
+  position: relative;
+
+  &:after {
+    background-color: alpha(var(--color-black), .2);
+    border-top: 1px solid transparent; // High Contrast Mode
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 1px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 200%;
+  }
+
+}
+
+.footer__content {
+  position: relative;
+  z-index: 1;
+}

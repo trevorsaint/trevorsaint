@@ -4,8 +4,8 @@
 
 // --------------------------------
 
-@import "custom-style/base";
-@import "custom-style/typography";
-@import "custom-style/lists";
-@import "custom-style/links";
-@import "custom-style/content";
+@use "custom-style/base";
+@use "custom-style/typography";
+@use "custom-style/lists";
+@use "custom-style/links";
+@use "custom-style/content";

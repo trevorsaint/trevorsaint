@@ -1,12 +1,12 @@
-{%- from "back-link/_macro.njk" import backLink -%}
-{%- from "picture/_macro.njk" import picture -%}
-{%- from "entry-details/_macro.njk" import entryDetails -%}
-{%- from "previous-next-links/_macro.njk" import previousNextLinks -%}
-{%- from "social-sharing/_macro.njk" import socialShare -%}
-{%- from "card/_macro.njk" import card -%}
-{%- from "quote/_macro.njk" import quote -%}
-{%- from "logos/_macro.njk" import logo -%}
-{%- from "icons/_macro.njk" import icon -%}
+{%- from "macros/_back-link.njk" import backLink -%}
+{%- from "macros/_picture.njk" import picture -%}
+{%- from "macros/_entry-details.njk" import entryDetails -%}
+{%- from "macros/_previous-next-links.njk" import previousNextLinks -%}
+{%- from "macros/_social-sharing.njk" import socialShare -%}
+{%- from "macros/_card.njk" import card -%}
+{%- from "macros/_quote.njk" import quote -%}
+{%- from "macros/_logos.njk" import logo -%}
+{%- from "macros/_icons.njk" import icon -%}
 <!DOCTYPE html>
 <html lang="en-GB">
   <head>
@@ -69,15 +69,21 @@
     <link rel="preload" as="font" type="font/woff2" href="{{rootPath}}fonts/Moderat-Regular.woff2" crossorigin="anonymous">
 
     {# Stylesheet #}
-    <link id="trevorsaint" href="{{rootPath}}stylesheets/main.css" rel="stylesheet">
-
-    {# No CSS variables support fallback #}
-    <script>
-      if(!('CSS' in window) || !CSS.supports('color', 'var(--color-var)')) {var main = document.getElementById('trevorsaint');if(main) {var href = main.getAttribute('href');href = href.replace('main.css', 'main-fallback.css');main.setAttribute('href', href);}}
-    </script>
+    <link href="{{rootPath}}stylesheets/main.min.css" rel="stylesheet">
 
     {# Progressive enhancement #}
     <script>document.getElementsByTagName('html')[0].className += 'js';</script>
+
+    <script src="https://www.google.com/recaptcha/api.js?render=6Lf33JcaAAAAAN5oC8LMQjEKbH4Nl-jn55bbk-3o"></script>
+
+    <script>
+      grecaptcha.ready(function () {
+        grecaptcha.execute('6Lf33JcaAAAAAN5oC8LMQjEKbH4Nl-jn55bbk-3o', {action: 'submit'}).then(function (token) {
+          console.info("got token: " + token);
+          document.getElementById('g-recaptcha-response').value = token;
+        });
+      });
+    </script>
 
   </head>
   <body>
