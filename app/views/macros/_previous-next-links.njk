@@ -1,0 +1,40 @@
+{% macro previousNextLinks(params) %}
+
+  {%- from "macros/_icons.njk" import icon -%}
+
+  <ul class="pn-links grid{{ ' ' + params.classes if params.classes else '' }}"{% for attribute, value in params.attributes %} {{attribute}}="{{value}}"{% endfor %}>
+
+    {% for previousNextLinksItem in params.previousNextLinksItems %}
+    <li class="pn-links__item col-6@md">
+
+      <a class="pn-links__link justify-center justify-between@md" href="{{ previousNextLinksItem.url }}" rel="{{ previousNextLinksItem.rel }}">
+
+        {% if previousNextLinksItem.rel === 'prev' %}
+        {{
+          icon({
+            "classes": 'pn-links__icon margin-right-sm',
+            "icon": 'arrow-back',
+            "iconSize": 'md'
+          })
+        }}
+        {% endif %}
+
+        <i class="sr-only">{{ previousNextLinksItem.text }}: </i>{{ previousNextLinksItem.label }}
+
+        {% if previousNextLinksItem.rel === 'next' %}
+        {{
+          icon({
+            "classes": 'pn-links__icon margin-left-sm',
+            "icon": 'arrow-forward',
+            "iconSize": 'md'
+          })
+        }}
+        {% endif %}
+
+      </a>
+
+    </li>
+    {% endfor %}
+
+  </ul>
+{% endmacro %}

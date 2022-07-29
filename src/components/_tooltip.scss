@@ -1,0 +1,112 @@
+@use "../base" as *;
+
+/* --------------------------------
+
+Title: Tooltip
+Description: A popup displaying additional text information
+
+-------------------------------- */
+
+:root {
+  --tooltip-triangle-size: 12px;
+}
+
+
+// Style inline-text tooltip trigger
+.tooltip-trigger {
+  border-bottom: 1px dotted var(--color-contrast-high);
+  cursor: help;
+  white-space: nowrap;
+}
+
+
+// Tooltip element - created using js
+.tooltip {
+  @include fontSmooth;
+  @include typography(16);
+  background-color: alpha(var(--color-contrast-high), 0.98);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-md);
+  color: var(--color-white);
+  display: inline-block;
+  max-width: 200px;
+  padding: var(--space-xxxs) var(--space-xxs);
+  position: absolute;
+  transition: opacity 0.2s, visibility 0.2s;
+  z-index: var(--z-index-popover, 5);
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+  }
+
+  @supports (clip-path: inset(50%)) {
+
+    // Tooltip triangle
+    &::before {
+      background-color: inherit;
+      border: inherit;
+      clip-path: polygon(0% 0%, 100% 100%, 100% 100%, 0% 100%);
+      content: "";
+      height: var(--tooltip-triangle-size);
+      position: absolute;
+      width: var(--tooltip-triangle-size);
+    }
+
+  }
+
+}
+
+
+.tootip:not(.tooltip--sticky) {
+  pointer-events: none;
+}
+
+
+// Tooltip position
+.tooltip {
+
+  // Variable used in JS to proper place tooltip triangle
+  --tooltip-triangle-translate: 0px;
+}
+
+
+.tooltip--top::before, .tooltip--bottom::before {
+  left: calc(50% - var(--tooltip-triangle-size) / 2);
+}
+
+
+.tooltip--top::before {
+  bottom: calc(var(--tooltip-triangle-size) * -0.5);
+  transform: translateX(var(--tooltip-triangle-translate)) rotate(-45deg);
+}
+
+
+.tooltip--bottom::before {
+  top: calc(var(--tooltip-triangle-size) * -0.5);
+  transform: translateX(var(--tooltip-triangle-translate)) rotate(135deg);
+}
+
+
+.tooltip--left::before, .tooltip--right::before {
+  top: calc(50% - var(--tooltip-triangle-size) / 2);
+}
+
+
+.tooltip--left::before {
+  right: calc(var(--tooltip-triangle-size) * -0.5);
+  transform: translateX(var(--tooltip-triangle-translate)) rotate(-135deg);
+}
+
+
+.tooltip--right::before {
+  left: calc(var(--tooltip-triangle-size) * -0.5);
+  transform: translateX(var(--tooltip-triangle-translate)) rotate(45deg);
+}
+
+
+.tooltip--is-hidden {
+  // Class used in JS to hide the tooltip element before its top/left positions are set
+  opacity: 0;
+  visibility: hidden;
+}
