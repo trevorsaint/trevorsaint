@@ -1,6 +1,6 @@
 {% macro socialShare(params) %}
 
-  {%- from "macros/_icons.njk" import icon -%}
+  {%- from "../macros/icons.njk" import icon -%}
 
   <ul class="social-share flex flex-wrap gap-xxs justify-center{{ ' ' + params.classes if params.classes else '' }}"{% for attribute, value in params.attributes %} {{attribute}}="{{value}}"{% endfor %}>
 

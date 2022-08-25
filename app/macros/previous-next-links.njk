@@ -1,6 +1,6 @@
 {% macro previousNextLinks(params) %}
 
-  {%- from "macros/_icons.njk" import icon -%}
+  {%- from "../macros/icons.njk" import icon -%}
 
   <ul class="pn-links grid{{ ' ' + params.classes if params.classes else '' }}"{% for attribute, value in params.attributes %} {{attribute}}="{{value}}"{% endfor %}>
 

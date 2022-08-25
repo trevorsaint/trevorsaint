@@ -1,6 +1,6 @@
 {% macro backLink(params) %}
 
-  {%- from "macros/_icons.njk" import icon -%}
+  {%- from "../macros/icons.njk" import icon -%}
 
   <a class="back-link{{ ' ' + params.classes if params.classes else '' }}" href="{{ params.url }}">
     {{

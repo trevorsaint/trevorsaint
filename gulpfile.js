@@ -75,7 +75,8 @@ gulp.task('nunjucks', function() {
         configPaths.components,
         configPaths.views,
         configPaths.layouts,
-        configPaths.partials
+        configPaths.partials,
+        configPaths.macros
       ],
       data: {
         serviceName: configPaths.name,
