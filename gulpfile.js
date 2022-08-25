@@ -201,7 +201,3 @@ function moveAssets() {
   });
 
 };
-
-
-// Production
-gulp.task('prod', gulp.series('build', 'dist'));
