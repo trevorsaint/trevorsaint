@@ -1,0 +1,52 @@
+{% set pageTitle       = "Sitemap - Trevor Saint" %}
+{% set pageDescription = "A list of pages on this website." %}
+{% set pageUrl         = "sitemap" %}
+{% set pageId          = "sitemap" %}
+
+{% extends "layout.njk" %}
+
+{% block content %}
+
+  <section class="padding-top-xs padding-bottom-md padding-bottom-lg@sm padding-bottom-xxl@md padding-bottom-xxxxl@lg">
+
+    <div class="container">
+
+      <div class="max-width-md">
+
+        <h1 class="text-xxxl margin-bottom-xxs margin-bottom-xs@md margin-bottom-lg@lg">Sitemap</h1>
+
+        <div class="text-component">
+
+          <p>Find your way around this website.</p>
+
+          <ul>
+            <li><b><a href="{{rootPath}}">Home</a></b></li>
+            <li><b><a href="{{rootPath}}about">About</a></b></li>
+            <li><b><a href="{{rootPath}}projects">Projects</a></b>
+              <ul>
+                <li><a href="{{rootPath}}projects/adrennial">Adrennial</a></li>
+                <li><a href="{{rootPath}}projects/census-2021">Census 2021</a></li>
+                <li><a href="{{rootPath}}projects/government-digital-service">Government Digital Service</a></li>
+                <li><a href="{{rootPath}}projects/travalion">Travalion</a></li>
+                <li><a href="{{rootPath}}projects/max-powder">Max Powder</a></li>
+                <li><a href="{{rootPath}}projects/paramount-packaging">Paramount Packaging</a></li>
+                <li><a href="{{rootPath}}projects/servelec-social-care">Servelec Social Care</a></li>
+                <li><a href="{{rootPath}}projects/judicial-case-manager">Judicial Case Manager</a></li>
+                <li><a href="{{rootPath}}projects/hmcts-design-system">HMCTS Design System</a></li>
+                <li><a href="{{rootPath}}projects/rural-payments">Rural Payments</a></li>
+              </ul>
+            </li>
+            <li><b><a href="{{rootPath}}testimonials">Testimonials</a></b></li>
+            <li><b><a href="{{rootPath}}contact">Contact</a></b></li>
+            <li><b><a href="{{rootPath}}accessibility">Accessibility</a></b></li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+{% endblock %}

@@ -74,6 +74,7 @@
     {# Progressive enhancement #}
     <script>document.getElementsByTagName('html')[0].className += 'js';</script>
 
+    {% if pageId == 'contact' %}
     <script src="https://www.google.com/recaptcha/api.js?render=6Lf33JcaAAAAAN5oC8LMQjEKbH4Nl-jn55bbk-3o"></script>
 
     <script>
@@ -84,6 +85,7 @@
         });
       });
     </script>
+    {% endif %}
 
   </head>
   <body>
