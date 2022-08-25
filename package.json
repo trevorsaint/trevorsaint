@@ -5,8 +5,10 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "gulp": "gulp",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "gulp",
+    "build": "gulp build",
+    "dist": "gulp build && gulp dist",
+    "deploy": "npm run dist && firebase deploy"
   },
   "author": "Trevor Saint <hello@trevorsaint.uk>",
   "license": "MIT",
