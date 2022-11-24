@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: "Baskerville";
-  src: font-url("Baskerville.woff2") format("woff2"), font-url("Baskerville.woff") format("woff");
+  src: url("/fonts/Baskerville.woff2") format("woff2"), url("/fonts/Baskerville.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -14,7 +14,7 @@
 
 @font-face {
   font-family: "Moderat";
-  src: font-url("Moderat-Bold.woff2") format("woff2"), font-url("Moderat-Bold.woff") format("woff");
+  src: url("/fonts/Moderat-Bold.woff2") format("woff2"), url("/fonts/Moderat-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -22,7 +22,7 @@
 
 @font-face {
   font-family: "Moderat";
-  src: font-url("Moderat-Regular.woff2") format("woff2"), font-url("Moderat-Regular.woff") format("woff");
+  src: url("/fonts/Moderat-Regular.woff2") format("woff2"), url("/fonts/Moderat-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
