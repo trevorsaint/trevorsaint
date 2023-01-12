@@ -74,20 +74,6 @@
     {# Progressive enhancement #}
     <script>document.getElementsByTagName('html')[0].className += 'js';</script>
 
-    {# Google reCaptcha #}
-    {% if pageId == 'contact' %}
-    <script src="https://www.google.com/recaptcha/api.js?render=6Lf33JcaAAAAAN5oC8LMQjEKbH4Nl-jn55bbk-3o"></script>
-
-    <script>
-      grecaptcha.ready(function () {
-        grecaptcha.execute('6Lf33JcaAAAAAN5oC8LMQjEKbH4Nl-jn55bbk-3o', {action: 'submit'}).then(function (token) {
-          console.info("got token: " + token);
-          document.getElementById('g-recaptcha-response').value = token;
-        });
-      });
-    </script>
-    {% endif %}
-
     {# Google Analytics #}
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9LSR2MP5CZ"></script>
     <script>

@@ -25,7 +25,7 @@
 
         <div class="col-7@sm">
 
-          <form class="form js-form" name="contact-form" method="POST" autocomplete="off" action="https://formspree.io/f/mgeddkrv">
+          <form class="form js-form" id="contact-form" name="Contact form" method="POST" autocomplete="off" action="/contact/thank-you" data-netlify="true" netlify-honeypot="bot-field">
 
             <div class="margin-bottom-sm">
               <label class="form__label" for="name">Full name</label>
@@ -50,6 +50,11 @@
               <input class="form__control" id="telephone" name="telephone" type="tel">
             </div>
 
+            <div class="margin-bottom-sm sr-only">
+              <label class="form__label" for="bot-field">Don’t fill this out if you’re human</label>
+              <input class="form__control" id="bot-field" name="bot-field" type="text">
+            </div>
+
             <div class="margin-bottom-sm">
               <label class="form__label" for="message">Message</label>
               <span class="form__error-message is-hidden" id="message-error">
@@ -58,8 +63,6 @@
               </span>
               <textarea class="form__control form__control--textarea" id="message" name="message" rows="8"></textarea>
             </div>
-
-            <input id="g-recaptcha-response" name="g-recaptcha-response" type="hidden">
 
             <button class="button button--full-width" type="submit">
               <span class="button__label">Send message</span>
